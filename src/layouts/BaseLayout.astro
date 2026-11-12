@@ -2,21 +2,20 @@
 export interface Props {
   title: string;
   description?: string;
-  theme?: 'loop77' | 'ul7r4';
+  theme?: 'loop77' | 'ul7r4' | 'home';
   lang?: 'en' | 'pt';
 }
 
 const { 
   title, 
   description = "LUMO Studio Platform", 
-  theme = 'loop77', 
+  theme = 'home', 
   lang = 'en' 
 } = Astro.props;
 
-// Lógica simples de tradução para o header
 const translations = {
-  en: { home: "Home", explore: "Explore", support: "Support" },
-  pt: { home: "Início", explore: "Explorar", support: "Apoie" }
+  en: { home: "Home", labels: "Labels", artists: "Artists", albums: "Albums", tracks: "Tracks", videos: "Videos", about: "About", explore: "Explore" },
+  pt: { home: "Início", labels: "Selos", artists: "Artistas", albums: "Álbuns", tracks: "Faixas", videos: "Vídeos", about: "Sobre", explore: "Explorar" }
 };
 const t = translations[lang];
 ---
@@ -28,28 +27,40 @@ const t = translations[lang];
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} | LUMO</title>
     <meta name="description" content={description} />
-    <!-- Open Graph Básico (será expandido depois) -->
-    <meta property="og:title" content={`${title} | LUMO`} />
-    <meta property="og:description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   </head>
   <body class={`theme-${theme}`}>
     
-    <!-- Header -->
+    <!-- Header Global Fixo -->
     <header>
+      <a href="/" class="logo">
+        <img src="https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_lumo_transparent.png" alt="LUMO" style="height: 24px;" />
+      </a>
+      
       <nav>
         <a href="/">{t.home}</a>
-        <a href="/explore">{t.explore}</a>
-        <a href="/support">{t.support}</a>
-        
-        <!-- Seletor de Idioma (simples) -->
+        <a href="/labels">{t.labels}</a>
+        <a href="/artists">{t.artists}</a>
+        <a href="/albums">{t.albums}</a>
+        <a href="/tracks">{t.tracks}</a>
+        <a href="/videos">{t.videos}</a>
+        <a href="/about">{t.about}</a>
+      </nav>
+
+      <div class="header-right">
+        <div class="search-bar">
+          <input type="text" placeholder="Search..." />
+        </div>
         <div class="lang-switcher">
           <a href="/" aria-label="English">EN</a>
           <a href="/pt/" aria-label="Português">PT</a>
         </div>
-      </nav>
+      </div>
     </header>
 
-    <!-- Conteúdo da Página -->
+    <!-- Conteúdo Principal -->
     <main>
       <slot />
     </main>
@@ -58,39 +69,72 @@ const t = translations[lang];
 </html>
 
 <style is:global>
-  /* Reset básico */
+  /* Reset e Tipografia */
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: sans-serif; background: #000; color: #fff; }
   
-  /* Variáveis de Tema */
-  body.theme-loop77 {
-    --bg-color: #1a0505;
-    --text-color: #ffcccc;
-    --accent-color: #ff3333;
-  }
-  
-  body.theme-ul7r4 {
-    --bg-color: #05051a;
-    --text-color: #ccccff;
-    --accent-color: #3366ff;
+  body { 
+    font-family: 'Inter', sans-serif; 
+    background: #000; /* Fundo preto */
+    color: #fff; 
+    overflow-x: hidden;
   }
 
-  body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
   }
 
+  /* Header Global Fixo */
   header {
-    padding: 1rem;
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    height: 80px;
+    padding: 0 4rem;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #333;
+    align-items: center;
+    background: #000; /* Fundo preto sólido */
+    border-bottom: 1px solid #222;
+    z-index: 1000;
   }
   
-  nav { display: flex; gap: 1rem; align-items: center; }
-  nav a { color: var(--text-color); text-decoration: none; font-weight: bold; }
-  nav a:hover { color: var(--accent-color); }
+  .logo { display: flex; align-items: center; text-decoration: none; }
 
-  .lang-switcher { margin-left: auto; display: flex; gap: 0.5rem; }
+  nav { display: flex; gap: 2rem; }
+  nav a { 
+    color: rgba(255, 255, 255, 0.6); 
+    text-decoration: none; 
+    font-size: 0.75rem; 
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: color 0.3s;
+  }
+  nav a:hover { color: #fff; }
+
+  .header-right { display: flex; align-items: center; gap: 2rem; }
+
+  .search-bar input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    outline: none;
+    width: 150px;
+  }
+  .search-bar input::placeholder { color: rgba(255,255,255,0.3); }
+
+  .lang-switcher { 
+    display: flex; gap: 0.5rem; 
+    font-size: 0.75rem;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    padding-left: 1rem;
+  }
+  .lang-switcher a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .lang-switcher a:hover { color: #fff; }
+
+  /* Utilitários */
+  main { padding-top: 80px; } /* Compensa a altura do header fixo */
+  h1, h2, h3 { font-weight: 400; letter-spacing: -0.02em; }
 </style>

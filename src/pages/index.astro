@@ -2,48 +2,91 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import catalogo from '../data/catalogo.json';
 
-const artistas = catalogo.artistas;
+const labels = catalogo.labels;
 ---
 
-<BaseLayout title="Home" theme="loop77" lang="en">
-  <div style="padding: 2rem;">
-    <h1 style="margin-bottom: 2rem;">LUMO Studio Platform</h1>
-    
-    <div class="artist-grid">
-      {artistas.map(artista => (
-        <a href={`/${artista.slug}`} class="artist-card">
-          <img src={artista.foto} alt={artista.nome} class="artist-cover" />
-          <h3>{artista.nome}</h3>
-          <p>{artista.genero.join(' · ')}</p>
-        </a>
-      ))}
-    </div>
+<BaseLayout title="Home" theme="home" lang="en">
+  
+  <div class="home-container">
+    {labels.map(label => (
+      <section class="universe-section" style={`background-image: url('${label.imagemFundo}');`}>
+        <div class="content">
+          <h1 class="font-serif">{label.nome}</h1>
+          <p class="description">{label.descricao.en || label.descricao.pt}</p>
+          <a href={`/labels/${label.slug}`} class="btn-explore">Enter Universe</a>
+        </div>
+      </section>
+    ))}
   </div>
+
 </BaseLayout>
 
 <style>
-  .artist-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  @media (min-width: 768px) {
-    .artist-grid { grid-template-columns: repeat(4, 1fr); }
-  }
-  .artist-card {
-    text-decoration: none;
-    color: var(--text-color);
-    transition: transform 0.2s;
-  }
-  .artist-card:hover { transform: scale(1.03); }
-  .artist-cover {
+  .home-container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid #444;
-    margin-bottom: 0.75rem;
   }
-  .artist-card h3 { margin: 0; font-size: 1.1rem; }
-  .artist-card p { margin: 0.25rem 0 0; font-size: 0.85rem; opacity: 0.7; }
+
+  .universe-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* Gradiente escuro para o texto ficar legível */
+  .universe-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 70%);
+    z-index: 1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+  }
+
+  h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    max-width: 500px;
+  }
+
+  .btn-explore {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5rem;
+    transition: all 0.3s;
+  }
+  .btn-explore:hover {
+    color: #ff3333;
+    border-color: #ff3333;
+  }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 4rem; }
+    .universe-section { padding: 0 5%; }
+  }
 </style>

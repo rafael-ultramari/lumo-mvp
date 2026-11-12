@@ -1,8 +1,1058 @@
 {
+  "labels": [
+    {
+      "nome": "Loop 77",
+      "slug": "loop-77",
+      "descricao": {},
+      "imagemFundo": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_loop-77.jpg",
+      "artistas": [
+        {
+          "nome": "Noise",
+          "slug": "noise",
+          "descricao": {},
+          "label": "loop-77",
+          "genero": [
+            "Metal",
+            "Electronic"
+          ],
+          "subgenero": [
+            "Industrial Metal",
+            "Electro-Industrial"
+          ],
+          "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_noise.jpg",
+          "totalAlbuns": 2,
+          "totalFaixas": 8,
+          "albuns": [
+            {
+              "title": "The Violet Sessions",
+              "slug": "the-violet-sessions",
+              "artistRef": "noise",
+              "releaseYear": "2026",
+              "releaseStatus": "Released",
+              "tracksList": [
+                "track_noise_scavenger",
+                "track_noise_breakdown",
+                "track_noise_the-edge",
+                "track_noise_eldorado"
+              ],
+              "tracks": [
+                {
+                  "title": "Scavenger",
+                  "slug": "scavenger",
+                  "duration": "03:04",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Metal",
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Industrial Metal",
+                    "Electro-Industrial"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_scavenger.mp3"
+                },
+                {
+                  "title": "Breakdown",
+                  "slug": "breakdown",
+                  "duration": "03:25",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Metal",
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Industrial Metal",
+                    "Electro-Industrial"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_breakdown.mp3"
+                },
+                {
+                  "title": "The Edge",
+                  "slug": "the-edge",
+                  "duration": "04:29",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Metal",
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Industrial Metal",
+                    "Electro-Industrial"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_the-edge.mp3"
+                },
+                {
+                  "title": "Eldorado",
+                  "slug": "eldorado",
+                  "duration": "03:44",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Metal",
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Industrial Metal",
+                    "Electro-Industrial"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_eldorado.mp3"
+                }
+              ],
+              "isVisible": true,
+              "genero": [
+                "Metal",
+                "Electronic"
+              ],
+              "subgenero": [
+                "Industrial Metal",
+                "Electro-Industrial"
+              ],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_noise_the-violet-sessions.jpg"
+            },
+            {
+              "title": "Violet",
+              "slug": "violet",
+              "artistRef": "noise",
+              "releaseYear": "2026",
+              "releaseStatus": "Unreleased",
+              "tracksList": [
+                "track_noise_the-sun-never-sets",
+                "track_noise_scavenger",
+                "track_noise_scrap-grinder",
+                "track_noise_the-vale-myth",
+                "track_noise_blood-on-the-sand",
+                "track_noise_rusted-chassis",
+                "track_noise_black-market-price",
+                "track_noise_neon-and-rust",
+                "track_noise_dust-trail",
+                "track_noise_adrenaline",
+                "track_noise_breakdown",
+                "track_noise_lone-warrior",
+                "track_noise_the-edge",
+                "track_noise_eldorado",
+                "track_noise_aftermath"
+              ],
+              "tracks": [
+                {
+                  "title": "Scavenger",
+                  "slug": "scavenger",
+                  "duration": "03:04",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Metal",
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Industrial Metal",
+                    "Electro-Industrial"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_scavenger.mp3"
+                },
+                {
+                  "title": "Breakdown",
+                  "slug": "breakdown",
+                  "duration": "03:25",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Metal",
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Industrial Metal",
+                    "Electro-Industrial"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_breakdown.mp3"
+                },
+                {
+                  "title": "The Edge",
+                  "slug": "the-edge",
+                  "duration": "04:29",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Metal",
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Industrial Metal",
+                    "Electro-Industrial"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_the-edge.mp3"
+                },
+                {
+                  "title": "Eldorado",
+                  "slug": "eldorado",
+                  "duration": "03:44",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Metal",
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Industrial Metal",
+                    "Electro-Industrial"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_eldorado.mp3"
+                }
+              ],
+              "isVisible": true,
+              "genero": [
+                "Metal",
+                "Electronic"
+              ],
+              "subgenero": [
+                "Industrial Metal",
+                "Electro-Industrial"
+              ],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_noise_violet.jpg"
+            }
+          ]
+        },
+        {
+          "nome": "Vex",
+          "slug": "vex",
+          "descricao": {},
+          "label": "loop-77",
+          "genero": [
+            "Rock"
+          ],
+          "subgenero": [
+            "Surf Rock",
+            "Dark Western",
+            "Desert Rock"
+          ],
+          "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_vex.jpg",
+          "totalAlbuns": 2,
+          "totalFaixas": 8,
+          "albuns": [
+            {
+              "title": "Highway Chase",
+              "slug": "highway-chase",
+              "artistRef": "vex",
+              "releaseYear": "2026",
+              "releaseStatus": "Released",
+              "tracksList": [
+                "track_vex_shattered-glass",
+                "track_vex_highway-chase",
+                "track_vex_redline-pressure",
+                "track_vex_fractured-speed"
+              ],
+              "tracks": [
+                {
+                  "title": "Shattered Glass",
+                  "slug": "shattered-glass",
+                  "duration": "03:25",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Rock"
+                  ],
+                  "track_subgenres": [
+                    "Surf Rock",
+                    "Dark Western",
+                    "Desert Rock"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_shattered-glass.mp3"
+                },
+                {
+                  "title": "Highway Chase",
+                  "slug": "highway-chase",
+                  "duration": "03:29",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Rock"
+                  ],
+                  "track_subgenres": [
+                    "Surf Rock",
+                    "Dark Western",
+                    "Desert Rock"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_highway-chase.mp3"
+                },
+                {
+                  "title": "Redline Pressure",
+                  "slug": "redline-pressure",
+                  "duration": "03:23",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Rock"
+                  ],
+                  "track_subgenres": [
+                    "Surf Rock",
+                    "Dark Western",
+                    "Desert Rock"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_redline-pressure.mp3"
+                },
+                {
+                  "title": "Fractured Speed",
+                  "slug": "fractured-speed",
+                  "duration": "03:30",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Rock"
+                  ],
+                  "track_subgenres": [
+                    "Surf Rock",
+                    "Dark Western",
+                    "Desert Rock"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_fractured-speed.mp3"
+                }
+              ],
+              "isVisible": true,
+              "genero": [
+                "Rock"
+              ],
+              "subgenero": [
+                "Surf Rock",
+                "Dark Western",
+                "Desert Rock"
+              ],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_vex_highway-chase.jpg"
+            },
+            {
+              "title": "Thunder",
+              "slug": "thunder",
+              "artistRef": "vex",
+              "releaseYear": "2026",
+              "releaseStatus": "Unreleased",
+              "tracksList": [
+                "track_vex_shattered-glass",
+                "track_vex_running-on-empty",
+                "track_vex_the-rhythm-of-the-street",
+                "track_vex_highway-chase",
+                "track_vex_throttle-open",
+                "track_vex_redline-pressure",
+                "track_vex_scorched",
+                "track_vex_dust-and-thunder",
+                "track_vex_black-smoke",
+                "track_vex_ghost-on-the-wheel",
+                "track_vex_fractured-speed",
+                "track_vex_blood-on-the-chrome",
+                "track_vex_the-last-wreck",
+                "track_vex_wreckage",
+                "track_vex_redline"
+              ],
+              "tracks": [
+                {
+                  "title": "Shattered Glass",
+                  "slug": "shattered-glass",
+                  "duration": "03:25",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Rock"
+                  ],
+                  "track_subgenres": [
+                    "Surf Rock",
+                    "Dark Western",
+                    "Desert Rock"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_shattered-glass.mp3"
+                },
+                {
+                  "title": "Highway Chase",
+                  "slug": "highway-chase",
+                  "duration": "03:29",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Rock"
+                  ],
+                  "track_subgenres": [
+                    "Surf Rock",
+                    "Dark Western",
+                    "Desert Rock"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_highway-chase.mp3"
+                },
+                {
+                  "title": "Redline Pressure",
+                  "slug": "redline-pressure",
+                  "duration": "03:23",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Rock"
+                  ],
+                  "track_subgenres": [
+                    "Surf Rock",
+                    "Dark Western",
+                    "Desert Rock"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_redline-pressure.mp3"
+                },
+                {
+                  "title": "Fractured Speed",
+                  "slug": "fractured-speed",
+                  "duration": "03:30",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Rock"
+                  ],
+                  "track_subgenres": [
+                    "Surf Rock",
+                    "Dark Western",
+                    "Desert Rock"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_fractured-speed.mp3"
+                }
+              ],
+              "isVisible": true,
+              "genero": [
+                "Rock"
+              ],
+              "subgenero": [
+                "Surf Rock",
+                "Dark Western",
+                "Desert Rock"
+              ],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_vex_thunder.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "UL7R4",
+      "slug": "ul7r4",
+      "descricao": {},
+      "imagemFundo": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_ul7r4.jpg",
+      "artistas": [
+        {
+          "nome": "RIFT",
+          "slug": "rift",
+          "descricao": {},
+          "label": "ul7r4",
+          "genero": [
+            "Electronic"
+          ],
+          "subgenero": [
+            "Dark Synthwave",
+            "Outrun",
+            "Retrowave"
+          ],
+          "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_rift.jpg",
+          "totalAlbuns": 1,
+          "totalFaixas": 4,
+          "albuns": [
+            {
+              "title": "Before the Loop",
+              "slug": "before-the-loop",
+              "artistRef": "rift",
+              "releaseYear": "2026",
+              "releaseStatus": "Released",
+              "tracksList": [
+                "track_rift_carry-the-fire",
+                "track_rift_two-shadows",
+                "track_rift_the-door",
+                "track_rift_the-pull"
+              ],
+              "tracks": [
+                {
+                  "title": "Carry the Fire",
+                  "slug": "carry-the-fire",
+                  "duration": "03:24",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Dark Synthwave",
+                    "Outrun",
+                    "Retrowave"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_carry-the-fire.mp3"
+                },
+                {
+                  "title": "Two Shadows",
+                  "slug": "two-shadows",
+                  "duration": "04:03",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Dark Synthwave",
+                    "Outrun",
+                    "Retrowave"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_two-shadows.mp3"
+                },
+                {
+                  "title": "The Door",
+                  "slug": "the-door",
+                  "duration": "03:18",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Dark Synthwave",
+                    "Outrun",
+                    "Retrowave"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_the-door.mp3"
+                },
+                {
+                  "title": "The Pull",
+                  "slug": "the-pull",
+                  "duration": "02:39",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Dark Synthwave",
+                    "Outrun",
+                    "Retrowave"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_the-pull.mp3"
+                }
+              ],
+              "isVisible": true,
+              "genero": [
+                "Electronic"
+              ],
+              "subgenero": [
+                "Dark Synthwave",
+                "Outrun",
+                "Retrowave"
+              ],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_before-the-loop.jpg"
+            },
+            {
+              "title": "Reset",
+              "slug": "reset",
+              "artistRef": "rift",
+              "releaseYear": "2026",
+              "releaseStatus": "Released",
+              "tracksList": [
+                "track_rift_reset",
+                "track_rift_6-47",
+                "track_rift_same-streets",
+                "track_rift_the-glitch",
+                "track_rift_new-plan",
+                "track_rift_almost-worked",
+                "track_rift_tomorrow-again"
+              ],
+              "tracks": [],
+              "isVisible": false,
+              "genero": [],
+              "subgenero": [],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_reset.jpg"
+            },
+            {
+              "title": "Rewind",
+              "slug": "rewind",
+              "artistRef": "rift",
+              "releaseYear": "2026",
+              "releaseStatus": "Released",
+              "tracksList": [
+                "track_rift_strange-light",
+                "track_rift_among-them",
+                "track_rift_speaking-to-stone",
+                "track_rift_cast-out",
+                "track_rift_the-few-who-followed",
+                "track_rift_as-it-was-written",
+                "track_rift_rewind"
+              ],
+              "tracks": [],
+              "isVisible": false,
+              "genero": [],
+              "subgenero": [],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_rewind.jpg"
+            },
+            {
+              "title": "Retry",
+              "slug": "retry",
+              "artistRef": "rift",
+              "releaseYear": "2027",
+              "releaseStatus": "Unreleased",
+              "tracksList": [
+                "track_rift_docking-bay",
+                "track_rift_corridors",
+                "track_rift_first-target",
+                "track_rift_unheeded",
+                "track_rift_reroute",
+                "track_rift_abandon-ship",
+                "track_rift_retry"
+              ],
+              "tracks": [],
+              "isVisible": false,
+              "genero": [],
+              "subgenero": [],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_retry.jpg"
+            },
+            {
+              "title": "Same War",
+              "slug": "same-war",
+              "artistRef": "rift",
+              "releaseYear": "2027",
+              "releaseStatus": "Unreleased",
+              "tracksList": [
+                "track_rift_homecoming",
+                "track_rift_allegiance",
+                "track_rift_remains",
+                "track_rift_attempt",
+                "track_rift_the-signal",
+                "track_rift_tug",
+                "track_rift_same-war"
+              ],
+              "tracks": [],
+              "isVisible": false,
+              "genero": [],
+              "subgenero": [],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_same-war.jpg"
+            }
+          ]
+        },
+        {
+          "nome": "Trace",
+          "slug": "trace",
+          "descricao": {},
+          "label": "ul7r4",
+          "genero": [
+            "Rock"
+          ],
+          "subgenero": [
+            "Progressive Rock",
+            "Progressive Metal",
+            "Alternative Metal"
+          ],
+          "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_trace.jpg",
+          "totalAlbuns": 1,
+          "totalFaixas": 3,
+          "albuns": [
+            {
+              "title": "What I Chose",
+              "slug": "what-i-chose",
+              "artistRef": "trace",
+              "releaseYear": "2026",
+              "releaseStatus": "Released",
+              "tracksList": [
+                "track_trace_you-call-it-running",
+                "track_trace_the-right-kind-of-peace",
+                "track_trace_what-i-chose"
+              ],
+              "tracks": [
+                {
+                  "title": "You Call It Running",
+                  "slug": "you-call-it-running",
+                  "duration": "04:32",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Rock"
+                  ],
+                  "track_subgenres": [
+                    "Progressive Rock",
+                    "Progressive Metal",
+                    "Alternative Metal"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_you-call-it-running.mp3"
+                },
+                {
+                  "title": "The Right Kind of Peace",
+                  "slug": "the-right-kind-of-peace",
+                  "duration": "05:36",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Rock"
+                  ],
+                  "track_subgenres": [
+                    "Progressive Rock",
+                    "Progressive Metal",
+                    "Alternative Metal"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_the-right-kind-of-peace.mp3"
+                },
+                {
+                  "title": "What I Chose",
+                  "slug": "what-i-chose",
+                  "duration": "04:41",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Rock"
+                  ],
+                  "track_subgenres": [
+                    "Progressive Rock",
+                    "Progressive Metal",
+                    "Alternative Metal"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_what-i-chose.mp3"
+                }
+              ],
+              "isVisible": true,
+              "genero": [
+                "Rock"
+              ],
+              "subgenero": [
+                "Progressive Rock",
+                "Progressive Metal",
+                "Alternative Metal"
+              ],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_what-i-chose.jpg"
+            },
+            {
+              "title": "Strata",
+              "slug": "strata",
+              "artistRef": "trace",
+              "releaseYear": "2026",
+              "releaseStatus": "Released",
+              "tracksList": [
+                "track_trace_survey",
+                "track_trace_strata",
+                "track_trace_barren",
+                "track_trace_light-years",
+                "track_trace_signals",
+                "track_trace_new-horizon"
+              ],
+              "tracks": [],
+              "isVisible": false,
+              "genero": [],
+              "subgenero": [],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_strata.jpg"
+            },
+            {
+              "title": "Unearthed",
+              "slug": "unearthed",
+              "artistRef": "trace",
+              "releaseYear": "2026",
+              "releaseStatus": "Released",
+              "tracksList": [
+                "track_trace_descent",
+                "track_trace_reading-the-ground",
+                "track_trace_shoreline",
+                "track_trace_foundations",
+                "track_trace_emergence",
+                "track_trace_breakthrough"
+              ],
+              "tracks": [],
+              "isVisible": false,
+              "genero": [],
+              "subgenero": [],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_unearthed.jpg"
+            },
+            {
+              "title": "Open File",
+              "slug": "open-file",
+              "artistRef": "trace",
+              "releaseYear": "2026",
+              "releaseStatus": "Unreleased",
+              "tracksList": [
+                "track_trace_the-question",
+                "track_trace_mass-grave",
+                "track_trace_official-records",
+                "track_trace_case-notes",
+                "track_trace_civil-war",
+                "track_trace_open-file"
+              ],
+              "tracks": [],
+              "isVisible": false,
+              "genero": [],
+              "subgenero": [],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_open-file.jpg"
+            },
+            {
+              "title": "Left Behind",
+              "slug": "left-behind",
+              "artistRef": "trace",
+              "releaseYear": "2027",
+              "releaseStatus": "Unreleased",
+              "tracksList": [
+                "track_trace_the-dig",
+                "track_trace_green-skies",
+                "track_trace_between-the-lines",
+                "track_trace_something-fell",
+                "track_trace_the-report",
+                "track_trace_no-one-listened",
+                "track_trace_left-behind"
+              ],
+              "tracks": [],
+              "isVisible": false,
+              "genero": [],
+              "subgenero": [],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_left-behind.jpg"
+            }
+          ]
+        },
+        {
+          "nome": "VOID",
+          "slug": "void",
+          "descricao": {},
+          "label": "ul7r4",
+          "genero": [
+            "Electronic"
+          ],
+          "subgenero": [
+            "Darkwave",
+            "Coldwave",
+            "EBM",
+            "Minimal Synthwave"
+          ],
+          "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_void.jpg",
+          "totalAlbuns": 2,
+          "totalFaixas": 5,
+          "albuns": [
+            {
+              "title": "Mirror Error",
+              "slug": "mirror-error",
+              "artistRef": "void",
+              "releaseYear": "2026",
+              "releaseStatus": "Released",
+              "tracksList": [
+                "track_void_fragments-of-glass",
+                "track_void_data-wipe",
+                "track_void_the-empty-glass"
+              ],
+              "tracks": [
+                {
+                  "title": "Fragments of Glass",
+                  "slug": "fragments-of-glass",
+                  "duration": "03:35",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Darkwave",
+                    "Coldwave",
+                    "EBM",
+                    "Minimal Synthwave"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_fragments-of-glass.mp3"
+                },
+                {
+                  "title": "Data Wipe",
+                  "slug": "data-wipe",
+                  "duration": "03:23",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Darkwave",
+                    "Coldwave",
+                    "EBM",
+                    "Minimal Synthwave"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_data-wipe.mp3"
+                },
+                {
+                  "title": "The Empty Glass",
+                  "slug": "the-empty-glass",
+                  "duration": "04:43",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Darkwave",
+                    "Coldwave",
+                    "EBM",
+                    "Minimal Synthwave"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_the-empty-glass.mp3"
+                }
+              ],
+              "isVisible": true,
+              "genero": [
+                "Electronic"
+              ],
+              "subgenero": [
+                "Darkwave",
+                "Coldwave",
+                "EBM",
+                "Minimal Synthwave"
+              ],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_mirror-error.jpg"
+            },
+            {
+              "title": "The Stranger at the Door",
+              "slug": "the-stranger-at-the-door",
+              "artistRef": "void",
+              "releaseYear": "2026",
+              "releaseStatus": "Released",
+              "tracksList": [
+                "track_void_something-in-the-house",
+                "track_void_the-lock-has-changed",
+                "track_void_voices-i-know",
+                "track_void_someone-at-my-desk",
+                "track_void_becoming-no-one",
+                "track_void_another-life"
+              ],
+              "tracks": [],
+              "isVisible": false,
+              "genero": [],
+              "subgenero": [],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-stranger-at-the-door.jpg"
+            },
+            {
+              "title": "The Loop",
+              "slug": "the-loop",
+              "artistRef": "void",
+              "releaseYear": "2026",
+              "releaseStatus": "Released",
+              "tracksList": [
+                "track_void_the-loop",
+                "track_void_they-move-the-same"
+              ],
+              "tracks": [
+                {
+                  "title": "The Loop",
+                  "slug": "the-loop",
+                  "duration": "05:55",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Darkwave",
+                    "Coldwave",
+                    "EBM",
+                    "Minimal Synthwave"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_the-loop.mp3"
+                },
+                {
+                  "title": "They Move the Same",
+                  "slug": "they-move-the-same",
+                  "duration": "04:54",
+                  "releaseStatus": "Released",
+                  "track_genres": [
+                    "Electronic"
+                  ],
+                  "track_subgenres": [
+                    "Darkwave",
+                    "Coldwave",
+                    "EBM",
+                    "Minimal Synthwave"
+                  ],
+                  "lyrics": {
+                    "en": ""
+                  },
+                  "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_they-move-the-same.mp3"
+                }
+              ],
+              "isVisible": true,
+              "genero": [
+                "Electronic"
+              ],
+              "subgenero": [
+                "Darkwave",
+                "Coldwave",
+                "EBM",
+                "Minimal Synthwave"
+              ],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-loop.jpg"
+            },
+            {
+              "title": "Shards",
+              "slug": "shards",
+              "artistRef": "void",
+              "releaseYear": "2027",
+              "releaseStatus": "Unreleased",
+              "tracksList": [
+                "track_void_shards",
+                "track_void_the-polished-piece",
+                "track_void_the-sharp-edge",
+                "track_void_lost-fragment",
+                "track_void_glued-together",
+                "track_void_still-reflects"
+              ],
+              "tracks": [],
+              "isVisible": false,
+              "genero": [],
+              "subgenero": [],
+              "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_shards.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "artistas": [
     {
       "nome": "Noise",
       "slug": "noise",
+      "descricao": {},
+      "label": "loop-77",
       "genero": [
         "Metal",
         "Electronic"
@@ -12,11 +1062,14 @@
         "Electro-Industrial"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_noise.jpg",
+      "totalAlbuns": 2,
+      "totalFaixas": 8,
       "albuns": [
         {
           "title": "The Violet Sessions",
           "slug": "the-violet-sessions",
           "artistRef": "noise",
+          "releaseYear": "2026",
           "releaseStatus": "Released",
           "tracksList": [
             "track_noise_scavenger",
@@ -38,6 +1091,9 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_scavenger.mp3"
             },
             {
@@ -53,6 +1109,9 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_breakdown.mp3"
             },
             {
@@ -68,6 +1127,9 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_the-edge.mp3"
             },
             {
@@ -83,6 +1145,9 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_eldorado.mp3"
             }
           ],
@@ -101,6 +1166,7 @@
           "title": "Violet",
           "slug": "violet",
           "artistRef": "noise",
+          "releaseYear": "2026",
           "releaseStatus": "Unreleased",
           "tracksList": [
             "track_noise_the-sun-never-sets",
@@ -133,6 +1199,9 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_scavenger.mp3"
             },
             {
@@ -148,6 +1217,9 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_breakdown.mp3"
             },
             {
@@ -163,6 +1235,9 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_the-edge.mp3"
             },
             {
@@ -178,6 +1253,9 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_eldorado.mp3"
             }
           ],
@@ -197,6 +1275,8 @@
     {
       "nome": "RIFT",
       "slug": "rift",
+      "descricao": {},
+      "label": "ul7r4",
       "genero": [
         "Electronic"
       ],
@@ -206,11 +1286,14 @@
         "Retrowave"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_rift.jpg",
+      "totalAlbuns": 1,
+      "totalFaixas": 4,
       "albuns": [
         {
           "title": "Before the Loop",
           "slug": "before-the-loop",
           "artistRef": "rift",
+          "releaseYear": "2026",
           "releaseStatus": "Released",
           "tracksList": [
             "track_rift_carry-the-fire",
@@ -232,6 +1315,9 @@
                 "Outrun",
                 "Retrowave"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_carry-the-fire.mp3"
             },
             {
@@ -247,6 +1333,9 @@
                 "Outrun",
                 "Retrowave"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_two-shadows.mp3"
             },
             {
@@ -262,6 +1351,9 @@
                 "Outrun",
                 "Retrowave"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_the-door.mp3"
             },
             {
@@ -277,6 +1369,9 @@
                 "Outrun",
                 "Retrowave"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_the-pull.mp3"
             }
           ],
@@ -295,6 +1390,7 @@
           "title": "Reset",
           "slug": "reset",
           "artistRef": "rift",
+          "releaseYear": "2026",
           "releaseStatus": "Released",
           "tracksList": [
             "track_rift_reset",
@@ -315,6 +1411,7 @@
           "title": "Rewind",
           "slug": "rewind",
           "artistRef": "rift",
+          "releaseYear": "2026",
           "releaseStatus": "Released",
           "tracksList": [
             "track_rift_strange-light",
@@ -335,6 +1432,7 @@
           "title": "Retry",
           "slug": "retry",
           "artistRef": "rift",
+          "releaseYear": "2027",
           "releaseStatus": "Unreleased",
           "tracksList": [
             "track_rift_docking-bay",
@@ -355,6 +1453,7 @@
           "title": "Same War",
           "slug": "same-war",
           "artistRef": "rift",
+          "releaseYear": "2027",
           "releaseStatus": "Unreleased",
           "tracksList": [
             "track_rift_homecoming",
@@ -376,6 +1475,8 @@
     {
       "nome": "Trace",
       "slug": "trace",
+      "descricao": {},
+      "label": "ul7r4",
       "genero": [
         "Rock"
       ],
@@ -385,11 +1486,14 @@
         "Alternative Metal"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_trace.jpg",
+      "totalAlbuns": 1,
+      "totalFaixas": 3,
       "albuns": [
         {
           "title": "What I Chose",
           "slug": "what-i-chose",
           "artistRef": "trace",
+          "releaseYear": "2026",
           "releaseStatus": "Released",
           "tracksList": [
             "track_trace_you-call-it-running",
@@ -410,6 +1514,9 @@
                 "Progressive Metal",
                 "Alternative Metal"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_you-call-it-running.mp3"
             },
             {
@@ -425,6 +1532,9 @@
                 "Progressive Metal",
                 "Alternative Metal"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_the-right-kind-of-peace.mp3"
             },
             {
@@ -440,6 +1550,9 @@
                 "Progressive Metal",
                 "Alternative Metal"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_what-i-chose.mp3"
             }
           ],
@@ -458,6 +1571,7 @@
           "title": "Strata",
           "slug": "strata",
           "artistRef": "trace",
+          "releaseYear": "2026",
           "releaseStatus": "Released",
           "tracksList": [
             "track_trace_survey",
@@ -477,6 +1591,7 @@
           "title": "Unearthed",
           "slug": "unearthed",
           "artistRef": "trace",
+          "releaseYear": "2026",
           "releaseStatus": "Released",
           "tracksList": [
             "track_trace_descent",
@@ -496,6 +1611,7 @@
           "title": "Open File",
           "slug": "open-file",
           "artistRef": "trace",
+          "releaseYear": "2026",
           "releaseStatus": "Unreleased",
           "tracksList": [
             "track_trace_the-question",
@@ -515,6 +1631,7 @@
           "title": "Left Behind",
           "slug": "left-behind",
           "artistRef": "trace",
+          "releaseYear": "2027",
           "releaseStatus": "Unreleased",
           "tracksList": [
             "track_trace_the-dig",
@@ -536,6 +1653,8 @@
     {
       "nome": "Vex",
       "slug": "vex",
+      "descricao": {},
+      "label": "loop-77",
       "genero": [
         "Rock"
       ],
@@ -545,11 +1664,14 @@
         "Desert Rock"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_vex.jpg",
+      "totalAlbuns": 2,
+      "totalFaixas": 8,
       "albuns": [
         {
           "title": "Highway Chase",
           "slug": "highway-chase",
           "artistRef": "vex",
+          "releaseYear": "2026",
           "releaseStatus": "Released",
           "tracksList": [
             "track_vex_shattered-glass",
@@ -571,6 +1693,9 @@
                 "Dark Western",
                 "Desert Rock"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_shattered-glass.mp3"
             },
             {
@@ -586,6 +1711,9 @@
                 "Dark Western",
                 "Desert Rock"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_highway-chase.mp3"
             },
             {
@@ -601,6 +1729,9 @@
                 "Dark Western",
                 "Desert Rock"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_redline-pressure.mp3"
             },
             {
@@ -616,6 +1747,9 @@
                 "Dark Western",
                 "Desert Rock"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_fractured-speed.mp3"
             }
           ],
@@ -634,6 +1768,7 @@
           "title": "Thunder",
           "slug": "thunder",
           "artistRef": "vex",
+          "releaseYear": "2026",
           "releaseStatus": "Unreleased",
           "tracksList": [
             "track_vex_shattered-glass",
@@ -666,6 +1801,9 @@
                 "Dark Western",
                 "Desert Rock"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_shattered-glass.mp3"
             },
             {
@@ -681,6 +1819,9 @@
                 "Dark Western",
                 "Desert Rock"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_highway-chase.mp3"
             },
             {
@@ -696,6 +1837,9 @@
                 "Dark Western",
                 "Desert Rock"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_redline-pressure.mp3"
             },
             {
@@ -711,6 +1855,9 @@
                 "Dark Western",
                 "Desert Rock"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_fractured-speed.mp3"
             }
           ],
@@ -730,6 +1877,8 @@
     {
       "nome": "VOID",
       "slug": "void",
+      "descricao": {},
+      "label": "ul7r4",
       "genero": [
         "Electronic"
       ],
@@ -740,11 +1889,14 @@
         "Minimal Synthwave"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_void.jpg",
+      "totalAlbuns": 2,
+      "totalFaixas": 5,
       "albuns": [
         {
           "title": "Mirror Error",
           "slug": "mirror-error",
           "artistRef": "void",
+          "releaseYear": "2026",
           "releaseStatus": "Released",
           "tracksList": [
             "track_void_fragments-of-glass",
@@ -766,6 +1918,9 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_fragments-of-glass.mp3"
             },
             {
@@ -782,6 +1937,9 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_data-wipe.mp3"
             },
             {
@@ -798,6 +1956,9 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_the-empty-glass.mp3"
             }
           ],
@@ -817,6 +1978,7 @@
           "title": "The Stranger at the Door",
           "slug": "the-stranger-at-the-door",
           "artistRef": "void",
+          "releaseYear": "2026",
           "releaseStatus": "Released",
           "tracksList": [
             "track_void_something-in-the-house",
@@ -836,6 +1998,7 @@
           "title": "The Loop",
           "slug": "the-loop",
           "artistRef": "void",
+          "releaseYear": "2026",
           "releaseStatus": "Released",
           "tracksList": [
             "track_void_the-loop",
@@ -856,6 +2019,9 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_the-loop.mp3"
             },
             {
@@ -872,6 +2038,9 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
+              "lyrics": {
+                "en": ""
+              },
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_they-move-the-same.mp3"
             }
           ],
@@ -891,6 +2060,7 @@
           "title": "Shards",
           "slug": "shards",
           "artistRef": "void",
+          "releaseYear": "2027",
           "releaseStatus": "Unreleased",
           "tracksList": [
             "track_void_shards",
