@@ -11,7 +11,7 @@
         "Industrial Metal",
         "Electro-Industrial"
       ],
-      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist-noise.jpg",
+      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_noise.jpg",
       "albuns": [
         {
           "title": "The Violet Sessions",
@@ -95,7 +95,7 @@
             "Industrial Metal",
             "Electro-Industrial"
           ],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-the-violet-sessions.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_noise_the-violet-sessions.jpg"
         },
         {
           "title": "Violet",
@@ -190,7 +190,7 @@
             "Industrial Metal",
             "Electro-Industrial"
           ],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-violet.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_noise_violet.jpg"
         }
       ]
     },
@@ -205,7 +205,7 @@
         "Outrun",
         "Retrowave"
       ],
-      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist-rift.jpg",
+      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_rift.jpg",
       "albuns": [
         {
           "title": "Before the Loop",
@@ -289,7 +289,7 @@
             "Outrun",
             "Retrowave"
           ],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-before-the-loop.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_before-the-loop.jpg"
         },
         {
           "title": "Reset",
@@ -309,7 +309,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-reset.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_reset.jpg"
         },
         {
           "title": "Rewind",
@@ -329,7 +329,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-rewind.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_rewind.jpg"
         },
         {
           "title": "Retry",
@@ -349,7 +349,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-retry.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_retry.jpg"
         },
         {
           "title": "Same War",
@@ -369,7 +369,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-same-war.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_same-war.jpg"
         }
       ]
     },
@@ -384,7 +384,7 @@
         "Progressive Metal",
         "Alternative Metal"
       ],
-      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist-trace.jpg",
+      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_trace.jpg",
       "albuns": [
         {
           "title": "What I Chose",
@@ -452,7 +452,7 @@
             "Progressive Metal",
             "Alternative Metal"
           ],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-what-i-chose.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_what-i-chose.jpg"
         },
         {
           "title": "Strata",
@@ -471,7 +471,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-strata.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_strata.jpg"
         },
         {
           "title": "Unearthed",
@@ -490,7 +490,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-unearthed.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_unearthed.jpg"
         },
         {
           "title": "Open File",
@@ -509,7 +509,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-open-file.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_open-file.jpg"
         },
         {
           "title": "Left Behind",
@@ -529,7 +529,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-left-behind.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_left-behind.jpg"
         }
       ]
     },
@@ -544,7 +544,7 @@
         "Dark Western",
         "Desert Rock"
       ],
-      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist-vex.jpg",
+      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_vex.jpg",
       "albuns": [
         {
           "title": "Highway Chase",
@@ -628,7 +628,7 @@
             "Dark Western",
             "Desert Rock"
           ],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-highway-chase.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_vex_highway-chase.jpg"
         },
         {
           "title": "Thunder",
@@ -723,7 +723,7 @@
             "Dark Western",
             "Desert Rock"
           ],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-thunder.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_vex_thunder.jpg"
         }
       ]
     },
@@ -739,7 +739,7 @@
         "EBM",
         "Minimal Synthwave"
       ],
-      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist-void.jpg",
+      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_void.jpg",
       "albuns": [
         {
           "title": "Mirror Error",
@@ -811,7 +811,7 @@
             "EBM",
             "Minimal Synthwave"
           ],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-mirror-error.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_mirror-error.jpg"
         },
         {
           "title": "The Stranger at the Door",
@@ -830,7 +830,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-the-stranger-at-the-door.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-stranger-at-the-door.jpg"
         },
         {
           "title": "The Loop",
@@ -885,7 +885,7 @@
             "EBM",
             "Minimal Synthwave"
           ],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-the-loop.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-loop.jpg"
         },
         {
           "title": "Shards",
@@ -904,7 +904,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
-          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-shards.jpg"
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_shards.jpg"
         }
       ]
     }

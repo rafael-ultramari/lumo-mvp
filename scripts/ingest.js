@@ -68,7 +68,6 @@ function ingest() {
         title, slug, duration, releaseStatus, 
         track_genres: genres, 
         track_subgenres: subgenres,
-        // AQUI ESTÁ A MÁGICA: Monta a URL do áudio no R2
         audio: `${R2_BASE_URL}/audio/${slug}.mp3` 
       });
     }
@@ -94,8 +93,11 @@ function ingest() {
     album.genero = Array.from(albumGenres);
     album.subgenero = Array.from(albumSubgenres);
     
-    // AQUI: Monta a URL da capa do álbum no R2
-    album.capa = `${R2_BASE_URL}/image/album-${album.slug}.jpg`;
+    // CORREÇÃO: O nome do arquivo no R2 usa underline e o slug do artista
+    // Ex: album_noise_the-violet-sessions.jpg
+    const artistForAlbum = artistsMap.get(`artist_${album.artistRef.replace('artist_', '')}`);
+    const artistSlug = artistForAlbum ? artistForAlbum.slug : 'unknown';
+    album.capa = `${R2_BASE_URL}/image/album_${artistSlug}_${album.slug}.jpg`;
   }
 
   const artistasFinais = [];
@@ -121,8 +123,8 @@ function ingest() {
         slug: artist.slug,
         genero: Array.from(artistGenres),
         subgenero: Array.from(artistSubgenres),
-        // AQUI: Monta a URL da foto do artista no R2
-        foto: `${R2_BASE_URL}/image/artist-${artist.slug}.jpg`,
+        // CORREÇÃO: O nome do arquivo no R2 é artist_[slug].jpg
+        foto: `${R2_BASE_URL}/image/artist_${artist.slug}.jpg`,
         albuns: artist.albums
       });
     }
