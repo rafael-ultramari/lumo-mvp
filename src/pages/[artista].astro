@@ -14,17 +14,68 @@ const { artista } = Astro.props;
 
 <BaseLayout title={artista.nome} theme="loop77" lang="en">
   <div style="padding: 2rem;">
-    <h1>{artista.nome}</h1>
-    <p>Gêneros: {artista.genero.join(', ')}</p>
-    <p>Subgêneros: {artista.subgenero.join(', ')}</p>
+    <div class="artist-header">
+      <div class="artist-photo">{artista.nome.charAt(0)}</div>
+      <div>
+        <h1>{artista.nome}</h1>
+        <p class="genres">{artista.genero.join(' · ')}</p>
+      </div>
+    </div>
 
-    <h2>Álbuns</h2>
-    <ul>
+    <h2 style="margin-top: 3rem;">Álbuns</h2>
+    <div class="album-grid">
       {artista.albuns.filter(album => album.isVisible).map(album => (
-        <li>
-          <a href={`/${artista.slug}/${album.slug}`}>{album.title}</a>
-        </li>
+        <a href={`/${artista.slug}/${album.slug}`} class="album-card">
+          <div class="album-cover-placeholder">{album.title.charAt(0)}</div>
+          <h4>{album.title}</h4>
+        </a>
       ))}
-    </ul>
+    </div>
   </div>
 </BaseLayout>
+
+<style>
+  .artist-header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  .artist-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+  }
+  .genres { opacity: 0.7; margin-top: 0.5rem; }
+  .album-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  @media (min-width: 768px) {
+    .album-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .album-card {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  .album-cover-placeholder {
+    aspect-ratio: 1;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--accent-color);
+    border: 1px solid #444;
+    margin-bottom: 0.5rem;
+  }
+  .album-card h4 { margin: 0; font-size: 0.95rem; }
+</style>
