@@ -36,8 +36,8 @@ const t = translations[lang];
     <!-- Header Global Fixo -->
     <header>
       <a href="/" class="logo">
-        <!-- Aumentei a altura do logo para 70px e ajustei a largura -->
-        <img src="https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_lumo_transparent.png" alt="LUMO" style="height: 70px; width: auto;" />
+        <!-- A imagem agora é 1200x400. A altura de 60px vai deixar a escrita no tamanho ideal -->
+        <img src="https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_lumo_transparent.png" alt="LUMO" style="height: 60px; width: auto; display: block;" />
       </a>
       
       <nav>
@@ -89,7 +89,7 @@ const t = translations[lang];
   header {
     position: fixed;
     top: 0; left: 0; width: 100%;
-    height: 100px; /* Aumentei a altura do header para acomodar o logo maior */
+    height: 100px; /* Header alto para acomodar bem o logo e o menu */
     padding: 0 4rem;
     display: flex;
     justify-content: space-between;
@@ -99,13 +99,18 @@ const t = translations[lang];
     z-index: 1000;
   }
   
-  .logo { display: flex; align-items: center; text-decoration: none; }
+  .logo { 
+    display: flex; 
+    align-items: center; 
+    text-decoration: none; 
+    height: 100%; 
+  }
 
   nav { display: flex; gap: 2rem; }
   nav a { 
     color: rgba(255, 255, 255, 0.6); 
     text-decoration: none; 
-    font-size: 0.85rem; /* Aumentei um pouco a fonte do menu */
+    font-size: 0.85rem; 
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transition: color 0.3s;
@@ -136,6 +141,6 @@ const t = translations[lang];
   .lang-switcher a:hover { color: #fff; }
 
   /* Utilitários */
-  main { padding-top: 100px; } /* Compensa a altura do header fixo */
+  main { padding-top: 100px; }
   h1, h2, h3 { font-weight: 400; letter-spacing: -0.02em; }
 </style>
