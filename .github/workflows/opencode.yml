@@ -13,6 +13,9 @@ jobs:
       contains(github.event.comment.body, '/opencode')
     runs-on: ubuntu-latest
     permissions:
+      contents: read
+      issues: write
+      pull-requests: write
       id-token: write
     steps:
       - name: Checkout repository
