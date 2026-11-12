@@ -12,15 +12,13 @@ const labels = catalogo.labels;
       <section class="universe-section" style={`background-image: url('${label.imagemFundo}');`}>
         <div class="content">
           
-          <!-- Logo do Selo (aumentei o max-height para 120px) -->
           <div class="label-logo">
             <img src={`https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_${label.slug}_transparent.png`} alt={label.nome} style="max-height: 120px; width: auto;" />
           </div>
 
-          <!-- Nome do Universo em MAIÚSCULO -->
-          <h1 class="font-serif">{label.nome.toUpperCase()}</h1>
+          <!-- Adicionamos a classe "lining-nums" para corrigir os números -->
+          <h1 class="font-serif lining-nums">{label.nome.toUpperCase()}</h1>
           
-          <!-- Botão "Enter Universe" -->
           <a href={`/labels/${label.slug}`} class="btn-enter">Enter Universe</a>
 
         </div>
@@ -70,14 +68,20 @@ const labels = catalogo.labels;
   }
 
   .label-logo {
-    margin-bottom: 1.5rem; /* Mais espaço após o logo */
+    margin-bottom: 1.5rem;
   }
 
   h1 {
-    font-size: 4.5rem; /* Aumentei um pouco o nome */
+    font-size: 4.5rem;
     margin-bottom: 2rem;
-    line-height: 1;
-    letter-spacing: 0.05em; /* Um leve espaçamento entre as letras */
+    line-height: 1.1; /* Ajustado para não cortar os números */
+    letter-spacing: 0.05em;
+  }
+
+  /* FORÇA OS NÚMEROS A FICAREM ALINHADOS (LINING NUMS) */
+  .lining-nums {
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum"; 
   }
 
   .btn-enter {
@@ -88,7 +92,7 @@ const labels = catalogo.labels;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     border: 1px solid #fff;
-    padding: 1rem 3rem; /* Botão um pouco mais largo */
+    padding: 1rem 3rem;
     background: rgba(0, 0, 0, 0.4); 
     transition: all 0.3s ease;
   }
@@ -101,6 +105,6 @@ const labels = catalogo.labels;
   @media (max-width: 768px) {
     h1 { font-size: 3rem; }
     .universe-section { padding-bottom: 4rem; }
-    .label-logo img { max-height: 80px; } /* Ajuste para mobile */
+    .label-logo img { max-height: 80px; }
   }
 </style>
