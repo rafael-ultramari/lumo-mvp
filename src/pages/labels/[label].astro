@@ -14,180 +14,185 @@ const { label } = Astro.props;
 
 <BaseLayout title={label.nome} theme="home" lang="en">
   
-  <!-- Hero do Selo -->
-  <section class="label-hero" style={`background-image: url('${label.imagemFundo}');`}>
+  <!-- Container Principal (Hero Imersivo) -->
+  <div class="hero-container" style={`background-image: url('${label.imagemFundo}');`}>
+    
+    <!-- Degradê para garantir a leitura do texto e dos cards -->
+    <div class="overlay"></div>
+
     <div class="hero-content">
-      <!-- Logo do selo -->
-      <img src={`https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_${label.slug}_transparent.png`} alt={label.nome} class="label-logo" />
-      
-      <h1 class="font-serif">{label.nome.toUpperCase()}</h1>
+      <!-- Logo e Título -->
+      <div class="title-section">
+        <img src={`https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_${label.slug}_transparent.png`} alt={label.nome} class="label-logo" />
+        <h1 class="font-serif">{label.nome.toUpperCase()}</h1>
+      </div>
+
+      <!-- Descrição -->
       <p class="hero-description">{label.descricao.en || label.descricao.pt}</p>
     </div>
-  </section>
 
-  <!-- Lista de Artistas -->
-  <section class="artist-list-section">
-    <div class="list-header">
-      <h2>ARTISTS</h2>
+    <!-- Carrossel de Artistas (Estilo Netflix) -->
+    <div class="artists-carousel-section">
+      <h2 class="carousel-title">Artists</h2>
+      
+      <div class="carousel-track">
+        {label.artistas.map(artista => (
+          <a href={`/artists/${artista.slug}`} class="artist-card">
+            <div class="card-image-wrapper">
+              <img src={artista.foto} alt={artista.nome} class="card-image" />
+            </div>
+            <div class="card-info">
+              <h3 class="font-serif">{artista.nome.toUpperCase()}</h3>
+              <p class="card-meta">{artista.genero.join(' · ')}</p>
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
-    
-    <div class="artist-list">
-      {label.artistas.map(artista => (
-        <a href={`/artists/${artista.slug}`} class="artist-row">
-          <div class="row-left">
-            <img src={artista.foto} alt={artista.nome} class="artist-photo" />
-            <h3 class="artist-name font-serif">{artista.nome.toUpperCase()}</h3>
-          </div>
-          
-          <div class="row-right">
-            <span class="meta">{artista.genero.join(' · ')}</span>
-            <span class="meta">{artista.totalAlbuns} ALBUMS</span>
-            <span class="meta">{artista.totalFaixas} TRACKS</span>
-          </div>
-        </a>
-      ))}
-    </div>
-  </section>
+
+  </div>
 
 </BaseLayout>
 
 <style>
-  /* Hero */
-  .label-hero {
-    height: 70vh;
-    width: 100%;
+  /* Remove a barra de rolagem padrão do body nesta página */
+  :global(body) {
+    overflow: hidden; 
+  }
+
+  .hero-container {
     position: relative;
+    width: 100vw;
+    height: 100vh; /* Ocupa a tela toda */
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: flex-end;
-    padding: 4rem 10%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 15vh; /* Espaço para o header global */
+    padding-bottom: 2rem;
   }
 
-  .label-hero::before {
-    content: '';
+  /* Degradê estilo Netflix */
+  .overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 40%, transparent 100%),
+                linear-gradient(to right, rgba(0,0,0,0.8) 0%, transparent 50%);
     z-index: 1;
   }
 
   .hero-content {
     position: relative;
     z-index: 2;
+    padding: 0 5%;
     max-width: 800px;
   }
 
-  .label-logo {
-    height: 60px;
-    width: auto;
+  .title-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 1.5rem;
   }
 
+  .label-logo {
+    height: 80px; /* Logo bem maior */
+    width: auto;
+    margin-bottom: 1rem;
+  }
+
   .hero-content h1 {
-    font-size: 5rem;
+    font-size: 6rem;
     line-height: 1;
-    margin-bottom: 1.5rem;
     letter-spacing: 0.05em;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
   }
 
   .hero-description {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.9);
     max-width: 600px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
   }
 
-  /* Lista de Artistas */
-  .artist-list-section {
-    padding: 6rem 10%;
-    background: #000;
+  /* Carrossel */
+  .artists-carousel-section {
+    position: relative;
+    z-index: 2;
+    padding: 0 5%;
+    margin-top: auto;
   }
 
-  .list-header {
-    margin-bottom: 3rem;
-    border-bottom: 1px solid #333;
+  .carousel-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto; /* Rolagem horizontal */
+    scrollbar-width: none; /* Esconde a barra no Firefox */
     padding-bottom: 1rem;
   }
 
-  .list-header h2 {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-weight: 400;
-    color: rgba(255,255,255,0.5);
+  .carousel-track::-webkit-scrollbar {
+    display: none; /* Esconde a barra no Chrome/Safari */
   }
 
-  .artist-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .artist-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid #222;
+  .artist-card {
+    flex: 0 0 auto;
+    width: 200px;
     text-decoration: none;
     color: #fff;
-    transition: background 0.3s;
+    transition: transform 0.3s ease;
   }
 
-  .artist-row:hover {
-    background: rgba(255,255,255,0.03);
+  .artist-card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
   }
 
-  .row-left {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-  }
-
-  .artist-photo {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 50%;
+  .card-image-wrapper {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0.75rem;
+    border-radius: 4px;
+    overflow: hidden;
     border: 1px solid #333;
   }
 
-  .artist-name {
-    font-size: 2.5rem;
-    font-weight: 400;
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.02em;
+  }
+
+  .card-meta {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
     letter-spacing: 0.05em;
   }
 
-  .row-right {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .meta {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255,255,255,0.5);
-    min-width: 120px;
-  }
-
-  .meta:last-child {
-    text-align: right;
-  }
-
+  /* Mobile */
   @media (max-width: 768px) {
-    .label-hero { height: 60vh; padding: 2rem 5%; }
-    .hero-content h1 { font-size: 3rem; }
-    .label-logo { height: 40px; }
-    
-    .artist-list-section { padding: 3rem 5%; }
-    .artist-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
-    .row-left { gap: 1.5rem; }
-    .artist-photo { width: 60px; height: 60px; }
-    .artist-name { font-size: 1.8rem; }
-    .row-right { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-    .meta { min-width: auto; }
-    .meta:last-child { text-align: left; }
+    .hero-content h1 { font-size: 3.5rem; }
+    .label-logo { height: 50px; }
+    .hero-description { font-size: 0.9rem; }
+    .artist-card, .card-image-wrapper { width: 150px; }
+    .card-image-wrapper { height: 150px; }
+    .hero-container { padding-top: 12vh; }
   }
 </style>
