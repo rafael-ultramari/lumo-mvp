@@ -11,9 +11,18 @@ const labels = catalogo.labels;
     {labels.map(label => (
       <section class="universe-section" style={`background-image: url('${label.imagemFundo}');`}>
         <div class="content">
+          
+          <!-- Logo do Selo (usa a imagem transparente do label) -->
+          <div class="label-logo">
+            <img src={`https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_${label.slug}_transparent.png`} alt={label.nome} style="max-height: 80px;" />
+          </div>
+
+          <!-- Nome do Universo -->
           <h1 class="font-serif">{label.nome}</h1>
-          <p class="description">{label.descricao.en || label.descricao.pt}</p>
-          <a href={`/labels/${label.slug}`} class="btn-explore">Enter Universe</a>
+          
+          <!-- Botão "Enter Universe" -->
+          <a href={`/labels/${label.slug}`} class="btn-enter">Enter Universe</a>
+
         </div>
       </section>
     ))}
@@ -32,61 +41,66 @@ const labels = catalogo.labels;
     height: 100vh;
     width: 100%;
     display: flex;
-    align-items: center;
-    padding: 0 10%;
+    flex-direction: column;
+    justify-content: flex-end; /* Empurra o conteúdo para baixo */
+    align-items: center;       /* Centraliza horizontalmente */
+    padding-bottom: 4rem;      /* Espaço na parte inferior para o botão */
     position: relative;
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 
-  /* Gradiente escuro para o texto ficar legível */
+  /* Gradiente para o texto e o botão ficarem legíveis sobre a imagem */
   .universe-section::before {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
     z-index: 1;
   }
 
   .content {
     position: relative;
     z-index: 2;
-    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .label-logo {
+    margin-bottom: 1rem;
   }
 
   h1 {
-    font-size: 6rem;
-    margin-bottom: 1rem;
+    font-size: 4rem; /* Um pouco menor para não competir com o logo */
+    margin-bottom: 1.5rem;
     line-height: 1;
   }
 
-  .description {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 500px;
-  }
-
-  .btn-explore {
+  /* Botão Retangular Transparente */
+  .btn-enter {
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 0.5rem;
-    transition: all 0.3s;
+    border: 1px solid #fff;
+    padding: 0.75rem 2.5rem;
+    background: rgba(0, 0, 0, 0.3); /* Leve fundo preto transparente para garantir leitura */
+    transition: all 0.3s ease;
   }
-  .btn-explore:hover {
-    color: #ff3333;
-    border-color: #ff3333;
+
+  .btn-enter:hover {
+    background: #fff;
+    color: #000;
   }
 
   @media (max-width: 768px) {
-    h1 { font-size: 4rem; }
-    .universe-section { padding: 0 5%; }
+    h1 { font-size: 3rem; }
+    .universe-section { padding-bottom: 2rem; }
+    .label-logo img { max-height: 50px; }
   }
 </style>
