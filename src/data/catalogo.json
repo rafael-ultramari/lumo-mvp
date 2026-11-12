@@ -11,6 +11,7 @@
         "Industrial Metal",
         "Electro-Industrial"
       ],
+      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist-noise.jpg",
       "albuns": [
         {
           "title": "The Violet Sessions",
@@ -36,7 +37,8 @@
               "track_subgenres": [
                 "Industrial Metal",
                 "Electro-Industrial"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/scavenger.mp3"
             },
             {
               "title": "Breakdown",
@@ -50,7 +52,8 @@
               "track_subgenres": [
                 "Industrial Metal",
                 "Electro-Industrial"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/breakdown.mp3"
             },
             {
               "title": "The Edge",
@@ -64,7 +67,8 @@
               "track_subgenres": [
                 "Industrial Metal",
                 "Electro-Industrial"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-edge.mp3"
             },
             {
               "title": "Eldorado",
@@ -78,7 +82,8 @@
               "track_subgenres": [
                 "Industrial Metal",
                 "Electro-Industrial"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/eldorado.mp3"
             }
           ],
           "isVisible": true,
@@ -89,7 +94,8 @@
           "subgenero": [
             "Industrial Metal",
             "Electro-Industrial"
-          ]
+          ],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-the-violet-sessions.jpg"
         },
         {
           "title": "Violet",
@@ -126,7 +132,8 @@
               "track_subgenres": [
                 "Industrial Metal",
                 "Electro-Industrial"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/scavenger.mp3"
             },
             {
               "title": "Breakdown",
@@ -140,7 +147,8 @@
               "track_subgenres": [
                 "Industrial Metal",
                 "Electro-Industrial"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/breakdown.mp3"
             },
             {
               "title": "The Edge",
@@ -154,7 +162,8 @@
               "track_subgenres": [
                 "Industrial Metal",
                 "Electro-Industrial"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-edge.mp3"
             },
             {
               "title": "Eldorado",
@@ -168,7 +177,8 @@
               "track_subgenres": [
                 "Industrial Metal",
                 "Electro-Industrial"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/eldorado.mp3"
             }
           ],
           "isVisible": true,
@@ -179,7 +189,8 @@
           "subgenero": [
             "Industrial Metal",
             "Electro-Industrial"
-          ]
+          ],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-violet.jpg"
         }
       ]
     },
@@ -194,6 +205,7 @@
         "Outrun",
         "Retrowave"
       ],
+      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist-rift.jpg",
       "albuns": [
         {
           "title": "Before the Loop",
@@ -219,7 +231,8 @@
                 "Dark Synthwave",
                 "Outrun",
                 "Retrowave"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/carry-the-fire.mp3"
             },
             {
               "title": "Two Shadows",
@@ -233,7 +246,8 @@
                 "Dark Synthwave",
                 "Outrun",
                 "Retrowave"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/two-shadows.mp3"
             },
             {
               "title": "The Door",
@@ -247,7 +261,8 @@
                 "Dark Synthwave",
                 "Outrun",
                 "Retrowave"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-door.mp3"
             },
             {
               "title": "The Pull",
@@ -261,7 +276,8 @@
                 "Dark Synthwave",
                 "Outrun",
                 "Retrowave"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-pull.mp3"
             }
           ],
           "isVisible": true,
@@ -272,7 +288,8 @@
             "Dark Synthwave",
             "Outrun",
             "Retrowave"
-          ]
+          ],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-before-the-loop.jpg"
         },
         {
           "title": "Reset",
@@ -291,7 +308,8 @@
           "tracks": [],
           "isVisible": false,
           "genero": [],
-          "subgenero": []
+          "subgenero": [],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-reset.jpg"
         },
         {
           "title": "Rewind",
@@ -310,7 +328,8 @@
           "tracks": [],
           "isVisible": false,
           "genero": [],
-          "subgenero": []
+          "subgenero": [],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-rewind.jpg"
         },
         {
           "title": "Retry",
@@ -329,7 +348,8 @@
           "tracks": [],
           "isVisible": false,
           "genero": [],
-          "subgenero": []
+          "subgenero": [],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-retry.jpg"
         },
         {
           "title": "Same War",
@@ -348,7 +368,8 @@
           "tracks": [],
           "isVisible": false,
           "genero": [],
-          "subgenero": []
+          "subgenero": [],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-same-war.jpg"
         }
       ]
     },
@@ -363,6 +384,7 @@
         "Progressive Metal",
         "Alternative Metal"
       ],
+      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist-trace.jpg",
       "albuns": [
         {
           "title": "What I Chose",
@@ -387,7 +409,8 @@
                 "Progressive Rock",
                 "Progressive Metal",
                 "Alternative Metal"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/you-call-it-running.mp3"
             },
             {
               "title": "The Right Kind of Peace",
@@ -401,7 +424,8 @@
                 "Progressive Rock",
                 "Progressive Metal",
                 "Alternative Metal"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-right-kind-of-peace.mp3"
             },
             {
               "title": "What I Chose",
@@ -415,7 +439,8 @@
                 "Progressive Rock",
                 "Progressive Metal",
                 "Alternative Metal"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/what-i-chose.mp3"
             }
           ],
           "isVisible": true,
@@ -426,7 +451,8 @@
             "Progressive Rock",
             "Progressive Metal",
             "Alternative Metal"
-          ]
+          ],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-what-i-chose.jpg"
         },
         {
           "title": "Strata",
@@ -444,7 +470,8 @@
           "tracks": [],
           "isVisible": false,
           "genero": [],
-          "subgenero": []
+          "subgenero": [],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-strata.jpg"
         },
         {
           "title": "Unearthed",
@@ -462,7 +489,8 @@
           "tracks": [],
           "isVisible": false,
           "genero": [],
-          "subgenero": []
+          "subgenero": [],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-unearthed.jpg"
         },
         {
           "title": "Open File",
@@ -480,7 +508,8 @@
           "tracks": [],
           "isVisible": false,
           "genero": [],
-          "subgenero": []
+          "subgenero": [],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-open-file.jpg"
         },
         {
           "title": "Left Behind",
@@ -499,7 +528,8 @@
           "tracks": [],
           "isVisible": false,
           "genero": [],
-          "subgenero": []
+          "subgenero": [],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-left-behind.jpg"
         }
       ]
     },
@@ -514,6 +544,7 @@
         "Dark Western",
         "Desert Rock"
       ],
+      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist-vex.jpg",
       "albuns": [
         {
           "title": "Highway Chase",
@@ -539,7 +570,8 @@
                 "Surf Rock",
                 "Dark Western",
                 "Desert Rock"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/shattered-glass.mp3"
             },
             {
               "title": "Highway Chase",
@@ -553,7 +585,8 @@
                 "Surf Rock",
                 "Dark Western",
                 "Desert Rock"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/highway-chase.mp3"
             },
             {
               "title": "Redline Pressure",
@@ -567,7 +600,8 @@
                 "Surf Rock",
                 "Dark Western",
                 "Desert Rock"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/redline-pressure.mp3"
             },
             {
               "title": "Fractured Speed",
@@ -581,7 +615,8 @@
                 "Surf Rock",
                 "Dark Western",
                 "Desert Rock"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/fractured-speed.mp3"
             }
           ],
           "isVisible": true,
@@ -592,7 +627,8 @@
             "Surf Rock",
             "Dark Western",
             "Desert Rock"
-          ]
+          ],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-highway-chase.jpg"
         },
         {
           "title": "Thunder",
@@ -629,7 +665,8 @@
                 "Surf Rock",
                 "Dark Western",
                 "Desert Rock"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/shattered-glass.mp3"
             },
             {
               "title": "Highway Chase",
@@ -643,7 +680,8 @@
                 "Surf Rock",
                 "Dark Western",
                 "Desert Rock"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/highway-chase.mp3"
             },
             {
               "title": "Redline Pressure",
@@ -657,7 +695,8 @@
                 "Surf Rock",
                 "Dark Western",
                 "Desert Rock"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/redline-pressure.mp3"
             },
             {
               "title": "Fractured Speed",
@@ -671,7 +710,8 @@
                 "Surf Rock",
                 "Dark Western",
                 "Desert Rock"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/fractured-speed.mp3"
             }
           ],
           "isVisible": true,
@@ -682,7 +722,8 @@
             "Surf Rock",
             "Dark Western",
             "Desert Rock"
-          ]
+          ],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-thunder.jpg"
         }
       ]
     },
@@ -698,6 +739,7 @@
         "EBM",
         "Minimal Synthwave"
       ],
+      "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist-void.jpg",
       "albuns": [
         {
           "title": "Mirror Error",
@@ -723,7 +765,8 @@
                 "Coldwave",
                 "EBM",
                 "Minimal Synthwave"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/fragments-of-glass.mp3"
             },
             {
               "title": "Data Wipe",
@@ -738,7 +781,8 @@
                 "Coldwave",
                 "EBM",
                 "Minimal Synthwave"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/data-wipe.mp3"
             },
             {
               "title": "The Empty Glass",
@@ -753,7 +797,8 @@
                 "Coldwave",
                 "EBM",
                 "Minimal Synthwave"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-empty-glass.mp3"
             }
           ],
           "isVisible": true,
@@ -765,7 +810,8 @@
             "Coldwave",
             "EBM",
             "Minimal Synthwave"
-          ]
+          ],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-mirror-error.jpg"
         },
         {
           "title": "The Stranger at the Door",
@@ -783,7 +829,8 @@
           "tracks": [],
           "isVisible": false,
           "genero": [],
-          "subgenero": []
+          "subgenero": [],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-the-stranger-at-the-door.jpg"
         },
         {
           "title": "The Loop",
@@ -808,7 +855,8 @@
                 "Coldwave",
                 "EBM",
                 "Minimal Synthwave"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-loop.mp3"
             },
             {
               "title": "They Move the Same",
@@ -823,7 +871,8 @@
                 "Coldwave",
                 "EBM",
                 "Minimal Synthwave"
-              ]
+              ],
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/they-move-the-same.mp3"
             }
           ],
           "isVisible": true,
@@ -835,7 +884,8 @@
             "Coldwave",
             "EBM",
             "Minimal Synthwave"
-          ]
+          ],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-the-loop.jpg"
         },
         {
           "title": "Shards",
@@ -853,7 +903,8 @@
           "tracks": [],
           "isVisible": false,
           "genero": [],
-          "subgenero": []
+          "subgenero": [],
+          "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album-shards.jpg"
         }
       ]
     }

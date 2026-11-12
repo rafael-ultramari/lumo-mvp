@@ -7,16 +7,43 @@ const artistas = catalogo.artistas;
 
 <BaseLayout title="Home" theme="loop77" lang="en">
   <div style="padding: 2rem;">
-    <h1>LUMO Studio Platform</h1>
-    <p>Artistas visíveis: {artistas.length}</p>
+    <h1 style="margin-bottom: 2rem;">LUMO Studio Platform</h1>
     
-    <ul>
+    <div class="artist-grid">
       {artistas.map(artista => (
-        <li>
-          <a href={`/${artista.slug}`}>{artista.nome}</a> 
-          (Gêneros: {artista.genero.join(', ')})
-        </li>
+        <a href={`/${artista.slug}`} class="artist-card">
+          <img src={artista.foto} alt={artista.nome} class="artist-cover" />
+          <h3>{artista.nome}</h3>
+          <p>{artista.genero.join(' · ')}</p>
+        </a>
       ))}
-    </ul>
+    </div>
   </div>
 </BaseLayout>
+
+<style>
+  .artist-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .artist-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .artist-card {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.2s;
+  }
+  .artist-card:hover { transform: scale(1.03); }
+  .artist-cover {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #444;
+    margin-bottom: 0.75rem;
+  }
+  .artist-card h3 { margin: 0; font-size: 1.1rem; }
+  .artist-card p { margin: 0.25rem 0 0; font-size: 0.85rem; opacity: 0.7; }
+</style>

@@ -21,9 +21,6 @@ export function getStaticPaths() {
 }
 
 const { artista, album, track } = Astro.props;
-
-// URL de teste provisória
-const testAudioUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
 ---
 
 <BaseLayout title={track.title} theme="loop77" lang="en">
@@ -36,7 +33,7 @@ const testAudioUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.
     <h2>Gêneros</h2>
     <p>{track.track_genres.join(', ')}</p>
 
-    <!-- Player fixo no rodapé -->
-    <AudioPlayer audioUrl={testAudioUrl} trackTitle={track.title} />
+    <!-- Renderiza o player com a URL real do áudio -->
+    <AudioPlayer audioUrl={track.audio} trackTitle={track.title} />
   </div>
 </BaseLayout>

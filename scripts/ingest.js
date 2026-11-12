@@ -3,12 +3,12 @@ import path from 'node:path';
 
 const MATERIALS_DIR = path.join(process.cwd(), 'lumo-materials', 'metadata');
 const OUTPUT_FILE = path.join(process.cwd(), 'src', 'data', 'catalogo.json');
+const R2_BASE_URL = 'https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev';
 
 function readLines(filePath) {
   return fs.readFileSync(filePath, 'utf-8').split('\n').map(l => l.trim()).filter(l => l);
 }
 
-// Função para extrair valores de arrays no formato ["Rock", "Eletrônico"]
 function parseArray(str) {
   if (!str) return [];
   try {
@@ -30,12 +30,11 @@ function ingest() {
   const albumsMap = new Map();
   const tracksMap = new Map();
 
-  // 1. Primeiro passe: ler todos os arquivos e guardar nos Mapas
   files.forEach(file => {
     const lines = readLines(path.join(MATERIALS_DIR, file));
     if (lines.length === 0) return;
 
-    const type = lines[0].split('_')[0]; // artist, album, track, label
+    const type = lines[0].split('_')[0];
     const id = lines[0]; 
 
     if (type === 'artist') {
@@ -68,12 +67,13 @@ function ingest() {
       tracksMap.set(id, { 
         title, slug, duration, releaseStatus, 
         track_genres: genres, 
-        track_subgenres: subgenres 
+        track_subgenres: subgenres,
+        // AQUI ESTÁ A MÁGICA: Monta a URL do áudio no R2
+        audio: `${R2_BASE_URL}/audio/${slug}.mp3` 
       });
     }
   });
 
-  // 2. Segundo passe: Vincular faixas aos álbuns e calcular heranças
   for (const [albumId, album] of albumsMap.entries()) {
     let albumGenres = new Set();
     let albumSubgenres = new Set();
@@ -85,7 +85,6 @@ function ingest() {
         album.tracks.push(track);
         if (track.releaseStatus !== 'Released') allTracksReleased = false;
         
-        // Herança de gêneros (Track -> Album)
         track.track_genres.forEach(g => albumGenres.add(g));
         track.track_subgenres.forEach(sg => albumSubgenres.add(sg));
       }
@@ -94,9 +93,11 @@ function ingest() {
     album.isVisible = allTracksReleased && album.tracks.length > 0;
     album.genero = Array.from(albumGenres);
     album.subgenero = Array.from(albumSubgenres);
+    
+    // AQUI: Monta a URL da capa do álbum no R2
+    album.capa = `${R2_BASE_URL}/image/album-${album.slug}.jpg`;
   }
 
-  // 3. Terceiro passe: Vincular álbuns aos artistas e calcular heranças
   const artistasFinais = [];
   for (const [artistId, artist] of artistsMap.entries()) {
     let artistGenres = new Set();
@@ -109,25 +110,24 @@ function ingest() {
         artist.albums.push(album);
         if (album.isVisible) hasVisibleAlbum = true;
         
-        // Herança de gêneros (Album -> Artist)
         album.genero.forEach(g => artistGenres.add(g));
         album.subgenero.forEach(sg => artistSubgenres.add(sg));
       }
     });
 
-    // Regra de renderização: Artista só aparece se tiver um álbum visível
     if (hasVisibleAlbum) {
       artistasFinais.push({
         nome: artist.name,
         slug: artist.slug,
         genero: Array.from(artistGenres),
         subgenero: Array.from(artistSubgenres),
+        // AQUI: Monta a URL da foto do artista no R2
+        foto: `${R2_BASE_URL}/image/artist-${artist.slug}.jpg`,
         albuns: artist.albums
       });
     }
   }
 
-  // 4. Salvar o JSON final
   const catalogo = { artistas: artistasFinais };
   
   const dataDir = path.dirname(OUTPUT_FILE);

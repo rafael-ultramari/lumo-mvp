@@ -22,13 +22,19 @@ const { artista, album } = Astro.props;
 
 <BaseLayout title={album.title} theme="loop77" lang="en">
   <div style="padding: 2rem;">
-    <p><a href={`/${artista.slug}`}>Voltar para {artista.nome}</a></p>
-    <h1>{album.title}</h1>
-    <p>Artista: {artista.nome}</p>
-    <p>Gêneros do Álbum: {album.genero.join(', ')}</p>
+    <p><a href={`/${artista.slug}`}>&larr; Voltar para {artista.nome}</a></p>
+    
+    <div class="album-header">
+      <img src={album.capa} alt={album.title} class="album-cover" />
+      <div>
+        <h1>{album.title}</h1>
+        <p>Artista: {artista.nome}</p>
+        <p>Gêneros: {album.genero.join(', ')}</p>
+      </div>
+    </div>
 
     <h2>Faixas</h2>
-    <ul>
+    <ul class="tracklist">
       {album.tracks.map(track => (
         <li>
           <a href={`/${artista.slug}/${album.slug}/${track.slug}`}>
@@ -39,3 +45,31 @@ const { artista, album } = Astro.props;
     </ul>
   </div>
 </BaseLayout>
+
+<style>
+  .album-header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .album-cover {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #444;
+  }
+  .tracklist {
+    list-style: none;
+    padding: 0;
+  }
+  .tracklist li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+  }
+  .tracklist a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+</style>
