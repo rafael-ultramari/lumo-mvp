@@ -20,19 +20,23 @@ const { label } = Astro.props;
     <!-- Degradê para garantir a leitura do texto e dos cards -->
     <div class="overlay"></div>
 
-    <div class="hero-content">
-      <!-- Logo e Título -->
-      <div class="title-section">
+    <!-- Cabeçalho do Selo (Logo, Título e Descrição lado a lado) -->
+    <div class="hero-header">
+      
+      <!-- Coluna da Esquerda (Logo e Título) -->
+      <div class="title-col">
         <img src={`https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_${label.slug}_transparent.png`} alt={label.nome} class="label-logo" />
-        <!-- Aplicando a classe lining-nums para os números ficarem alinhados -->
         <h1 class="font-serif lining-nums">{label.nome.toUpperCase()}</h1>
       </div>
 
-      <!-- Descrição -->
-      <p class="hero-description">{label.descricao.en || label.descricao.pt}</p>
+      <!-- Coluna da Direita (Descrição) -->
+      <div class="desc-col">
+        <p class="hero-description">{label.descricao.en || label.descricao.pt}</p>
+      </div>
+
     </div>
 
-    <!-- Carrossel de Artistas (Estilo Netflix) -->
+    <!-- Carrossel de Artistas -->
     <div class="artists-carousel-section">
       <h2 class="carousel-title">Artists</h2>
       
@@ -69,13 +73,12 @@ const { label } = Astro.props;
     background-position: center;
     display: flex;
     flex-direction: column;
-    /* Reduzi o padding-top para trazer os artistas mais para cima */
-    padding-top: 10vh; 
-    /* Aumentei o padding-bottom para criar o espaço do player */
-    padding-bottom: 120px; 
+    justify-content: space-between; /* Mantém o header no topo e o carrossel embaixo */
+    padding-top: 12vh; /* Respiro do topo */
+    padding-bottom: 120px; /* Espaço reservado para o player */
   }
 
-  /* Degradê estilo Netflix (mais forte na parte de baixo onde ficam os artistas) */
+  /* Degradê estilo Netflix */
   .overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -84,45 +87,50 @@ const { label } = Astro.props;
     z-index: 1;
   }
 
-  .hero-content {
+  /* Header do Selo (Layout em duas colunas) */
+  .hero-header {
     position: relative;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 0 5%;
-    max-width: 800px;
-    /* Removemos o flex-grow para não empurrar os artistas para o final */
+    width: 100%;
   }
 
-  .title-section {
+  .title-col {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 1rem; /* Reduzi a margem para aproximar os artistas */
+    flex: 1;
   }
 
   .label-logo {
-    height: 120px; /* Mesmo tamanho da tela inicial */
+    height: 120px;
     width: auto;
-    margin-bottom: 0.5rem; /* Logo mais próximo ao título */
+    margin-bottom: 0.5rem;
   }
 
-  .hero-content h1 {
+  .hero-header h1 {
     font-size: 6rem;
     line-height: 1;
     letter-spacing: 0.05em;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-    margin-bottom: 1rem; /* Título mais próximo da descrição */
+  }
+
+  .desc-col {
+    flex: 1;
+    max-width: 45%; /* Limita a descrição para não invadir o lado direito da tela */
+    padding-top: 1rem; /* Alinha um pouco mais para baixo com o título */
   }
 
   .hero-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
-    color: rgba(255,255,255,0.9);
-    max-width: 600px;
+    color: rgba(255,255,255,0.8);
     text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-    margin-bottom: 1rem; /* Descrição mais próxima dos artistas */
   }
 
-  /* Força os números a ficarem alinhados (igual à tela inicial) */
   .lining-nums {
     font-variant-numeric: lining-nums;
     font-feature-settings: "lnum"; 
@@ -133,7 +141,8 @@ const { label } = Astro.props;
     position: relative;
     z-index: 2;
     padding: 0 5%;
-    margin-top: 0; /* Removido o auto para ficar logo abaixo da descrição */
+    /* Aumentei a margem inferior para empurrar os artistas um pouco mais para baixo */
+    margin-bottom: 1rem; 
   }
 
   .carousel-title {
@@ -199,9 +208,12 @@ const { label } = Astro.props;
 
   /* Mobile */
   @media (max-width: 768px) {
-    .hero-content h1 { font-size: 3.5rem; }
+    .hero-header { flex-direction: column; gap: 1.5rem; }
+    .desc-col { max-width: 100%; padding-top: 0; }
+    .hero-header h1 { font-size: 3.5rem; }
     .label-logo { height: 80px; }
     .hero-description { font-size: 0.9rem; }
+    
     .artist-card, .card-image-wrapper { width: 150px; }
     .card-image-wrapper { height: 150px; }
     .hero-container { padding-top: 12vh; padding-bottom: 80px; }
