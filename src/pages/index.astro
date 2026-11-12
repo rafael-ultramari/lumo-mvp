@@ -12,13 +12,13 @@ const labels = catalogo.labels;
       <section class="universe-section" style={`background-image: url('${label.imagemFundo}');`}>
         <div class="content">
           
-          <!-- Logo do Selo (usa a imagem transparente do label) -->
+          <!-- Logo do Selo (aumentei o max-height para 120px) -->
           <div class="label-logo">
-            <img src={`https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_${label.slug}_transparent.png`} alt={label.nome} style="max-height: 80px;" />
+            <img src={`https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_${label.slug}_transparent.png`} alt={label.nome} style="max-height: 120px; width: auto;" />
           </div>
 
-          <!-- Nome do Universo -->
-          <h1 class="font-serif">{label.nome}</h1>
+          <!-- Nome do Universo em MAIÚSCULO -->
+          <h1 class="font-serif">{label.nome.toUpperCase()}</h1>
           
           <!-- Botão "Enter Universe" -->
           <a href={`/labels/${label.slug}`} class="btn-enter">Enter Universe</a>
@@ -42,16 +42,15 @@ const labels = catalogo.labels;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Empurra o conteúdo para baixo */
-    align-items: center;       /* Centraliza horizontalmente */
-    padding-bottom: 8rem;      /* AUMENTEI O ESPAÇO INFERIOR PARA 8REM */
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 8rem;
     position: relative;
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 
-  /* Gradiente para o texto e o botão ficarem legíveis sobre a imagem */
   .universe-section::before {
     content: '';
     position: absolute;
@@ -67,29 +66,29 @@ const labels = catalogo.labels;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 2rem; /* Margem extra para garantir que não cole na borda */
+    margin-bottom: 2rem;
   }
 
   .label-logo {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Mais espaço após o logo */
   }
 
   h1 {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
+    font-size: 4.5rem; /* Aumentei um pouco o nome */
+    margin-bottom: 2rem;
     line-height: 1;
+    letter-spacing: 0.05em; /* Um leve espaçamento entre as letras */
   }
 
-  /* Botão Retangular Transparente */
   .btn-enter {
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     border: 1px solid #fff;
-    padding: 0.75rem 2.5rem;
+    padding: 1rem 3rem; /* Botão um pouco mais largo */
     background: rgba(0, 0, 0, 0.4); 
     transition: all 0.3s ease;
   }
@@ -101,7 +100,7 @@ const labels = catalogo.labels;
 
   @media (max-width: 768px) {
     h1 { font-size: 3rem; }
-    .universe-section { padding-bottom: 4rem; } /* Ajuste para mobile */
-    .label-logo img { max-height: 50px; }
+    .universe-section { padding-bottom: 4rem; }
+    .label-logo img { max-height: 80px; } /* Ajuste para mobile */
   }
 </style>
