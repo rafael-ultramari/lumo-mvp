@@ -36,7 +36,8 @@ const t = translations[lang];
     <!-- Header Global Fixo -->
     <header>
       <a href="/" class="logo">
-        <img src="https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_lumo_transparent.png" alt="LUMO" style="height: 40px; width: auto;" />
+        <!-- Aumentei a altura do logo para 70px e ajustei a largura -->
+        <img src="https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_lumo_transparent.png" alt="LUMO" style="height: 70px; width: auto;" />
       </a>
       
       <nav>
@@ -74,7 +75,7 @@ const t = translations[lang];
   
   body { 
     font-family: 'Inter', sans-serif; 
-    background: #000; /* Fundo preto */
+    background: #000; 
     color: #fff; 
     overflow-x: hidden;
   }
@@ -88,12 +89,12 @@ const t = translations[lang];
   header {
     position: fixed;
     top: 0; left: 0; width: 100%;
-    height: 80px;
+    height: 100px; /* Aumentei a altura do header para acomodar o logo maior */
     padding: 0 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #000; /* Fundo preto sólido */
+    background: #000; 
     border-bottom: 1px solid #222;
     z-index: 1000;
   }
@@ -104,7 +105,7 @@ const t = translations[lang];
   nav a { 
     color: rgba(255, 255, 255, 0.6); 
     text-decoration: none; 
-    font-size: 0.75rem; 
+    font-size: 0.85rem; /* Aumentei um pouco a fonte do menu */
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transition: color 0.3s;
@@ -119,7 +120,7 @@ const t = translations[lang];
     border-bottom: 1px solid rgba(255,255,255,0.3);
     color: #fff;
     padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     outline: none;
     width: 150px;
   }
@@ -127,7 +128,7 @@ const t = translations[lang];
 
   .lang-switcher { 
     display: flex; gap: 0.5rem; 
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     border-left: 1px solid rgba(255,255,255,0.2);
     padding-left: 1rem;
   }
@@ -135,6 +136,6 @@ const t = translations[lang];
   .lang-switcher a:hover { color: #fff; }
 
   /* Utilitários */
-  main { padding-top: 80px; } /* Compensa a altura do header fixo */
+  main { padding-top: 100px; } /* Compensa a altura do header fixo */
   h1, h2, h3 { font-weight: 400; letter-spacing: -0.02em; }
 </style>
