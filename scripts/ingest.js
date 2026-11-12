@@ -64,11 +64,15 @@ function ingest() {
       const genres = parseArray(genresStr);
       const subgenres = parseArray(subgenresStr);
 
+      // CORREÇÃO: Adiciona o slug do artista para montar o nome do MP3
+      const artistSlug = lines.find(l => l.startsWith('- Artist:'))?.replace('- Artist:', '').trim() || 'unknown';
+
       tracksMap.set(id, { 
         title, slug, duration, releaseStatus, 
         track_genres: genres, 
         track_subgenres: subgenres,
-        audio: `${R2_BASE_URL}/audio/${slug}.mp3` 
+        // CORREÇÃO: O nome do arquivo no R2 é track_[artista]_[faixa].mp3
+        audio: `${R2_BASE_URL}/audio/track_${artistSlug}_${slug}.mp3` 
       });
     }
   });
@@ -93,8 +97,6 @@ function ingest() {
     album.genero = Array.from(albumGenres);
     album.subgenero = Array.from(albumSubgenres);
     
-    // CORREÇÃO: O nome do arquivo no R2 usa underline e o slug do artista
-    // Ex: album_noise_the-violet-sessions.jpg
     const artistForAlbum = artistsMap.get(`artist_${album.artistRef.replace('artist_', '')}`);
     const artistSlug = artistForAlbum ? artistForAlbum.slug : 'unknown';
     album.capa = `${R2_BASE_URL}/image/album_${artistSlug}_${album.slug}.jpg`;
@@ -123,7 +125,6 @@ function ingest() {
         slug: artist.slug,
         genero: Array.from(artistGenres),
         subgenero: Array.from(artistSubgenres),
-        // CORREÇÃO: O nome do arquivo no R2 é artist_[slug].jpg
         foto: `${R2_BASE_URL}/image/artist_${artist.slug}.jpg`,
         albuns: artist.albums
       });

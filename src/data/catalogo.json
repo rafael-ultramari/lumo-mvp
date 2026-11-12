@@ -38,7 +38,7 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/scavenger.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_scavenger.mp3"
             },
             {
               "title": "Breakdown",
@@ -53,7 +53,7 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/breakdown.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_breakdown.mp3"
             },
             {
               "title": "The Edge",
@@ -68,7 +68,7 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-edge.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_the-edge.mp3"
             },
             {
               "title": "Eldorado",
@@ -83,7 +83,7 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/eldorado.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_eldorado.mp3"
             }
           ],
           "isVisible": true,
@@ -133,7 +133,7 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/scavenger.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_scavenger.mp3"
             },
             {
               "title": "Breakdown",
@@ -148,7 +148,7 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/breakdown.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_breakdown.mp3"
             },
             {
               "title": "The Edge",
@@ -163,7 +163,7 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-edge.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_the-edge.mp3"
             },
             {
               "title": "Eldorado",
@@ -178,7 +178,7 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/eldorado.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_eldorado.mp3"
             }
           ],
           "isVisible": true,
@@ -232,7 +232,7 @@
                 "Outrun",
                 "Retrowave"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/carry-the-fire.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_carry-the-fire.mp3"
             },
             {
               "title": "Two Shadows",
@@ -247,7 +247,7 @@
                 "Outrun",
                 "Retrowave"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/two-shadows.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_two-shadows.mp3"
             },
             {
               "title": "The Door",
@@ -262,7 +262,7 @@
                 "Outrun",
                 "Retrowave"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-door.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_the-door.mp3"
             },
             {
               "title": "The Pull",
@@ -277,7 +277,7 @@
                 "Outrun",
                 "Retrowave"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-pull.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_the-pull.mp3"
             }
           ],
           "isVisible": true,
@@ -410,7 +410,7 @@
                 "Progressive Metal",
                 "Alternative Metal"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/you-call-it-running.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_you-call-it-running.mp3"
             },
             {
               "title": "The Right Kind of Peace",
@@ -425,7 +425,7 @@
                 "Progressive Metal",
                 "Alternative Metal"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-right-kind-of-peace.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_the-right-kind-of-peace.mp3"
             },
             {
               "title": "What I Chose",
@@ -440,7 +440,7 @@
                 "Progressive Metal",
                 "Alternative Metal"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/what-i-chose.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_what-i-chose.mp3"
             }
           ],
           "isVisible": true,
@@ -571,7 +571,7 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/shattered-glass.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_shattered-glass.mp3"
             },
             {
               "title": "Highway Chase",
@@ -586,7 +586,7 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/highway-chase.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_highway-chase.mp3"
             },
             {
               "title": "Redline Pressure",
@@ -601,7 +601,7 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/redline-pressure.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_redline-pressure.mp3"
             },
             {
               "title": "Fractured Speed",
@@ -616,7 +616,7 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/fractured-speed.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_fractured-speed.mp3"
             }
           ],
           "isVisible": true,
@@ -666,7 +666,7 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/shattered-glass.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_shattered-glass.mp3"
             },
             {
               "title": "Highway Chase",
@@ -681,7 +681,7 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/highway-chase.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_highway-chase.mp3"
             },
             {
               "title": "Redline Pressure",
@@ -696,7 +696,7 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/redline-pressure.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_redline-pressure.mp3"
             },
             {
               "title": "Fractured Speed",
@@ -711,7 +711,7 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/fractured-speed.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_fractured-speed.mp3"
             }
           ],
           "isVisible": true,
@@ -766,7 +766,7 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/fragments-of-glass.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_fragments-of-glass.mp3"
             },
             {
               "title": "Data Wipe",
@@ -782,7 +782,7 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/data-wipe.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_data-wipe.mp3"
             },
             {
               "title": "The Empty Glass",
@@ -798,7 +798,7 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-empty-glass.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_the-empty-glass.mp3"
             }
           ],
           "isVisible": true,
@@ -856,7 +856,7 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/the-loop.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_the-loop.mp3"
             },
             {
               "title": "They Move the Same",
@@ -872,7 +872,7 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
-              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/they-move-the-same.mp3"
+              "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_they-move-the-same.mp3"
             }
           ],
           "isVisible": true,
