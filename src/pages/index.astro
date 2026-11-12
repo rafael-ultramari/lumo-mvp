@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import catalogo from '../data/catalogo.json';
+
+const artistas = catalogo.artistas;
+---
+
+<BaseLayout title="Home" theme="loop77" lang="en">
+  <div style="padding: 2rem;">
+    <h1>LUMO Studio Platform</h1>
+    <p>Artistas visíveis: {artistas.length}</p>
+    
+    <ul>
+      {artistas.map(artista => (
+        <li>
+          <a href={`/${artista.slug}`}>{artista.nome}</a> 
+          (Gêneros: {artista.genero.join(', ')})
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>

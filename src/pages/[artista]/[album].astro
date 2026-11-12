@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import catalogo from '../../data/catalogo.json';
+
+export function getStaticPaths() {
+  const paths = [];
+  for (const artista of catalogo.artistas) {
+    for (const album of artista.albuns) {
+      if (album.isVisible) {
+        paths.push({
+          params: { artista: artista.slug, album: album.slug },
+          props: { artista, album }
+        });
+      }
+    }
+  }
+  return paths;
+}
+
+const { artista, album } = Astro.props;
+---
+
+<BaseLayout title={album.title} theme="loop77" lang="en">
+  <div style="padding: 2rem;">
+    <p><a href={`/${artista.slug}`}>Voltar para {artista.nome}</a></p>
+    <h1>{album.title}</h1>
+    <p>Artista: {artista.nome}</p>
+    <p>Gêneros do Álbum: {album.genero.join(', ')}</p>
+
+    <h2>Faixas</h2>
+    <ul>
+      {album.tracks.map(track => (
+        <li>
+          <a href={`/${artista.slug}/${album.slug}/${track.slug}`}>
+            {track.title} ({track.duration})
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>

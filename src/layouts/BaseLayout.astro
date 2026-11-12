@@ -1,0 +1,96 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  theme?: 'loop77' | 'ul7r4';
+  lang?: 'en' | 'pt';
+}
+
+const { 
+  title, 
+  description = "LUMO Studio Platform", 
+  theme = 'loop77', 
+  lang = 'en' 
+} = Astro.props;
+
+// Lógica simples de tradução para o header
+const translations = {
+  en: { home: "Home", explore: "Explore", support: "Support" },
+  pt: { home: "Início", explore: "Explorar", support: "Apoie" }
+};
+const t = translations[lang];
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | LUMO</title>
+    <meta name="description" content={description} />
+    <!-- Open Graph Básico (será expandido depois) -->
+    <meta property="og:title" content={`${title} | LUMO`} />
+    <meta property="og:description" content={description} />
+  </head>
+  <body class={`theme-${theme}`}>
+    
+    <!-- Header -->
+    <header>
+      <nav>
+        <a href="/">{t.home}</a>
+        <a href="/explore">{t.explore}</a>
+        <a href="/support">{t.support}</a>
+        
+        <!-- Seletor de Idioma (simples) -->
+        <div class="lang-switcher">
+          <a href="/" aria-label="English">EN</a>
+          <a href="/pt/" aria-label="Português">PT</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Conteúdo da Página -->
+    <main>
+      <slot />
+    </main>
+
+  </body>
+</html>
+
+<style is:global>
+  /* Reset básico */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: sans-serif; background: #000; color: #fff; }
+  
+  /* Variáveis de Tema */
+  body.theme-loop77 {
+    --bg-color: #1a0505;
+    --text-color: #ffcccc;
+    --accent-color: #ff3333;
+  }
+  
+  body.theme-ul7r4 {
+    --bg-color: #05051a;
+    --text-color: #ccccff;
+    --accent-color: #3366ff;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+  }
+  
+  nav { display: flex; gap: 1rem; align-items: center; }
+  nav a { color: var(--text-color); text-decoration: none; font-weight: bold; }
+  nav a:hover { color: var(--accent-color); }
+
+  .lang-switcher { margin-left: auto; display: flex; gap: 0.5rem; }
+</style>

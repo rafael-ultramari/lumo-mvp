@@ -1,0 +1,132 @@
+---
+export interface Props {
+  audioUrl: string;
+  trackTitle: string;
+}
+const { audioUrl, trackTitle } = Astro.props;
+---
+
+<div id="player-container" class="sticky-player" data-url={audioUrl}>
+  <div class="player-info">
+    <strong>{trackTitle}</strong>
+  </div>
+  
+  <div class="player-controls">
+    <button id="play-pause" aria-label="Play/Pause">▶</button>
+    <input type="range" id="progress" value="0" max="100" step="0.1" />
+    <span id="time-display">0:00 / 0:00</span>
+    <input type="range" id="volume" min="0" max="1" step="0.1" value="0.8" />
+  </div>
+</div>
+
+<script>
+  import { Howl, Howler } from 'howler';
+
+  // Pegando os elementos do DOM
+  const container = document.getElementById('player-container');
+  const audioUrl = container?.getAttribute('data-url') || ''; 
+  
+  const playBtn = document.getElementById('play-pause') as HTMLButtonElement;
+  const progressBar = document.getElementById('progress') as HTMLInputElement;
+  const volumeBar = document.getElementById('volume') as HTMLInputElement;
+  const timeDisplay = document.getElementById('time-display');
+
+  let sound: Howl | null = null;
+  let isPlaying = false;
+  let animationFrame: number;
+
+  function formatTime(secs: number) {
+    const min = Math.floor(secs / 60);
+    const sec = Math.floor(secs % 60);
+    return `${min}:${sec.toString().padStart(2, '0')}`;
+  }
+
+  if (audioUrl) {
+    sound = new Howl({
+      src: [audioUrl],
+      html5: true,
+      onplay: () => {
+        isPlaying = true;
+        playBtn.textContent = '⏸';
+        updateProgress();
+      },
+      onpause: () => {
+        isPlaying = false;
+        playBtn.textContent = '▶';
+        cancelAnimationFrame(animationFrame);
+      },
+      onend: () => {
+        isPlaying = false;
+        playBtn.textContent = '▶';
+        progressBar.value = '0';
+        cancelAnimationFrame(animationFrame);
+      },
+      onload: () => {
+        if (timeDisplay) timeDisplay.textContent = `0:00 / ${formatTime(sound!.duration())}`;
+      }
+    });
+  }
+
+  function updateProgress() {
+    if (!sound || !isPlaying) return;
+    const seek = sound.seek() as number || 0;
+    const duration = sound.duration() || 1;
+    progressBar.value = String((seek / duration) * 100);
+    if (timeDisplay) timeDisplay.textContent = `${formatTime(seek)} / ${formatTime(duration)}`;
+    animationFrame = requestAnimationFrame(updateProgress);
+  }
+
+  playBtn?.addEventListener('click', () => {
+    if (!sound) return;
+    if (isPlaying) sound.pause();
+    else sound.play();
+  });
+
+  progressBar?.addEventListener('input', (e) => {
+    if (!sound) return;
+    const target = e.target as HTMLInputElement;
+    const seekTo = (Number(target.value) / 100) * sound.duration();
+    sound.seek(seekTo);
+  });
+
+  volumeBar?.addEventListener('input', (e) => {
+    const target = e.target as HTMLInputElement;
+    Howler.volume(Number(target.value));
+  });
+</script>
+
+<style>
+  .sticky-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 5, 5, 0.95);
+    border-top: 1px solid var(--accent-color);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    z-index: 1000;
+  }
+  .player-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 60%;
+  }
+  .player-controls input[type="range"] {
+    flex: 1;
+    accent-color: var(--accent-color);
+  }
+  button {
+    background: var(--accent-color);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+</style>
