@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import catalogo from '../../data/catalogo.json';
+
+export function getStaticPaths() {
+  return catalogo.labels.map(label => ({
+    params: { label: label.slug },
+    props: { label }
+  }));
+}
+
+const { label } = Astro.props;
+---
+
+<BaseLayout title={label.nome} theme="home" lang="en">
+  
+  <!-- Hero do Selo -->
+  <section class="label-hero" style={`background-image: url('${label.imagemFundo}');`}>
+    <div class="hero-content">
+      <!-- Logo do selo -->
+      <img src={`https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_${label.slug}_transparent.png`} alt={label.nome} class="label-logo" />
+      
+      <h1 class="font-serif">{label.nome.toUpperCase()}</h1>
+      <p class="hero-description">{label.descricao.en || label.descricao.pt}</p>
+    </div>
+  </section>
+
+  <!-- Lista de Artistas -->
+  <section class="artist-list-section">
+    <div class="list-header">
+      <h2>ARTISTS</h2>
+    </div>
+    
+    <div class="artist-list">
+      {label.artistas.map(artista => (
+        <a href={`/artists/${artista.slug}`} class="artist-row">
+          <div class="row-left">
+            <img src={artista.foto} alt={artista.nome} class="artist-photo" />
+            <h3 class="artist-name font-serif">{artista.nome.toUpperCase()}</h3>
+          </div>
+          
+          <div class="row-right">
+            <span class="meta">{artista.genero.join(' · ')}</span>
+            <span class="meta">{artista.totalAlbuns} ALBUMS</span>
+            <span class="meta">{artista.totalFaixas} TRACKS</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .label-hero {
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem 10%;
+  }
+
+  .label-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+  }
+
+  .label-logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+  }
+
+  /* Lista de Artistas */
+  .artist-list-section {
+    padding: 6rem 10%;
+    background: #000;
+  }
+
+  .list-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+  }
+
+  .list-header h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .artist-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .artist-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #222;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s;
+  }
+
+  .artist-row:hover {
+    background: rgba(255,255,255,0.03);
+  }
+
+  .row-left {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .artist-photo {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #333;
+  }
+
+  .artist-name {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
+  .row-right {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .meta {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.5);
+    min-width: 120px;
+  }
+
+  .meta:last-child {
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .label-hero { height: 60vh; padding: 2rem 5%; }
+    .hero-content h1 { font-size: 3rem; }
+    .label-logo { height: 40px; }
+    
+    .artist-list-section { padding: 3rem 5%; }
+    .artist-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .row-left { gap: 1.5rem; }
+    .artist-photo { width: 60px; height: 60px; }
+    .artist-name { font-size: 1.8rem; }
+    .row-right { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .meta { min-width: auto; }
+    .meta:last-child { text-align: left; }
+  }
+</style>
