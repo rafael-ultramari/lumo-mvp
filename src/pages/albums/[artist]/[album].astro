@@ -1,0 +1,516 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import catalogo from '../../../data/catalogo.json';
+
+export function getStaticPaths() {
+  const paths = [];
+  for (const artista of catalogo.artistas) {
+    for (const album of artista.albuns) {
+      if (album.isVisible) {
+        paths.push({
+          params: { artist: artista.slug, album: album.slug },
+          props: { artista, album }
+        });
+      }
+    }
+  }
+  return paths;
+}
+
+const { artista, album } = Astro.props;
+const primeiraFaixa = album.tracks[0];
+
+const queue = album.tracks.map(track => ({
+  url: track.audio,
+  title: track.title,
+  artist: artista.nome,
+  cover: album.capa
+}));
+const queueJson = JSON.stringify(queue);
+---
+
+<BaseLayout title={album.title} theme="home" lang="en">
+  
+  <div class="album-hero-container">
+    
+    <div class="album-bg" style={`background-image: url('${album.capa}');`}></div>
+    <div class="overlay"></div>
+
+    <div class="album-content-wrapper">
+      
+      <div class="album-info-section">
+        <div class="album-cover-wrapper">
+          <img src={album.capa} alt={album.title} class="album-main-cover" />
+        </div>
+
+        <div class="album-text-content">
+          <div class="album-text-top">
+            <h1 class="font-serif">{album.title.toUpperCase()}</h1>
+            <p class="album-artist">By {artista.nome}</p>
+            {album.descricao && album.descricao.en && (
+              <p class="album-description">{album.descricao.en}</p>
+            )}
+            <div class="album-meta-row">
+              <span class="meta-item">{album.releaseYear || '2026'}</span>
+              <span class="meta-sep">|</span>
+              <span class="meta-item">{album.tracks.length} TRACKS</span>
+              <span class="meta-sep">|</span>
+              <span class="meta-item">{album.totalDuration}</span>
+              <span class="meta-sep">|</span>
+              <span class="meta-item">{album.genero.join(' · ')}</span>
+            </div>
+          </div>
+
+          <div class="album-actions">
+            {primeiraFaixa && (
+              <button class="btn-play" 
+                data-audio={primeiraFaixa.audio} 
+                data-title={primeiraFaixa.title} 
+                data-artist={artista.nome} 
+                data-cover={album.capa}
+                data-queue={queueJson}
+                data-index="0">
+                <span class="play-icon">▶</span> Play
+              </button>
+            )}
+            
+            <button class="btn-icon" id="page-shuffle-btn" 
+              data-queue={queueJson}
+              title="Shuffle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <polyline points="16 3 21 3 21 8"></polyline>
+                <line x1="4" y1="20" x2="21" y2="3"></line>
+                <polyline points="21 16 21 21 16 21"></polyline>
+                <line x1="15" y1="15" x2="21" y2="21"></line>
+                <line x1="4" y1="4" x2="9" y2="9"></line>
+              </svg>
+            </button>
+
+            <button id="share-btn" class="btn-icon" aria-label="Compartilhar" title="Share">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                <polyline points="16 6 12 2 8 6"></polyline>
+                <line x1="12" y1="2" x2="12" y2="15"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tracklist-section">
+        <div class="tracklist">
+          {album.tracks.map((track, index) => (
+            <div class="track-row">
+              <a href={`/tracks/${artista.slug}/${album.slug}/${track.slug}`} class="track-link">
+                <span class="track-number">{String(index + 1).padStart(2, '0')}</span>
+                <div class="track-title-wrapper">
+                  <span class="track-title">{track.title}</span>
+                  {track.track_subgenres && track.track_subgenres.length > 0 && (
+                    <span class="track-subgenres">{track.track_subgenres.join(' · ')}</span>
+                  )}
+                </div>
+              </a>
+              <div class="track-meta">
+                <span class="track-duration">{track.duration}</span>
+                <button class="track-play-btn" 
+                  data-audio={track.audio}
+                  data-title={track.title}
+                  data-artist={artista.nome}
+                  data-cover={album.capa}
+                  data-queue={queueJson}
+                  data-index={index}
+                  title="Play">
+                  ▶
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</BaseLayout>
+
+<script>
+  function setupAlbumPage() {
+    const shareBtn = document.getElementById('share-btn');
+    if (shareBtn) {
+      const newShareBtn = shareBtn.cloneNode(true) as HTMLButtonElement;
+      shareBtn.parentNode?.replaceChild(newShareBtn, shareBtn);
+      
+      newShareBtn.addEventListener('click', async () => {
+        const url = window.location.href;
+        const title = document.querySelector('h1')?.textContent || 'Album';
+        
+        if (navigator.share) {
+          try {
+            await navigator.share({ title: title, url: url });
+          } catch (err) { console.log('Erro ao compartilhar:', err); }
+        } else {
+          navigator.clipboard.writeText(url);
+          alert('Link copiado para a área de transferência!');
+        }
+      });
+    }
+
+    const playBtn = document.querySelector('.btn-play');
+    if (playBtn) {
+      const newPlayBtn = playBtn.cloneNode(true) as HTMLButtonElement;
+      playBtn.parentNode?.replaceChild(newPlayBtn, playBtn);
+      
+      newPlayBtn.addEventListener('click', (e) => {
+        const btn = e.currentTarget as HTMLButtonElement;
+        const url = btn.getAttribute('data-audio');
+        const title = btn.getAttribute('data-title');
+        const artist = btn.getAttribute('data-artist');
+        const cover = btn.getAttribute('data-cover');
+        const queue = JSON.parse(btn.getAttribute('data-queue') || '[]');
+        const index = parseInt(btn.getAttribute('data-index') || '0');
+
+        if (url && title && artist && cover) {
+          document.dispatchEvent(new CustomEvent('playTrack', {
+            detail: { url, title, artist, cover, queue, index, isShuffle: false }
+          }));
+        }
+      });
+    }
+
+    const shuffleBtn = document.getElementById('page-shuffle-btn');
+    if (shuffleBtn) {
+      const newShuffleBtn = shuffleBtn.cloneNode(true) as HTMLButtonElement;
+      shuffleBtn.parentNode?.replaceChild(newShuffleBtn, shuffleBtn);
+      
+      newShuffleBtn.addEventListener('click', () => {
+        const queueAttr = newShuffleBtn.getAttribute('data-queue');
+        if (!queueAttr) return;
+
+        const queue = JSON.parse(queueAttr);
+        
+        function shuffleArray(array) {
+          const arr = [...array];
+          for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+          }
+          return arr;
+        }
+        
+        const shuffled = shuffleArray(queue);
+        const randomTrack = shuffled[0];
+        
+        document.dispatchEvent(new CustomEvent('playTrack', {
+          detail: {
+            url: randomTrack.url,
+            title: randomTrack.title,
+            artist: randomTrack.artist,
+            cover: randomTrack.cover,
+            queue: shuffled,
+            index: 0,
+            isShuffle: true
+          }
+        }));
+      });
+    }
+
+    const playTrackBtns = document.querySelectorAll('.track-play-btn');
+    playTrackBtns.forEach(btn => {
+      const newBtn = btn.cloneNode(true) as HTMLButtonElement;
+      btn.parentNode?.replaceChild(newBtn, btn);
+
+      newBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const el = e.currentTarget as HTMLButtonElement;
+        const url = el.getAttribute('data-audio');
+        const title = el.getAttribute('data-title');
+        const artist = el.getAttribute('data-artist');
+        const cover = el.getAttribute('data-cover');
+        const queue = JSON.parse(el.getAttribute('data-queue') || '[]');
+        const index = parseInt(el.getAttribute('data-index') || '0');
+
+        if (url && title && artist && cover) {
+          document.dispatchEvent(new CustomEvent('playTrack', {
+            detail: { url, title, artist, cover, queue, index, isShuffle: false }
+          }));
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', setupAlbumPage);
+  document.addEventListener('astro:page-load', setupAlbumPage);
+</script>
+
+<style>
+  :global(body) { overflow-y: auto; overflow-x: hidden; }
+
+  .album-hero-container {
+    position: relative;
+    width: 100vw;
+    /* Removido min-height: 100vh para a altura ser do conteúdo */
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px; 
+    padding-bottom: 70px;
+  }
+
+  .album-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(40px) brightness(0.3);
+    transform: scale(1.1);
+    z-index: 0;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
+    z-index: 1;
+  }
+
+  .album-content-wrapper {
+    position: relative;
+    z-index: 2;
+    padding: 0 10%;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .album-info-section {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start; 
+    margin-bottom: 2rem; 
+  }
+
+  .album-cover-wrapper {
+    width: 280px;
+    height: 280px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  }
+
+  .album-main-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .album-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 280px;
+    max-width: 800px;
+    padding-top: 0;
+  }
+
+  .album-text-content h1 {
+    font-size: 3rem; 
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    margin-bottom: 0.25rem;
+    margin-top: -0.2rem;
+  }
+
+  .album-artist {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 1rem;
+  }
+
+  .album-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1rem;
+  }
+
+  .album-meta-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .meta-sep { opacity: 0.3; }
+
+  .album-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .btn-play {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 0.6rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .btn-play:hover { transform: scale(1.05); }
+  .play-icon { font-size: 0.75rem; }
+
+  .btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-icon:hover { background: rgba(255,255,255,0.2); }
+
+  .tracklist-section {
+    max-width: 1000px;
+    padding-right: 2rem; 
+  }
+
+  .tracklist { display: flex; flex-direction: column; }
+
+  .track-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #222;
+    transition: background 0.2s;
+  }
+
+  .track-row:hover { background: rgba(255,255,255,0.03); }
+
+  .track-link {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    flex-grow: 1;
+  }
+
+  .track-number {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.4);
+    width: 20px;
+  }
+
+  .track-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .track-title { font-size: 1.1rem; }
+
+  .track-subgenres {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .track-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .track-duration {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .track-play-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+    padding: 0.5rem;
+  }
+
+  .track-row:hover .track-play-btn {
+    opacity: 1;
+  }
+
+  @media (max-width: 1024px) {
+    .album-hero-container {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    .album-content-wrapper { padding: 0 5%; }
+    
+    .album-info-section { 
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
+      gap: 1.5rem; 
+    }
+    .album-cover-wrapper { 
+      width: 240px; 
+      height: 240px; 
+    }
+    .album-text-content { 
+      height: auto; 
+      width: 100%;
+      align-items: center; 
+    }
+    .album-text-content h1 { 
+      font-size: 2.5rem; 
+      margin-top: 0; 
+    }
+    .album-meta-row { 
+      justify-content: center; 
+    }
+    .album-actions { 
+      justify-content: center; 
+    }
+    .tracklist-section {
+      padding-right: 0;
+      width: 100%;
+    }
+    .track-play-btn {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .album-content-wrapper { padding: 0 5%; }
+    .album-cover-wrapper { width: 200px; height: 200px; }
+    .album-text-content h1 { font-size: 2rem; }
+    .track-link { gap: 1rem; }
+    .track-title { font-size: 1rem; }
+  }
+</style>

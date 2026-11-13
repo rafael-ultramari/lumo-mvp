@@ -3,13 +3,17 @@
     {
       "nome": "Loop 77",
       "slug": "loop-77",
-      "descricao": {},
+      "descricao": {
+        "en": "A record label dedicated to sonic and visual experimentation. A collective space where different projects, identities, and sounds coexist. From heavy and distorted riffs to cold, ethereal synthscapes. Each project carries its own voice, its own narrative, and its own visual identity. An ongoing archive of experiments, a space where boundaries are tested and the only commitment is to the art of sound."
+      },
       "imagemFundo": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_loop-77.jpg",
       "artistas": [
         {
           "nome": "Noise",
           "slug": "noise",
-          "descricao": {},
+          "descricao": {
+            "en": "A brutal collision of Industrial Metal and Electro-Industrial. Built on heavy, mechanical drum machines, distorted synths, and abrasive textures, the project creates an oppressive and claustrophobic atmosphere. The vocals are purely screamed, distorted, and aggressive, with no room for clean vocals or melody. It is the sound of pure mechanical fury, where every track is a relentless assault of noise and aggression."
+          },
           "label": "loop-77",
           "genero": [
             "Metal",
@@ -20,15 +24,17 @@
             "Electro-Industrial"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_noise.jpg",
-          "totalAlbuns": 2,
-          "totalFaixas": 8,
+          "totalAlbuns": 1,
+          "totalFaixas": 4,
           "albuns": [
             {
               "title": "The Violet Sessions",
               "slug": "the-violet-sessions",
               "artistRef": "noise",
               "releaseYear": "2026",
-              "releaseStatus": "Released",
+              "descricao": {
+                "en": "Four tracks salvaged from the corrupted tapes of the wasteland. A raw, mechanical descent into the mind of a lone scavenger. Built on heavy drum machines, abrasive synths, and pure aggressive fury."
+              },
               "tracksList": [
                 "track_noise_scavenger",
                 "track_noise_breakdown",
@@ -49,9 +55,13 @@
                     "Industrial Metal",
                     "Electro-Industrial"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Dig tear strip bleed\r\nNothing left but rust and greed\r\nThe sun is a hammer\r\nThe earth is a grave\r\n\r\nI am the scavenger\r\nI take what i need\r\nTear the metal\r\nBreak the bone\r\nIn the graveyard\r\nI stand alone\r\n\r\nRust\r\nBone\r\nDust\r\nAlone"
+                  },
+                  "hasVideo": true,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_scavenger.mp3"
                 },
                 {
@@ -67,9 +77,13 @@
                     "Industrial Metal",
                     "Electro-Industrial"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Smoke pours out from broken parts\r\nA heavy silence in the hearts\r\nThe wheels are stuck, the engine dead\r\nA crushing weight upon the head\r\n\r\nBreakdown, the end of the line\r\nA failing spark, a broken sign\r\nNo way forward, no way back\r\nA final stand in endless black\r\n\r\nSurrounded by the closing walls\r\nA silent scream, a desperate call\r\nThe weapon drawn, the final breath\r\nA violent dance with frozen death\r\n\r\nStuck\r\nFail\r\nLost\r\nHere"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_breakdown.mp3"
                 },
                 {
@@ -85,9 +99,13 @@
                     "Industrial Metal",
                     "Electro-Industrial"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Bleeding steps on broken glass\r\nA final push, a heavy mass\r\nThe air is cold, the air is strange\r\nA sudden shift, a distant change\r\n\r\nThe edge of nowhere, the edge of fear\r\nA fading shadow drawing near\r\nA wall of metal, high and grand\r\nA final truth, a final stand\r\n\r\nThe ruins fade, the green appears\r\nA hidden truth from ancient years\r\nA heavy gate, a line of wire\r\nA burning hope, a rising fire\r\n\r\nSee\r\nThe\r\nWall\r\nFall\r\n\r\nThe edge of nowhere, the edge of fear\r\nA fading shadow drawing near\r\nA wall of metal, high and grand\r\nA final truth, a final stand"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_the-edge.mp3"
                 },
                 {
@@ -103,9 +121,13 @@
                     "Industrial Metal",
                     "Electro-Industrial"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "A touch of green, a breath of air\r\nA sudden dream, a sudden care\r\nA wall of steel, a heavy gate\r\nA twisted joke of cruel fate\r\n\r\nEldorado, a gilded cage\r\nA bloody price, a bitter wage\r\nA promised land of rust and bone\r\nA violent truth, a heavy stone\r\n\r\nGangs and guns and hollow eyes\r\nA kingdom built on broken lies\r\nA paradise of frozen fear\r\nA brutal end, a violent spear\r\n\r\nNo\r\nGold\r\nNo\r\nHome\r\n\r\nEldorado, a gilded cage\r\nA bloody price, a bitter wage\r\nA promised land of rust and bone\r\nA violent truth, a heavy stone"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_eldorado.mp3"
                 }
               ],
@@ -118,6 +140,7 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
+              "totalDuration": "14:42",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_noise_the-violet-sessions.jpg"
             },
             {
@@ -125,7 +148,9 @@
               "slug": "violet",
               "artistRef": "noise",
               "releaseYear": "2026",
-              "releaseStatus": "Unreleased",
+              "descricao": {
+                "en": "The journey of Violet, a lone scavenger traversing a desert in search of promised paradise. The album narrates the physical violence and survival, where the only law is the rust and the blade."
+              },
               "tracksList": [
                 "track_noise_the-sun-never-sets",
                 "track_noise_scavenger",
@@ -157,9 +182,13 @@
                     "Industrial Metal",
                     "Electro-Industrial"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Dig tear strip bleed\r\nNothing left but rust and greed\r\nThe sun is a hammer\r\nThe earth is a grave\r\n\r\nI am the scavenger\r\nI take what i need\r\nTear the metal\r\nBreak the bone\r\nIn the graveyard\r\nI stand alone\r\n\r\nRust\r\nBone\r\nDust\r\nAlone"
+                  },
+                  "hasVideo": true,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_scavenger.mp3"
                 },
                 {
@@ -175,9 +204,13 @@
                     "Industrial Metal",
                     "Electro-Industrial"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Smoke pours out from broken parts\r\nA heavy silence in the hearts\r\nThe wheels are stuck, the engine dead\r\nA crushing weight upon the head\r\n\r\nBreakdown, the end of the line\r\nA failing spark, a broken sign\r\nNo way forward, no way back\r\nA final stand in endless black\r\n\r\nSurrounded by the closing walls\r\nA silent scream, a desperate call\r\nThe weapon drawn, the final breath\r\nA violent dance with frozen death\r\n\r\nStuck\r\nFail\r\nLost\r\nHere"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_breakdown.mp3"
                 },
                 {
@@ -193,9 +226,13 @@
                     "Industrial Metal",
                     "Electro-Industrial"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Bleeding steps on broken glass\r\nA final push, a heavy mass\r\nThe air is cold, the air is strange\r\nA sudden shift, a distant change\r\n\r\nThe edge of nowhere, the edge of fear\r\nA fading shadow drawing near\r\nA wall of metal, high and grand\r\nA final truth, a final stand\r\n\r\nThe ruins fade, the green appears\r\nA hidden truth from ancient years\r\nA heavy gate, a line of wire\r\nA burning hope, a rising fire\r\n\r\nSee\r\nThe\r\nWall\r\nFall\r\n\r\nThe edge of nowhere, the edge of fear\r\nA fading shadow drawing near\r\nA wall of metal, high and grand\r\nA final truth, a final stand"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_the-edge.mp3"
                 },
                 {
@@ -211,13 +248,17 @@
                     "Industrial Metal",
                     "Electro-Industrial"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "A touch of green, a breath of air\r\nA sudden dream, a sudden care\r\nA wall of steel, a heavy gate\r\nA twisted joke of cruel fate\r\n\r\nEldorado, a gilded cage\r\nA bloody price, a bitter wage\r\nA promised land of rust and bone\r\nA violent truth, a heavy stone\r\n\r\nGangs and guns and hollow eyes\r\nA kingdom built on broken lies\r\nA paradise of frozen fear\r\nA brutal end, a violent spear\r\n\r\nNo\r\nGold\r\nNo\r\nHome\r\n\r\nEldorado, a gilded cage\r\nA bloody price, a bitter wage\r\nA promised land of rust and bone\r\nA violent truth, a heavy stone"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_eldorado.mp3"
                 }
               ],
-              "isVisible": true,
+              "isVisible": false,
               "genero": [
                 "Metal",
                 "Electronic"
@@ -226,6 +267,7 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
+              "totalDuration": "14:42",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_noise_violet.jpg"
             }
           ]
@@ -233,7 +275,9 @@
         {
           "nome": "Vex",
           "slug": "vex",
-          "descricao": {},
+          "descricao": {
+            "en": "A high-octane fusion of Surf Rock, Dark Western, and Desert Rock. Built on fast-paced drums, distorted basslines, and relentless tremolo picking, the sound is raw and cinematic. The vocals are aggressive and shouted, cutting through layers of heavy fuzz to create an intense, driving atmosphere."
+          },
           "label": "loop-77",
           "genero": [
             "Rock"
@@ -244,15 +288,17 @@
             "Desert Rock"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_vex.jpg",
-          "totalAlbuns": 2,
-          "totalFaixas": 8,
+          "totalAlbuns": 1,
+          "totalFaixas": 4,
           "albuns": [
             {
               "title": "Highway Chase",
               "slug": "highway-chase",
               "artistRef": "vex",
               "releaseYear": "2026",
-              "releaseStatus": "Released",
+              "descricao": {
+                "en": "A raw transmission from the wasteland. Engine roars and distorted riffs collide in a relentless display of speed and aggression. No clean vocals, no slow moments, just the pure, unfiltered sound of the chase."
+              },
               "tracksList": [
                 "track_vex_shattered-glass",
                 "track_vex_highway-chase",
@@ -273,9 +319,13 @@
                     "Dark Western",
                     "Desert Rock"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Shattered glass on highway dust\r\nA violent end to broken trust\r\nEngines roar and shadows run\r\nNowhere left beneath the sun\r\n\r\nShattered glass on highway dust\r\nA violent end to broken trust\r\nEngines roar and shadows run\r\nNowhere left beneath the sun"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_shattered-glass.mp3"
                 },
                 {
@@ -291,9 +341,13 @@
                     "Dark Western",
                     "Desert Rock"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "[Instrumental]"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_highway-chase.mp3"
                 },
                 {
@@ -309,9 +363,13 @@
                     "Dark Western",
                     "Desert Rock"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Tires burning on the asphalt\r\nBroken mirrors, broken past\r\nEvery mile a heavy burden\r\nEvery turn could be the last\r\n\r\nRedline pressure, breaking every door\r\nNothing left to lose, nothing left in store\r\nSpeed is the drug, metal is the vein\r\nRacing through the fire, hiding from the pain\r\n\r\nHeadlights cutting through the black\r\nNo direction, no way back\r\nEngine screaming, metal crying\r\nEvery second slowly dying\r\n\r\nWheels on fire, burning bright\r\nRacing through the endless night\r\nDust and thunder, blood and steel\r\nNothing left to make it real"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_redline-pressure.mp3"
                 },
                 {
@@ -327,9 +385,13 @@
                     "Dark Western",
                     "Desert Rock"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Shadows crawling on the wall\r\nWaiting for the final fall\r\nEvery breath a heavy weight\r\nLocked behind a broken gate\r\nRunning from the silence\r\nRunning from the violence\r\n\r\nBlack birds sing a heavy song\r\nWhere the hollow souls belong\r\nNothing left to hold or trust\r\nTurning everything to dust\r\n\r\nRipping at the memories\r\nDrowning in the deep\r\nWaking up the enemies\r\nBuried in the sleep\r\nNothing left to save\r\nDigging out a grave\r\n\r\nBlack birds sing a heavy song\r\nWhere the hollow souls belong\r\nNothing left to hold or trust\r\nTurning everything to dust\r\n\r\nBurn\r\nThe\r\nSkin\r\nBurn\r\nThe\r\nSkin"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_fractured-speed.mp3"
                 }
               ],
@@ -342,6 +404,7 @@
                 "Dark Western",
                 "Desert Rock"
               ],
+              "totalDuration": "13:47",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_vex_highway-chase.jpg"
             },
             {
@@ -349,7 +412,9 @@
               "slug": "thunder",
               "artistRef": "vex",
               "releaseYear": "2026",
-              "releaseStatus": "Unreleased",
+              "descricao": {
+                "en": "A relentless collision of speed and noise. The road is a machine that consumes everything, and the only way forward is to keep moving. Fuzz, tremolo, and an engine that refuses to die. There is no destination, only the chase."
+              },
               "tracksList": [
                 "track_vex_shattered-glass",
                 "track_vex_running-on-empty",
@@ -381,9 +446,13 @@
                     "Dark Western",
                     "Desert Rock"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Shattered glass on highway dust\r\nA violent end to broken trust\r\nEngines roar and shadows run\r\nNowhere left beneath the sun\r\n\r\nShattered glass on highway dust\r\nA violent end to broken trust\r\nEngines roar and shadows run\r\nNowhere left beneath the sun"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_shattered-glass.mp3"
                 },
                 {
@@ -399,9 +468,13 @@
                     "Dark Western",
                     "Desert Rock"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "[Instrumental]"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_highway-chase.mp3"
                 },
                 {
@@ -417,9 +490,13 @@
                     "Dark Western",
                     "Desert Rock"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Tires burning on the asphalt\r\nBroken mirrors, broken past\r\nEvery mile a heavy burden\r\nEvery turn could be the last\r\n\r\nRedline pressure, breaking every door\r\nNothing left to lose, nothing left in store\r\nSpeed is the drug, metal is the vein\r\nRacing through the fire, hiding from the pain\r\n\r\nHeadlights cutting through the black\r\nNo direction, no way back\r\nEngine screaming, metal crying\r\nEvery second slowly dying\r\n\r\nWheels on fire, burning bright\r\nRacing through the endless night\r\nDust and thunder, blood and steel\r\nNothing left to make it real"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_redline-pressure.mp3"
                 },
                 {
@@ -435,13 +512,17 @@
                     "Dark Western",
                     "Desert Rock"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Shadows crawling on the wall\r\nWaiting for the final fall\r\nEvery breath a heavy weight\r\nLocked behind a broken gate\r\nRunning from the silence\r\nRunning from the violence\r\n\r\nBlack birds sing a heavy song\r\nWhere the hollow souls belong\r\nNothing left to hold or trust\r\nTurning everything to dust\r\n\r\nRipping at the memories\r\nDrowning in the deep\r\nWaking up the enemies\r\nBuried in the sleep\r\nNothing left to save\r\nDigging out a grave\r\n\r\nBlack birds sing a heavy song\r\nWhere the hollow souls belong\r\nNothing left to hold or trust\r\nTurning everything to dust\r\n\r\nBurn\r\nThe\r\nSkin\r\nBurn\r\nThe\r\nSkin"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_fractured-speed.mp3"
                 }
               ],
-              "isVisible": true,
+              "isVisible": false,
               "genero": [
                 "Rock"
               ],
@@ -450,6 +531,7 @@
                 "Dark Western",
                 "Desert Rock"
               ],
+              "totalDuration": "13:47",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_vex_thunder.jpg"
             }
           ]
@@ -459,13 +541,17 @@
     {
       "nome": "UL7R4",
       "slug": "ul7r4",
-      "descricao": {},
+      "descricao": {
+        "en": "Dark science fiction universe where sound and narrative merge to create an immersive, fictional world.\r Every release, whether music, visual, or story, is a fragment of a larger interconnected mythos. Transmissions from the void. The signal never stops."
+      },
       "imagemFundo": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_ul7r4.jpg",
       "artistas": [
         {
           "nome": "RIFT",
           "slug": "rift",
-          "descricao": {},
+          "descricao": {
+            "en": "The time traveler who never wins. Originally just a man who believed in his best friend, he was forced into a temporal loop when he piloted a time machine to prevent the invasion. Trapped in a cycle where every failure resets the day and throws him into a different era or planet, he is the ultimate tragic hero. He knows the name of everyone who will die, he knows the exact second the bombs will fall, yet he never stops trying. He is the anchor of the universe, the thread that connects the timelines, even if he is doomed to always arrive too late. The sound is defined by dark synthwave, outrun, and retrowave. Cold, nocturnal, and cinematic, it features pulsating basslines and melancholic synths. The vocal delivery is robotic, tired, and spoken more than sung, reflecting a man who has repeated the same words a thousand times in the dark."
+          },
           "label": "ul7r4",
           "genero": [
             "Electronic"
@@ -484,7 +570,9 @@
               "slug": "before-the-loop",
               "artistRef": "rift",
               "releaseYear": "2026",
-              "releaseStatus": "Released",
+              "descricao": {
+                "en": "The beginning, before the war and the machine. The pure friendship forged long before the ashes. It covers the tragedy of the attack, the fire that consumed a friend, and the agonizing decision to leave them behind to step into the unknown. It is the origin of the guilt that will fuel an eternal cycle."
+              },
               "tracksList": [
                 "track_rift_carry-the-fire",
                 "track_rift_two-shadows",
@@ -505,9 +593,13 @@
                     "Outrun",
                     "Retrowave"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "The sky broke first\r\nThen the ground\r\nThen the sound of everything\r\nComing down\r\n\r\nFound him there\r\nHalf gone\r\nStill breathing\r\nStill holding on\r\n\r\nCarry the fire\r\nThrough the ash\r\nCarry the fire\r\nDon't let it crash\r\n\r\nMetal for skin\r\nWire for veins\r\nBuilt him back\r\nThrough the pain\r\n\r\nNo time to mourn\r\nNo time to rest\r\nJust the work\r\nAnd the burning chest\r\n\r\nCarry the fire\r\nThrough the ash\r\nCarry the fire\r\nDon't let it crash\r\n\r\nEyes opened\r\nNot the same\r\nBut alive\r\nAnd the flame remained"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_carry-the-fire.mp3"
                 },
                 {
@@ -523,9 +615,13 @@
                     "Outrun",
                     "Retrowave"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Same room\r\nSame glow\r\nTwo shadows on the wall\r\n\r\nOne burned\r\nOne watched\r\nOne caught the other's fall\r\n\r\nNo words needed\r\nNo names called\r\nJust the sound of keys\r\nAnd a world that felt small\r\n\r\nTwo shadows\r\nOne light\r\nTwo shadows\r\nThrough the night\r\n\r\nThe days were long\r\nThe plans were bold\r\nTime seemed enough\r\nTo grow old\r\n\r\nTwo shadows\r\nOne light\r\nTwo shadows\r\nThrough the night\r\n\r\nThe world was sharp\r\nThe world was wide\r\nBut there was a door\r\nAnd there was a side\r\n\r\nTwo shadows\r\nOne light\r\nTwo shadows\r\nThrough the night"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_two-shadows.mp3"
                 },
                 {
@@ -541,9 +637,13 @@
                     "Outrun",
                     "Retrowave"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "The machine is ready\r\nThe numbers aligned\r\nOne stays behind\r\nOne climbs\r\n\r\nWatched him sleep\r\nDidn't speak\r\nThe words too heavy\r\nThe night too deep\r\n\r\nStood at the door\r\nLooked back once more\r\nThe world was ending\r\nAnd this was the cure\r\n\r\nStep through the light\r\nLeave it behind\r\nThe past is a ghost\r\nThat will follow in time\r\n\r\nStood at the door\r\nLooked back once more\r\nThe world was ending\r\nAnd this was the cure\r\n\r\nNo goodbye\r\nNo see you soon\r\nJust the hum\r\nOf the machine's tune"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_the-door.mp3"
                 },
                 {
@@ -559,9 +659,13 @@
                     "Outrun",
                     "Retrowave"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "[Instrumental]"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_the-pull.mp3"
                 }
               ],
@@ -574,6 +678,7 @@
                 "Outrun",
                 "Retrowave"
               ],
+              "totalDuration": "13:24",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_before-the-loop.jpg"
             },
             {
@@ -581,7 +686,9 @@
               "slug": "reset",
               "artistRef": "rift",
               "releaseYear": "2026",
-              "releaseStatus": "Released",
+              "descricao": {
+                "en": "The same morning. The same cold coffee. The same impending doom. It is the purest form of exhaustion and paranoia, where a new plan is tried and fails, while a mysterious crack in the system offers a glimpse of something else."
+              },
               "tracksList": [
                 "track_rift_reset",
                 "track_rift_6-47",
@@ -595,6 +702,7 @@
               "isVisible": false,
               "genero": [],
               "subgenero": [],
+              "totalDuration": "0:00",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_reset.jpg"
             },
             {
@@ -602,7 +710,9 @@
               "slug": "rewind",
               "artistRef": "rift",
               "releaseYear": "2026",
-              "releaseStatus": "Released",
+              "descricao": {
+                "en": "An ancient desert civilization. A prophet of doom in a land that refuses to listen. The isolation of speaking a truth no one wants to hear, and the heavy burden of watching the inevitable unfold from a distance."
+              },
               "tracksList": [
                 "track_rift_strange-light",
                 "track_rift_among-them",
@@ -616,6 +726,7 @@
               "isVisible": false,
               "genero": [],
               "subgenero": [],
+              "totalDuration": "0:00",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_rewind.jpg"
             },
             {
@@ -623,7 +734,9 @@
               "slug": "retry",
               "artistRef": "rift",
               "releaseYear": "2027",
-              "releaseStatus": "Unreleased",
+              "descricao": {
+                "en": "A space station, the first target before the world below. A claustrophobic and high-stakes attempt to hack the system and evacuate the innocent. It is the brutal dilemma of trying to buy time against a machine that fights back, knowing the station is destined to burn."
+              },
               "tracksList": [
                 "track_rift_docking-bay",
                 "track_rift_corridors",
@@ -637,6 +750,7 @@
               "isVisible": false,
               "genero": [],
               "subgenero": [],
+              "totalDuration": "0:00",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_retry.jpg"
             },
             {
@@ -644,7 +758,9 @@
               "slug": "same-war",
               "artistRef": "rift",
               "releaseYear": "2027",
-              "releaseStatus": "Unreleased",
+              "descricao": {
+                "en": "A quiet and melancholic return to the homeworld, before the fire. The heavy weight of allegiance and the desperate attempt to save a doomed world. It is the heartbreaking acceptance that the loop will eventually pull him away again, leaving only the realization that the war remains the same, and only the sky changes."
+              },
               "tracksList": [
                 "track_rift_homecoming",
                 "track_rift_allegiance",
@@ -658,6 +774,7 @@
               "isVisible": false,
               "genero": [],
               "subgenero": [],
+              "totalDuration": "0:00",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_same-war.jpg"
             }
           ]
@@ -665,7 +782,9 @@
         {
           "nome": "Trace",
           "slug": "trace",
-          "descricao": {},
+          "descricao": {
+            "en": "An intergalactic archaeologist from a peaceful, bureaucratic civilization. He investigates dead planets in search of lost civilizations. Obsessed with his work, he is a solitary man who feels more at home among ruins and dust than among the living. The ultimate seeker of truth, driven by a stubborn refusal to give up, even when the truth he uncovers is ignored by his own people. The sound is defined by progressive rock. It features hypnotic riffs, a distorted bass driving the rhythm, and tribal, mathematical drums. The vocals are deep and intense, balancing between a controlled whisper and a powerful release. It is the sound of discovery, dust, and ancient stones."
+          },
           "label": "ul7r4",
           "genero": [
             "Rock"
@@ -684,7 +803,9 @@
               "slug": "what-i-chose",
               "artistRef": "trace",
               "releaseYear": "2026",
-              "releaseStatus": "Released",
+              "descricao": {
+                "en": "The heavy silence of a choice made long ago. It is the quiet certainty of a soul that traded a normal life for the cold vastness of the stars and the dust of forgotten ruins."
+              },
               "tracksList": [
                 "track_trace_you-call-it-running",
                 "track_trace_the-right-kind-of-peace",
@@ -704,9 +825,13 @@
                     "Progressive Metal",
                     "Alternative Metal"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "You think I ran away from something\r\nYou think I couldn't face the world\r\nYou see the distance on my face\r\nAnd call it fear, you call it fear\r\n\r\nBut fear is staying where the walls close in\r\nFear is living someone else's life\r\nI didn't run, I walked\r\nI didn't hide, I chose\r\n\r\nYou call it running\r\nI call it breathing\r\nYou call it lonely\r\nI call it free\r\nYou don't get to name my leaving\r\nYou don't get to judge me\r\n\r\nYour pity is a cage you built for me\r\nYour worry is a rope you tied around my feet\r\nI cut it, I cut it all\r\nAnd walked into the silence you were too afraid to meet\r\n\r\nYou call it running\r\nI call it breathing\r\nYou call it lonely\r\nI call it free\r\nYou don't get to name my leaving\r\nYou don't get to judge me\r\n\r\nI've seen the void, have you\r\nI've touched the dust, have you\r\nI've walked on worlds that don't know human names\r\nAnd you sit there asking why I changed\r\n\r\nYou call it running\r\nI call it breathing\r\nYou call it lonely\r\nI call it free\r\nYou don't get to name my leaving\r\nYou don't get to judge me\r\n\r\nDon't you dare judge me"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_you-call-it-running.mp3"
                 },
                 {
@@ -722,9 +847,13 @@
                     "Progressive Metal",
                     "Alternative Metal"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "The walls are quiet now, too quiet\r\nThe crew is gone, they're always gone\r\nAnother briefing at the break of dawn\r\nBut I stay behind, I always stay behind\r\n\r\nA stranger in my skin, a guest in my own home\r\nAn exile who came in and never found his own\r\n\r\nI chose this\r\nI chose the long goodbye\r\nI chose the stars\r\nI chose the endless sky\r\nBut sometimes in the quiet\r\nWhen the engines cease\r\nI wonder if I chose\r\nThe right kind of peace\r\n\r\nThey ask me how it feels to walk where no one walks\r\nTo see what no one sees, to hear the silent sound\r\nI tell them it's a gift, I tell them it's a dream\r\nBut the truth is: I'm more alive when I'm unseen\r\n\r\nI chose this\r\nI chose the long goodbye\r\nI chose the stars\r\nI chose the endless sky\r\nBut sometimes in the quiet\r\nWhen the engines cease\r\nI wonder if I chose\r\nThe right kind of peace\r\n\r\nThe photographs are fading\r\nThe faces don't know my name\r\nI used to know their voices\r\nNow I'm just a frequency they cannot tune\r\n\r\nHome is not a place, it's a weight I cannot hold\r\nHome is not a word, it's a story never told\r\nI feel more myself among the dust and stone\r\nThan I ever did surrounded by my own\r\n\r\nI chose this\r\nI chose the long goodbye\r\nI chose the stars\r\nI chose the endless sky\r\nBut sometimes in the quiet\r\nWhen the engines cease\r\nI wonder if I chose\r\nThe right kind of peace\r\n\r\nThe right kind of peace"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_the-right-kind-of-peace.mp3"
                 },
                 {
@@ -740,9 +869,13 @@
                     "Progressive Metal",
                     "Alternative Metal"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "I've walked the dust of dying suns\r\nI've traced the bones of worlds undone\r\nI've seen the silence at the edge of time\r\nAnd I have called it mine\r\n\r\nThe stars don't ask me why I came\r\nThe void don't need me to explain\r\nThe only judgment that I face\r\nIs the one I left without a trace\r\n\r\nThis is what I chose\r\nThis is what I made of me\r\nA wanderer, a hunter, a ghost\r\nThis is what I chose\r\nAnd I would choose it again\r\n\r\nNo house, no street, no photograph\r\nNo voice that calls me back\r\nJust the scanner and the endless black\r\nAnd I am fine with that\r\n\r\nThis is what I chose\r\nThis is what I made of me\r\nA wanderer, a hunter, a ghost\r\nThis is what I chose\r\nAnd I would choose it again\r\n\r\nSome call it sacrifice, I call it peace\r\nSome call it loneliness, I call it release\r\nI am not lost, I am where I need to be\r\nI am not running, I am free\r\n\r\nThis is what I chose\r\nThis is what I made of me\r\nA wanderer, a hunter, a ghost\r\nThis is what I chose\r\nAnd I would choose it again\r\n\r\nI would choose it again"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_what-i-chose.mp3"
                 }
               ],
@@ -755,6 +888,7 @@
                 "Progressive Metal",
                 "Alternative Metal"
               ],
+              "totalDuration": "14:49",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_what-i-chose.jpg"
             },
             {
@@ -762,7 +896,9 @@
               "slug": "strata",
               "artistRef": "trace",
               "releaseYear": "2026",
-              "releaseStatus": "Released",
+              "descricao": {
+                "en": "The routine, the method, and the frustration of the search. Lonely scans and drillings on a dead planet. It captures the relentless repetition of looking for signs of life in the stone, dealing with the silence of the universe and the slow, methodical process of reading the ground."
+              },
               "tracksList": [
                 "track_trace_survey",
                 "track_trace_strata",
@@ -775,6 +911,7 @@
               "isVisible": false,
               "genero": [],
               "subgenero": [],
+              "totalDuration": "0:00",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_strata.jpg"
             },
             {
@@ -782,7 +919,9 @@
               "slug": "unearthed",
               "artistRef": "trace",
               "releaseYear": "2026",
-              "releaseStatus": "Released",
+              "descricao": {
+                "en": "The shift from routine to wonder. The slow, careful uncovering of something that was never meant to be found. It is the awe and the eerie silence of walking through a civilization that time forgot, where the dust holds secrets older than memory itself."
+              },
               "tracksList": [
                 "track_trace_descent",
                 "track_trace_reading-the-ground",
@@ -795,6 +934,7 @@
               "isVisible": false,
               "genero": [],
               "subgenero": [],
+              "totalDuration": "0:00",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_unearthed.jpg"
             },
             {
@@ -802,7 +942,9 @@
               "slug": "open-file",
               "artistRef": "trace",
               "releaseYear": "2026",
-              "releaseStatus": "Unreleased",
+              "descricao": {
+                "en": "The investigation of a tragedy. Digging through the remnants of a horrific end, a theory begins to form. But the evidence refuses to align. It is a descent into forensic detail, paranoia, and the heavy burden of uncovering a truth that does not perfectly fit."
+              },
               "tracksList": [
                 "track_trace_the-question",
                 "track_trace_mass-grave",
@@ -815,6 +957,7 @@
               "isVisible": false,
               "genero": [],
               "subgenero": [],
+              "totalDuration": "0:00",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_open-file.jpg"
             },
             {
@@ -822,7 +965,9 @@
               "slug": "left-behind",
               "artistRef": "trace",
               "releaseYear": "2027",
-              "releaseStatus": "Unreleased",
+              "descricao": {
+                "en": "The discovery of a truth that was never meant to be found. An account of something impossible, buried in the dust of a dead world. It is the crushing weight of knowing, and the quiet tragedy of being ignored by those who refused to listen. A legacy left behind for a future that may never come."
+              },
               "tracksList": [
                 "track_trace_the-dig",
                 "track_trace_green-skies",
@@ -836,6 +981,7 @@
               "isVisible": false,
               "genero": [],
               "subgenero": [],
+              "totalDuration": "0:00",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_left-behind.jpg"
             }
           ]
@@ -843,7 +989,9 @@
         {
           "nome": "VOID",
           "slug": "void",
-          "descricao": {},
+          "descricao": {
+            "en": "The silence in a world that screams. Living in a dystopian, colonized urban center, she represents the psychological erosion caused by an oppressive regime. While the world reacts with anger, this is the slow, agonizing dissolution of identity. Suffering from memory loss and depersonalization, it is someone standing at their own front door, holding a key that no longer fits, wondering if they ever belonged there at all. The sound is defined by darkwave, coldwave, EBM, and minimal synthwave. Cold, hypnotic, and club-oriented, it is driven by pulsating basslines and atmospheric synths. The vocal delivery is dry, distant, and intimate, narrating the horror of looking into a mirror and not recognizing the face staring back. It is the sound of the void."
+          },
           "label": "ul7r4",
           "genero": [
             "Electronic"
@@ -863,7 +1011,9 @@
               "slug": "mirror-error",
               "artistRef": "void",
               "releaseYear": "2026",
-              "releaseStatus": "Released",
+              "descricao": {
+                "en": "Fragmented memories of a past that might not be real. The terrifying void of recognizing familiar faces but feeling nothing. It culminates in front of a mirror that reflects nothing but the initial shock of losing oneself."
+              },
               "tracksList": [
                 "track_void_fragments-of-glass",
                 "track_void_data-wipe",
@@ -884,9 +1034,13 @@
                     "EBM",
                     "Minimal Synthwave"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Midnight drive, the dashboard glows\r\nA cold wind through the window blows\r\nFor a second, the music stops\r\nAnd a sudden curtain drops\r\nI see a shadow in the rear-view mirror\r\nFor just a moment, it looks clearer\r\n\r\nA sudden spark, a distant light\r\nA stranger walking through the night\r\n\r\nFragments of glass on the floor\r\nA face I think I knew before\r\nStatic playing on the radio line\r\nLike a transmission out of time\r\nJust a whisper, just a trace\r\nFlickering in an empty space\r\n\r\nI find a coat I haven't worn in years\r\nA cassette tape full of forgotten tears\r\nWho wrote these words, who drew this line\r\nIt feels so close, but it isn't mine\r\nLike waking up inside a dream\r\nNothing is quite what it seems\r\n\r\nA sudden spark, a distant light\r\nA stranger walking through the night\r\n\r\nFragments of glass on the floor\r\nA face I think I knew before\r\nStatic playing on the radio line\r\nLike a transmission out of time\r\nJust a whisper, just a trace\r\nFlickering in an empty space\r\n\r\nJust a trace\r\nLike dust in the air\r\nA memory I can't quite catch"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_fragments-of-glass.mp3"
                 },
                 {
@@ -903,9 +1057,13 @@
                     "EBM",
                     "Minimal Synthwave"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "System restart\r\nHollow heart\r\nData clear\r\nWho is here\r\nI see your face\r\nA missing trace\r\n\r\nWho are you\r\nNo clue\r\nA blank mind\r\nLeft behind\r\nI look at you\r\nBut nothing comes through\r\n\r\nEmpty files\r\nCold smiles\r\nA familiar stare\r\nBut no one's there\r\nMy memory dies\r\nDigital lies\r\n\r\nWho are you\r\nNo clue\r\nA blank mind\r\nLeft behind\r\nI look at you\r\nBut nothing comes through\r\n\r\nNo memory\r\nWho are you\r\nDisconnected"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_data-wipe.mp3"
                 },
                 {
@@ -922,9 +1080,13 @@
                     "EBM",
                     "Minimal Synthwave"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Flashing neon through the blinds\r\nSilver frame that time untwines\r\nI step into the bathroom light\r\nReady for the ghost tonight\r\nBut the surface shifts and slips\r\nA silent cry on frozen lips\r\n\r\nI raise my hand to touch the pane\r\nBut everything feels down the drain\r\nA silhouette that fades away\r\nInto a shade of hollow gray\r\n\r\nI look into the mirror and see a stranger's eyes\r\nStaring back at me through a cold disguise\r\nSometimes there is no one there at all\r\nJust a blank reflection on a shifting wall\r\nAn empty glass, a missing trace\r\nLooking for my own forgotten face\r\n\r\nThe glass is clear, the room is still\r\nBut there's a void I cannot fill\r\nI blink my eyes to make it right\r\nBut the image vanishes from sight\r\nJust a shadow where I used to stand\r\nReaching out an invisible hand\r\n\r\nI raise my hand to touch the pane\r\nBut everything feels down the drain\r\nA silhouette that fades away\r\nInto a shade of hollow gray\r\n\r\nI look into the mirror and see a stranger's eyes\r\nStaring back at me through a cold disguise\r\nSometimes there is no one there at all\r\nJust a blank reflection on a shifting wall\r\nAn empty glass, a missing trace\r\nLooking for my own forgotten face\r\n\r\nNothing there\r\nJust an empty wall\r\nWho is behind the glass"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_the-empty-glass.mp3"
                 }
               ],
@@ -938,6 +1100,7 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
+              "totalDuration": "11:41",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_mirror-error.jpg"
             },
             {
@@ -945,7 +1108,9 @@
               "slug": "the-stranger-at-the-door",
               "artistRef": "void",
               "releaseYear": "2026",
-              "releaseStatus": "Released",
+              "descricao": {
+                "en": "The full dissolution of existence. A reality where every familiar space becomes alien, and the reflection of a life once lived now belongs to someone else. It is the claustrophobic horror of being erased from existence, carrying the unbearable question of who is left when the identity is gone."
+              },
               "tracksList": [
                 "track_void_something-in-the-house",
                 "track_void_the-lock-has-changed",
@@ -958,6 +1123,7 @@
               "isVisible": false,
               "genero": [],
               "subgenero": [],
+              "totalDuration": "0:00",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-stranger-at-the-door.jpg"
             },
             {
@@ -965,7 +1131,9 @@
               "slug": "the-loop",
               "artistRef": "void",
               "releaseYear": "2026",
-              "releaseStatus": "Released",
+              "descricao": {
+                "en": "A short, sharp shock of perception. The realization that the world around is stuck in a perfect, synchronized loop. Everyone else seems blind to it, leaving a profound isolation in this awareness. It is the paranoia of seeing the cage but not being able to break it."
+              },
               "tracksList": [
                 "track_void_the-loop",
                 "track_void_they-move-the-same"
@@ -985,9 +1153,13 @@
                     "EBM",
                     "Minimal Synthwave"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "The same hour repeats itself in silence\r\nThe same door opens to the same violence\r\nI counted the cycles until I lost track\r\nThe end is the beginning and it always comes back\r\n\r\nIs this a prison or a stage\r\nIs this a script or a cage\r\nIf every day is written in advance\r\nThen nothing I do is ever by chance\r\n\r\nRound and round the circuit bends\r\nThe pattern never meets its end\r\nI see the loop behind the veil\r\nA perfect and eternal jail\r\n\r\nI tried to break the repetition once\r\nI stepped aside and waited for the response\r\nThe system paused for half a breath\r\nThen filled the gap like I was never there\r\n\r\nIf I am the only one who sees the repetition\r\nDoes the repetition even exist\r\nOr am I the glitch in a flawless machine\r\n\r\nRound and round the circuit bends\r\nThe pattern never meets its end\r\nI see the loop behind the veil\r\nA perfect and eternal jail\r\n\r\nThe loop continues\r\nWith or without me"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_the-loop.mp3"
                 },
                 {
@@ -1004,9 +1176,13 @@
                     "EBM",
                     "Minimal Synthwave"
                   ],
-                  "lyrics": {
+                  "descricao": {
                     "en": ""
                   },
+                  "lyrics": {
+                    "en": "Every morning they turn left at the same time\r\nEvery evening they speak the same line\r\nI watched for days to find a mistake\r\nBut the pattern holds and I am awake\r\n\r\nIs it them who are frozen in repetition\r\nOr am I the one who broke from the system\r\nIf no one else sees the loop that I see\r\nThen the error is either them or me\r\n\r\nThey move the same\r\nThey speak the same\r\nIdentical days\r\nNo one is changed\r\n\r\nI tried to mimic the motion they keep\r\nI tried to enter the synchronized sleep\r\nBut my limbs respond to a different call\r\nAnd my voice does not echo theirs at all\r\n\r\nSomething is watching\r\nSomething is keeping them in line\r\nAnd it does not know I can see\r\n\r\nThey move the same\r\nThey speak the same\r\nIdentical days\r\nNo one is changed\r\n\r\nI do not know if they are the prisoners\r\nOr I am the one already condemned"
+                  },
+                  "hasVideo": false,
                   "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_they-move-the-same.mp3"
                 }
               ],
@@ -1020,6 +1196,7 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
+              "totalDuration": "10:49",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-loop.jpg"
             },
             {
@@ -1027,7 +1204,9 @@
               "slug": "shards",
               "artistRef": "void",
               "releaseYear": "2027",
-              "releaseStatus": "Unreleased",
+              "descricao": {
+                "en": "The reconstruction of a shattered identity. Gathering the sharp fragments of what was lost, learning to accept the cracks, and finding that a fractured mirror can still reflect."
+              },
               "tracksList": [
                 "track_void_shards",
                 "track_void_the-polished-piece",
@@ -1040,6 +1219,7 @@
               "isVisible": false,
               "genero": [],
               "subgenero": [],
+              "totalDuration": "0:00",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_shards.jpg"
             }
           ]
@@ -1051,7 +1231,9 @@
     {
       "nome": "Noise",
       "slug": "noise",
-      "descricao": {},
+      "descricao": {
+        "en": "A brutal collision of Industrial Metal and Electro-Industrial. Built on heavy, mechanical drum machines, distorted synths, and abrasive textures, the project creates an oppressive and claustrophobic atmosphere. The vocals are purely screamed, distorted, and aggressive, with no room for clean vocals or melody. It is the sound of pure mechanical fury, where every track is a relentless assault of noise and aggression."
+      },
       "label": "loop-77",
       "genero": [
         "Metal",
@@ -1062,15 +1244,17 @@
         "Electro-Industrial"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_noise.jpg",
-      "totalAlbuns": 2,
-      "totalFaixas": 8,
+      "totalAlbuns": 1,
+      "totalFaixas": 4,
       "albuns": [
         {
           "title": "The Violet Sessions",
           "slug": "the-violet-sessions",
           "artistRef": "noise",
           "releaseYear": "2026",
-          "releaseStatus": "Released",
+          "descricao": {
+            "en": "Four tracks salvaged from the corrupted tapes of the wasteland. A raw, mechanical descent into the mind of a lone scavenger. Built on heavy drum machines, abrasive synths, and pure aggressive fury."
+          },
           "tracksList": [
             "track_noise_scavenger",
             "track_noise_breakdown",
@@ -1091,9 +1275,13 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Dig tear strip bleed\r\nNothing left but rust and greed\r\nThe sun is a hammer\r\nThe earth is a grave\r\n\r\nI am the scavenger\r\nI take what i need\r\nTear the metal\r\nBreak the bone\r\nIn the graveyard\r\nI stand alone\r\n\r\nRust\r\nBone\r\nDust\r\nAlone"
+              },
+              "hasVideo": true,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_scavenger.mp3"
             },
             {
@@ -1109,9 +1297,13 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Smoke pours out from broken parts\r\nA heavy silence in the hearts\r\nThe wheels are stuck, the engine dead\r\nA crushing weight upon the head\r\n\r\nBreakdown, the end of the line\r\nA failing spark, a broken sign\r\nNo way forward, no way back\r\nA final stand in endless black\r\n\r\nSurrounded by the closing walls\r\nA silent scream, a desperate call\r\nThe weapon drawn, the final breath\r\nA violent dance with frozen death\r\n\r\nStuck\r\nFail\r\nLost\r\nHere"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_breakdown.mp3"
             },
             {
@@ -1127,9 +1319,13 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Bleeding steps on broken glass\r\nA final push, a heavy mass\r\nThe air is cold, the air is strange\r\nA sudden shift, a distant change\r\n\r\nThe edge of nowhere, the edge of fear\r\nA fading shadow drawing near\r\nA wall of metal, high and grand\r\nA final truth, a final stand\r\n\r\nThe ruins fade, the green appears\r\nA hidden truth from ancient years\r\nA heavy gate, a line of wire\r\nA burning hope, a rising fire\r\n\r\nSee\r\nThe\r\nWall\r\nFall\r\n\r\nThe edge of nowhere, the edge of fear\r\nA fading shadow drawing near\r\nA wall of metal, high and grand\r\nA final truth, a final stand"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_the-edge.mp3"
             },
             {
@@ -1145,9 +1341,13 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "A touch of green, a breath of air\r\nA sudden dream, a sudden care\r\nA wall of steel, a heavy gate\r\nA twisted joke of cruel fate\r\n\r\nEldorado, a gilded cage\r\nA bloody price, a bitter wage\r\nA promised land of rust and bone\r\nA violent truth, a heavy stone\r\n\r\nGangs and guns and hollow eyes\r\nA kingdom built on broken lies\r\nA paradise of frozen fear\r\nA brutal end, a violent spear\r\n\r\nNo\r\nGold\r\nNo\r\nHome\r\n\r\nEldorado, a gilded cage\r\nA bloody price, a bitter wage\r\nA promised land of rust and bone\r\nA violent truth, a heavy stone"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_eldorado.mp3"
             }
           ],
@@ -1160,6 +1360,7 @@
             "Industrial Metal",
             "Electro-Industrial"
           ],
+          "totalDuration": "14:42",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_noise_the-violet-sessions.jpg"
         },
         {
@@ -1167,7 +1368,9 @@
           "slug": "violet",
           "artistRef": "noise",
           "releaseYear": "2026",
-          "releaseStatus": "Unreleased",
+          "descricao": {
+            "en": "The journey of Violet, a lone scavenger traversing a desert in search of promised paradise. The album narrates the physical violence and survival, where the only law is the rust and the blade."
+          },
           "tracksList": [
             "track_noise_the-sun-never-sets",
             "track_noise_scavenger",
@@ -1199,9 +1402,13 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Dig tear strip bleed\r\nNothing left but rust and greed\r\nThe sun is a hammer\r\nThe earth is a grave\r\n\r\nI am the scavenger\r\nI take what i need\r\nTear the metal\r\nBreak the bone\r\nIn the graveyard\r\nI stand alone\r\n\r\nRust\r\nBone\r\nDust\r\nAlone"
+              },
+              "hasVideo": true,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_scavenger.mp3"
             },
             {
@@ -1217,9 +1424,13 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Smoke pours out from broken parts\r\nA heavy silence in the hearts\r\nThe wheels are stuck, the engine dead\r\nA crushing weight upon the head\r\n\r\nBreakdown, the end of the line\r\nA failing spark, a broken sign\r\nNo way forward, no way back\r\nA final stand in endless black\r\n\r\nSurrounded by the closing walls\r\nA silent scream, a desperate call\r\nThe weapon drawn, the final breath\r\nA violent dance with frozen death\r\n\r\nStuck\r\nFail\r\nLost\r\nHere"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_breakdown.mp3"
             },
             {
@@ -1235,9 +1446,13 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Bleeding steps on broken glass\r\nA final push, a heavy mass\r\nThe air is cold, the air is strange\r\nA sudden shift, a distant change\r\n\r\nThe edge of nowhere, the edge of fear\r\nA fading shadow drawing near\r\nA wall of metal, high and grand\r\nA final truth, a final stand\r\n\r\nThe ruins fade, the green appears\r\nA hidden truth from ancient years\r\nA heavy gate, a line of wire\r\nA burning hope, a rising fire\r\n\r\nSee\r\nThe\r\nWall\r\nFall\r\n\r\nThe edge of nowhere, the edge of fear\r\nA fading shadow drawing near\r\nA wall of metal, high and grand\r\nA final truth, a final stand"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_the-edge.mp3"
             },
             {
@@ -1253,13 +1468,17 @@
                 "Industrial Metal",
                 "Electro-Industrial"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "A touch of green, a breath of air\r\nA sudden dream, a sudden care\r\nA wall of steel, a heavy gate\r\nA twisted joke of cruel fate\r\n\r\nEldorado, a gilded cage\r\nA bloody price, a bitter wage\r\nA promised land of rust and bone\r\nA violent truth, a heavy stone\r\n\r\nGangs and guns and hollow eyes\r\nA kingdom built on broken lies\r\nA paradise of frozen fear\r\nA brutal end, a violent spear\r\n\r\nNo\r\nGold\r\nNo\r\nHome\r\n\r\nEldorado, a gilded cage\r\nA bloody price, a bitter wage\r\nA promised land of rust and bone\r\nA violent truth, a heavy stone"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_noise_eldorado.mp3"
             }
           ],
-          "isVisible": true,
+          "isVisible": false,
           "genero": [
             "Metal",
             "Electronic"
@@ -1268,6 +1487,7 @@
             "Industrial Metal",
             "Electro-Industrial"
           ],
+          "totalDuration": "14:42",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_noise_violet.jpg"
         }
       ]
@@ -1275,7 +1495,9 @@
     {
       "nome": "RIFT",
       "slug": "rift",
-      "descricao": {},
+      "descricao": {
+        "en": "The time traveler who never wins. Originally just a man who believed in his best friend, he was forced into a temporal loop when he piloted a time machine to prevent the invasion. Trapped in a cycle where every failure resets the day and throws him into a different era or planet, he is the ultimate tragic hero. He knows the name of everyone who will die, he knows the exact second the bombs will fall, yet he never stops trying. He is the anchor of the universe, the thread that connects the timelines, even if he is doomed to always arrive too late. The sound is defined by dark synthwave, outrun, and retrowave. Cold, nocturnal, and cinematic, it features pulsating basslines and melancholic synths. The vocal delivery is robotic, tired, and spoken more than sung, reflecting a man who has repeated the same words a thousand times in the dark."
+      },
       "label": "ul7r4",
       "genero": [
         "Electronic"
@@ -1294,7 +1516,9 @@
           "slug": "before-the-loop",
           "artistRef": "rift",
           "releaseYear": "2026",
-          "releaseStatus": "Released",
+          "descricao": {
+            "en": "The beginning, before the war and the machine. The pure friendship forged long before the ashes. It covers the tragedy of the attack, the fire that consumed a friend, and the agonizing decision to leave them behind to step into the unknown. It is the origin of the guilt that will fuel an eternal cycle."
+          },
           "tracksList": [
             "track_rift_carry-the-fire",
             "track_rift_two-shadows",
@@ -1315,9 +1539,13 @@
                 "Outrun",
                 "Retrowave"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "The sky broke first\r\nThen the ground\r\nThen the sound of everything\r\nComing down\r\n\r\nFound him there\r\nHalf gone\r\nStill breathing\r\nStill holding on\r\n\r\nCarry the fire\r\nThrough the ash\r\nCarry the fire\r\nDon't let it crash\r\n\r\nMetal for skin\r\nWire for veins\r\nBuilt him back\r\nThrough the pain\r\n\r\nNo time to mourn\r\nNo time to rest\r\nJust the work\r\nAnd the burning chest\r\n\r\nCarry the fire\r\nThrough the ash\r\nCarry the fire\r\nDon't let it crash\r\n\r\nEyes opened\r\nNot the same\r\nBut alive\r\nAnd the flame remained"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_carry-the-fire.mp3"
             },
             {
@@ -1333,9 +1561,13 @@
                 "Outrun",
                 "Retrowave"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Same room\r\nSame glow\r\nTwo shadows on the wall\r\n\r\nOne burned\r\nOne watched\r\nOne caught the other's fall\r\n\r\nNo words needed\r\nNo names called\r\nJust the sound of keys\r\nAnd a world that felt small\r\n\r\nTwo shadows\r\nOne light\r\nTwo shadows\r\nThrough the night\r\n\r\nThe days were long\r\nThe plans were bold\r\nTime seemed enough\r\nTo grow old\r\n\r\nTwo shadows\r\nOne light\r\nTwo shadows\r\nThrough the night\r\n\r\nThe world was sharp\r\nThe world was wide\r\nBut there was a door\r\nAnd there was a side\r\n\r\nTwo shadows\r\nOne light\r\nTwo shadows\r\nThrough the night"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_two-shadows.mp3"
             },
             {
@@ -1351,9 +1583,13 @@
                 "Outrun",
                 "Retrowave"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "The machine is ready\r\nThe numbers aligned\r\nOne stays behind\r\nOne climbs\r\n\r\nWatched him sleep\r\nDidn't speak\r\nThe words too heavy\r\nThe night too deep\r\n\r\nStood at the door\r\nLooked back once more\r\nThe world was ending\r\nAnd this was the cure\r\n\r\nStep through the light\r\nLeave it behind\r\nThe past is a ghost\r\nThat will follow in time\r\n\r\nStood at the door\r\nLooked back once more\r\nThe world was ending\r\nAnd this was the cure\r\n\r\nNo goodbye\r\nNo see you soon\r\nJust the hum\r\nOf the machine's tune"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_the-door.mp3"
             },
             {
@@ -1369,9 +1605,13 @@
                 "Outrun",
                 "Retrowave"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "[Instrumental]"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_rift_the-pull.mp3"
             }
           ],
@@ -1384,6 +1624,7 @@
             "Outrun",
             "Retrowave"
           ],
+          "totalDuration": "13:24",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_before-the-loop.jpg"
         },
         {
@@ -1391,7 +1632,9 @@
           "slug": "reset",
           "artistRef": "rift",
           "releaseYear": "2026",
-          "releaseStatus": "Released",
+          "descricao": {
+            "en": "The same morning. The same cold coffee. The same impending doom. It is the purest form of exhaustion and paranoia, where a new plan is tried and fails, while a mysterious crack in the system offers a glimpse of something else."
+          },
           "tracksList": [
             "track_rift_reset",
             "track_rift_6-47",
@@ -1405,6 +1648,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
+          "totalDuration": "0:00",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_reset.jpg"
         },
         {
@@ -1412,7 +1656,9 @@
           "slug": "rewind",
           "artistRef": "rift",
           "releaseYear": "2026",
-          "releaseStatus": "Released",
+          "descricao": {
+            "en": "An ancient desert civilization. A prophet of doom in a land that refuses to listen. The isolation of speaking a truth no one wants to hear, and the heavy burden of watching the inevitable unfold from a distance."
+          },
           "tracksList": [
             "track_rift_strange-light",
             "track_rift_among-them",
@@ -1426,6 +1672,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
+          "totalDuration": "0:00",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_rewind.jpg"
         },
         {
@@ -1433,7 +1680,9 @@
           "slug": "retry",
           "artistRef": "rift",
           "releaseYear": "2027",
-          "releaseStatus": "Unreleased",
+          "descricao": {
+            "en": "A space station, the first target before the world below. A claustrophobic and high-stakes attempt to hack the system and evacuate the innocent. It is the brutal dilemma of trying to buy time against a machine that fights back, knowing the station is destined to burn."
+          },
           "tracksList": [
             "track_rift_docking-bay",
             "track_rift_corridors",
@@ -1447,6 +1696,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
+          "totalDuration": "0:00",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_retry.jpg"
         },
         {
@@ -1454,7 +1704,9 @@
           "slug": "same-war",
           "artistRef": "rift",
           "releaseYear": "2027",
-          "releaseStatus": "Unreleased",
+          "descricao": {
+            "en": "A quiet and melancholic return to the homeworld, before the fire. The heavy weight of allegiance and the desperate attempt to save a doomed world. It is the heartbreaking acceptance that the loop will eventually pull him away again, leaving only the realization that the war remains the same, and only the sky changes."
+          },
           "tracksList": [
             "track_rift_homecoming",
             "track_rift_allegiance",
@@ -1468,6 +1720,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
+          "totalDuration": "0:00",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_same-war.jpg"
         }
       ]
@@ -1475,7 +1728,9 @@
     {
       "nome": "Trace",
       "slug": "trace",
-      "descricao": {},
+      "descricao": {
+        "en": "An intergalactic archaeologist from a peaceful, bureaucratic civilization. He investigates dead planets in search of lost civilizations. Obsessed with his work, he is a solitary man who feels more at home among ruins and dust than among the living. The ultimate seeker of truth, driven by a stubborn refusal to give up, even when the truth he uncovers is ignored by his own people. The sound is defined by progressive rock. It features hypnotic riffs, a distorted bass driving the rhythm, and tribal, mathematical drums. The vocals are deep and intense, balancing between a controlled whisper and a powerful release. It is the sound of discovery, dust, and ancient stones."
+      },
       "label": "ul7r4",
       "genero": [
         "Rock"
@@ -1494,7 +1749,9 @@
           "slug": "what-i-chose",
           "artistRef": "trace",
           "releaseYear": "2026",
-          "releaseStatus": "Released",
+          "descricao": {
+            "en": "The heavy silence of a choice made long ago. It is the quiet certainty of a soul that traded a normal life for the cold vastness of the stars and the dust of forgotten ruins."
+          },
           "tracksList": [
             "track_trace_you-call-it-running",
             "track_trace_the-right-kind-of-peace",
@@ -1514,9 +1771,13 @@
                 "Progressive Metal",
                 "Alternative Metal"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "You think I ran away from something\r\nYou think I couldn't face the world\r\nYou see the distance on my face\r\nAnd call it fear, you call it fear\r\n\r\nBut fear is staying where the walls close in\r\nFear is living someone else's life\r\nI didn't run, I walked\r\nI didn't hide, I chose\r\n\r\nYou call it running\r\nI call it breathing\r\nYou call it lonely\r\nI call it free\r\nYou don't get to name my leaving\r\nYou don't get to judge me\r\n\r\nYour pity is a cage you built for me\r\nYour worry is a rope you tied around my feet\r\nI cut it, I cut it all\r\nAnd walked into the silence you were too afraid to meet\r\n\r\nYou call it running\r\nI call it breathing\r\nYou call it lonely\r\nI call it free\r\nYou don't get to name my leaving\r\nYou don't get to judge me\r\n\r\nI've seen the void, have you\r\nI've touched the dust, have you\r\nI've walked on worlds that don't know human names\r\nAnd you sit there asking why I changed\r\n\r\nYou call it running\r\nI call it breathing\r\nYou call it lonely\r\nI call it free\r\nYou don't get to name my leaving\r\nYou don't get to judge me\r\n\r\nDon't you dare judge me"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_you-call-it-running.mp3"
             },
             {
@@ -1532,9 +1793,13 @@
                 "Progressive Metal",
                 "Alternative Metal"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "The walls are quiet now, too quiet\r\nThe crew is gone, they're always gone\r\nAnother briefing at the break of dawn\r\nBut I stay behind, I always stay behind\r\n\r\nA stranger in my skin, a guest in my own home\r\nAn exile who came in and never found his own\r\n\r\nI chose this\r\nI chose the long goodbye\r\nI chose the stars\r\nI chose the endless sky\r\nBut sometimes in the quiet\r\nWhen the engines cease\r\nI wonder if I chose\r\nThe right kind of peace\r\n\r\nThey ask me how it feels to walk where no one walks\r\nTo see what no one sees, to hear the silent sound\r\nI tell them it's a gift, I tell them it's a dream\r\nBut the truth is: I'm more alive when I'm unseen\r\n\r\nI chose this\r\nI chose the long goodbye\r\nI chose the stars\r\nI chose the endless sky\r\nBut sometimes in the quiet\r\nWhen the engines cease\r\nI wonder if I chose\r\nThe right kind of peace\r\n\r\nThe photographs are fading\r\nThe faces don't know my name\r\nI used to know their voices\r\nNow I'm just a frequency they cannot tune\r\n\r\nHome is not a place, it's a weight I cannot hold\r\nHome is not a word, it's a story never told\r\nI feel more myself among the dust and stone\r\nThan I ever did surrounded by my own\r\n\r\nI chose this\r\nI chose the long goodbye\r\nI chose the stars\r\nI chose the endless sky\r\nBut sometimes in the quiet\r\nWhen the engines cease\r\nI wonder if I chose\r\nThe right kind of peace\r\n\r\nThe right kind of peace"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_the-right-kind-of-peace.mp3"
             },
             {
@@ -1550,9 +1815,13 @@
                 "Progressive Metal",
                 "Alternative Metal"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "I've walked the dust of dying suns\r\nI've traced the bones of worlds undone\r\nI've seen the silence at the edge of time\r\nAnd I have called it mine\r\n\r\nThe stars don't ask me why I came\r\nThe void don't need me to explain\r\nThe only judgment that I face\r\nIs the one I left without a trace\r\n\r\nThis is what I chose\r\nThis is what I made of me\r\nA wanderer, a hunter, a ghost\r\nThis is what I chose\r\nAnd I would choose it again\r\n\r\nNo house, no street, no photograph\r\nNo voice that calls me back\r\nJust the scanner and the endless black\r\nAnd I am fine with that\r\n\r\nThis is what I chose\r\nThis is what I made of me\r\nA wanderer, a hunter, a ghost\r\nThis is what I chose\r\nAnd I would choose it again\r\n\r\nSome call it sacrifice, I call it peace\r\nSome call it loneliness, I call it release\r\nI am not lost, I am where I need to be\r\nI am not running, I am free\r\n\r\nThis is what I chose\r\nThis is what I made of me\r\nA wanderer, a hunter, a ghost\r\nThis is what I chose\r\nAnd I would choose it again\r\n\r\nI would choose it again"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_trace_what-i-chose.mp3"
             }
           ],
@@ -1565,6 +1834,7 @@
             "Progressive Metal",
             "Alternative Metal"
           ],
+          "totalDuration": "14:49",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_what-i-chose.jpg"
         },
         {
@@ -1572,7 +1842,9 @@
           "slug": "strata",
           "artistRef": "trace",
           "releaseYear": "2026",
-          "releaseStatus": "Released",
+          "descricao": {
+            "en": "The routine, the method, and the frustration of the search. Lonely scans and drillings on a dead planet. It captures the relentless repetition of looking for signs of life in the stone, dealing with the silence of the universe and the slow, methodical process of reading the ground."
+          },
           "tracksList": [
             "track_trace_survey",
             "track_trace_strata",
@@ -1585,6 +1857,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
+          "totalDuration": "0:00",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_strata.jpg"
         },
         {
@@ -1592,7 +1865,9 @@
           "slug": "unearthed",
           "artistRef": "trace",
           "releaseYear": "2026",
-          "releaseStatus": "Released",
+          "descricao": {
+            "en": "The shift from routine to wonder. The slow, careful uncovering of something that was never meant to be found. It is the awe and the eerie silence of walking through a civilization that time forgot, where the dust holds secrets older than memory itself."
+          },
           "tracksList": [
             "track_trace_descent",
             "track_trace_reading-the-ground",
@@ -1605,6 +1880,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
+          "totalDuration": "0:00",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_unearthed.jpg"
         },
         {
@@ -1612,7 +1888,9 @@
           "slug": "open-file",
           "artistRef": "trace",
           "releaseYear": "2026",
-          "releaseStatus": "Unreleased",
+          "descricao": {
+            "en": "The investigation of a tragedy. Digging through the remnants of a horrific end, a theory begins to form. But the evidence refuses to align. It is a descent into forensic detail, paranoia, and the heavy burden of uncovering a truth that does not perfectly fit."
+          },
           "tracksList": [
             "track_trace_the-question",
             "track_trace_mass-grave",
@@ -1625,6 +1903,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
+          "totalDuration": "0:00",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_open-file.jpg"
         },
         {
@@ -1632,7 +1911,9 @@
           "slug": "left-behind",
           "artistRef": "trace",
           "releaseYear": "2027",
-          "releaseStatus": "Unreleased",
+          "descricao": {
+            "en": "The discovery of a truth that was never meant to be found. An account of something impossible, buried in the dust of a dead world. It is the crushing weight of knowing, and the quiet tragedy of being ignored by those who refused to listen. A legacy left behind for a future that may never come."
+          },
           "tracksList": [
             "track_trace_the-dig",
             "track_trace_green-skies",
@@ -1646,6 +1927,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
+          "totalDuration": "0:00",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_left-behind.jpg"
         }
       ]
@@ -1653,7 +1935,9 @@
     {
       "nome": "Vex",
       "slug": "vex",
-      "descricao": {},
+      "descricao": {
+        "en": "A high-octane fusion of Surf Rock, Dark Western, and Desert Rock. Built on fast-paced drums, distorted basslines, and relentless tremolo picking, the sound is raw and cinematic. The vocals are aggressive and shouted, cutting through layers of heavy fuzz to create an intense, driving atmosphere."
+      },
       "label": "loop-77",
       "genero": [
         "Rock"
@@ -1664,15 +1948,17 @@
         "Desert Rock"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_vex.jpg",
-      "totalAlbuns": 2,
-      "totalFaixas": 8,
+      "totalAlbuns": 1,
+      "totalFaixas": 4,
       "albuns": [
         {
           "title": "Highway Chase",
           "slug": "highway-chase",
           "artistRef": "vex",
           "releaseYear": "2026",
-          "releaseStatus": "Released",
+          "descricao": {
+            "en": "A raw transmission from the wasteland. Engine roars and distorted riffs collide in a relentless display of speed and aggression. No clean vocals, no slow moments, just the pure, unfiltered sound of the chase."
+          },
           "tracksList": [
             "track_vex_shattered-glass",
             "track_vex_highway-chase",
@@ -1693,9 +1979,13 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Shattered glass on highway dust\r\nA violent end to broken trust\r\nEngines roar and shadows run\r\nNowhere left beneath the sun\r\n\r\nShattered glass on highway dust\r\nA violent end to broken trust\r\nEngines roar and shadows run\r\nNowhere left beneath the sun"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_shattered-glass.mp3"
             },
             {
@@ -1711,9 +2001,13 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "[Instrumental]"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_highway-chase.mp3"
             },
             {
@@ -1729,9 +2023,13 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Tires burning on the asphalt\r\nBroken mirrors, broken past\r\nEvery mile a heavy burden\r\nEvery turn could be the last\r\n\r\nRedline pressure, breaking every door\r\nNothing left to lose, nothing left in store\r\nSpeed is the drug, metal is the vein\r\nRacing through the fire, hiding from the pain\r\n\r\nHeadlights cutting through the black\r\nNo direction, no way back\r\nEngine screaming, metal crying\r\nEvery second slowly dying\r\n\r\nWheels on fire, burning bright\r\nRacing through the endless night\r\nDust and thunder, blood and steel\r\nNothing left to make it real"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_redline-pressure.mp3"
             },
             {
@@ -1747,9 +2045,13 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Shadows crawling on the wall\r\nWaiting for the final fall\r\nEvery breath a heavy weight\r\nLocked behind a broken gate\r\nRunning from the silence\r\nRunning from the violence\r\n\r\nBlack birds sing a heavy song\r\nWhere the hollow souls belong\r\nNothing left to hold or trust\r\nTurning everything to dust\r\n\r\nRipping at the memories\r\nDrowning in the deep\r\nWaking up the enemies\r\nBuried in the sleep\r\nNothing left to save\r\nDigging out a grave\r\n\r\nBlack birds sing a heavy song\r\nWhere the hollow souls belong\r\nNothing left to hold or trust\r\nTurning everything to dust\r\n\r\nBurn\r\nThe\r\nSkin\r\nBurn\r\nThe\r\nSkin"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_fractured-speed.mp3"
             }
           ],
@@ -1762,6 +2064,7 @@
             "Dark Western",
             "Desert Rock"
           ],
+          "totalDuration": "13:47",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_vex_highway-chase.jpg"
         },
         {
@@ -1769,7 +2072,9 @@
           "slug": "thunder",
           "artistRef": "vex",
           "releaseYear": "2026",
-          "releaseStatus": "Unreleased",
+          "descricao": {
+            "en": "A relentless collision of speed and noise. The road is a machine that consumes everything, and the only way forward is to keep moving. Fuzz, tremolo, and an engine that refuses to die. There is no destination, only the chase."
+          },
           "tracksList": [
             "track_vex_shattered-glass",
             "track_vex_running-on-empty",
@@ -1801,9 +2106,13 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Shattered glass on highway dust\r\nA violent end to broken trust\r\nEngines roar and shadows run\r\nNowhere left beneath the sun\r\n\r\nShattered glass on highway dust\r\nA violent end to broken trust\r\nEngines roar and shadows run\r\nNowhere left beneath the sun"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_shattered-glass.mp3"
             },
             {
@@ -1819,9 +2128,13 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "[Instrumental]"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_highway-chase.mp3"
             },
             {
@@ -1837,9 +2150,13 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Tires burning on the asphalt\r\nBroken mirrors, broken past\r\nEvery mile a heavy burden\r\nEvery turn could be the last\r\n\r\nRedline pressure, breaking every door\r\nNothing left to lose, nothing left in store\r\nSpeed is the drug, metal is the vein\r\nRacing through the fire, hiding from the pain\r\n\r\nHeadlights cutting through the black\r\nNo direction, no way back\r\nEngine screaming, metal crying\r\nEvery second slowly dying\r\n\r\nWheels on fire, burning bright\r\nRacing through the endless night\r\nDust and thunder, blood and steel\r\nNothing left to make it real"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_redline-pressure.mp3"
             },
             {
@@ -1855,13 +2172,17 @@
                 "Dark Western",
                 "Desert Rock"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Shadows crawling on the wall\r\nWaiting for the final fall\r\nEvery breath a heavy weight\r\nLocked behind a broken gate\r\nRunning from the silence\r\nRunning from the violence\r\n\r\nBlack birds sing a heavy song\r\nWhere the hollow souls belong\r\nNothing left to hold or trust\r\nTurning everything to dust\r\n\r\nRipping at the memories\r\nDrowning in the deep\r\nWaking up the enemies\r\nBuried in the sleep\r\nNothing left to save\r\nDigging out a grave\r\n\r\nBlack birds sing a heavy song\r\nWhere the hollow souls belong\r\nNothing left to hold or trust\r\nTurning everything to dust\r\n\r\nBurn\r\nThe\r\nSkin\r\nBurn\r\nThe\r\nSkin"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_vex_fractured-speed.mp3"
             }
           ],
-          "isVisible": true,
+          "isVisible": false,
           "genero": [
             "Rock"
           ],
@@ -1870,6 +2191,7 @@
             "Dark Western",
             "Desert Rock"
           ],
+          "totalDuration": "13:47",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_vex_thunder.jpg"
         }
       ]
@@ -1877,7 +2199,9 @@
     {
       "nome": "VOID",
       "slug": "void",
-      "descricao": {},
+      "descricao": {
+        "en": "The silence in a world that screams. Living in a dystopian, colonized urban center, she represents the psychological erosion caused by an oppressive regime. While the world reacts with anger, this is the slow, agonizing dissolution of identity. Suffering from memory loss and depersonalization, it is someone standing at their own front door, holding a key that no longer fits, wondering if they ever belonged there at all. The sound is defined by darkwave, coldwave, EBM, and minimal synthwave. Cold, hypnotic, and club-oriented, it is driven by pulsating basslines and atmospheric synths. The vocal delivery is dry, distant, and intimate, narrating the horror of looking into a mirror and not recognizing the face staring back. It is the sound of the void."
+      },
       "label": "ul7r4",
       "genero": [
         "Electronic"
@@ -1897,7 +2221,9 @@
           "slug": "mirror-error",
           "artistRef": "void",
           "releaseYear": "2026",
-          "releaseStatus": "Released",
+          "descricao": {
+            "en": "Fragmented memories of a past that might not be real. The terrifying void of recognizing familiar faces but feeling nothing. It culminates in front of a mirror that reflects nothing but the initial shock of losing oneself."
+          },
           "tracksList": [
             "track_void_fragments-of-glass",
             "track_void_data-wipe",
@@ -1918,9 +2244,13 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Midnight drive, the dashboard glows\r\nA cold wind through the window blows\r\nFor a second, the music stops\r\nAnd a sudden curtain drops\r\nI see a shadow in the rear-view mirror\r\nFor just a moment, it looks clearer\r\n\r\nA sudden spark, a distant light\r\nA stranger walking through the night\r\n\r\nFragments of glass on the floor\r\nA face I think I knew before\r\nStatic playing on the radio line\r\nLike a transmission out of time\r\nJust a whisper, just a trace\r\nFlickering in an empty space\r\n\r\nI find a coat I haven't worn in years\r\nA cassette tape full of forgotten tears\r\nWho wrote these words, who drew this line\r\nIt feels so close, but it isn't mine\r\nLike waking up inside a dream\r\nNothing is quite what it seems\r\n\r\nA sudden spark, a distant light\r\nA stranger walking through the night\r\n\r\nFragments of glass on the floor\r\nA face I think I knew before\r\nStatic playing on the radio line\r\nLike a transmission out of time\r\nJust a whisper, just a trace\r\nFlickering in an empty space\r\n\r\nJust a trace\r\nLike dust in the air\r\nA memory I can't quite catch"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_fragments-of-glass.mp3"
             },
             {
@@ -1937,9 +2267,13 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "System restart\r\nHollow heart\r\nData clear\r\nWho is here\r\nI see your face\r\nA missing trace\r\n\r\nWho are you\r\nNo clue\r\nA blank mind\r\nLeft behind\r\nI look at you\r\nBut nothing comes through\r\n\r\nEmpty files\r\nCold smiles\r\nA familiar stare\r\nBut no one's there\r\nMy memory dies\r\nDigital lies\r\n\r\nWho are you\r\nNo clue\r\nA blank mind\r\nLeft behind\r\nI look at you\r\nBut nothing comes through\r\n\r\nNo memory\r\nWho are you\r\nDisconnected"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_data-wipe.mp3"
             },
             {
@@ -1956,9 +2290,13 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Flashing neon through the blinds\r\nSilver frame that time untwines\r\nI step into the bathroom light\r\nReady for the ghost tonight\r\nBut the surface shifts and slips\r\nA silent cry on frozen lips\r\n\r\nI raise my hand to touch the pane\r\nBut everything feels down the drain\r\nA silhouette that fades away\r\nInto a shade of hollow gray\r\n\r\nI look into the mirror and see a stranger's eyes\r\nStaring back at me through a cold disguise\r\nSometimes there is no one there at all\r\nJust a blank reflection on a shifting wall\r\nAn empty glass, a missing trace\r\nLooking for my own forgotten face\r\n\r\nThe glass is clear, the room is still\r\nBut there's a void I cannot fill\r\nI blink my eyes to make it right\r\nBut the image vanishes from sight\r\nJust a shadow where I used to stand\r\nReaching out an invisible hand\r\n\r\nI raise my hand to touch the pane\r\nBut everything feels down the drain\r\nA silhouette that fades away\r\nInto a shade of hollow gray\r\n\r\nI look into the mirror and see a stranger's eyes\r\nStaring back at me through a cold disguise\r\nSometimes there is no one there at all\r\nJust a blank reflection on a shifting wall\r\nAn empty glass, a missing trace\r\nLooking for my own forgotten face\r\n\r\nNothing there\r\nJust an empty wall\r\nWho is behind the glass"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_the-empty-glass.mp3"
             }
           ],
@@ -1972,6 +2310,7 @@
             "EBM",
             "Minimal Synthwave"
           ],
+          "totalDuration": "11:41",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_mirror-error.jpg"
         },
         {
@@ -1979,7 +2318,9 @@
           "slug": "the-stranger-at-the-door",
           "artistRef": "void",
           "releaseYear": "2026",
-          "releaseStatus": "Released",
+          "descricao": {
+            "en": "The full dissolution of existence. A reality where every familiar space becomes alien, and the reflection of a life once lived now belongs to someone else. It is the claustrophobic horror of being erased from existence, carrying the unbearable question of who is left when the identity is gone."
+          },
           "tracksList": [
             "track_void_something-in-the-house",
             "track_void_the-lock-has-changed",
@@ -1992,6 +2333,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
+          "totalDuration": "0:00",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-stranger-at-the-door.jpg"
         },
         {
@@ -1999,7 +2341,9 @@
           "slug": "the-loop",
           "artistRef": "void",
           "releaseYear": "2026",
-          "releaseStatus": "Released",
+          "descricao": {
+            "en": "A short, sharp shock of perception. The realization that the world around is stuck in a perfect, synchronized loop. Everyone else seems blind to it, leaving a profound isolation in this awareness. It is the paranoia of seeing the cage but not being able to break it."
+          },
           "tracksList": [
             "track_void_the-loop",
             "track_void_they-move-the-same"
@@ -2019,9 +2363,13 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "The same hour repeats itself in silence\r\nThe same door opens to the same violence\r\nI counted the cycles until I lost track\r\nThe end is the beginning and it always comes back\r\n\r\nIs this a prison or a stage\r\nIs this a script or a cage\r\nIf every day is written in advance\r\nThen nothing I do is ever by chance\r\n\r\nRound and round the circuit bends\r\nThe pattern never meets its end\r\nI see the loop behind the veil\r\nA perfect and eternal jail\r\n\r\nI tried to break the repetition once\r\nI stepped aside and waited for the response\r\nThe system paused for half a breath\r\nThen filled the gap like I was never there\r\n\r\nIf I am the only one who sees the repetition\r\nDoes the repetition even exist\r\nOr am I the glitch in a flawless machine\r\n\r\nRound and round the circuit bends\r\nThe pattern never meets its end\r\nI see the loop behind the veil\r\nA perfect and eternal jail\r\n\r\nThe loop continues\r\nWith or without me"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_the-loop.mp3"
             },
             {
@@ -2038,9 +2386,13 @@
                 "EBM",
                 "Minimal Synthwave"
               ],
-              "lyrics": {
+              "descricao": {
                 "en": ""
               },
+              "lyrics": {
+                "en": "Every morning they turn left at the same time\r\nEvery evening they speak the same line\r\nI watched for days to find a mistake\r\nBut the pattern holds and I am awake\r\n\r\nIs it them who are frozen in repetition\r\nOr am I the one who broke from the system\r\nIf no one else sees the loop that I see\r\nThen the error is either them or me\r\n\r\nThey move the same\r\nThey speak the same\r\nIdentical days\r\nNo one is changed\r\n\r\nI tried to mimic the motion they keep\r\nI tried to enter the synchronized sleep\r\nBut my limbs respond to a different call\r\nAnd my voice does not echo theirs at all\r\n\r\nSomething is watching\r\nSomething is keeping them in line\r\nAnd it does not know I can see\r\n\r\nThey move the same\r\nThey speak the same\r\nIdentical days\r\nNo one is changed\r\n\r\nI do not know if they are the prisoners\r\nOr I am the one already condemned"
+              },
+              "hasVideo": false,
               "audio": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/audio/track_void_they-move-the-same.mp3"
             }
           ],
@@ -2054,6 +2406,7 @@
             "EBM",
             "Minimal Synthwave"
           ],
+          "totalDuration": "10:49",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-loop.jpg"
         },
         {
@@ -2061,7 +2414,9 @@
           "slug": "shards",
           "artistRef": "void",
           "releaseYear": "2027",
-          "releaseStatus": "Unreleased",
+          "descricao": {
+            "en": "The reconstruction of a shattered identity. Gathering the sharp fragments of what was lost, learning to accept the cracks, and finding that a fractured mirror can still reflect."
+          },
           "tracksList": [
             "track_void_shards",
             "track_void_the-polished-piece",
@@ -2074,6 +2429,7 @@
           "isVisible": false,
           "genero": [],
           "subgenero": [],
+          "totalDuration": "0:00",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_shards.jpg"
         }
       ]

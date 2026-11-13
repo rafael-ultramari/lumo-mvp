@@ -5,8 +5,8 @@ const MATERIALS_DIR = path.join(process.cwd(), 'lumo-materials', 'metadata');
 const OUTPUT_FILE = path.join(process.cwd(), 'src', 'data', 'catalogo.json');
 const R2_BASE_URL = 'https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev';
 
-function readLines(filePath) {
-  return fs.readFileSync(filePath, 'utf-8').split('\n').map(l => l.trim()).filter(l => l);
+function readFile(filePath) {
+  return fs.readFileSync(filePath, 'utf-8');
 }
 
 function parseArray(str) {
@@ -17,19 +17,36 @@ function parseArray(str) {
   } catch { return []; }
 }
 
-function parseDescription(lines) {
-  const descIndex = lines.findIndex(l => l.startsWith('- Description:'));
-  if (descIndex === -1) return { en: '' };
-  const desc = {};
-  for (let i = descIndex + 1; i < lines.length; i++) {
-    const line = lines[i];
-    if (line.startsWith('-')) break; // Para quando chegar no próximo campo
-    const match = line.match(/^\s*-\s*\[(\w+)\]:\s*(.*)$/);
-    if (match) {
-      desc[match[1]] = match[2];
-    }
+function extractDescription(text) {
+  const match = text.match(/- Description:\s*\n\s*- \[en\]: ([\s\S]*?)(?=\n- |$)/i);
+  if (match) {
+    return { en: match[1].trim().replace(/\n\s*/g, ' ') };
   }
-  return desc;
+  return { en: '' };
+}
+
+function extractLyrics(text) {
+  const match = text.match(/- Lyrics \(plain text\):\s*\n\s*- \[en\]: ([\s\S]*?)(?=\n- |$)/i);
+  if (match) {
+    return { en: match[1].trim() };
+  }
+  return { en: '' };
+}
+
+function parseDuration(durationStr) {
+  if (!durationStr) return 0;
+  const parts = durationStr.split(':');
+  if (parts.length === 2) {
+    return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
+  }
+  return 0;
+}
+
+function formatDuration(totalSeconds) {
+  if (isNaN(totalSeconds) || totalSeconds === 0) return '0:00';
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `${minutes}:${seconds.toString().padStart(2, '0')}`;
 }
 
 function ingest() {
@@ -46,103 +63,113 @@ function ingest() {
   const albumsMap = new Map();
   const tracksMap = new Map();
 
-  // 1. Leitura dos arquivos V4
   files.forEach(file => {
-    const lines = readLines(path.join(MATERIALS_DIR, file));
-    if (lines.length === 0) return;
+    const text = readFile(path.join(MATERIALS_DIR, file));
+    if (!text) return;
 
-    const type = lines[0].split('_')[0];
-    const id = lines[0]; 
+    const firstLine = text.split('\n')[0].trim();
+    const type = firstLine.split('_')[0];
+    const id = firstLine; 
 
     if (type === 'label') {
-      const name = lines.find(l => l.startsWith('- Name:'))?.replace('- Name:', '').trim() || '';
-      const slug = lines.find(l => l.startsWith('- Slug (URL):'))?.replace('- Slug (URL):', '').trim() || lines[0].replace('label_', '').trim();
-      const desc = parseDescription(lines);
+      const name = text.match(/- Name: (.*)/)?.[1]?.trim() || '';
+      const slug = text.match(/- Slug \(URL\): (.*)/)?.[1]?.trim() || id.replace('label_', '').trim();
+      const desc = extractDescription(text);
       labelsMap.set(id, { name, slug, descricao: desc });
     }
     else if (type === 'artist') {
-      const name = lines.find(l => l.startsWith('- Name:'))?.replace('- Name:', '').trim() || '';
-      const slug = lines.find(l => l.startsWith('- Slug (URL):'))?.replace('- Slug (URL):', '').trim() || '';
-      const desc = parseDescription(lines);
+      const name = text.match(/- Name: (.*)/)?.[1]?.trim() || '';
+      const slug = text.match(/- Slug \(URL\): (.*)/)?.[1]?.trim() || '';
+      const desc = extractDescription(text);
       
-      // Tenta ler o campo 'Label:' do V4. Se não existir, usa o nome do arquivo como fallback.
-      let labelSlug = lines.find(l => l.startsWith('- Label:'))?.replace('- Label:', '').trim();
+      let labelSlug = text.match(/- Label: (.*)/)?.[1]?.trim();
       if (!labelSlug) {
-        // Fallback para o MVP: se o nome do arquivo tem "noise" ou "vex", é loop-77, senão ul7r4
         labelSlug = slug.match(/noise|vex/) ? 'loop-77' : 'ul7r4';
       }
       
-      const albumsList = lines.filter(l => l.match(/- \d+\. album_/)).map(l => l.replace(/- \d+\. /, '').trim());
+      const albumsBlock = text.match(/- Albums:\s*\n([\s\S]*?)(?=\n- |$)/);
+      const albumsList = albumsBlock ? albumsBlock[1].split('\n').map(l => l.replace(/- \d+\. /, '').trim()).filter(Boolean) : [];
+      
       artistsMap.set(id, { name, slug, descricao: desc, labelSlug, albumsList, albums: [] });
     } 
     else if (type === 'album') {
-      const title = lines.find(l => l.startsWith('- Album Title:'))?.replace('- Album Title:', '').trim() || '';
-      const slug = lines.find(l => l.startsWith('- Slug (URL):'))?.replace('- Slug (URL):', '').trim() || '';
-      const artistRef = lines.find(l => l.startsWith('- Artist:'))?.replace('- Artist:', '').trim() || '';
-      const releaseYear = lines.find(l => l.startsWith('- Release Year:'))?.replace('- Release Year:', '').trim() || '';
-      const releaseStatus = lines.find(l => l.startsWith('- Release Status:'))?.replace('- Release Status:', '').trim() || 'Unreleased';
-      const tracksList = lines.filter(l => l.match(/- \d+\. track_/)).map(l => l.replace(/- \d+\. /, '').trim());
+      const title = text.match(/- Album Title: (.*)/)?.[1]?.trim() || '';
+      const slug = text.match(/- Slug \(URL\): (.*)/)?.[1]?.trim() || '';
+      const artistRef = text.match(/- Artist: (.*)/)?.[1]?.trim() || '';
+      const releaseYear = text.match(/- Release Year: (.*)/)?.[1]?.trim() || '';
       
-      albumsMap.set(id, { title, slug, artistRef, releaseYear, releaseStatus, tracksList, tracks: [] });
+      const desc = extractDescription(text);
+      
+      const tracksBlock = text.match(/- Tracks:\s*\n([\s\S]*?)(?=\n- |$)/);
+      const tracksList = tracksBlock ? tracksBlock[1].split('\n').map(l => l.replace(/- \d+\. /, '').trim()).filter(Boolean) : [];
+      
+      albumsMap.set(id, { title, slug, artistRef, releaseYear, descricao: desc, tracksList, tracks: [] });
     } 
     else if (type === 'track') {
-      const title = lines.find(l => l.startsWith('- Track Title:'))?.replace('- Track Title:', '').trim() || '';
-      const slug = lines.find(l => l.startsWith('- Slug (URL):'))?.replace('- Slug (URL):', '').trim() || '';
-      const genresStr = lines.find(l => l.startsWith('- Genres (macro):'))?.replace('- Genres (macro):', '').trim() || '[]';
-      const subgenresStr = lines.find(l => l.startsWith('- Subgenres (micro):'))?.replace('- Subgenres (micro):', '').trim() || '[]';
-      const duration = lines.find(l => l.startsWith('- Exact Duration'))?.replace('- Exact Duration (mm:ss):', '').trim() || '';
-      const releaseStatus = lines.find(l => l.startsWith('- Release Status:'))?.replace('- Release Status:', '').trim() || 'Unreleased';
+      const title = text.match(/- Track Title: (.*)/)?.[1]?.trim() || '';
+      const slug = text.match(/- Slug \(URL\): (.*)/)?.[1]?.trim() || '';
       
-      const lyricsIndex = lines.findIndex(l => l.startsWith('- Lyrics (plain text):'));
-      let lyrics = { en: '' };
-      if (lyricsIndex !== -1) {
-        const lyricsLines = [];
-        for (let i = lyricsIndex + 1; i < lines.length; i++) {
-          if (lines[i].startsWith('-')) break;
-          lyricsLines.push(lines[i]);
-        }
-        lyrics.en = lyricsLines.join('\n');
-      }
+      const genresStr = text.match(/- Genres \(macro\): (.*)/)?.[1]?.trim() || '[]';
+      const subgenresStr = text.match(/- Subgenres \(micro\): (.*)/)?.[1]?.trim() || '[]';
+      const duration = text.match(/- Exact Duration \(mm:ss\): (.*)/)?.[1]?.trim() || '';
+      
+      let releaseStatus = text.match(/- Release Status: (.*)/)?.[1]?.trim() || 'Unreleased';
+      releaseStatus = releaseStatus.trim();
 
-      const artistSlug = lines.find(l => l.startsWith('- Artist:'))?.replace('- Artist:', '').trim() || 'unknown';
+      // NOVO: Lê o campo "Official Music Video?"
+      const hasVideo = text.match(/- Official Music Video\?: (.*)/)?.[1]?.trim().toLowerCase() === 'yes';
+
+      const desc = extractDescription(text);
+      const lyrics = extractLyrics(text);
+      
+      const artistSlug = text.match(/- Artist: (.*)/)?.[1]?.trim() || 'unknown';
 
       tracksMap.set(id, { 
         title, slug, duration, releaseStatus, 
         track_genres: parseArray(genresStr), 
         track_subgenres: parseArray(subgenresStr),
+        descricao: desc,
         lyrics: lyrics,
+        hasVideo: hasVideo, // NOVO CAMPO
         audio: `${R2_BASE_URL}/audio/track_${artistSlug}_${slug}.mp3` 
       });
     }
   });
 
-  // 2. Processamento dos Álbuns
   for (const [albumId, album] of albumsMap.entries()) {
     let albumGenres = new Set();
     let albumSubgenres = new Set();
     let allTracksReleased = true;
+    let totalSeconds = 0;
 
     album.tracksList.forEach(trackRef => {
       const track = tracksMap.get(trackRef);
       if (track) {
         album.tracks.push(track);
-        if (track.releaseStatus !== 'Released') allTracksReleased = false;
+        
+        if (track.releaseStatus !== 'Released') {
+          allTracksReleased = false;
+        }
         
         track.track_genres.forEach(g => albumGenres.add(g));
         track.track_subgenres.forEach(sg => albumSubgenres.add(sg));
+        
+        totalSeconds += parseDuration(track.duration);
+      } else {
+        allTracksReleased = false;
       }
     });
 
     album.isVisible = allTracksReleased && album.tracks.length > 0;
     album.genero = Array.from(albumGenres);
     album.subgenero = Array.from(albumSubgenres);
+    album.totalDuration = formatDuration(totalSeconds);
     
     const artistForAlbum = artistsMap.get(`artist_${album.artistRef.replace('artist_', '')}`);
     const artistSlug = artistForAlbum ? artistForAlbum.slug : 'unknown';
     album.capa = `${R2_BASE_URL}/image/album_${artistSlug}_${album.slug}.jpg`;
   }
 
-  // 3. Processamento dos Artistas
   const artistasFinais = [];
   for (const [artistId, artist] of artistsMap.entries()) {
     let artistGenres = new Set();
@@ -180,7 +207,6 @@ function ingest() {
     }
   }
 
-  // 4. Processamento dos Labels (Selos)
   const labelsFinais = [];
   for (const [labelId, label] of labelsMap.entries()) {
     const artistasDoLabel = artistasFinais.filter(a => a.label === label.slug);
@@ -196,7 +222,6 @@ function ingest() {
     }
   }
 
-  // 5. Salva o catálogo final
   const catalogo = { 
     labels: labelsFinais,
     artistas: artistasFinais 

@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import catalogo from '../../data/catalogo.json';
+
+// Percorre todos os artistas e álbuns para encontrar faixas com vídeo oficial
+const videos = [];
+for (const artista of catalogo.artistas) {
+  for (const album of artista.albuns) {
+    if (album.isVisible) {
+      for (const track of album.tracks) {
+        // Usa 'hasVideo' (que é o campo que está no seu JSON)
+        if (track.hasVideo) {
+          videos.push({
+            ...track,
+            artistaNome: artista.nome,
+            artistaSlug: artista.slug,
+            albumSlug: album.slug,
+            albumTitle: album.title,
+            albumCapa: album.capa
+          });
+        }
+      }
+    }
+  }
+}
+---
+
+<BaseLayout title="Videos" theme="home" lang="en">
+  
+  <div class="videos-page-container">
+    
+    <h2 class="section-title">VIDEOS</h2>
+    
+    <div class="videos-list">
+      {videos.length === 0 ? (
+        <p class="no-videos">No official music videos available yet.</p>
+      ) : (
+        videos.map(video => (
+          <a href={`/tracks/${video.artistaSlug}/${video.albumSlug}/${video.slug}`} class="video-row">
+            
+            <div class="video-image-wrapper">
+              <img src={video.albumCapa} alt={video.title} class="video-image" />
+              <div class="play-overlay">▶</div>
+            </div>
+
+            <div class="video-info">
+              <h3 class="font-serif">{video.title.toUpperCase()}</h3>
+              <p class="video-artist">By {video.artistaNome}</p>
+              <p class="video-album">From the album: {video.albumTitle}</p>
+              <span class="video-cta">WATCH VIDEO &rarr;</span>
+            </div>
+
+          </a>
+        ))
+      )}
+    </div>
+
+  </div>
+
+</BaseLayout>
+
+<style>
+  :global(body) { overflow-y: auto; overflow-x: hidden; }
+
+  .videos-page-container {
+    /* Padrão de 150px: 80px (header) + 70px */
+    padding-top: 50px; 
+    /* Padrão de 150px: 80px (player) + 70px */
+    padding-bottom: 170px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .no-videos {
+    color: rgba(255,255,255,0.5);
+    font-size: 1.1rem;
+  }
+
+  .videos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .video-row {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid #222;
+    transition: background 0.3s, border-color 0.3s;
+  }
+
+  .video-row:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: #555;
+  }
+
+  .video-image-wrapper {
+    width: 280px;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #333;
+    position: relative;
+  }
+
+  .video-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  }
+
+  .video-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .video-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.02em;
+  }
+
+  .video-artist {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.5rem;
+  }
+
+  .video-album {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 1.5rem;
+  }
+
+  .video-cta {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
+    align-self: flex-start;
+    transition: color 0.3s, border-color 0.3s;
+  }
+
+  .video-row:hover .video-cta {
+    color: #ff3333;
+    border-color: #ff3333;
+  }
+
+  @media (max-width: 768px) {
+    .video-row { flex-direction: column; align-items: flex-start; gap: 1.5rem; padding: 1rem; }
+    .video-image-wrapper { width: 100%; height: auto; aspect-ratio: 16/9; }
+    .video-info h3 { font-size: 1.5rem; }
+  }
+</style>

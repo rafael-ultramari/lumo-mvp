@@ -1,0 +1,479 @@
+---
+// GlobalPlayer.astro
+---
+
+<div id="global-player" class="global-player hidden" transition:persist>
+  <div class="player-left">
+    <img id="player-cover" src="" alt="Cover" class="player-cover" />
+    <div class="player-text">
+      <span id="player-title" class="player-title">Track Title</span>
+      <span id="player-artist" class="player-artist">Artist</span>
+    </div>
+  </div>
+  
+  <div class="player-center">
+    <div class="player-buttons">
+      <button id="player-shuffle-btn" class="btn-control" title="Shuffle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+          <polyline points="16 3 21 3 21 8"></polyline>
+          <line x1="4" y1="20" x2="21" y2="3"></line>
+          <polyline points="21 16 21 21 16 21"></polyline>
+          <line x1="15" y1="15" x2="21" y2="21"></line>
+          <line x1="4" y1="4" x2="9" y2="9"></line>
+        </svg>
+      </button>
+      <button id="prev-btn" class="btn-control" title="Previous">⏮</button>
+      <button id="play-pause" aria-label="Play/Pause">▶</button>
+      <button id="next-btn" class="btn-control" title="Next">⏭</button>
+      <button id="repeat-btn" class="btn-control" title="Repeat">
+        <svg id="repeat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+          <polyline points="17 1 21 5 17 9"></polyline>
+          <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+          <polyline points="7 23 3 19 7 15"></polyline>
+          <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="progress-wrapper">
+      <span id="time-current">0:00</span>
+      <input type="range" id="progress" value="0" max="100" step="0.1" />
+      <span id="time-total">0:00</span>
+    </div>
+  </div>
+
+  <div class="player-right">
+    <input type="range" id="volume" min="0" max="1" step="0.1" value="0.8" />
+  </div>
+</div>
+
+<script>
+  window.lumoPlayer = window.lumoPlayer || {
+    sound: null,
+    isPlaying: false,
+    animationFrame: null,
+    currentUrl: null,
+    currentIndex: -1,
+    originalQueue: [],
+    activeQueue: [],
+    shuffle: false,
+    repeatMode: 'none',
+    formatTime: function(secs) {
+      const min = Math.floor(secs / 60);
+      const sec = Math.floor(secs % 60);
+      return `${min}:${sec.toString().padStart(2, '0')}`;
+    }
+  };
+
+  function getElements() {
+    return {
+      playerDiv: document.getElementById('global-player'),
+      playBtn: document.getElementById('play-pause'),
+      prevBtn: document.getElementById('prev-btn'),
+      nextBtn: document.getElementById('next-btn'),
+      shuffleBtn: document.getElementById('player-shuffle-btn'),
+      repeatBtn: document.getElementById('repeat-btn'),
+      repeatIcon: document.getElementById('repeat-icon'),
+      progressBar: document.getElementById('progress'),
+      volumeBar: document.getElementById('volume'),
+      timeCurrent: document.getElementById('time-current'),
+      timeTotal: document.getElementById('time-total'),
+      playerTitle: document.getElementById('player-title'),
+      playerArtist: document.getElementById('player-artist'),
+      playerCover: document.getElementById('player-cover'),
+    };
+  }
+
+  function updateUI() {
+    const el = getElements();
+    const p = window.lumoPlayer;
+
+    if (el.playerDiv) {
+      if (p.sound) el.playerDiv.classList.remove('hidden');
+      else el.playerDiv.classList.add('hidden');
+    }
+
+    if (el.playBtn) {
+      el.playBtn.textContent = p.isPlaying ? '⏸' : '▶';
+    }
+
+    if (el.shuffleBtn) {
+      if (p.shuffle) el.shuffleBtn.classList.add('active');
+      else el.shuffleBtn.classList.remove('active');
+    }
+
+    if (el.repeatBtn && el.repeatIcon) {
+      if (p.repeatMode === 'none') {
+        el.repeatBtn.classList.remove('active');
+        el.repeatIcon.innerHTML = `
+          <polyline points="17 1 21 5 17 9"></polyline>
+          <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+          <polyline points="7 23 3 19 7 15"></polyline>
+          <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+        `;
+      } else if (p.repeatMode === 'all') {
+        el.repeatBtn.classList.add('active');
+        el.repeatIcon.innerHTML = `
+          <polyline points="17 1 21 5 17 9"></polyline>
+          <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+          <polyline points="7 23 3 19 7 15"></polyline>
+          <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+        `;
+      } else if (p.repeatMode === 'one') {
+        el.repeatBtn.classList.add('active');
+        el.repeatIcon.innerHTML = `
+          <polyline points="17 1 21 5 17 9"></polyline>
+          <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+          <polyline points="7 23 3 19 7 15"></polyline>
+          <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+          <text x="12" y="17" text-anchor="middle" font-size="8" fill="currentColor" stroke="none">1</text>
+        `;
+      }
+    }
+  }
+
+  function startProgressLoop() {
+    const p = window.lumoPlayer;
+    if (p.animationFrame) cancelAnimationFrame(p.animationFrame);
+    function tick() {
+      if (!p.sound || !p.isPlaying) return;
+      const el = getElements();
+      if (el.progressBar && p.sound) {
+        const seek = p.sound.seek() || 0;
+        const duration = p.sound.duration() || 1;
+        el.progressBar.value = String((seek / duration) * 100);
+        if (el.timeCurrent) el.timeCurrent.textContent = p.formatTime(seek);
+        if (el.timeTotal) el.timeTotal.textContent = p.formatTime(duration);
+      }
+      p.animationFrame = requestAnimationFrame(tick);
+    }
+    p.animationFrame = requestAnimationFrame(tick);
+  }
+
+  function shuffleArray(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  function playTrackByIndex(index) {
+    const p = window.lumoPlayer;
+    if (index < 0 || index >= p.activeQueue.length) return;
+    
+    const track = p.activeQueue[index];
+    p.currentIndex = index;
+    
+    if (p.currentUrl === track.url && p.sound && p.isPlaying) return;
+    if (p.currentUrl === track.url && p.sound && !p.isPlaying) {
+      p.sound.play();
+      return;
+    }
+
+    if (p.sound) {
+      try { p.sound.stop(); p.sound.unload(); } catch (e) { }
+      p.sound = null;
+    }
+    if (p.animationFrame) {
+      cancelAnimationFrame(p.animationFrame);
+      p.animationFrame = null;
+    }
+
+    const el = getElements();
+    if (el.playerTitle) el.playerTitle.textContent = track.title;
+    if (el.playerArtist) el.playerArtist.textContent = track.artist;
+    if (el.playerCover) el.playerCover.src = track.cover;
+    if (el.playerDiv) el.playerDiv.classList.remove('hidden');
+
+    p.currentUrl = track.url;
+    p.sound = new Howl({
+      src: [track.url],
+      html5: true,
+      onplay: () => { p.isPlaying = true; updateUI(); startProgressLoop(); },
+      onpause: () => { p.isPlaying = false; updateUI(); if (p.animationFrame) cancelAnimationFrame(p.animationFrame); },
+      onend: () => {
+        p.isPlaying = false;
+        updateUI();
+        if (p.animationFrame) cancelAnimationFrame(p.animationFrame);
+        if (el.progressBar) el.progressBar.value = '0';
+        if (el.timeCurrent) el.timeCurrent.textContent = '0:00';
+        
+        if (p.repeatMode === 'one') {
+          playTrackByIndex(p.currentIndex);
+        } else {
+          handleNext();
+        }
+      },
+      onload: () => { if (el.timeTotal && p.sound) el.timeTotal.textContent = p.formatTime(p.sound.duration()); }
+    });
+
+    p.sound.play();
+  }
+
+  function handleNext() {
+    const p = window.lumoPlayer;
+    if (p.activeQueue.length === 0) return;
+
+    let nextIndex = p.currentIndex + 1;
+    if (nextIndex >= p.activeQueue.length) {
+      if (p.repeatMode === 'all') nextIndex = 0;
+      else return;
+    }
+    playTrackByIndex(nextIndex);
+  }
+
+  function handlePrev() {
+    const p = window.lumoPlayer;
+    if (p.activeQueue.length === 0) return;
+
+    let prevIndex = p.currentIndex - 1;
+    if (prevIndex < 0) {
+      if (p.repeatMode === 'all') prevIndex = p.activeQueue.length - 1;
+      else prevIndex = 0;
+    }
+    playTrackByIndex(prevIndex);
+  }
+
+  function handlePlayerShuffle() {
+    const p = window.lumoPlayer;
+    if (p.originalQueue.length === 0) return;
+
+    p.shuffle = !p.shuffle;
+
+    if (p.shuffle) {
+      const currentTrack = p.activeQueue[p.currentIndex];
+      if (currentTrack) {
+        const otherTracks = p.originalQueue.filter(t => t.url !== currentTrack.url);
+        const shuffledOthers = shuffleArray(otherTracks);
+        p.activeQueue = [currentTrack, ...shuffledOthers];
+        p.currentIndex = 0;
+      } else {
+        p.activeQueue = shuffleArray(p.originalQueue);
+        p.currentIndex = 0;
+      }
+    } else {
+      const currentTrack = p.activeQueue[p.currentIndex];
+      p.activeQueue = [...p.originalQueue];
+      if (currentTrack) {
+        const newIndex = p.originalQueue.findIndex(t => t.url === currentTrack.url);
+        p.currentIndex = newIndex !== -1 ? newIndex : 0;
+      } else {
+        p.currentIndex = 0;
+      }
+    }
+
+    updateUI();
+  }
+
+  function handlePlayTrackEvent(e) {
+    const { url, title, artist, cover, queue, index, isShuffle } = e.detail;
+    const p = window.lumoPlayer;
+    
+    if (queue && Array.isArray(queue)) {
+      p.originalQueue = queue;
+      p.activeQueue = [...p.originalQueue];
+      p.currentIndex = index !== undefined ? index : p.originalQueue.findIndex(t => t.url === url);
+      p.shuffle = isShuffle === true;
+    } else {
+      p.originalQueue = [{ url, title, artist, cover }];
+      p.currentIndex = 0;
+      p.activeQueue = [...p.originalQueue];
+      p.shuffle = false;
+    }
+
+    playTrackByIndex(p.currentIndex);
+    updateUI();
+  }
+
+  function handlePlayerClick(e) {
+    const target = e.target;
+    if (!target || !target.closest) return;
+
+    const p = window.lumoPlayer;
+
+    if (target.closest('#play-pause')) {
+      if (!p.sound) return;
+      if (p.isPlaying) p.sound.pause();
+      else p.sound.play();
+      return;
+    }
+
+    if (target.closest('#player-shuffle-btn')) {
+      handlePlayerShuffle();
+      return;
+    }
+
+    if (target.closest('#repeat-btn')) {
+      if (p.repeatMode === 'none') p.repeatMode = 'all';
+      else if (p.repeatMode === 'all') p.repeatMode = 'one';
+      else p.repeatMode = 'none';
+      updateUI();
+      return;
+    }
+
+    if (target.closest('#prev-btn')) {
+      handlePrev();
+      return;
+    }
+
+    if (target.closest('#next-btn')) {
+      handleNext();
+      return;
+    }
+  }
+
+  function handleSliderInput(e) {
+    const target = e.target;
+    if (!target) return;
+
+    const p = window.lumoPlayer;
+
+    if (target.id === 'progress' && p.sound) {
+      const seekTo = (Number(target.value) / 100) * p.sound.duration();
+      p.sound.seek(seekTo);
+    }
+
+    if (target.id === 'volume') {
+      Howler.volume(Number(target.value));
+    }
+  }
+
+  if (!window.lumoPlayer.listenerAttached) {
+    document.addEventListener('click', handlePlayerClick);
+    document.addEventListener('input', handleSliderInput);
+    document.addEventListener('playTrack', handlePlayTrackEvent);
+    window.lumoPlayer.listenerAttached = true;
+  }
+
+  document.addEventListener('astro:page-load', () => {
+    const p = window.lumoPlayer;
+    updateUI();
+    if (p.sound) {
+      const el = getElements();
+      if (el.playerDiv) el.playerDiv.classList.remove('hidden');
+      if (el.playBtn) el.playBtn.textContent = p.isPlaying ? '⏸' : '▶';
+    }
+  });
+</script>
+
+<style>
+  .global-player {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 80px;
+    background: rgba(10, 10, 10, 0.95);
+    border-top: 1px solid var(--accent-color, #333);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+  }
+
+  .global-player.hidden {
+    transform: translateY(100%);
+  }
+
+  .player-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 200px;
+    flex-shrink: 0;
+  }
+  .player-cover { width: 40px; height: 40px; border-radius: 4px; object-fit: cover; display: block; }
+  .player-text { display: flex; flex-direction: column; overflow: hidden; }
+  .player-title { font-weight: 600; font-size: 0.85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #fff; display: block; }
+  .player-artist { font-size: 0.7rem; color: rgba(255,255,255,0.6); display: block; }
+
+  .player-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 50%;
+    max-width: 600px;
+  }
+
+  .player-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .btn-control {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  }
+  
+  .btn-control:hover { color: rgba(255, 255, 255, 0.8); }
+  .btn-control.active { color: #fff; }
+
+  .btn-control svg { display: block; fill: none; stroke: currentColor; }
+
+  #play-pause { 
+    background: #fff; 
+    color: #000; 
+    border: none; 
+    width: 36px; 
+    height: 36px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    font-size: 0.9rem; 
+    margin: 0 0.5rem;
+  }
+
+  .progress-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .progress-wrapper input[type="range"] {
+    flex: 1;
+    accent-color: var(--accent-color, #fff);
+    height: 4px;
+    cursor: pointer;
+  }
+
+  .progress-wrapper span {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.5);
+    min-width: 35px;
+    text-align: center;
+  }
+
+  .player-right {
+    position: absolute;
+    right: 2rem;
+    width: 100px;
+  }
+
+  #volume { width: 100% !important; accent-color: var(--accent-color, #fff); }
+
+  @media (max-width: 768px) {
+    .global-player { height: auto; padding: 0.5rem 1rem; flex-direction: column; gap: 0.5rem; }
+    .player-left { width: 100%; }
+    .player-center { position: relative; left: 0; transform: none; width: 100%; max-width: none; }
+    .player-right { display: none; }
+  }
+</style>

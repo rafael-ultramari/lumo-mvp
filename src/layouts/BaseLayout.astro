@@ -1,16 +1,23 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+import GlobalPlayer from '../components/GlobalPlayer.astro';
+
 export interface Props {
   title: string;
   description?: string;
   theme?: 'loop77' | 'ul7r4' | 'home';
   lang?: 'en' | 'pt';
+  ogImage?: string;
+  ogType?: 'website' | 'music.song' | 'music.album' | 'profile';
 }
 
 const { 
   title, 
   description = "LUMO Studio Platform", 
   theme = 'home', 
-  lang = 'en' 
+  lang = 'en',
+  ogImage = "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_lumo_transparent.png",
+  ogType = "website"
 } = Astro.props;
 
 const translations = {
@@ -18,6 +25,11 @@ const translations = {
   pt: { home: "Início", labels: "Selos", artists: "Artistas", albums: "Álbuns", tracks: "Faixas", videos: "Vídeos", about: "Sobre", explore: "Explorar" }
 };
 const t = translations[lang];
+
+// Correção: Constrói a URL canônica de forma segura
+const baseUrl = Astro.site?.toString() || 'https://lumo-mvp.netlify.app';
+const pathname = Astro.url?.pathname || '/';
+const canonicalURL = new URL(pathname, baseUrl);
 ---
 
 <!DOCTYPE html>
@@ -27,20 +39,41 @@ const t = translations[lang];
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} | LUMO</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content={`${title} | LUMO`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="LUMO" />
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | LUMO`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+    <ViewTransitions />
   </head>
   <body class={`theme-${theme}`}>
     
-    <!-- Header Global Fixo -->
+    <!-- Header (igual ao anterior) -->
     <header>
       <a href="/" class="logo">
-        <!-- Reduzi a altura para 50px para caber na barra de 80px -->
-        <img src="https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_lumo_transparent.png" alt="LUMO" style="height: 50px; width: auto; display: block;" />
+        <img src="https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_lumo_transparent.png" alt="LUMO" style="height: 40px; width: auto; display: block;" />
       </a>
       
-      <nav>
+      <div class="mobile-search-bar">
+        <input type="text" placeholder="Search..." />
+      </div>
+
+      <nav class="desktop-menu">
         <a href="/">{t.home}</a>
         <a href="/labels">{t.labels}</a>
         <a href="/artists">{t.artists}</a>
@@ -51,96 +84,106 @@ const t = translations[lang];
       </nav>
 
       <div class="header-right">
-        <div class="search-bar">
+        <div class="desktop-search-bar">
           <input type="text" placeholder="Search..." />
         </div>
+
         <div class="lang-switcher">
           <a href="/" aria-label="English">EN</a>
           <a href="/pt/" aria-label="Português">PT</a>
         </div>
+        
+        <button id="menu-toggle" class="hamburger-btn" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
     </header>
 
-    <!-- Conteúdo Principal -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+      <div class="mobile-menu-content">
+        <button id="menu-close" class="close-btn">&times;</button>
+        <nav class="mobile-nav-links">
+          <a href="/">{t.home}</a>
+          <a href="/labels">{t.labels}</a>
+          <a href="/artists">{t.artists}</a>
+          <a href="/albums">{t.albums}</a>
+          <a href="/tracks">{t.tracks}</a>
+          <a href="/videos">{t.videos}</a>
+          <a href="/about">{t.about}</a>
+        </nav>
+      </div>
+    </div>
+
     <main>
       <slot />
     </main>
+
+    <GlobalPlayer />
+
+    <script is:inline>
+      function handleMenuClick(e) {
+        const target = e.target;
+        if (!target || !target.closest) return;
+        if (target.closest('#menu-toggle')) {
+          document.getElementById('mobile-menu')?.classList.add('active');
+        }
+        if (target.closest('#menu-close')) {
+          document.getElementById('mobile-menu')?.classList.remove('active');
+        }
+      }
+      if (!window.lumoMenuListener) {
+        document.addEventListener('click', handleMenuClick);
+        window.lumoMenuListener = true;
+      }
+    </script>
 
   </body>
 </html>
 
 <style is:global>
-  /* Reset e Tipografia */
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  
-  body { 
-    font-family: 'Inter', sans-serif; 
-    background: #000; 
-    color: #fff; 
-    overflow-x: hidden;
-  }
+  body { font-family: 'Inter', sans-serif; background: #000; color: #fff; overflow-x: hidden; }
+  .font-serif { font-family: 'Playfair Display', serif; font-weight: 400; }
 
-  .font-serif {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-  }
-
-  /* Header Global Fixo */
   header {
-    position: fixed;
-    top: 0; left: 0; width: 100%;
-    height: 80px; /* Barra mais fina e elegante */
-    padding: 0 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #000; 
-    border-bottom: 1px solid #222;
-    z-index: 1000;
+    position: fixed; top: 0; left: 0; width: 100%;
+    height: 80px; padding: 0 4rem;
+    display: flex; justify-content: space-between; align-items: center;
+    background: #000; border-bottom: 1px solid #222; z-index: 1000;
   }
-  
-  .logo { 
-    display: flex; 
-    align-items: center; 
-    text-decoration: none; 
-    height: 100%; 
-  }
-
-  nav { display: flex; gap: 2rem; }
-  nav a { 
-    color: rgba(255, 255, 255, 0.6); 
-    text-decoration: none; 
-    font-size: 0.8rem; /* Fonte um pouco menor para combinar com a barra fina */
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: color 0.3s;
-  }
-  nav a:hover { color: #fff; }
-
-  .header-right { display: flex; align-items: center; gap: 2rem; }
-
-  .search-bar input {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-    color: #fff;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.8rem;
-    outline: none;
-    width: 150px;
-  }
-  .search-bar input::placeholder { color: rgba(255,255,255,0.3); }
-
-  .lang-switcher { 
-    display: flex; gap: 0.5rem; 
-    font-size: 0.8rem;
-    border-left: 1px solid rgba(255,255,255,0.2);
-    padding-left: 1rem;
-  }
+  .logo { display: flex; align-items: center; text-decoration: none; height: 100%; flex-shrink: 0; }
+  nav.desktop-menu { display: flex; gap: 2rem; flex-grow: 1; justify-content: center; }
+  nav.desktop-menu a { color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; transition: color 0.3s; }
+  nav.desktop-menu a:hover { color: #fff; }
+  .header-right { display: flex; align-items: center; gap: 2rem; flex-shrink: 0; }
+  .desktop-search-bar input { background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 0.25rem 0.5rem; font-size: 0.8rem; outline: none; width: 120px; }
+  .mobile-search-bar { display: none; flex-grow: 1; padding: 0 2rem; }
+  .mobile-search-bar input { background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 0.25rem 0.5rem; font-size: 0.8rem; outline: none; width: 100%; text-align: center; }
+  .lang-switcher { display: flex; gap: 0.5rem; font-size: 0.8rem; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 1rem; }
   .lang-switcher a { color: rgba(255,255,255,0.6); text-decoration: none; }
-  .lang-switcher a:hover { color: #fff; }
-
-  /* Utilitários */
-  main { padding-top: 80px; } /* Ajustado para a nova altura do header */
+  .hamburger-btn { display: none; background: none; border: none; color: #fff; cursor: pointer; padding: 0.5rem; }
+  .mobile-menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+  .mobile-menu-overlay.active { opacity: 1; pointer-events: auto; }
+  .mobile-menu-content { position: relative; text-align: center; }
+  .close-btn { position: absolute; top: -3rem; right: 0; background: none; border: none; color: #fff; font-size: 3rem; cursor: pointer; line-height: 1; }
+  .mobile-nav-links { display: flex; flex-direction: column; gap: 1.5rem; }
+  .mobile-nav-links a { color: #fff; text-decoration: none; font-size: 2rem; text-transform: uppercase; font-family: 'Playfair Display', serif; }
+  @media (max-width: 1200px) {
+    nav.desktop-menu { display: none; }
+    .desktop-search-bar { display: none; }
+    .hamburger-btn { display: block; }
+    .mobile-search-bar { display: flex; }
+    header { padding: 0 1.5rem; }
+    .header-right { gap: 0.5rem; }
+  }
+  @media (max-width: 600px) {
+    header { padding: 0 1rem; }
+    .mobile-search-bar { padding: 0 1rem; }
+  }
+  main { padding-top: 80px; }
   h1, h2, h3 { font-weight: 400; letter-spacing: -0.02em; }
 </style>

@@ -14,45 +14,37 @@ const { label } = Astro.props;
 
 <BaseLayout title={label.nome} theme="home" lang="en">
   
-  <!-- Container Principal (Hero Imersivo) -->
   <div class="hero-container" style={`background-image: url('${label.imagemFundo}');`}>
     
-    <!-- Degradê para garantir a leitura do texto e dos cards -->
     <div class="overlay"></div>
 
-    <!-- Cabeçalho do Selo (Logo, Título e Descrição lado a lado) -->
-    <div class="hero-header">
+    <div class="hero-content-wrapper">
       
-      <!-- Coluna da Esquerda (Logo e Título) -->
-      <div class="title-col">
-        <img src={`https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_${label.slug}_transparent.png`} alt={label.nome} class="label-logo" />
-        <h1 class="font-serif lining-nums">{label.nome.toUpperCase()}</h1>
-      </div>
-
-      <!-- Coluna da Direita (Descrição) -->
-      <div class="desc-col">
+      <div class="hero-header">
+        <div class="title-row">
+          <img src={`https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_${label.slug}_transparent.png`} alt={label.nome} class="label-logo" />
+          <h1 class="font-serif lining-nums">{label.nome.toUpperCase()}</h1>
+        </div>
         <p class="hero-description">{label.descricao.en || label.descricao.pt}</p>
       </div>
 
-    </div>
-
-    <!-- Carrossel de Artistas -->
-    <div class="artists-carousel-section">
-      <h2 class="carousel-title">Artists</h2>
-      
-      <div class="carousel-track">
-        {label.artistas.map(artista => (
-          <a href={`/artists/${artista.slug}`} class="artist-card">
-            <div class="card-image-wrapper">
-              <img src={artista.foto} alt={artista.nome} class="card-image" />
-            </div>
-            <div class="card-info">
-              <h3 class="font-serif">{artista.nome.toUpperCase()}</h3>
-              <p class="card-meta">{artista.genero.join(' · ')}</p>
-            </div>
-          </a>
-        ))}
+      <div class="artists-carousel-section">
+        <h2 class="carousel-title">Artists</h2>
+        <div class="carousel-track">
+          {label.artistas.map(artista => (
+            <a href={`/artists/${artista.slug}`} class="artist-card">
+              <div class="card-image-wrapper">
+                <img src={artista.foto} alt={artista.nome} class="card-image" />
+              </div>
+              <div class="card-info">
+                <h3 class="font-serif">{artista.nome.toUpperCase()}</h3>
+                <p class="card-meta">{artista.genero.join(' · ')}</p>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
+
     </div>
 
   </div>
@@ -60,75 +52,68 @@ const { label } = Astro.props;
 </BaseLayout>
 
 <style>
-  /* Remove a barra de rolagem padrão do body nesta página */
-  :global(body) {
-    overflow: hidden; 
-  }
+  :global(body) { overflow-y: auto; overflow-x: hidden; }
 
   .hero-container {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    /* Altura total - 160px (header + player) - 140px (padding total) */
+    height: calc(100vh - 160px); 
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Mantém o header no topo e o carrossel embaixo */
-    padding-top: 12vh; /* Respiro do topo */
-    padding-bottom: 120px; /* Espaço reservado para o player */
+    padding-top: 70px; 
+    padding-bottom: 70px;
   }
 
-  /* Degradê estilo Netflix */
   .overlay {
-    position: absolute;
+    position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 40%, transparent 100%),
                 linear-gradient(to right, rgba(0,0,0,0.8) 0%, transparent 60%);
     z-index: 1;
   }
 
-  /* Header do Selo (Layout em duas colunas) */
-  .hero-header {
+  .hero-content-wrapper {
     position: relative;
     z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     padding: 0 5%;
-    width: 100%;
-  }
-
-  .title-col {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    flex: 1;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .hero-header {
+    max-width: 700px; 
+  }
+
+  .title-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .label-logo {
-    height: 120px;
+    height: 100px;
     width: auto;
-    margin-bottom: 0.5rem;
   }
 
   .hero-header h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 1;
     letter-spacing: 0.05em;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
   }
 
-  .desc-col {
-    flex: 1;
-    max-width: 45%; /* Limita a descrição para não invadir o lado direito da tela */
-    padding-top: 1rem; /* Alinha um pouco mais para baixo com o título */
-  }
-
   .hero-description {
     font-size: 1rem;
     line-height: 1.6;
-    color: rgba(255,255,255,0.8);
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    color: rgba(255,255,255,0.9);
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.9);
+    max-width: 100%;
   }
 
   .lining-nums {
@@ -136,13 +121,8 @@ const { label } = Astro.props;
     font-feature-settings: "lnum"; 
   }
 
-  /* Carrossel */
   .artists-carousel-section {
-    position: relative;
-    z-index: 2;
-    padding: 0 5%;
-    /* Aumentei a margem inferior para empurrar os artistas um pouco mais para baixo */
-    margin-bottom: 1rem; 
+    margin-top: auto;
   }
 
   .carousel-title {
@@ -162,9 +142,7 @@ const { label } = Astro.props;
     padding-bottom: 1rem;
   }
 
-  .carousel-track::-webkit-scrollbar {
-    display: none;
-  }
+  .carousel-track::-webkit-scrollbar { display: none; }
 
   .artist-card {
     flex: 0 0 auto;
@@ -206,16 +184,25 @@ const { label } = Astro.props;
     letter-spacing: 0.05em;
   }
 
-  /* Mobile */
-  @media (max-width: 768px) {
-    .hero-header { flex-direction: column; gap: 1.5rem; }
-    .desc-col { max-width: 100%; padding-top: 0; }
+  @media (max-width: 1024px) {
+    .hero-container {
+      height: auto;
+      min-height: calc(100vh - 160px);
+      padding-top: 50px;
+      padding-bottom: 70px;
+    }
+
+    .title-row { 
+      flex-direction: column; 
+      align-items: flex-start; 
+      gap: 1rem; 
+    }
+    
     .hero-header h1 { font-size: 3.5rem; }
     .label-logo { height: 80px; }
     .hero-description { font-size: 0.9rem; }
     
     .artist-card, .card-image-wrapper { width: 150px; }
     .card-image-wrapper { height: 150px; }
-    .hero-container { padding-top: 12vh; padding-bottom: 80px; }
   }
 </style>

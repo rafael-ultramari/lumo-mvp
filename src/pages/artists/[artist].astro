@@ -1,0 +1,297 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import catalogo from '../../data/catalogo.json';
+
+export function getStaticPaths() {
+  return catalogo.artistas.map(artista => ({
+    params: { artist: artista.slug },
+    props: { artista }
+  }));
+}
+
+const { artista } = Astro.props;
+---
+
+<BaseLayout title={artista.nome} theme="home" lang="en">
+  
+  <div class="artist-hero-container">
+    
+    <div class="artist-bg" style={`background-image: url('${artista.foto}');`}></div>
+    <div class="overlay"></div>
+
+    <div class="artist-content-wrapper">
+      
+      <div class="artist-info-section">
+        <div class="artist-photo-wrapper">
+          <img src={artista.foto} alt={artista.nome} class="artist-main-photo" />
+        </div>
+
+        <div class="artist-text-content">
+          <h1 class="font-serif lining-nums">{artista.nome.toUpperCase()}</h1>
+          <p class="artist-description">{artista.descricao.en || artista.descricao.pt}</p>
+          
+          <div class="artist-meta-row">
+            <span class="meta-item">{artista.genero.join(' · ')}</span>
+            <span class="meta-sep">|</span>
+            <span class="meta-item">{artista.totalAlbuns} ALBUMS</span>
+            <span class="meta-sep">|</span>
+            <span class="meta-item">{artista.totalFaixas} TRACKS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="albums-carousel-section">
+        <h2 class="carousel-title">Albums</h2>
+        <div class="carousel-track">
+          {artista.albuns.filter(album => album.isVisible).map(album => (
+            <a href={`/albums/${artista.slug}/${album.slug}`} class="album-card">
+              <div class="album-cover-wrapper">
+                <img src={album.capa} alt={album.title} class="album-cover" />
+              </div>
+              <div class="album-info">
+                <h3 class="font-serif">{album.title}</h3>
+                <p class="album-meta">{album.releaseYear || '2026'}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</BaseLayout>
+
+<style>
+  :global(body) { overflow-y: auto; overflow-x: hidden; }
+
+  .artist-hero-container {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 160px); 
+    display: flex;
+    flex-direction: column;
+    /* Ajuste de 150px para 130px: 80px da barra + 50px */
+    padding-top: 50px; 
+    padding-bottom: 50px;
+  }
+
+  .artist-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(40px) brightness(0.3);
+    transform: scale(1.1);
+    z-index: 0;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
+    z-index: 1;
+  }
+
+  .artist-content-wrapper {
+    position: relative;
+    z-index: 2;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .artist-info-section {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start; 
+    justify-content: flex-start; 
+  }
+
+  .artist-photo-wrapper {
+    width: 280px; 
+    height: 280px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  .artist-main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .artist-text-content {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left; 
+  }
+
+  .artist-text-content h1 {
+    font-size: 4.5rem; 
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    margin-bottom: 1rem;
+  }
+
+  .artist-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 1.5rem;
+  }
+
+  .artist-meta-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .meta-item {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .meta-sep { opacity: 0.3; }
+
+  .lining-nums {
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum"; 
+  }
+
+  .albums-carousel-section {
+    padding-bottom: 0;
+  }
+
+  .carousel-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 0;
+  }
+
+  .carousel-track::-webkit-scrollbar { display: none; }
+
+  .album-card {
+    flex: 0 0 auto;
+    width: 200px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  .album-card:hover { transform: scale(1.05); }
+
+  .album-cover-wrapper {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0.75rem;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #333;
+  }
+
+  .album-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .album-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.02em;
+  }
+
+  .album-meta {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 1024px) {
+    .artist-hero-container {
+      height: auto;
+      min-height: calc(100vh - 160px);
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .artist-content-wrapper {
+      padding: 0 5%;
+    }
+
+    .artist-info-section { 
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
+      gap: 1.5rem; 
+      margin-bottom: 2rem;
+    }
+    
+    .artist-photo-wrapper { 
+      width: 180px; 
+      height: 180px; 
+    }
+    
+    .artist-text-content { 
+      height: auto; 
+      max-width: 100%;
+      align-items: center; 
+      text-align: center; 
+    }
+    
+    .artist-text-content h1 { 
+      font-size: 3rem; 
+      margin-bottom: 0.5rem; 
+    }
+    
+    .artist-description { 
+      font-size: 0.9rem; 
+      line-height: 1.5;
+      margin-bottom: 1rem; 
+    }
+    
+    .artist-meta-row { 
+      justify-content: center; 
+      gap: 1.5rem;
+      margin-bottom: 1.5rem; 
+    }
+    
+    .carousel-title {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .album-card { width: 160px; }
+    .album-cover-wrapper { width: 160px; height: 160px; }
+    .album-info h3 { font-size: 1rem; }
+  }
+</style>

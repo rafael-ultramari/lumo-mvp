@@ -12,13 +12,15 @@ const labels = catalogo.labels;
       <section class="universe-section" style={`background-image: url('${label.imagemFundo}');`}>
         <div class="content">
           
+          <!-- Logo do Selo -->
           <div class="label-logo">
             <img src={`https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_${label.slug}_transparent.png`} alt={label.nome} style="max-height: 120px; width: auto;" />
           </div>
 
-          <!-- Adicionamos a classe "lining-nums" para corrigir os números -->
+          <!-- Nome do Universo -->
           <h1 class="font-serif lining-nums">{label.nome.toUpperCase()}</h1>
           
+          <!-- Botão "Enter Universe" -->
           <a href={`/labels/${label.slug}`} class="btn-enter">Enter Universe</a>
 
         </div>
@@ -40,9 +42,9 @@ const labels = catalogo.labels;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding-bottom: 8rem;
+    justify-content: center; 
+    align-items: center;       
+    padding-bottom: 12rem;      
     position: relative;
     background-size: cover;
     background-position: center;
@@ -53,7 +55,7 @@ const labels = catalogo.labels;
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
     z-index: 1;
   }
 
@@ -64,35 +66,28 @@ const labels = catalogo.labels;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 2rem;
   }
 
   .label-logo {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   h1 {
     font-size: 4.5rem;
     margin-bottom: 2rem;
-    line-height: 1.1; /* Ajustado para não cortar os números */
+    line-height: 1;
     letter-spacing: 0.05em;
-  }
-
-  /* FORÇA OS NÚMEROS A FICAREM ALINHADOS (LINING NUMS) */
-  .lining-nums {
-    font-variant-numeric: lining-nums;
-    font-feature-settings: "lnum"; 
   }
 
   .btn-enter {
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     border: 1px solid #fff;
-    padding: 1rem 3rem;
+    padding: 0.75rem 2.5rem;
     background: rgba(0, 0, 0, 0.4); 
     transition: all 0.3s ease;
   }
@@ -102,9 +97,14 @@ const labels = catalogo.labels;
     color: #000;
   }
 
+  .lining-nums {
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum"; 
+  }
+
   @media (max-width: 768px) {
     h1 { font-size: 3rem; }
-    .universe-section { padding-bottom: 4rem; }
+    .universe-section { padding-bottom: 6rem; } 
     .label-logo img { max-height: 80px; }
   }
 </style>

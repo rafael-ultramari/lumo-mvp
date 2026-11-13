@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import catalogo from '../../data/catalogo.json';
+
+const todasAsTracks = [];
+for (const artista of catalogo.artistas) {
+  for (const album of artista.albuns) {
+    if (album.isVisible) {
+      for (const track of album.tracks) {
+        todasAsTracks.push({
+          ...track,
+          artistaNome: artista.nome,
+          artistaSlug: artista.slug,
+          albumSlug: album.slug,
+          albumTitle: album.title,
+          albumCapa: album.capa
+        });
+      }
+    }
+  }
+}
+---
+
+<BaseLayout title="Tracks" theme="home" lang="en">
+  
+  <div class="tracks-page-container">
+    
+    <h2 class="section-title">TRACKS</h2>
+    
+    <div class="tracks-list">
+      {todasAsTracks.map(track => (
+        <a href={`/tracks/${track.artistaSlug}/${track.albumSlug}/${track.slug}`} class="track-row">
+          
+          <div class="track-image-wrapper">
+            <img src={track.albumCapa} alt={track.title} class="track-image" />
+          </div>
+
+          <div class="track-info">
+            <h3 class="font-serif">{track.title}</h3>
+            <p class="track-album">{track.artistaNome} · {track.albumTitle}</p>
+            <div class="track-meta">
+              <span>{track.duration}</span>
+              <span class="meta-sep">|</span>
+              <span>{track.track_subgenres.join(' · ')}</span>
+            </div>
+          </div>
+
+        </a>
+      ))}
+    </div>
+
+  </div>
+
+</BaseLayout>
+
+<style>
+  :global(body) { overflow-y: auto; overflow-x: hidden; }
+
+  .tracks-page-container {
+    padding-top: 50px; 
+    padding-bottom: 170px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .tracks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .track-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid #222;
+    transition: background 0.3s, border-color 0.3s;
+  }
+
+  .track-row:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: #555;
+  }
+
+  .track-image-wrapper {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #333;
+  }
+
+  .track-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .track-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .track-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.02em;
+  }
+
+  .track-album {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.5rem;
+  }
+
+  .track-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .meta-sep { opacity: 0.3; }
+
+  @media (max-width: 768px) {
+    .track-row { gap: 1rem; padding: 0.75rem; }
+    .track-image-wrapper { width: 60px; height: 60px; }
+    .track-info h3 { font-size: 1.1rem; }
+    .track-album { font-size: 0.8rem; }
+  }
+</style>

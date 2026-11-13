@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import catalogo from '../../data/catalogo.json';
+
+const artistas = catalogo.artistas;
+---
+
+<BaseLayout title="Artists" theme="home" lang="en">
+  
+  <div class="artists-page-container">
+    
+    <h2 class="section-title">ARTISTS</h2>
+    
+    <div class="artists-list">
+      {artistas.map(artista => (
+        <a href={`/artists/${artista.slug}`} class="artist-row">
+          
+          <div class="artist-image-wrapper">
+            <img src={artista.foto} alt={artista.nome} class="artist-image" />
+          </div>
+
+          <div class="artist-info">
+            <h3 class="font-serif">{artista.nome.toUpperCase()}</h3>
+            <p class="artist-desc">{artista.descricao.en || artista.descricao.pt}</p>
+            <span class="artist-cta">VIEW ARTIST &rarr;</span>
+          </div>
+
+        </a>
+      ))}
+    </div>
+
+  </div>
+
+</BaseLayout>
+
+<style>
+  :global(body) { overflow-y: auto; overflow-x: hidden; }
+
+  .artists-page-container {
+    padding-top: 50px; 
+    padding-bottom: 170px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .artists-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .artist-row {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid #222;
+    transition: background 0.3s, border-color 0.3s;
+  }
+
+  .artist-row:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: #555;
+  }
+
+  .artist-image-wrapper {
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #333;
+  }
+
+  .artist-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .artist-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .artist-info h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+  }
+
+  .artist-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .artist-cta {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
+    align-self: flex-start;
+    transition: color 0.3s, border-color 0.3s;
+  }
+
+  .artist-row:hover .artist-cta {
+    color: #ff3333;
+    border-color: #ff3333;
+  }
+
+  @media (max-width: 768px) {
+    .artist-row { flex-direction: column; align-items: flex-start; gap: 1.5rem; padding: 1rem; }
+    .artist-image-wrapper { width: 100%; height: auto; aspect-ratio: 1; }
+    .artist-info h3 { font-size: 2rem; }
+    .artist-desc { font-size: 0.9rem; }
+  }
+</style>
