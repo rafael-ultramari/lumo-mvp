@@ -26,7 +26,6 @@ const translations = {
 };
 const t = translations[lang];
 
-// Correção: Constrói a URL canônica de forma segura
 const baseUrl = Astro.site?.toString() || 'https://lumo-mvp.netlify.app';
 const pathname = Astro.url?.pathname || '/';
 const canonicalURL = new URL(pathname, baseUrl);
@@ -40,7 +39,6 @@ const canonicalURL = new URL(pathname, baseUrl);
     <title>{title} | LUMO</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
-    <link rel="icon" type="image/png" href="/images/logo_lumo_transparent.png" />
     
     <!-- OPEN GRAPH -->
     <meta property="og:title" content={`${title} | LUMO`} />
@@ -64,7 +62,6 @@ const canonicalURL = new URL(pathname, baseUrl);
   </head>
   <body class={`theme-${theme}`}>
     
-    <!-- Header (igual ao anterior) -->
     <header>
       <a href="/" class="logo">
         <img src="https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_lumo_transparent.png" alt="LUMO" style="height: 40px; width: auto; display: block;" />
@@ -147,7 +144,28 @@ const canonicalURL = new URL(pathname, baseUrl);
 
 <style is:global>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Inter', sans-serif; background: #000; color: #fff; overflow-x: hidden; }
+
+  /* A rolagem fica contida no <main>, não no body */
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body { 
+    font-family: 'Inter', sans-serif; 
+    background: #000; 
+    color: #fff; 
+    overflow-x: hidden;
+  }
+
+  main {
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+  }
+
   .font-serif { font-family: 'Playfair Display', serif; font-weight: 400; }
 
   header {
@@ -185,6 +203,6 @@ const canonicalURL = new URL(pathname, baseUrl);
     header { padding: 0 1rem; }
     .mobile-search-bar { padding: 0 1rem; }
   }
-  main { padding-top: 80px; }
+
   h1, h2, h3 { font-weight: 400; letter-spacing: -0.02em; }
 </style>
