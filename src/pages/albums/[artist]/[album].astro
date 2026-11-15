@@ -38,6 +38,11 @@ const queueJson = JSON.stringify(queue);
 
     <div class="album-content-wrapper">
       
+      <!-- BOTÃO VOLTAR -->
+      <a href={`/artists/${artista.slug}`} class="back-link">
+        ← Voltar para {artista.nome}
+      </a>
+
       <div class="album-info-section">
         <div class="album-cover-wrapper">
           <img src={album.capa} alt={album.title} class="album-main-cover" />
@@ -249,7 +254,6 @@ const queueJson = JSON.stringify(queue);
   .album-hero-container {
     position: relative;
     width: 100vw;
-    /* Removido min-height: 100vh para a altura ser do conteúdo */
     display: flex;
     flex-direction: column;
     padding-top: 50px; 
@@ -280,6 +284,20 @@ const queueJson = JSON.stringify(queue);
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
+  }
+
+  /* ESTILO DO BOTÃO VOLTAR */
+  .back-link {
+    display: inline-block;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s;
+  }
+
+  .back-link:hover {
+    color: #fff;
   }
 
   .album-info-section {
@@ -466,7 +484,7 @@ const queueJson = JSON.stringify(queue);
 
   @media (max-width: 1024px) {
     .album-hero-container {
-      padding-top: 70px;
+      padding-top: 50px;
       padding-bottom: 70px;
     }
 

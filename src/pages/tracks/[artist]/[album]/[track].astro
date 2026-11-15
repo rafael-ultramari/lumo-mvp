@@ -49,6 +49,11 @@ const currentIndex = album.tracks.findIndex(t => t.slug === track.slug);
 
     <div class="track-content-wrapper">
       
+      <!-- Botão de voltar (histórico), agora DENTRO do wrapper para não desalinhar a capa -->
+      <button id="back-btn" class="back-link">
+        &larr; Voltar
+      </button>
+
       <div class="track-info-section">
         <div class="track-cover-wrapper">
           <img src={album.capa} alt={track.title} class="track-main-cover" />
@@ -106,6 +111,17 @@ const currentIndex = album.tracks.findIndex(t => t.slug === track.slug);
 
 <script>
   function setupTrackPage() {
+    // Botão Voltar (histórico)
+    const backBtn = document.getElementById('back-btn');
+    if (backBtn) {
+      const newBackBtn = backBtn.cloneNode(true) as HTMLButtonElement;
+      backBtn.parentNode?.replaceChild(newBackBtn, backBtn);
+      newBackBtn.addEventListener('click', () => {
+        window.history.back();
+      });
+    }
+
+    // Botão de Compartilhar
     const shareBtn = document.getElementById('share-btn');
     if (shareBtn) {
       const newShareBtn = shareBtn.cloneNode(true) as HTMLButtonElement;
@@ -126,6 +142,7 @@ const currentIndex = album.tracks.findIndex(t => t.slug === track.slug);
       });
     }
 
+    // Botão de Play
     const playBtn = document.getElementById('play-track-btn');
     if (playBtn) {
       const newPlayBtn = playBtn.cloneNode(true) as HTMLButtonElement;
@@ -159,7 +176,6 @@ const currentIndex = album.tracks.findIndex(t => t.slug === track.slug);
   .track-hero-container {
     position: relative;
     width: 100vw;
-    /* Removido min-height: 100vh para a altura ser do conteúdo */
     display: flex;
     flex-direction: column;
     padding-top: 50px;
@@ -190,6 +206,26 @@ const currentIndex = album.tracks.findIndex(t => t.slug === track.slug);
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
+  }
+
+  /* Botão Voltar usando o histórico, alinhado à esquerda */
+  .back-link {
+    display: inline-block;
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 0;
+  }
+
+  .back-link:hover {
+    color: #fff;
   }
 
   .track-info-section {
@@ -316,11 +352,6 @@ const currentIndex = album.tracks.findIndex(t => t.slug === track.slug);
   }
 
   @media (max-width: 1024px) {
-    .track-hero-container {
-      padding-top: 50px;
-      padding-bottom: 70px;
-    }
-
     .track-content-wrapper { padding: 0 5%; }
     .track-info-section { flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; }
     .track-text-content { height: auto; }
@@ -328,5 +359,6 @@ const currentIndex = album.tracks.findIndex(t => t.slug === track.slug);
     .track-meta-row { justify-content: center; }
     .track-actions { justify-content: center; }
     .track-lyrics-section { padding: 1rem; }
+    .back-link { display: block; text-align: center; margin-bottom: 1rem; }
   }
 </style>
