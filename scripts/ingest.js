@@ -18,6 +18,7 @@ function parseArray(str) {
 }
 
 function extractDescription(text) {
+  // Agora busca apenas pelo campo padrão "- Description:"
   const match = text.match(/- Description:\s*\n\s*- \[en\]: ([\s\S]*?)(?=\n- |$)/i);
   if (match) {
     return { en: match[1].trim().replace(/\n\s*/g, ' ') };
@@ -116,7 +117,6 @@ function ingest() {
       let releaseStatus = text.match(/- Release Status: (.*)/)?.[1]?.trim() || 'Unreleased';
       releaseStatus = releaseStatus.trim();
 
-      // NOVO: Lê o campo "Official Music Video?"
       const hasVideo = text.match(/- Official Music Video\?: (.*)/)?.[1]?.trim().toLowerCase() === 'yes';
 
       const desc = extractDescription(text);
@@ -130,7 +130,7 @@ function ingest() {
         track_subgenres: parseArray(subgenresStr),
         descricao: desc,
         lyrics: lyrics,
-        hasVideo: hasVideo, // NOVO CAMPO
+        hasVideo: hasVideo,
         audio: `${R2_BASE_URL}/audio/track_${artistSlug}_${slug}.mp3` 
       });
     }
