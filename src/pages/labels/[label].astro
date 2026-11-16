@@ -57,18 +57,22 @@ const { label } = Astro.props;
   .hero-container {
     position: relative;
     width: 100vw;
-    /* MUDANÇA: min-height em vez de height */
-    min-height: calc(100vh - 160px); 
+    
+    /* Ocupa a tela inteira, ignorando o padding do main */
+    height: 100vh; 
+    margin-top: -80px; /* Puxa para cima, sobre o header */
+    margin-bottom: -80px; /* Puxa para baixo, sobre o player */
+    padding-top: 150px; /* Compensa o header para o conteúdo não ficar escondido */
+    padding-bottom: 150px; /* Compensa o player */
+    
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
-    padding-top: 70px; 
-    padding-bottom: 70px;
   }
 
   .overlay {
-    position: fixed;
+    position: absolute; /* Mudou de fixed para absolute para ficar contido no container */
     top: 0; left: 0; width: 100%; height: 100%;
     background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 40%, transparent 100%),
                 linear-gradient(to right, rgba(0,0,0,0.8) 0%, transparent 60%);

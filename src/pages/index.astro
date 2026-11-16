@@ -12,15 +12,12 @@ const labels = catalogo.labels;
       <section class="universe-section" style={`background-image: url('${label.imagemFundo}');`}>
         <div class="content">
           
-          <!-- Logo do Selo -->
           <div class="label-logo">
             <img src={`https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/label_${label.slug}_transparent.png`} alt={label.nome} style="max-height: 120px; width: auto;" />
           </div>
 
-          <!-- Nome do Universo -->
           <h1 class="font-serif lining-nums">{label.nome.toUpperCase()}</h1>
           
-          <!-- Botão "Enter Universe" -->
           <a href={`/labels/${label.slug}`} class="btn-enter">Enter Universe</a>
 
         </div>
@@ -31,6 +28,12 @@ const labels = catalogo.labels;
 </BaseLayout>
 
 <style>
+  /* 🚨 A CHAVE: Ignora o padding do <main> apenas para esta página */
+  :global(main) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
   .home-container {
     display: flex;
     flex-direction: column;
@@ -38,13 +41,13 @@ const labels = catalogo.labels;
   }
 
   .universe-section {
-    height: 100vh;
+    /* Cada seção tem a altura total da tela */
+    height: 100vh; 
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;       
-    padding-bottom: 12rem;      
     position: relative;
     background-size: cover;
     background-position: center;
@@ -66,6 +69,10 @@ const labels = catalogo.labels;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
+    /* Compensa o header fixo (64px) e o player (80px) */
+    padding-top: 64px;
+    padding-bottom: 80px;
   }
 
   .label-logo {
@@ -104,7 +111,7 @@ const labels = catalogo.labels;
 
   @media (max-width: 768px) {
     h1 { font-size: 3rem; }
-    .universe-section { padding-bottom: 6rem; } 
     .label-logo img { max-height: 80px; }
+    .content { padding-top: 64px; padding-bottom: 80px; }
   }
 </style>
