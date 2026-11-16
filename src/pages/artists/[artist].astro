@@ -26,30 +26,38 @@ const labelUrl = label ? `/labels/${label.slug}` : '/artists';
 
     <div class="artist-content-wrapper">
       
-      <!-- BOTÃO VOLTAR -->
-      <a href={labelUrl} class="back-link">
-        ← Voltar para {labelNome}
-      </a>
+      <div class="artist-top-block">
+        
+        <a href={labelUrl} class="back-link">
+          ← Voltar para {labelNome}
+        </a>
 
-      <div class="artist-info-section">
-        <div class="artist-photo-wrapper">
-          <img src={artista.foto} alt={artista.nome} class="artist-main-photo" />
-        </div>
+        <div class="artist-info-section">
+          <div class="artist-photo-wrapper">
+            <img src={artista.foto} alt={artista.nome} class="artist-main-photo" />
+          </div>
 
-        <div class="artist-text-content">
-          <h1 class="font-serif lining-nums">{artista.nome.toUpperCase()}</h1>
-          <p class="artist-description">{artista.descricao.en || artista.descricao.pt}</p>
-          
-          <div class="artist-meta-row">
-            <span class="meta-item">{artista.genero.join(' · ')}</span>
-            <span class="meta-sep">|</span>
-            <span class="meta-item">{artista.totalAlbuns} ALBUMS</span>
-            <span class="meta-sep">|</span>
-            <span class="meta-item">{artista.totalFaixas} TRACKS</span>
+          <div class="artist-text-content">
+            
+            <!-- Agrupador: Título + Descrição -->
+            <div class="artist-header-text">
+              <h1 class="font-serif lining-nums">{artista.nome.toUpperCase()}</h1>
+              <p class="artist-description">{artista.descricao.en || artista.descricao.pt}</p>
+            </div>
+            
+            <!-- Info: Independente, cravada na base -->
+            <div class="artist-meta-row">
+              <span class="meta-item">{artista.genero.join(' · ')}</span>
+              <span class="meta-sep">|</span>
+              <span class="meta-item">{artista.totalAlbuns} ALBUMS</span>
+              <span class="meta-sep">|</span>
+              <span class="meta-item">{artista.totalFaixas} TRACKS</span>
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- Carrossel -->
       <div class="albums-carousel-section">
         <h2 class="carousel-title">Albums</h2>
         <div class="carousel-track">
@@ -73,17 +81,57 @@ const labelUrl = label ? `/labels/${label.slug}` : '/artists';
 
 </BaseLayout>
 
+<script>
+  function fitWidth(el, maxHeight) {
+    if (!el) return;
+    
+    // Salva o estilo original para não quebrar se rodar 2x
+    el.style.width = 'max-content'; 
+    const maxW = el.offsetWidth;
+    
+    el.style.width = 'min-content'; 
+    const minW = el.offsetWidth;
+
+    let lo = minW, hi = maxW;
+    while (lo < hi) {
+      const mid = (lo + hi) >> 1;
+      el.style.width = mid + 'px';
+      if (el.offsetHeight > maxHeight) {
+        lo = mid + 1; // Precisa ser mais largo para caber na altura
+      } else {
+        hi = mid;     // Largura suficiente, tenta ser menor
+      }
+    }
+    el.style.width = lo + 'px';
+  }
+
+  function initArtistLayout() {
+    // Só executa se estivermos na página do artista
+    const desc = document.querySelector('.artist-description');
+    if (desc) {
+      // 110px é a altura máxima que o texto pode ocupar
+      // (ajuste esse valor se quiser que o texto ocupe mais ou menos espaço vertical)
+      fitWidth(desc, 180);
+    }
+  }
+
+  // Roda na carga inicial
+  document.addEventListener('DOMContentLoaded', initArtistLayout);
+  // Roda quando o Astro troca de página (ViewTransitions)
+  document.addEventListener('astro:page-load', initArtistLayout);
+</script>
+
 <style>
   :global(body) { overflow-y: auto; overflow-x: hidden; }
 
   .artist-hero-container {
     position: relative;
     width: 100vw;
-    height: calc(100vh - 160px); 
+    min-height: calc(100vh - 160px); 
     display: flex;
     flex-direction: column;
-    padding-top: 50px; 
-    padding-bottom: 50px;
+    padding-top: 30px; 
+    padding-bottom: 30px; 
   }
 
   .artist-bg {
@@ -109,29 +157,35 @@ const labelUrl = label ? `/labels/${label.slug}` : '/artists';
     padding: 0 10%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; 
+    flex-grow: 1; 
     height: 100%;
   }
 
-  /* ESTILO DO BOTÃO VOLTAR */
+  .artist-top-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
   .back-link {
     display: inline-block;
     color: rgba(255,255,255,0.6);
     text-decoration: none;
     font-size: 0.85rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; 
     transition: color 0.3s;
   }
 
-  .back-link:hover {
-    color: #fff;
-  }
+  .back-link:hover { color: #fff; }
 
   .artist-info-section {
     display: flex;
     gap: 3rem;
     align-items: flex-start; 
     justify-content: flex-start; 
+    width: 100%;
   }
 
   .artist-photo-wrapper {
@@ -151,26 +205,38 @@ const labelUrl = label ? `/labels/${label.slug}` : '/artists';
   }
 
   .artist-text-content {
-    max-width: 700px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    text-align: left; 
+    text-align: left;
+    height: 280px; 
+    width: 100%; 
+  }
+
+  .artist-header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* O JS vai controlar a largura da descrição, não precisa travar aqui */
+    max-width: 100%; 
   }
 
   .artist-text-content h1 {
-    font-size: 4.5rem; 
+    font-size: 3.5rem; 
     line-height: 1;
     letter-spacing: 0.05em;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-    margin-bottom: 1rem;
+    margin: 0; 
   }
 
   .artist-description {
     font-size: 1rem;
     line-height: 1.6;
     color: rgba(255,255,255,0.9);
-    margin-bottom: 1.5rem;
+    
+    /* O JS vai calcular a largura. O CSS só define a margem. */
+    margin-top: 0.8rem; 
+    margin-bottom: 0; 
   }
 
   .artist-meta-row {
@@ -182,6 +248,9 @@ const labelUrl = label ? `/labels/${label.slug}` : '/artists';
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: rgba(255,255,255,0.5);
+    margin-top: auto; 
+    margin-bottom: 0;
+    width: 100%; 
   }
 
   .meta-item {
@@ -198,7 +267,9 @@ const labelUrl = label ? `/labels/${label.slug}` : '/artists';
   }
 
   .albums-carousel-section {
+    margin-top: 2rem; 
     padding-bottom: 0;
+    width: 100%;
   }
 
   .carousel-title {
@@ -262,12 +333,18 @@ const labelUrl = label ? `/labels/${label.slug}` : '/artists';
     .artist-hero-container {
       height: auto; 
       min-height: calc(100vh - 160px);
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
 
     .artist-content-wrapper {
       padding: 0 5%;
+      justify-content: flex-start; 
+    }
+
+    .artist-top-block {
+      align-items: center;
+      margin-bottom: 2rem;
     }
 
     .artist-info-section { 
@@ -278,10 +355,7 @@ const labelUrl = label ? `/labels/${label.slug}` : '/artists';
       margin-bottom: 2rem;
     }
     
-    .artist-photo-wrapper { 
-      width: 180px; 
-      height: 180px; 
-    }
+    .artist-photo-wrapper { width: 180px; height: 180px; }
     
     .artist-text-content { 
       height: auto; 
@@ -289,30 +363,24 @@ const labelUrl = label ? `/labels/${label.slug}` : '/artists';
       align-items: center; 
       text-align: center; 
     }
-    
-    .artist-text-content h1 { 
-      font-size: 3rem; 
-      margin-bottom: 0.5rem; 
+
+    .artist-header-text {
+      align-items: center;
+      width: 100%;
     }
+    
+    .artist-text-content h1 { font-size: 3rem; margin-bottom: 0.5rem; }
     
     .artist-description { 
       font-size: 0.9rem; 
-      line-height: 1.5;
+      line-height: 1.5; 
+      width: 100% !important; /* Força a largura total no mobile (ignora o JS) */
       margin-bottom: 1rem; 
     }
     
-    .artist-meta-row { 
-      justify-content: center; 
-      gap: 1.5rem;
-      margin-bottom: 1.5rem; 
-    }
-    
-    .carousel-title {
-      text-align: center;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    
+    .artist-meta-row { justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+    .albums-carousel-section { margin-top: 0; }
+    .carousel-title { text-align: center; font-size: 1rem; margin-bottom: 1rem; }
     .album-card { width: 160px; }
     .album-cover-wrapper { width: 160px; height: 160px; }
     .album-info h3 { font-size: 1rem; }
