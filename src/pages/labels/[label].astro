@@ -57,8 +57,8 @@ const { label } = Astro.props;
   .hero-container {
     position: relative;
     width: 100vw;
-    /* Altura total - 160px (header + player) - 140px (padding total) */
-    height: calc(100vh - 160px); 
+    /* MUDANÇA: min-height em vez de height */
+    min-height: calc(100vh - 160px); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -81,7 +81,9 @@ const { label } = Astro.props;
     padding: 0 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* MUDANÇA: empurra o carrossel para a base */
+    justify-content: space-between; 
+    flex-grow: 1; /* Permite crescer se necessário */
     height: 100%;
   }
 
@@ -106,6 +108,7 @@ const { label } = Astro.props;
     line-height: 1;
     letter-spacing: 0.05em;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    margin: 0;
   }
 
   .hero-description {
@@ -114,6 +117,7 @@ const { label } = Astro.props;
     color: rgba(255,255,255,0.9);
     text-shadow: 1px 1px 8px rgba(0,0,0,0.9);
     max-width: 100%;
+    margin: 0;
   }
 
   .lining-nums {
@@ -122,7 +126,9 @@ const { label } = Astro.props;
   }
 
   .artists-carousel-section {
-    margin-top: auto;
+    margin-top: 2rem; 
+    padding-bottom: 0;
+    width: 100%;
   }
 
   .carousel-title {
@@ -139,7 +145,7 @@ const { label } = Astro.props;
     gap: 1.5rem;
     overflow-x: auto;
     scrollbar-width: none;
-    padding-bottom: 1rem;
+    padding-bottom: 0;
   }
 
   .carousel-track::-webkit-scrollbar { display: none; }
@@ -192,6 +198,10 @@ const { label } = Astro.props;
       padding-bottom: 70px;
     }
 
+    .hero-content-wrapper {
+      justify-content: flex-start; /* No mobile, o conteúdo flui naturalmente */
+    }
+
     .title-row { 
       flex-direction: column; 
       align-items: flex-start; 
@@ -201,6 +211,10 @@ const { label } = Astro.props;
     .hero-header h1 { font-size: 3.5rem; }
     .label-logo { height: 80px; }
     .hero-description { font-size: 0.9rem; }
+
+    .artists-carousel-section {
+      margin-top: 2rem;
+    }
     
     .artist-card, .card-image-wrapper { width: 150px; }
     .card-image-wrapper { height: 150px; }
