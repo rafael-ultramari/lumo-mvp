@@ -30,19 +30,28 @@ const { label } = Astro.props;
 
       <div class="artists-carousel-section">
         <h2 class="carousel-title">Artists</h2>
-        <div class="carousel-track">
-          {label.artistas.map(artista => (
-            <a href={`/artists/${artista.slug}`} class="artist-card">
-              <div class="card-image-wrapper">
-                <img src={artista.foto} alt={artista.nome} class="card-image" />
-              </div>
-              <div class="card-info">
-                <h3 class="font-serif">{artista.nome.toUpperCase()}</h3>
-                <p class="card-meta">{artista.genero.join(' · ')}</p>
-              </div>
-            </a>
-          ))}
+        
+        <!-- Container que segura o carrossel e as setas -->
+        <div class="carousel-wrapper">
+          <button class="nav-arrow prev" aria-label="Anterior">‹</button>
+          
+          <div class="carousel-track" id="artists-carousel">
+            {label.artistas.map(artista => (
+              <a href={`/artists/${artista.slug}`} class="artist-card">
+                <div class="card-image-wrapper">
+                  <img src={artista.foto} alt={artista.nome} class="card-image" />
+                </div>
+                <div class="card-info">
+                  <h3 class="font-serif">{artista.nome.toUpperCase()}</h3>
+                  <p class="card-meta">{artista.genero.join(' · ')}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <button class="nav-arrow next" aria-label="Próximo">›</button>
         </div>
+        
       </div>
 
     </div>
@@ -51,20 +60,68 @@ const { label } = Astro.props;
 
 </BaseLayout>
 
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const track = document.getElementById('artists-carousel');
+    const prevBtn = document.querySelector('.nav-arrow.prev');
+    const nextBtn = document.querySelector('.nav-arrow.next');
+
+    if (track && prevBtn && nextBtn) {
+      
+      const updateArrows = () => {
+        if (track.scrollWidth <= track.clientWidth) {
+          prevBtn.style.opacity = '0';
+          prevBtn.style.pointerEvents = 'none';
+          nextBtn.style.opacity = '0';
+          nextBtn.style.pointerEvents = 'none';
+          return;
+        }
+
+        if (track.scrollLeft > 0) {
+          prevBtn.style.opacity = '1';
+          prevBtn.style.pointerEvents = 'auto';
+        } else {
+          prevBtn.style.opacity = '0';
+          prevBtn.style.pointerEvents = 'none';
+        }
+
+        if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 1) {
+          nextBtn.style.opacity = '0';
+          nextBtn.style.pointerEvents = 'none';
+        } else {
+          nextBtn.style.opacity = '1';
+          nextBtn.style.pointerEvents = 'auto';
+        }
+      };
+
+      updateArrows();
+      track.addEventListener('scroll', updateArrows);
+      window.addEventListener('resize', updateArrows);
+
+      const scrollAmount = 224; 
+
+      prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+    }
+  });
+</script>
+
 <style>
   :global(body) { overflow-y: auto; overflow-x: hidden; }
 
   .hero-container {
     position: relative;
     width: 100vw;
-    
-    /* Ocupa a tela inteira, ignorando o padding do main */
     height: 100vh; 
-    margin-top: -80px; /* Puxa para cima, sobre o header */
-    margin-bottom: -80px; /* Puxa para baixo, sobre o player */
-    padding-top: 150px; /* Compensa o header para o conteúdo não ficar escondido */
-    padding-bottom: 150px; /* Compensa o player */
-    
+    margin-top: -80px; 
+    margin-bottom: -80px; 
+    padding-top: 150px; 
+    padding-bottom: 150px; 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -72,7 +129,7 @@ const { label } = Astro.props;
   }
 
   .overlay {
-    position: absolute; /* Mudou de fixed para absolute para ficar contido no container */
+    position: absolute; 
     top: 0; left: 0; width: 100%; height: 100%;
     background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 40%, transparent 100%),
                 linear-gradient(to right, rgba(0,0,0,0.8) 0%, transparent 60%);
@@ -85,9 +142,8 @@ const { label } = Astro.props;
     padding: 0 5%;
     display: flex;
     flex-direction: column;
-    /* MUDANÇA: empurra o carrossel para a base */
     justify-content: space-between; 
-    flex-grow: 1; /* Permite crescer se necessário */
+    flex-grow: 1; 
     height: 100%;
   }
 
@@ -131,7 +187,6 @@ const { label } = Astro.props;
 
   .artists-carousel-section {
     margin-top: 2rem; 
-    padding-bottom: 0;
     width: 100%;
   }
 
@@ -144,12 +199,55 @@ const { label } = Astro.props;
     letter-spacing: 0.1em;
   }
 
+  /* O container do carrossel precisa ter espaço extra nas laterais para as setas */
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    /* Impede que as setas vazem para fora da página inteira */
+    overflow: visible; 
+  }
+
+  /* NOVO: Setas discretas, sem fundo, posicionadas fora do card */
+  .nav-arrow {
+    position: absolute;
+    top: 40%; /* Alinha mais ou menos com o centro da imagem do card */
+    transform: translateY(-50%);
+    z-index: 10;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 3rem; /* Tamanho da seta */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0; 
+    pointer-events: none; 
+    text-shadow: 0 0 10px rgba(0,0,0,0.8); /* Sombra para não sumir no fundo */
+  }
+
+  .nav-arrow:hover {
+    transform: translateY(-50%) scale(1.2); /* Efeito de crescer levemente */
+    text-shadow: 0 0 15px rgba(0,0,0,1);
+  }
+
+  /* Move as setas para fora do carrossel */
+  .nav-arrow.prev {
+    left: -40px; /* Empurra para a esquerda */
+  }
+
+  .nav-arrow.next {
+    right: -40px; /* Empurra para a direita */
+  }
+
   .carousel-track {
     display: flex;
     gap: 1.5rem;
     overflow-x: auto;
     scrollbar-width: none;
     padding-bottom: 0;
+    scroll-behavior: smooth;
   }
 
   .carousel-track::-webkit-scrollbar { display: none; }
@@ -203,7 +301,7 @@ const { label } = Astro.props;
     }
 
     .hero-content-wrapper {
-      justify-content: flex-start; /* No mobile, o conteúdo flui naturalmente */
+      justify-content: flex-start;
     }
 
     .title-row { 
@@ -218,6 +316,11 @@ const { label } = Astro.props;
 
     .artists-carousel-section {
       margin-top: 2rem;
+    }
+
+    /* Esconde as setas no mobile, pois o swipe é nativo */
+    .nav-arrow {
+      display: none;
     }
     
     .artist-card, .card-image-wrapper { width: 150px; }
