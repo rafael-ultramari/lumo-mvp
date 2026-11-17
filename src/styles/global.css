@@ -1,0 +1,51 @@
+/* src/styles/global.css */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* A rolagem fica contida no <main>, não no body */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body { 
+  font-family: 'Inter', sans-serif; 
+  background: #000; 
+  color: #fff; 
+  overflow-x: hidden;
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 64px; /* Header agora tem 64px */
+  padding-bottom: 80px; /* Player */
+  box-sizing: border-box;
+}
+
+.font-serif { font-family: 'Playfair Display', serif; font-weight: 400; }
+
+header {
+  position: fixed; top: 0; left: 0; width: 100%;
+  height: 64px; padding: 0 4rem;
+  display: flex; justify-content: space-between; align-items: center;
+  background: #000; border-bottom: 1px solid #222; z-index: 1000;
+}
+.logo { display: flex; align-items: center; text-decoration: none; height: 100%; flex-shrink: 0; }
+nav.desktop-menu { display: flex; gap: 2rem; flex-grow: 1; justify-content: center; }
+nav.desktop-menu a { color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; transition: color 0.3s; }
+nav.desktop-menu a:hover { color: #fff; }
+.header-right { display: flex; align-items: center; gap: 2rem; flex-shrink: 0; }
+.desktop-search-bar input { background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 0.25rem 0.5rem; font-size: 0.8rem; outline: none; width: 120px; }
+.mobile-search-bar { display: none; flex-grow: 1; padding: 0 2rem; }
+.mobile-search-bar input { background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 0.25rem 0.5rem; font-size: 0.8rem; outline: none; width: 100%; text-align: center; }
+.lang-switcher { display: flex; gap: 0.5rem; font-size: 0.8rem; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 1rem; }
+.lang-switcher a { color: rgba(255,255,255,0.6); text-decoration: none; }
+.hamburger-btn { display: none; background: none; border: none; color: #fff; cursor: pointer; padding: 0.5rem; }
+.mobile-menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+.mobile-menu-overlay.active { opacity: 1; pointer-events: auto; }
+.mobile-menu-content { position: relative; text-align: center; }
+.close-btn { position: absolute; top: -3rem; right: 0; background: none; border: none; color: #fff; font-size: 3rem; cursor: pointer; line-height: 1; }
+.mobile-nav-links { display: flex; flex-direction: column; gap: 1.5rem; }
+.mobile-nav-links a { color: #fff; text-decoration: none; font-size: 2rem; text-transform: uppercase; font-family: 'Playfair Display', serif; }
+
+h1, h2, h3 { font-weight: 400; letter-spacing: -0.02em; }

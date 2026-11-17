@@ -1,0 +1,27 @@
+/* src/styles/pages/track.css */
+
+/* Importa o CSS base da página de álbum para reaproveitar o fundo, 
+   a estrutura da imagem, os botões, etc. */
+@import './album.css';
+
+/* Ajustes específicos para a letra da música */
+.track-lyrics-section {
+  max-width: 1000px;
+  padding-right: 2rem;
+  margin-top: 2rem;
+}
+
+.lyrics-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.8);
+  white-space: pre-line; /* Mantém as quebras de linha originais da letra */
+  font-family: 'Inter', sans-serif;
+}
+
+/* Se a música não tiver letra, mostramos um aviso */
+.lyrics-empty {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}

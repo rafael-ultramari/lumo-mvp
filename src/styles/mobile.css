@@ -1,0 +1,189 @@
+/* src/styles/mobile.css */
+@media (max-width: 1024px) {
+  /* ... (os ajustes de header e main que já estão lá) ... */
+
+  /* --- Ajustes da Home --- */
+  .content {
+    padding-top: 64px;
+    padding-bottom: 80px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+
+  .label-logo img {
+    max-height: 80px;
+  }
+  nav.desktop-menu { display: none; }
+  .desktop-search-bar { display: none; }
+  .hamburger-btn { display: block; }
+  .mobile-search-bar { display: flex; }
+  header { padding: 0 1.5rem; }
+  .header-right { gap: 0.5rem; }
+
+  /* Ajuste no main para o player não cobrir o conteúdo no celular */
+  main {
+    padding-bottom: 120px; 
+  }
+
+  /* --- Ajustes da Página de Label --- */
+  .hero-container {
+    height: auto;
+    min-height: calc(100vh - 160px);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .hero-content-wrapper {
+    justify-content: flex-start;
+  }
+
+  .title-row { 
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 1rem; 
+  }
+  
+  .hero-header h1 { font-size: 3.5rem; }
+  .label-logo { height: 80px; }
+  .hero-description { font-size: 0.9rem; }
+
+  .artists-carousel-section {
+    margin-top: 2rem;
+  }
+
+  /* Esconde as setas no mobile, pois o swipe é nativo */
+  .nav-arrow {
+    display: none;
+  }
+  
+  .artist-card, .card-image-wrapper { width: 150px; }
+  .card-image-wrapper { height: 150px; }
+
+  /* --- Ajustes da Página de Artista --- */
+  .artist-hero-container {
+    height: auto; 
+    min-height: calc(100vh - 160px);
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .artist-content-wrapper {
+    padding: 0 5%;
+    justify-content: flex-start; 
+  }
+
+  .artist-top-block {
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .artist-info-section { 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    gap: 1.5rem; 
+    margin-bottom: 2rem;
+  }
+  
+  .artist-photo-wrapper { width: 180px; height: 180px; }
+  
+  .artist-text-content { 
+    height: auto; 
+    max-width: 100%;
+    align-items: center; 
+    text-align: center; 
+  }
+
+  .artist-header-text {
+    align-items: center;
+    width: 100%;
+  }
+  
+  .artist-text-content h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+  
+  .artist-description { 
+    font-size: 0.9rem; 
+    line-height: 1.5; 
+    width: 100% !important; /* Força a largura no mobile */
+    margin-bottom: 1rem; 
+  }
+  
+  .artist-meta-row { justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+  .albums-carousel-section { margin-top: 0; }
+  .carousel-title { text-align: center; font-size: 1rem; margin-bottom: 1rem; }
+  .album-card { width: 160px; }
+  .album-cover-wrapper { width: 160px; height: 160px; }
+  .album-info h3 { font-size: 1rem; }
+
+  /* --- Ajustes da Página de Álbum --- */
+  .album-hero-container {
+    padding-top: 50px;
+    padding-bottom: 120px; /* Mais espaço para o player não cobrir a tracklist */
+  }
+
+  .album-content-wrapper { padding: 0 5%; }
+  
+  .album-info-section { 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    gap: 1.5rem; 
+  }
+  .album-cover-wrapper { 
+    width: 240px; 
+    height: 240px; 
+  }
+  .album-text-content { 
+    height: auto; 
+    width: 100%;
+    align-items: center; 
+  }
+  .album-text-content h1 { 
+    font-size: 2.5rem; 
+    margin-top: 0; 
+  }
+  .album-meta-row { 
+    justify-content: center; 
+  }
+  .album-actions { 
+    justify-content: center; 
+  }
+  .tracklist-section {
+    padding-right: 0;
+    width: 100%;
+  }
+  .track-play-btn {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .album-content-wrapper { padding: 0 5%; }
+  .album-cover-wrapper { width: 200px; height: 200px; }
+  .album-text-content h1 { font-size: 2rem; }
+  .track-link { gap: 1rem; }
+  .track-title { font-size: 1rem; }
+
+  * --- Ajustes da Página de Track --- */
+  .track-lyrics-section {
+    margin-top: 1.5rem;
+    padding-right: 0;
+    width: 100%;
+  }
+  
+  .lyrics-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center; /* Centraliza a letra no celular, se achar melhor */
+  }
+  
+}
+
+@media (max-width: 600px) {
+  header { padding: 0 1rem; }
+  .mobile-search-bar { padding: 0 1rem; }
+}

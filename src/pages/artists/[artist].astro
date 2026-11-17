@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import catalogo from '../../data/catalogo.json';
+import '../../styles/pages/artist.css'; // <--- Importando o CSS externo
 
 export function getStaticPaths() {
   return catalogo.artistas.map(artista => ({
@@ -28,6 +29,7 @@ const labelUrl = label ? `/labels/${label.slug}` : '/artists';
       
       <div class="artist-top-block">
         
+        <!-- Botão Voltar fixo em inglês -->
         <a href={labelUrl} class="back-link">
           ← Back to {labelNome}
         </a>
@@ -85,7 +87,6 @@ const labelUrl = label ? `/labels/${label.slug}` : '/artists';
   function fitWidth(el, maxHeight) {
     if (!el) return;
     
-    // Salva o estilo original para não quebrar se rodar 2x
     el.style.width = 'max-content'; 
     const maxW = el.offsetWidth;
     
@@ -97,292 +98,24 @@ const labelUrl = label ? `/labels/${label.slug}` : '/artists';
       const mid = (lo + hi) >> 1;
       el.style.width = mid + 'px';
       if (el.offsetHeight > maxHeight) {
-        lo = mid + 1; // Precisa ser mais largo para caber na altura
+        lo = mid + 1; 
       } else {
-        hi = mid;     // Largura suficiente, tenta ser menor
+        hi = mid;     
       }
     }
     el.style.width = lo + 'px';
   }
 
   function initArtistLayout() {
-    // Só executa se estivermos na página do artista
     const desc = document.querySelector('.artist-description');
-    if (desc) {
-      // 110px é a altura máxima que o texto pode ocupar
-      // (ajuste esse valor se quiser que o texto ocupe mais ou menos espaço vertical)
-      fitWidth(desc, 180);
+    // Só executa no desktop para não quebrar o mobile
+    if (desc && window.innerWidth > 1024) {
+      fitWidth(desc, 180); // Valor 180px que você estava usando
+    } else if (desc) {
+      desc.style.width = '';
     }
   }
 
-  // Roda na carga inicial
   document.addEventListener('DOMContentLoaded', initArtistLayout);
-  // Roda quando o Astro troca de página (ViewTransitions)
   document.addEventListener('astro:page-load', initArtistLayout);
 </script>
-
-<style>
-  :global(body) { overflow-y: auto; overflow-x: hidden; }
-
-  .artist-hero-container {
-    position: relative;
-    width: 100vw;
-    min-height: calc(100vh - 160px); 
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px; 
-    padding-bottom: 30px; 
-  }
-
-  .artist-bg {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-size: cover;
-    background-position: center;
-    filter: blur(40px) brightness(0.3);
-    transform: scale(1.1);
-    z-index: 0;
-  }
-
-  .overlay {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
-    z-index: 1;
-  }
-
-  .artist-content-wrapper {
-    position: relative;
-    z-index: 2;
-    padding: 0 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    flex-grow: 1; 
-    height: 100%;
-  }
-
-  .artist-top-block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .back-link {
-    display: inline-block;
-    color: rgba(255,255,255,0.6);
-    text-decoration: none;
-    font-size: 0.85rem;
-    margin-bottom: 1.5rem; 
-    transition: color 0.3s;
-  }
-
-  .back-link:hover { color: #fff; }
-
-  .artist-info-section {
-    display: flex;
-    gap: 3rem;
-    align-items: flex-start; 
-    justify-content: flex-start; 
-    width: 100%;
-  }
-
-  .artist-photo-wrapper {
-    width: 280px; 
-    height: 280px;
-    flex-shrink: 0;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  }
-
-  .artist-main-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .artist-text-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
-    height: 280px; 
-    width: 100%; 
-  }
-
-  .artist-header-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* O JS vai controlar a largura da descrição, não precisa travar aqui */
-    max-width: 100%; 
-  }
-
-  .artist-text-content h1 {
-    font-size: 3.5rem; 
-    line-height: 1;
-    letter-spacing: 0.05em;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-    margin: 0; 
-  }
-
-  .artist-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.9);
-    
-    /* O JS vai calcular a largura. O CSS só define a margem. */
-    margin-top: 0.8rem; 
-    margin-bottom: 0; 
-  }
-
-  .artist-meta-row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: rgba(255,255,255,0.5);
-    margin-top: auto; 
-    margin-bottom: 0;
-    width: 100%; 
-  }
-
-  .meta-item {
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    color: rgba(255,255,255,0.6);
-  }
-
-  .meta-sep { opacity: 0.3; }
-
-  .lining-nums {
-    font-variant-numeric: lining-nums;
-    font-feature-settings: "lnum"; 
-  }
-
-  .albums-carousel-section {
-    margin-top: 2rem; 
-    padding-bottom: 0;
-    width: 100%;
-  }
-
-  .carousel-title {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    color: rgba(255,255,255,0.8);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  .carousel-track {
-    display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-    padding-bottom: 0;
-  }
-
-  .carousel-track::-webkit-scrollbar { display: none; }
-
-  .album-card {
-    flex: 0 0 auto;
-    width: 200px;
-    text-decoration: none;
-    color: #fff;
-    transition: transform 0.3s ease;
-  }
-
-  .album-card:hover { transform: scale(1.05); }
-
-  .album-cover-wrapper {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 0.75rem;
-    border-radius: 4px;
-    overflow: hidden;
-    border: 1px solid #333;
-  }
-
-  .album-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .album-info h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.25rem;
-    letter-spacing: 0.02em;
-  }
-
-  .album-meta {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.6);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  @media (max-width: 1024px) {
-    .artist-hero-container {
-      height: auto; 
-      min-height: calc(100vh - 160px);
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
-
-    .artist-content-wrapper {
-      padding: 0 5%;
-      justify-content: flex-start; 
-    }
-
-    .artist-top-block {
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    .artist-info-section { 
-      flex-direction: column; 
-      align-items: center; 
-      text-align: center; 
-      gap: 1.5rem; 
-      margin-bottom: 2rem;
-    }
-    
-    .artist-photo-wrapper { width: 180px; height: 180px; }
-    
-    .artist-text-content { 
-      height: auto; 
-      max-width: 100%;
-      align-items: center; 
-      text-align: center; 
-    }
-
-    .artist-header-text {
-      align-items: center;
-      width: 100%;
-    }
-    
-    .artist-text-content h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-    
-    .artist-description { 
-      font-size: 0.9rem; 
-      line-height: 1.5; 
-      width: 100% !important; /* Força a largura total no mobile (ignora o JS) */
-      margin-bottom: 1rem; 
-    }
-    
-    .artist-meta-row { justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
-    .albums-carousel-section { margin-top: 0; }
-    .carousel-title { text-align: center; font-size: 1rem; margin-bottom: 1rem; }
-    .album-card { width: 160px; }
-    .album-cover-wrapper { width: 160px; height: 160px; }
-    .album-info h3 { font-size: 1rem; }
-  }
-</style>
