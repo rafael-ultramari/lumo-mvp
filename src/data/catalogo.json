@@ -284,8 +284,7 @@
           ],
           "subgenero": [
             "Surf Rock",
-            "Dark Western",
-            "Desert Rock"
+            "Dark Western"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_vex.jpg",
           "totalAlbuns": 1,
@@ -401,8 +400,7 @@
               ],
               "subgenero": [
                 "Surf Rock",
-                "Dark Western",
-                "Desert Rock"
+                "Dark Western"
               ],
               "totalDuration": "13:47",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_vex_highway-chase.jpg"
@@ -528,8 +526,7 @@
               ],
               "subgenero": [
                 "Surf Rock",
-                "Dark Western",
-                "Desert Rock"
+                "Dark Western"
               ],
               "totalDuration": "13:47",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_vex_thunder.jpg"
@@ -810,8 +807,7 @@
           ],
           "subgenero": [
             "Heavy Metal",
-            "Thrash Metal",
-            "Doom Metal"
+            "Thrash Metal"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_ember.jpg",
           "totalAlbuns": 1,
@@ -908,8 +904,7 @@
               ],
               "subgenero": [
                 "Heavy Metal",
-                "Thrash Metal",
-                "Doom Metal"
+                "Thrash Metal"
               ],
               "totalDuration": "13:38",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_ember_the-flame-unquenched.jpg"
@@ -1068,8 +1063,7 @@
           ],
           "subgenero": [
             "Modern DnB",
-            "Neurofunk",
-            "Liquidfunk"
+            "Neurofunk"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_ghostline.jpg",
           "totalAlbuns": 1,
@@ -1208,8 +1202,7 @@
               ],
               "subgenero": [
                 "Modern DnB",
-                "Neurofunk",
-                "Liquidfunk"
+                "Neurofunk"
               ],
               "totalDuration": "23:11",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_ghostline_terminal-velocity.jpg"
@@ -1273,10 +1266,7 @@
           "subgenero": [
             "Gothic Rock",
             "Ethereal Wave",
-            "Coldwave",
-            "Post-Punk",
-            "Darkwave",
-            "Gothic"
+            "Post-Punk"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_mourn.jpg",
           "totalAlbuns": 3,
@@ -1454,10 +1444,7 @@
               ],
               "subgenero": [
                 "Gothic Rock",
-                "Ethereal Wave",
-                "Coldwave",
-                "Post-Punk",
-                "Darkwave"
+                "Ethereal Wave"
               ],
               "totalDuration": "28:00",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_mourn_love-in-decay.jpg"
@@ -1510,9 +1497,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
-                    "Darkwave",
-                    "Post-Punk"
+                    "Post-Punk",
+                    "Coldwave"
                   ],
                   "descricao": {
                     "en": "The hollow space left by another person. A pain that has stopped screaming, but now lives quietly under the skin. The realization that the absence is no longer a wound, but the landscape itself."
@@ -1532,9 +1518,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
                     "Darkwave",
-                    "Post-Punk"
+                    "Ethereal Wave"
                   ],
                   "descricao": {
                     "en": "The reflection as a stranger. A constant reminder that the person who used to exist in that space was built around another. Now, the image must learn to exist on its own, even if it doesn't recognize itself yet."
@@ -1554,8 +1539,7 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
-                    "Darkwave",
+                    "Gothic Rock",
                     "Post-Punk"
                   ],
                   "descricao": {
@@ -1576,9 +1560,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
-                    "Darkwave",
-                    "Post-Punk"
+                    "Post-Punk",
+                    "Coldwave"
                   ],
                   "descricao": {
                     "en": "The painful process of erasing another person from your own identity. Shedding the habits, the gestures, and the silence they left behind. Discovering that the person underneath is smaller than expected, but finally, fully your own."
@@ -1598,9 +1581,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
-                    "Darkwave",
-                    "Post-Punk"
+                    "Gothic Rock",
+                    "Dark Rock"
                   ],
                   "descricao": {
                     "en": "Past tense. The cruelest grammar. The person who belonged to you died with you."
@@ -1620,9 +1602,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
-                    "Darkwave",
-                    "Post-Punk"
+                    "Gothic Rock",
+                    "Ethereal Wave"
                   ],
                   "descricao": {
                     "en": "The quiet used to be a threat, a space that had to be filled with a name to avoid forgetting. Now, it is a chosen landscape. A peaceful emptiness that belongs entirely to the one who survived."
@@ -1640,10 +1621,7 @@
               ],
               "subgenero": [
                 "Gothic Rock",
-                "Ethereal Wave",
-                "Gothic",
-                "Darkwave",
-                "Post-Punk"
+                "Ethereal Wave"
               ],
               "totalDuration": "28:23",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_mourn_what-remains-of-me.jpg"
@@ -1675,9 +1653,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
-                    "Darkwave",
-                    "Post-Punk"
+                    "Post-Punk",
+                    "Gothic Rock"
                   ],
                   "descricao": {
                     "en": "The quiet relief of giving up the search. A long-awaited realization that the world keeps turning, and the sky remains exactly where it has always been."
@@ -1697,9 +1674,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
                     "Darkwave",
-                    "Post-Punk"
+                    "Ethereal Wave"
                   ],
                   "descricao": {
                     "en": "The discovery that the void is not a blank space. It is a presence that does not need to be filled, but simply understood. The quiet is not an absence of sound, but a different way of listening."
@@ -1719,9 +1695,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
-                    "Darkwave",
-                    "Post-Punk"
+                    "Post-Punk",
+                    "Coldwave"
                   ],
                   "descricao": {
                     "en": "A final gentle closure of a path that never truly existed. It is not an act of anger, but the quiet acceptance of a boundary that was built by the mind itself."
@@ -1741,9 +1716,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
-                    "Darkwave",
-                    "Post-Punk"
+                    "Gothic Rock",
+                    "Dark Rock"
                   ],
                   "descricao": {
                     "en": "The remnants of a loss that cannot be discarded. Memories that cease to be thoughts and become physical, blending with the body, tracing invisible lines under the surface. A constant, quiet echo that remains long after the source is gone."
@@ -1763,9 +1737,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
-                    "Darkwave",
-                    "Post-Punk"
+                    "Post-Punk",
+                    "Gothic Rock"
                   ],
                   "descricao": {
                     "en": "The map was drawn by hands never held. The key was never hidden. The search was the only cage."
@@ -1785,9 +1758,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
-                    "Darkwave",
-                    "Post-Punk"
+                    "Gothic Rock",
+                    "Dark Rock"
                   ],
                   "descricao": {
                     "en": "This is not a wound left by others, but a deliberate architecture. The conscious choice to carve out a place in the world that belongs entirely to oneself, built brick by brick, until the isolation becomes a fortress."
@@ -1807,9 +1779,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Gothic",
-                    "Darkwave",
-                    "Post-Punk"
+                    "Ethereal Wave",
+                    "Darkwave"
                   ],
                   "descricao": {
                     "en": "An end to the conflict that has nothing to do with victory. The quiet decision to stop fighting a battle that was already lost, and the slow, deliberate construction of a new kind of existence from the ruins."
@@ -1826,8 +1797,7 @@
                 "Rock"
               ],
               "subgenero": [
-                "Gothic",
-                "Darkwave",
+                "Gothic Rock",
                 "Post-Punk"
               ],
               "totalDuration": "28:02",
@@ -2166,8 +2136,7 @@
           ],
           "subgenero": [
             "Dark Synthwave",
-            "Outrun",
-            "Retrowave"
+            "Outrun"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_rift.jpg",
           "totalAlbuns": 3,
@@ -2283,8 +2252,7 @@
               ],
               "subgenero": [
                 "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Outrun"
               ],
               "totalDuration": "13:24",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_before-the-loop.jpg"
@@ -2468,8 +2436,7 @@
               ],
               "subgenero": [
                 "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Outrun"
               ],
               "totalDuration": "27:21",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_reset.jpg"
@@ -2653,8 +2620,7 @@
               ],
               "subgenero": [
                 "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Outrun"
               ],
               "totalDuration": "25:03",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_rewind.jpg"
@@ -2940,8 +2906,7 @@
           ],
           "subgenero": [
             "Progressive Rock",
-            "Progressive Metal",
-            "Alternative Metal"
+            "Progressive Metal"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_trace.jpg",
           "totalAlbuns": 3,
@@ -3034,8 +2999,7 @@
               ],
               "subgenero": [
                 "Progressive Rock",
-                "Progressive Metal",
-                "Alternative Metal"
+                "Progressive Metal"
               ],
               "totalDuration": "14:49",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_what-i-chose.jpg"
@@ -3196,8 +3160,7 @@
               ],
               "subgenero": [
                 "Progressive Rock",
-                "Progressive Metal",
-                "Alternative Metal"
+                "Progressive Metal"
               ],
               "totalDuration": "33:57",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_strata.jpg"
@@ -3358,8 +3321,7 @@
               ],
               "subgenero": [
                 "Progressive Rock",
-                "Progressive Metal",
-                "Alternative Metal"
+                "Progressive Metal"
               ],
               "totalDuration": "31:07",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_unearthed.jpg"
@@ -3425,9 +3387,7 @@
           ],
           "subgenero": [
             "Darkwave",
-            "Coldwave",
-            "EBM",
-            "Minimal Synthwave"
+            "Coldwave"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_void.jpg",
           "totalAlbuns": 3,
@@ -3523,9 +3483,7 @@
               ],
               "subgenero": [
                 "Darkwave",
-                "Coldwave",
-                "EBM",
-                "Minimal Synthwave"
+                "Coldwave"
               ],
               "totalDuration": "11:41",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_mirror-error.jpg"
@@ -3692,9 +3650,7 @@
               ],
               "subgenero": [
                 "Darkwave",
-                "Coldwave",
-                "EBM",
-                "Minimal Synthwave"
+                "Coldwave"
               ],
               "totalDuration": "22:37",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-stranger-at-the-door.jpg"
@@ -3765,9 +3721,7 @@
               ],
               "subgenero": [
                 "Darkwave",
-                "Coldwave",
-                "EBM",
-                "Minimal Synthwave"
+                "Coldwave"
               ],
               "totalDuration": "10:49",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-loop.jpg"
@@ -3809,8 +3763,7 @@
           ],
           "subgenero": [
             "Spacesynth",
-            "Cyberpunk Techno",
-            "Sci-Fi Darkwave"
+            "Cyberpunk Techno"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_voyager-23.jpg",
           "totalAlbuns": 1,
@@ -3949,8 +3902,7 @@
               ],
               "subgenero": [
                 "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Cyberpunk Techno"
               ],
               "totalDuration": "23:32",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_voyager-23_cascade-collapse.jpg"
@@ -4014,8 +3966,7 @@
           ],
           "subgenero": [
             "Spacesynth",
-            "Cyberpunk Techno",
-            "Sci-Fi Darkwave"
+            "Cyberpunk Techno"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_x3n0.jpg",
           "totalAlbuns": 4,
@@ -4184,8 +4135,7 @@
               ],
               "subgenero": [
                 "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Cyberpunk Techno"
               ],
               "totalDuration": "28:35",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_colonize.jpg"
@@ -4377,8 +4327,7 @@
               ],
               "subgenero": [
                 "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Cyberpunk Techno"
               ],
               "totalDuration": "37:32",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_supremacy.jpg"
@@ -4546,8 +4495,7 @@
               ],
               "subgenero": [
                 "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Cyberpunk Techno"
               ],
               "totalDuration": "31:27",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_agonizing.jpg"
@@ -4739,8 +4687,7 @@
               ],
               "subgenero": [
                 "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Cyberpunk Techno"
               ],
               "totalDuration": "27:27",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_dominate.jpg"
@@ -5133,8 +5080,7 @@
       ],
       "subgenero": [
         "Heavy Metal",
-        "Thrash Metal",
-        "Doom Metal"
+        "Thrash Metal"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_ember.jpg",
       "totalAlbuns": 1,
@@ -5231,8 +5177,7 @@
           ],
           "subgenero": [
             "Heavy Metal",
-            "Thrash Metal",
-            "Doom Metal"
+            "Thrash Metal"
           ],
           "totalDuration": "13:38",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_ember_the-flame-unquenched.jpg"
@@ -5391,8 +5336,7 @@
       ],
       "subgenero": [
         "Modern DnB",
-        "Neurofunk",
-        "Liquidfunk"
+        "Neurofunk"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_ghostline.jpg",
       "totalAlbuns": 1,
@@ -5531,8 +5475,7 @@
           ],
           "subgenero": [
             "Modern DnB",
-            "Neurofunk",
-            "Liquidfunk"
+            "Neurofunk"
           ],
           "totalDuration": "23:11",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_ghostline_terminal-velocity.jpg"
@@ -5596,10 +5539,7 @@
       "subgenero": [
         "Gothic Rock",
         "Ethereal Wave",
-        "Coldwave",
-        "Post-Punk",
-        "Darkwave",
-        "Gothic"
+        "Post-Punk"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_mourn.jpg",
       "totalAlbuns": 3,
@@ -5777,10 +5717,7 @@
           ],
           "subgenero": [
             "Gothic Rock",
-            "Ethereal Wave",
-            "Coldwave",
-            "Post-Punk",
-            "Darkwave"
+            "Ethereal Wave"
           ],
           "totalDuration": "28:00",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_mourn_love-in-decay.jpg"
@@ -5833,9 +5770,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
-                "Darkwave",
-                "Post-Punk"
+                "Post-Punk",
+                "Coldwave"
               ],
               "descricao": {
                 "en": "The hollow space left by another person. A pain that has stopped screaming, but now lives quietly under the skin. The realization that the absence is no longer a wound, but the landscape itself."
@@ -5855,9 +5791,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
                 "Darkwave",
-                "Post-Punk"
+                "Ethereal Wave"
               ],
               "descricao": {
                 "en": "The reflection as a stranger. A constant reminder that the person who used to exist in that space was built around another. Now, the image must learn to exist on its own, even if it doesn't recognize itself yet."
@@ -5877,8 +5812,7 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
-                "Darkwave",
+                "Gothic Rock",
                 "Post-Punk"
               ],
               "descricao": {
@@ -5899,9 +5833,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
-                "Darkwave",
-                "Post-Punk"
+                "Post-Punk",
+                "Coldwave"
               ],
               "descricao": {
                 "en": "The painful process of erasing another person from your own identity. Shedding the habits, the gestures, and the silence they left behind. Discovering that the person underneath is smaller than expected, but finally, fully your own."
@@ -5921,9 +5854,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
-                "Darkwave",
-                "Post-Punk"
+                "Gothic Rock",
+                "Dark Rock"
               ],
               "descricao": {
                 "en": "Past tense. The cruelest grammar. The person who belonged to you died with you."
@@ -5943,9 +5875,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
-                "Darkwave",
-                "Post-Punk"
+                "Gothic Rock",
+                "Ethereal Wave"
               ],
               "descricao": {
                 "en": "The quiet used to be a threat, a space that had to be filled with a name to avoid forgetting. Now, it is a chosen landscape. A peaceful emptiness that belongs entirely to the one who survived."
@@ -5963,10 +5894,7 @@
           ],
           "subgenero": [
             "Gothic Rock",
-            "Ethereal Wave",
-            "Gothic",
-            "Darkwave",
-            "Post-Punk"
+            "Ethereal Wave"
           ],
           "totalDuration": "28:23",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_mourn_what-remains-of-me.jpg"
@@ -5998,9 +5926,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
-                "Darkwave",
-                "Post-Punk"
+                "Post-Punk",
+                "Gothic Rock"
               ],
               "descricao": {
                 "en": "The quiet relief of giving up the search. A long-awaited realization that the world keeps turning, and the sky remains exactly where it has always been."
@@ -6020,9 +5947,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
                 "Darkwave",
-                "Post-Punk"
+                "Ethereal Wave"
               ],
               "descricao": {
                 "en": "The discovery that the void is not a blank space. It is a presence that does not need to be filled, but simply understood. The quiet is not an absence of sound, but a different way of listening."
@@ -6042,9 +5968,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
-                "Darkwave",
-                "Post-Punk"
+                "Post-Punk",
+                "Coldwave"
               ],
               "descricao": {
                 "en": "A final gentle closure of a path that never truly existed. It is not an act of anger, but the quiet acceptance of a boundary that was built by the mind itself."
@@ -6064,9 +5989,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
-                "Darkwave",
-                "Post-Punk"
+                "Gothic Rock",
+                "Dark Rock"
               ],
               "descricao": {
                 "en": "The remnants of a loss that cannot be discarded. Memories that cease to be thoughts and become physical, blending with the body, tracing invisible lines under the surface. A constant, quiet echo that remains long after the source is gone."
@@ -6086,9 +6010,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
-                "Darkwave",
-                "Post-Punk"
+                "Post-Punk",
+                "Gothic Rock"
               ],
               "descricao": {
                 "en": "The map was drawn by hands never held. The key was never hidden. The search was the only cage."
@@ -6108,9 +6031,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
-                "Darkwave",
-                "Post-Punk"
+                "Gothic Rock",
+                "Dark Rock"
               ],
               "descricao": {
                 "en": "This is not a wound left by others, but a deliberate architecture. The conscious choice to carve out a place in the world that belongs entirely to oneself, built brick by brick, until the isolation becomes a fortress."
@@ -6130,9 +6052,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Gothic",
-                "Darkwave",
-                "Post-Punk"
+                "Ethereal Wave",
+                "Darkwave"
               ],
               "descricao": {
                 "en": "An end to the conflict that has nothing to do with victory. The quiet decision to stop fighting a battle that was already lost, and the slow, deliberate construction of a new kind of existence from the ruins."
@@ -6149,8 +6070,7 @@
             "Rock"
           ],
           "subgenero": [
-            "Gothic",
-            "Darkwave",
+            "Gothic Rock",
             "Post-Punk"
           ],
           "totalDuration": "28:02",
@@ -6753,8 +6673,7 @@
       ],
       "subgenero": [
         "Dark Synthwave",
-        "Outrun",
-        "Retrowave"
+        "Outrun"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_rift.jpg",
       "totalAlbuns": 3,
@@ -6870,8 +6789,7 @@
           ],
           "subgenero": [
             "Dark Synthwave",
-            "Outrun",
-            "Retrowave"
+            "Outrun"
           ],
           "totalDuration": "13:24",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_before-the-loop.jpg"
@@ -7055,8 +6973,7 @@
           ],
           "subgenero": [
             "Dark Synthwave",
-            "Outrun",
-            "Retrowave"
+            "Outrun"
           ],
           "totalDuration": "27:21",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_reset.jpg"
@@ -7240,8 +7157,7 @@
           ],
           "subgenero": [
             "Dark Synthwave",
-            "Outrun",
-            "Retrowave"
+            "Outrun"
           ],
           "totalDuration": "25:03",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_rewind.jpg"
@@ -7527,8 +7443,7 @@
       ],
       "subgenero": [
         "Progressive Rock",
-        "Progressive Metal",
-        "Alternative Metal"
+        "Progressive Metal"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_trace.jpg",
       "totalAlbuns": 3,
@@ -7621,8 +7536,7 @@
           ],
           "subgenero": [
             "Progressive Rock",
-            "Progressive Metal",
-            "Alternative Metal"
+            "Progressive Metal"
           ],
           "totalDuration": "14:49",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_what-i-chose.jpg"
@@ -7783,8 +7697,7 @@
           ],
           "subgenero": [
             "Progressive Rock",
-            "Progressive Metal",
-            "Alternative Metal"
+            "Progressive Metal"
           ],
           "totalDuration": "33:57",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_strata.jpg"
@@ -7945,8 +7858,7 @@
           ],
           "subgenero": [
             "Progressive Rock",
-            "Progressive Metal",
-            "Alternative Metal"
+            "Progressive Metal"
           ],
           "totalDuration": "31:07",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_unearthed.jpg"
@@ -8012,8 +7924,7 @@
       ],
       "subgenero": [
         "Surf Rock",
-        "Dark Western",
-        "Desert Rock"
+        "Dark Western"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_vex.jpg",
       "totalAlbuns": 1,
@@ -8129,8 +8040,7 @@
           ],
           "subgenero": [
             "Surf Rock",
-            "Dark Western",
-            "Desert Rock"
+            "Dark Western"
           ],
           "totalDuration": "13:47",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_vex_highway-chase.jpg"
@@ -8256,8 +8166,7 @@
           ],
           "subgenero": [
             "Surf Rock",
-            "Dark Western",
-            "Desert Rock"
+            "Dark Western"
           ],
           "totalDuration": "13:47",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_vex_thunder.jpg"
@@ -8276,9 +8185,7 @@
       ],
       "subgenero": [
         "Darkwave",
-        "Coldwave",
-        "EBM",
-        "Minimal Synthwave"
+        "Coldwave"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_void.jpg",
       "totalAlbuns": 3,
@@ -8374,9 +8281,7 @@
           ],
           "subgenero": [
             "Darkwave",
-            "Coldwave",
-            "EBM",
-            "Minimal Synthwave"
+            "Coldwave"
           ],
           "totalDuration": "11:41",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_mirror-error.jpg"
@@ -8543,9 +8448,7 @@
           ],
           "subgenero": [
             "Darkwave",
-            "Coldwave",
-            "EBM",
-            "Minimal Synthwave"
+            "Coldwave"
           ],
           "totalDuration": "22:37",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-stranger-at-the-door.jpg"
@@ -8616,9 +8519,7 @@
           ],
           "subgenero": [
             "Darkwave",
-            "Coldwave",
-            "EBM",
-            "Minimal Synthwave"
+            "Coldwave"
           ],
           "totalDuration": "10:49",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-loop.jpg"
@@ -8660,8 +8561,7 @@
       ],
       "subgenero": [
         "Spacesynth",
-        "Cyberpunk Techno",
-        "Sci-Fi Darkwave"
+        "Cyberpunk Techno"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_voyager-23.jpg",
       "totalAlbuns": 1,
@@ -8800,8 +8700,7 @@
           ],
           "subgenero": [
             "Spacesynth",
-            "Cyberpunk Techno",
-            "Sci-Fi Darkwave"
+            "Cyberpunk Techno"
           ],
           "totalDuration": "23:32",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_voyager-23_cascade-collapse.jpg"
@@ -8865,8 +8764,7 @@
       ],
       "subgenero": [
         "Spacesynth",
-        "Cyberpunk Techno",
-        "Sci-Fi Darkwave"
+        "Cyberpunk Techno"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_x3n0.jpg",
       "totalAlbuns": 4,
@@ -9035,8 +8933,7 @@
           ],
           "subgenero": [
             "Spacesynth",
-            "Cyberpunk Techno",
-            "Sci-Fi Darkwave"
+            "Cyberpunk Techno"
           ],
           "totalDuration": "28:35",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_colonize.jpg"
@@ -9228,8 +9125,7 @@
           ],
           "subgenero": [
             "Spacesynth",
-            "Cyberpunk Techno",
-            "Sci-Fi Darkwave"
+            "Cyberpunk Techno"
           ],
           "totalDuration": "37:32",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_supremacy.jpg"
@@ -9397,8 +9293,7 @@
           ],
           "subgenero": [
             "Spacesynth",
-            "Cyberpunk Techno",
-            "Sci-Fi Darkwave"
+            "Cyberpunk Techno"
           ],
           "totalDuration": "31:27",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_agonizing.jpg"
@@ -9590,8 +9485,7 @@
           ],
           "subgenero": [
             "Spacesynth",
-            "Cyberpunk Techno",
-            "Sci-Fi Darkwave"
+            "Cyberpunk Techno"
           ],
           "totalDuration": "27:27",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_dominate.jpg"

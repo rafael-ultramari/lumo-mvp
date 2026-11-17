@@ -18,7 +18,6 @@ function parseArray(str) {
 }
 
 function extractDescription(text) {
-  // Agora busca apenas pelo campo padrão "- Description:"
   const match = text.match(/- Description:\s*\n\s*- \[en\]: ([\s\S]*?)(?=\n- |$)/i);
   if (match) {
     return { en: match[1].trim().replace(/\n\s*/g, ' ') };
@@ -136,11 +135,14 @@ function ingest() {
     }
   });
 
+  // ==========================================
+  // NOVA LÓGICA PARA OS ÁLBUNS (TOP 2)
+  // ==========================================
   for (const [albumId, album] of albumsMap.entries()) {
     let albumGenres = new Set();
-    let albumSubgenres = new Set();
     let allTracksReleased = true;
     let totalSeconds = 0;
+    let subgenreCount = {};
 
     album.tracksList.forEach(trackRef => {
       const track = tracksMap.get(trackRef);
@@ -151,8 +153,12 @@ function ingest() {
           allTracksReleased = false;
         }
         
+        // Conta a frequência de cada subgênero nas faixas
+        track.track_subgenres.forEach(sg => {
+          subgenreCount[sg] = (subgenreCount[sg] || 0) + 1;
+        });
+
         track.track_genres.forEach(g => albumGenres.add(g));
-        track.track_subgenres.forEach(sg => albumSubgenres.add(sg));
         
         totalSeconds += parseDuration(track.duration);
       } else {
@@ -160,9 +166,14 @@ function ingest() {
       }
     });
 
+    // Ordena os subgêneros pelo número de aparições (do maior para o menor)
+    const sortedSubgenres = Object.keys(subgenreCount)
+      .sort((a, b) => subgenreCount[b] - subgenreCount[a])
+      .slice(0, 2); // Pega apenas os 2 primeiros
+
     album.isVisible = allTracksReleased && album.tracks.length > 0;
     album.genero = Array.from(albumGenres);
-    album.subgenero = Array.from(albumSubgenres);
+    album.subgenero = sortedSubgenres; // Aplica os top 2 subgêneros
     album.totalDuration = formatDuration(totalSeconds);
     
     const artistForAlbum = artistsMap.get(`artist_${album.artistRef.replace('artist_', '')}`);
@@ -170,6 +181,9 @@ function ingest() {
     album.capa = `${R2_BASE_URL}/image/album_${artistSlug}_${album.slug}.jpg`;
   }
 
+  // ==========================================
+  // ARTISTAS CONTINUAM IGUAIS
+  // ==========================================
   const artistasFinais = [];
   for (const [artistId, artist] of artistsMap.entries()) {
     let artistGenres = new Set();
