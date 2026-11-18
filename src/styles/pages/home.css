@@ -1,7 +1,7 @@
 /* src/styles/pages/home.css */
 
 /* Ignora o padding do <main> apenas para a home, para os fundos cobrirem a tela toda */
-:global(main) {
+main {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
@@ -80,3 +80,166 @@ h1 {
   font-variant-numeric: lining-nums;
   font-feature-settings: "lnum"; 
 }
+
+
+/* Indicador de navegação vertical */
+
+.scroll-down-btn {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+
+  transition:
+    opacity 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.scroll-down-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-50%) translateY(3px);
+}
+
+/* Oculta a barra de rolagem somente na Home */
+
+.home-container {
+  scrollbar-width: none;
+}
+
+.home-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Oculta a barra de rolagem do main na Home */
+
+body:has(.home-container) main {
+  scrollbar-width: none;
+}
+
+body:has(.home-container) main::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Navegação entre os universos */
+
+.scroll-navigation-btn {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.scroll-navigation-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-50%) translateY(3px);
+}
+
+/* Ocultar barra de rolagem na Home */
+
+body:has(.home-container) main {
+  scrollbar-width: none;
+}
+
+body:has(.home-container) main::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* Navegação entre os universos */
+
+.home-nav-btn {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Seta para cima */
+
+#nav-up {
+  top: 85px;
+}
+
+#nav-up:hover {
+  transform: translateX(-50%) translateY(-3px);
+}
+
+/* Seta para baixo */
+
+#nav-down {
+  bottom: 100px;
+}
+
+#nav-down:hover {
+  transform: translateX(-50%) translateY(3px);
+}
+
+/* Ocultar barra de rolagem na Home */
+
+body:has(.home-container) main {
+  scrollbar-width: none;
+}
+
+body:has(.home-container) main::-webkit-scrollbar {
+  display: none;
+}
+

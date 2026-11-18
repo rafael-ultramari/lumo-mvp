@@ -50,16 +50,37 @@
   width: 100%;
 }
 
-.back-link {
-  display: inline-block;
-  color: rgba(255,255,255,0.6);
-  text-decoration: none;
-  font-size: 0.85rem;
-  margin-bottom: 1.5rem; 
-  transition: color 0.3s;
+.artist-top-block {
+  position: relative;
 }
 
-.back-link:hover { color: #fff; }
+.back-button {
+  position: absolute;
+  left: -60px;
+  top: 0;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 50%;
+
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateX(-3px);
+}
 
 .artist-info-section {
   display: flex;

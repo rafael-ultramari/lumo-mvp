@@ -39,9 +39,18 @@ const queueJson = JSON.stringify(queue);
 
     <div class="album-content-wrapper">
       
-      <!-- BOTÃO VOLTAR -->
-      <a href={`/artists/${artista.slug}`} class="back-link">
-        ← Back to {artista.nome}
+      <a
+        href={`/artists/${artista.slug}`}
+        class="back-button"
+        aria-label={`Back to ${artista.nome}`}
+        title={`Back to ${artista.nome}`}
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          width="20" height="20" aria-hidden="true">
+          <path d="M19 12H5"></path>
+          <path d="M12 19l-7-7 7-7"></path>
+        </svg>
       </a>
 
       <div class="album-info-section">

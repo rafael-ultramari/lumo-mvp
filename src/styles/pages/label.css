@@ -4,12 +4,12 @@
   position: relative;
   width: 100vw;
   height: 100vh; 
-  margin-top: -64px; /* Ajustado para o header de 64px */
+  margin-top: -64px; 
   margin-bottom: -80px; 
   padding-top: 150px; 
   padding-bottom: 150px; 
   background-size: cover;
-  background-position: center;
+  background-position: 50% 50%;
   display: flex;
   flex-direction: column;
 }
