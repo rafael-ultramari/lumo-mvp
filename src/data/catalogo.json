@@ -556,7 +556,7 @@
           ],
           "subgenero": [
             "Symphonic Gothic Metal",
-            "Gothic Metal"
+            "Doom Metal"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_dark-veil.jpg",
           "totalAlbuns": 1,
@@ -590,7 +590,7 @@
                   ],
                   "track_subgenres": [
                     "Symphonic Gothic Metal",
-                    "Gothic Metal"
+                    "Doom Metal"
                   ],
                   "descricao": {
                     "en": "A consecration in the dark. The heavy, sacred atmosphere of a forgotten sanctuary where time seems to have stopped, and the air itself feels like a held breath."
@@ -612,7 +612,7 @@
                   ],
                   "track_subgenres": [
                     "Symphonic Gothic Metal",
-                    "Gothic Metal"
+                    "Dark Metal"
                   ],
                   "descricao": {
                     "en": "The freezing breath of the grave. A somber invitation rising from the deep, pulling the living toward the ancient silence of the dead."
@@ -633,8 +633,8 @@
                     "Metal"
                   ],
                   "track_subgenres": [
-                    "Symphonic Gothic Metal",
-                    "Gothic Metal"
+                    "Symphonic Metal",
+                    "Instrumental"
                   ],
                   "descricao": {
                     "en": "The silent preparation of the altar. A ritual without words, where the shadows gather and the air grows heavy with the promise of what is to come."
@@ -655,8 +655,8 @@
                     "Metal"
                   ],
                   "track_subgenres": [
-                    "Symphonic Gothic Metal",
-                    "Gothic Metal"
+                    "Gothic Metal",
+                    "Heavy Metal"
                   ],
                   "descricao": {
                     "en": "A profane sacrament. The ultimate act of surrender, where the body and the soul are consumed by the void, finding a twisted kind of salvation in the absolute darkness."
@@ -678,7 +678,7 @@
                   ],
                   "track_subgenres": [
                     "Symphonic Gothic Metal",
-                    "Gothic Metal"
+                    "Ethereal Wave"
                   ],
                   "descricao": {
                     "en": "The total absence of light. The moment when the last sliver of hope is swallowed by the darkness, and the soul finally accepts the freezing embrace of the unknown."
@@ -700,7 +700,7 @@
                   ],
                   "track_subgenres": [
                     "Symphonic Gothic Metal",
-                    "Gothic Metal"
+                    "Power Metal"
                   ],
                   "descricao": {
                     "en": "The climax of the ritual. The tearing of the sacred veil, where the night is painted in shades of red and the final oath is sealed in violence and fire."
@@ -719,7 +719,7 @@
               ],
               "subgenero": [
                 "Symphonic Gothic Metal",
-                "Gothic Metal"
+                "Doom Metal"
               ],
               "totalDuration": "22:49",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_dark-veil_bloodmoon-rite.jpg"
@@ -807,7 +807,7 @@
           ],
           "subgenero": [
             "Heavy Metal",
-            "Thrash Metal"
+            "Doom Metal"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_ember.jpg",
           "totalAlbuns": 1,
@@ -838,7 +838,6 @@
                   ],
                   "track_subgenres": [
                     "Heavy Metal",
-                    "Thrash Metal",
                     "Doom Metal"
                   ],
                   "descricao": {
@@ -861,8 +860,7 @@
                   ],
                   "track_subgenres": [
                     "Heavy Metal",
-                    "Thrash Metal",
-                    "Doom Metal"
+                    "Groove Metal"
                   ],
                   "descricao": {
                     "en": "The survival. Walking through the flames and losing a part of oneself, but never bending."
@@ -883,9 +881,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Heavy Metal",
-                    "Thrash Metal",
-                    "Doom Metal"
+                    "Doom Metal",
+                    "Epic Metal"
                   ],
                   "descricao": {
                     "en": "The legacy. Passing the spark to the next generation, refusing to die in the dark."
@@ -904,7 +901,7 @@
               ],
               "subgenero": [
                 "Heavy Metal",
-                "Thrash Metal"
+                "Doom Metal"
               ],
               "totalDuration": "13:38",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_ember_the-flame-unquenched.jpg"
@@ -1062,8 +1059,8 @@
             "Electronic"
           ],
           "subgenero": [
-            "Modern DnB",
-            "Neurofunk"
+            "Neurofunk",
+            "Liquidfunk"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_ghostline.jpg",
           "totalAlbuns": 1,
@@ -1094,9 +1091,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Modern DnB",
-                    "Neurofunk",
-                    "Liquidfunk"
+                    "Liquidfunk",
+                    "Modern DnB"
                   ],
                   "descricao": {
                     "en": "The first step into the neon void. Breaking the system and running faster than the light."
@@ -1116,9 +1112,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Modern DnB",
                     "Neurofunk",
-                    "Liquidfunk"
+                    "Modern DnB"
                   ],
                   "descricao": {
                     "en": "The suffocating feeling of being hunted. They are always right behind, moving with a speed that defies physics, making the distance between the hunter and the prey almost nonexistent."
@@ -1138,9 +1133,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Modern DnB",
                     "Neurofunk",
-                    "Liquidfunk"
+                    "Atmospheric DnB"
                   ],
                   "descricao": {
                     "en": "The physical collapse of an endless escape. Lungs burning, muscles failing, and the terrifying awareness that there is no pause, no shelter, and no rest waiting ahead. Only the constant motion of survival."
@@ -1160,9 +1154,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Modern DnB",
                     "Neurofunk",
-                    "Liquidfunk"
+                    "Glitch"
                   ],
                   "descricao": {
                     "en": "An anomaly in the fabric of the world. A momentary failure in the system that opens a passage where none should exist, flickering in the static like a promise of escape."
@@ -1182,9 +1175,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Modern DnB",
-                    "Neurofunk",
-                    "Liquidfunk"
+                    "Liquidfunk",
+                    "Atmospheric DnB"
                   ],
                   "descricao": {
                     "en": "The absolute limit of existence. The moment when there is no more room to run, and the only path left is a blind leap into the blinding light. The final break from the machine."
@@ -1201,8 +1193,8 @@
                 "Electronic"
               ],
               "subgenero": [
-                "Modern DnB",
-                "Neurofunk"
+                "Neurofunk",
+                "Liquidfunk"
               ],
               "totalDuration": "23:11",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_ghostline_terminal-velocity.jpg"
@@ -1840,8 +1832,9 @@
             "Electronic"
           ],
           "subgenero": [
+            "Ethnic Electronic",
             "Organic Deep House",
-            "Ethnic Electronic"
+            "Dark Ambient"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_nay-aman.jpg",
           "totalAlbuns": 1,
@@ -1872,8 +1865,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Organic Deep House",
-                    "Ethnic Electronic"
+                    "Ethnic Electronic",
+                    "Dark Ambient"
                   ],
                   "descricao": {
                     "en": "Before the first stone, there was the river. The black soil. The sound of water that built an empire, and watched it turn to dust."
@@ -1893,7 +1886,7 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Organic Deep House",
+                    "Desert House",
                     "Ethnic Electronic"
                   ],
                   "descricao": {
@@ -1915,7 +1908,7 @@
                   ],
                   "track_subgenres": [
                     "Organic Deep House",
-                    "Ethnic Electronic"
+                    "Cinematic"
                   ],
                   "descricao": {
                     "en": "The empire at its height. Gold on every pillar. But the sand is patient. The sand has always been patient."
@@ -1956,8 +1949,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Organic Deep House",
-                    "Ethnic Electronic"
+                    "Organic House",
+                    "Ambient"
                   ],
                   "descricao": {
                     "en": "The desert does not warn. It simply takes what was always its. The empire sinks beneath the sand."
@@ -1974,8 +1967,8 @@
                 "Electronic"
               ],
               "subgenero": [
-                "Organic Deep House",
-                "Ethnic Electronic"
+                "Ethnic Electronic",
+                "Organic Deep House"
               ],
               "totalDuration": "25:06",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_nay-aman_echoes-of-sand.jpg"
@@ -2098,8 +2091,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Organic Deep House",
-                    "Ethnic Electronic"
+                    "Ethnic Electronic",
+                    "Dark Ambient"
                   ],
                   "descricao": {
                     "en": "Before the first stone, there was the river. The black soil. The sound of water that built an empire, and watched it turn to dust."
@@ -2116,8 +2109,8 @@
                 "Electronic"
               ],
               "subgenero": [
-                "Organic Deep House",
-                "Ethnic Electronic"
+                "Ethnic Electronic",
+                "Dark Ambient"
               ],
               "totalDuration": "6:15",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_nay-aman_golden-horizon.jpg"
@@ -2136,6 +2129,7 @@
           ],
           "subgenero": [
             "Dark Synthwave",
+            "Ambient",
             "Outrun"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_rift.jpg",
@@ -2167,8 +2161,7 @@
                   ],
                   "track_subgenres": [
                     "Dark Synthwave",
-                    "Outrun",
-                    "Retrowave"
+                    "Cinematic"
                   ],
                   "descricao": {
                     "en": "He carried the body through the flames. Not because he knew how to save him, but because letting go was not an option."
@@ -2188,9 +2181,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Dark Synthwave",
-                    "Outrun",
-                    "Retrowave"
+                    "Retrowave",
+                    "Ambient Synth"
                   ],
                   "descricao": {
                     "en": "Two shadows on the same wall. One burned. One watched. The bond that survived the fire."
@@ -2211,8 +2203,7 @@
                   ],
                   "track_subgenres": [
                     "Dark Synthwave",
-                    "Outrun",
-                    "Retrowave"
+                    "Ambient"
                   ],
                   "descricao": {
                     "en": "The machine was ready. Only one could go. He looked back one last time, and stepped through."
@@ -2232,9 +2223,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Dark Synthwave",
                     "Outrun",
-                    "Retrowave"
+                    "Ambient"
                   ],
                   "descricao": {
                     "en": "The light consumed him. The years folded back. This is the moment the loop began."
@@ -2252,7 +2242,7 @@
               ],
               "subgenero": [
                 "Dark Synthwave",
-                "Outrun"
+                "Ambient"
               ],
               "totalDuration": "13:24",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_before-the-loop.jpg"
@@ -2284,7 +2274,6 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Dark Synthwave",
                     "Outrun",
                     "Retrowave"
                   ],
@@ -2307,8 +2296,7 @@
                   ],
                   "track_subgenres": [
                     "Dark Synthwave",
-                    "Outrun",
-                    "Retrowave"
+                    "Outrun"
                   ],
                   "descricao": {
                     "en": "Waking up before the alarm even sounds. The heavy, exhausting awareness of a day that has not started yet, but whose ending is already known."
@@ -2328,7 +2316,6 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Dark Synthwave",
                     "Outrun",
                     "Retrowave"
                   ],
@@ -2350,9 +2337,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Dark Synthwave",
                     "Outrun",
-                    "Retrowave"
+                    "Synthwave"
                   ],
                   "descricao": {
                     "en": "There is a new idea. A new approach. And though he knows the odds, he cannot stop himself from hoping."
@@ -2373,8 +2359,7 @@
                   ],
                   "track_subgenres": [
                     "Dark Synthwave",
-                    "Outrun",
-                    "Retrowave"
+                    "Industrial Synth"
                   ],
                   "descricao": {
                     "en": "Something is different. A flicker. A break in the rhythm. For a moment, the world forgets what it is supposed to do."
@@ -2395,8 +2380,7 @@
                   ],
                   "track_subgenres": [
                     "Dark Synthwave",
-                    "Outrun",
-                    "Retrowave"
+                    "Ambient"
                   ],
                   "descricao": {
                     "en": "So close. The plan was perfect. But perfect is not enough. And the loop resets."
@@ -2416,9 +2400,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Dark Synthwave",
                     "Outrun",
-                    "Retrowave"
+                    "Epic Synthwave"
                   ],
                   "descricao": {
                     "en": "He will wake up again. The city will be the same. But he will keep trying. Because stopping means the loop wins."
@@ -2435,8 +2418,8 @@
                 "Electronic"
               ],
               "subgenero": [
-                "Dark Synthwave",
-                "Outrun"
+                "Outrun",
+                "Dark Synthwave"
               ],
               "totalDuration": "27:21",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_reset.jpg"
@@ -2469,8 +2452,7 @@
                   ],
                   "track_subgenres": [
                     "Dark Synthwave",
-                    "Outrun",
-                    "Retrowave"
+                    "Ambient"
                   ],
                   "descricao": {
                     "en": "The sky is not the sky he knows. The stars are different. The only familiar thing is the fear that something is coming."
@@ -2491,8 +2473,7 @@
                   ],
                   "track_subgenres": [
                     "Dark Synthwave",
-                    "Outrun",
-                    "Retrowave"
+                    "Outrun"
                   ],
                   "descricao": {
                     "en": "He walks through the crowd like a ghost. They do not see him. They do not hear him. The loneliness is louder than words."
@@ -2512,9 +2493,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Dark Synthwave",
                     "Outrun",
-                    "Retrowave"
+                    "Ethnic Electronic"
                   ],
                   "descricao": {
                     "en": "He tells them what is coming. They listen. They nod. And then they walk away. The warning is ignored."
@@ -2535,8 +2515,7 @@
                   ],
                   "track_subgenres": [
                     "Dark Synthwave",
-                    "Outrun",
-                    "Retrowave"
+                    "Ambient"
                   ],
                   "descricao": {
                     "en": "They call him mad. They drag him to the edge and leave him there. But he does not stop warning them."
@@ -2556,9 +2535,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Dark Synthwave",
                     "Outrun",
-                    "Retrowave"
+                    "Synthwave"
                   ],
                   "descricao": {
                     "en": "A handful believe him. They do not understand, but they trust him. And that trust is all he has left."
@@ -2579,8 +2557,7 @@
                   ],
                   "track_subgenres": [
                     "Dark Synthwave",
-                    "Outrun",
-                    "Retrowave"
+                    "Industrial"
                   ],
                   "descricao": {
                     "en": "It happened exactly as he said it would. The fire. The smoke. He was right, and being right felt like failure."
@@ -2600,9 +2577,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Dark Synthwave",
                     "Outrun",
-                    "Retrowave"
+                    "Epic Synthwave"
                   ],
                   "descricao": {
                     "en": "The pull comes again. Inevitable. He lets go, not because he wants to, but because fighting it has never worked."
@@ -2743,7 +2719,7 @@
                   ],
                   "track_subgenres": [
                     "Post-Punk",
-                    "Gothic Rock"
+                    "Coldwave"
                   ],
                   "descricao": {
                     "en": "The familiar streets have become a maze of unseen eyes. The paranoia of knowing that safety is an illusion, and that danger does not hide in the shadows, it watches from the light."
@@ -2785,7 +2761,7 @@
                   ],
                   "track_subgenres": [
                     "Post-Punk",
-                    "Gothic Rock"
+                    "Noise Rock"
                   ],
                   "descricao": {
                     "en": "A quiet pressure that grows in the silence. The dangerous accumulation of unspoken truths, waiting for the exact moment when the tension becomes impossible to hold."
@@ -2805,8 +2781,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Post-Punk",
-                    "Gothic Rock"
+                    "Coldwave",
+                    "Minimal Synth"
                   ],
                   "descricao": {
                     "en": "The terrifying isolation of trusting your own memory when everyone else denies it. A reality where the truth is treated as madness, and the only way to stay sane is to refuse to forget."
@@ -2827,7 +2803,7 @@
                   ],
                   "track_subgenres": [
                     "Post-Punk",
-                    "Gothic Rock"
+                    "Punk Rock"
                   ],
                   "descricao": {
                     "en": "The exact moment the silence is broken. A physical act of defiance that cannot be undone. Staring into the eye of the oppressor and making it clear that fear has lost its power."
@@ -2905,8 +2881,10 @@
             "Rock"
           ],
           "subgenero": [
+            "Progressive Metal",
+            "Alternative Metal",
             "Progressive Rock",
-            "Progressive Metal"
+            "Math Rock"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_trace.jpg",
           "totalAlbuns": 3,
@@ -2935,7 +2913,6 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Progressive Rock",
                     "Progressive Metal",
                     "Alternative Metal"
                   ],
@@ -2958,8 +2935,7 @@
                   ],
                   "track_subgenres": [
                     "Progressive Rock",
-                    "Progressive Metal",
-                    "Alternative Metal"
+                    "Post-Metal"
                   ],
                   "descricao": {
                     "en": "The room is small. The bed is hard. But the silence is his. And for the first time in years, he does not want to fill it."
@@ -2979,7 +2955,6 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Progressive Rock",
                     "Progressive Metal",
                     "Alternative Metal"
                   ],
@@ -2998,8 +2973,8 @@
                 "Rock"
               ],
               "subgenero": [
-                "Progressive Rock",
-                "Progressive Metal"
+                "Progressive Metal",
+                "Alternative Metal"
               ],
               "totalDuration": "14:49",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_what-i-chose.jpg"
@@ -3030,9 +3005,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Progressive Rock",
                     "Progressive Metal",
-                    "Alternative Metal"
+                    "Math Rock"
                   ],
                   "descricao": {
                     "en": "The ship drops out of the dark. The instruments begin their quiet work. And the planet below does not care."
@@ -3052,9 +3026,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Progressive Rock",
                     "Progressive Metal",
-                    "Alternative Metal"
+                    "Math Rock"
                   ],
                   "descricao": {
                     "en": "The relentless rhythm of the drill. Layers of dust, stone, and deep time."
@@ -3075,8 +3048,7 @@
                   ],
                   "track_subgenres": [
                     "Progressive Rock",
-                    "Progressive Metal",
-                    "Alternative Metal"
+                    "Post-Metal"
                   ],
                   "descricao": {
                     "en": "He kneels. Picks up a stone. Turns it in his hands. It is smooth. It is cold. He drops it. And keeps walking."
@@ -3097,8 +3069,7 @@
                   ],
                   "track_subgenres": [
                     "Progressive Rock",
-                    "Progressive Metal",
-                    "Alternative Metal"
+                    "Post-Metal"
                   ],
                   "descricao": {
                     "en": "He checks the oxygen levels. Then he sits back and watches the stars. They do not look any closer than yesterday."
@@ -3118,7 +3089,6 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Progressive Rock",
                     "Progressive Metal",
                     "Alternative Metal"
                   ],
@@ -3141,8 +3111,7 @@
                   ],
                   "track_subgenres": [
                     "Progressive Rock",
-                    "Progressive Metal",
-                    "Alternative Metal"
+                    "Space Rock"
                   ],
                   "descricao": {
                     "en": "He packs his tools. Checks them twice. Then he sits in the dark and waits. Not for sleep. For the next door to open."
@@ -3159,8 +3128,8 @@
                 "Rock"
               ],
               "subgenero": [
-                "Progressive Rock",
-                "Progressive Metal"
+                "Progressive Metal",
+                "Progressive Rock"
               ],
               "totalDuration": "33:57",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_strata.jpg"
@@ -3191,9 +3160,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Progressive Rock",
                     "Progressive Metal",
-                    "Alternative Metal"
+                    "Space Rock"
                   ],
                   "descricao": {
                     "en": "The ship breaks through the clouds. And the first thing he sees is not a ruin — it is a road. A road that leads somewhere."
@@ -3213,9 +3181,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Progressive Rock",
                     "Progressive Metal",
-                    "Alternative Metal"
+                    "Math Rock"
                   ],
                   "descricao": {
                     "en": "He kneels in the dust. The layers are deep. Deeper than they should be. And something in the pattern does not fit."
@@ -3235,8 +3202,7 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Progressive Rock",
-                    "Progressive Metal",
+                    "Post-Metal",
                     "Alternative Metal"
                   ],
                   "descricao": {
@@ -3257,9 +3223,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Progressive Rock",
                     "Progressive Metal",
-                    "Alternative Metal"
+                    "Math Rock"
                   ],
                   "descricao": {
                     "en": "Stone blocks. Perfect squares. Laid out in patterns that once meant something. He does not know what they were. But they were something."
@@ -3279,9 +3244,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Progressive Rock",
                     "Progressive Metal",
-                    "Alternative Metal"
+                    "Post-Metal"
                   ],
                   "descricao": {
                     "en": "Something is buried here. Not deep. He brushes the dirt away with his hands. And the first shape begins to appear."
@@ -3301,7 +3265,6 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Progressive Rock",
                     "Progressive Metal",
                     "Alternative Metal"
                   ],
@@ -3320,8 +3283,8 @@
                 "Rock"
               ],
               "subgenero": [
-                "Progressive Rock",
-                "Progressive Metal"
+                "Progressive Metal",
+                "Math Rock"
               ],
               "totalDuration": "31:07",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_unearthed.jpg"
@@ -3387,7 +3350,8 @@
           ],
           "subgenero": [
             "Darkwave",
-            "Coldwave"
+            "Coldwave",
+            "EBM"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_void.jpg",
           "totalAlbuns": 3,
@@ -3417,9 +3381,7 @@
                   ],
                   "track_subgenres": [
                     "Darkwave",
-                    "Coldwave",
-                    "EBM",
-                    "Minimal Synthwave"
+                    "Coldwave"
                   ],
                   "descricao": {
                     "en": "The pieces are all there. The problem is they don't fit anymore. And somewhere in the static, a voice speaks."
@@ -3439,10 +3401,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Darkwave",
-                    "Coldwave",
                     "EBM",
-                    "Minimal Synthwave"
+                    "Industrial Electronic"
                   ],
                   "descricao": {
                     "en": "A face appears. Recognition should follow, but the files are empty. The system runs, but something essential was never saved."
@@ -3463,9 +3423,7 @@
                   ],
                   "track_subgenres": [
                     "Darkwave",
-                    "Coldwave",
-                    "EBM",
-                    "Minimal Synthwave"
+                    "Minimal Synth"
                   ],
                   "descricao": {
                     "en": "The mirror offers nothing back. Not a reflection, not a memory, not even a shadow. Just the crushing realization that the person who used to stand there is gone."
@@ -3514,10 +3472,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Darkwave",
-                    "Coldwave",
                     "EBM",
-                    "Minimal Synthwave"
+                    "Darkwave"
                   ],
                   "descricao": {
                     "en": "The house is empty. But the silence is not. Something is here, it has been here longer than you. It remembers what you forgot."
@@ -3537,9 +3493,7 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Darkwave",
                     "Coldwave",
-                    "EBM",
                     "Minimal Synthwave"
                   ],
                   "descricao": {
@@ -3561,9 +3515,7 @@
                   ],
                   "track_subgenres": [
                     "Darkwave",
-                    "Coldwave",
-                    "EBM",
-                    "Minimal Synthwave"
+                    "Ethereal Wave"
                   ],
                   "descricao": {
                     "en": "The voices are familiar. The laughter is the same. But the name they are speaking is not yours anymore."
@@ -3583,10 +3535,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Darkwave",
-                    "Coldwave",
                     "EBM",
-                    "Minimal Synthwave"
+                    "Industrial Rock"
                   ],
                   "descricao": {
                     "en": "The chair is warm. The screen is on. Someone is wearing your name, living your life. Nobody noticed the difference."
@@ -3606,10 +3556,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Darkwave",
-                    "Coldwave",
-                    "EBM",
-                    "Minimal Synthwave"
+                    "Dark Ambient",
+                    "Darkwave"
                   ],
                   "descricao": {
                     "en": "The name was taken. The face was replaced. What remains is the silence between two heartbeats that belong to no one."
@@ -3629,10 +3577,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Darkwave",
                     "Coldwave",
-                    "EBM",
-                    "Minimal Synthwave"
+                    "Ethereal Wave"
                   ],
                   "descricao": {
                     "en": "Another life waits somewhere else. But the door to it is not in front of you. It is behind you, and it has been closed."
@@ -3650,7 +3596,7 @@
               ],
               "subgenero": [
                 "Darkwave",
-                "Coldwave"
+                "EBM"
               ],
               "totalDuration": "22:37",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-stranger-at-the-door.jpg"
@@ -3677,10 +3623,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Darkwave",
-                    "Coldwave",
                     "EBM",
-                    "Minimal Synthwave"
+                    "Coldwave"
                   ],
                   "descricao": {
                     "en": "A perfect circle. A perfect prison. The worst part is not being trapped, it is being the only one who knows."
@@ -3700,10 +3644,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Darkwave",
                     "Coldwave",
-                    "EBM",
-                    "Minimal Synthwave"
+                    "Minimal Synth"
                   ],
                   "descricao": {
                     "en": "They move in perfect sync. They speak in perfect time. The only thing more terrifying is being the one who sees it."
@@ -3720,8 +3662,8 @@
                 "Electronic"
               ],
               "subgenero": [
-                "Darkwave",
-                "Coldwave"
+                "Coldwave",
+                "EBM"
               ],
               "totalDuration": "10:49",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-loop.jpg"
@@ -3762,8 +3704,8 @@
             "Electronic"
           ],
           "subgenero": [
-            "Spacesynth",
-            "Cyberpunk Techno"
+            "Cyberpunk Techno",
+            "Darkwave"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_voyager-23.jpg",
           "totalAlbuns": 1,
@@ -3794,9 +3736,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
                     "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Synthwave"
                   ],
                   "descricao": {
                     "en": "A light on the horizon. Always close, never closer. The hand reaches, and the dark takes it back."
@@ -3816,9 +3757,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
                     "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Industrial"
                   ],
                   "descricao": {
                     "en": "A highway with no signs. A radio with no voice. The engines keep burning because stopping means there is nowhere to go."
@@ -3838,9 +3778,8 @@
                     "Electronic"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
                     "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Darkwave"
                   ],
                   "descricao": {
                     "en": "Gravity lets go. The floor was never there. The fall does not end, it only changes shape."
@@ -3861,8 +3800,7 @@
                   ],
                   "track_subgenres": [
                     "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Darkwave"
                   ],
                   "descricao": {
                     "en": "What remains when the fire goes out? Not ashes. Not memory. Just smoke drifting into skies that hold nothing."
@@ -3883,8 +3821,7 @@
                   ],
                   "track_subgenres": [
                     "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Ambient Techno"
                   ],
                   "descricao": {
                     "en": "The last light flickers. The last word breaks. The silence that follows is not empty, it is the answer."
@@ -3901,8 +3838,8 @@
                 "Electronic"
               ],
               "subgenero": [
-                "Spacesynth",
-                "Cyberpunk Techno"
+                "Cyberpunk Techno",
+                "Darkwave"
               ],
               "totalDuration": "23:32",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_voyager-23_cascade-collapse.jpg"
@@ -3965,8 +3902,11 @@
             "Rock"
           ],
           "subgenero": [
+            "Cyberpunk Techno",
             "Spacesynth",
-            "Cyberpunk Techno"
+            "Industrial Metal",
+            "Symphonic Metal",
+            "Darkwave"
           ],
           "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_x3n0.jpg",
           "totalAlbuns": 4,
@@ -4000,8 +3940,7 @@
                   ],
                   "track_subgenres": [
                     "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Cyberpunk Techno"
                   ],
                   "descricao": {
                     "en": "No warning. No negotiation. Only a declaration repeated like a sentence, marking the exact moment the sky went dark."
@@ -4023,8 +3962,7 @@
                   ],
                   "track_subgenres": [
                     "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Cinematic"
                   ],
                   "descricao": {
                     "en": "The declaration of possession. The planet is no longer yours. It belongs to the conqueror now."
@@ -4045,9 +3983,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
                     "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Industrial"
                   ],
                   "descricao": {
                     "en": "A hypnotic rhythm designed to break the mind. A single command repeated until all resistance dissolves into silence."
@@ -4068,9 +4005,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
                     "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "EBM"
                   ],
                   "descricao": {
                     "en": "No fight. No screams. Only the silence of the conquered. The sound of absolute surrender."
@@ -4091,9 +4027,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Industrial Metal",
+                    "Cyberpunk Techno"
                   ],
                   "descricao": {
                     "en": "The apex of chaos. Desperate screams echoing through a broken world, where a dark laughter seals the fate of the conquered."
@@ -4114,9 +4049,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Industrial Metal",
+                    "Heavy Metal"
                   ],
                   "descricao": {
                     "en": "The end of a cycle and the beginning of an era. The conqueror is not an invader passing through, but a permanent fixture. There is no departure, only an eternal occupation that outlasts everything."
@@ -4134,8 +4068,8 @@
                 "Rock"
               ],
               "subgenero": [
-                "Spacesynth",
-                "Cyberpunk Techno"
+                "Cyberpunk Techno",
+                "Spacesynth"
               ],
               "totalDuration": "28:35",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_colonize.jpg"
@@ -4168,9 +4102,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Industrial Metal",
+                    "Symphonic Metal"
                   ],
                   "descricao": {
                     "en": "A declaration of total control. The end of resistance, where the will of the conqueror becomes the only law. Power that does not need to be justified, only obeyed."
@@ -4191,9 +4124,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Industrial Metal",
+                    "Cinematic"
                   ],
                   "descricao": {
                     "en": "The physical act of submission. A command that leaves no room for negotiation, forcing the conquered to bow before an unchallengeable force."
@@ -4214,9 +4146,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Industrial Metal",
+                    "Symphonic Metal"
                   ],
                   "descricao": {
                     "en": "The same command repeated, stripped of all pretense. A brutal reminder that the demand for submission does not change, regardless of how it is delivered."
@@ -4237,9 +4168,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Industrial Metal",
+                    "Death Metal"
                   ],
                   "descricao": {
                     "en": "The ultimate punishment is not death, but the complete removal of memory. A fate where identity is deleted, history is rewritten, and the victims are forgotten by the very world they tried to save."
@@ -4260,9 +4190,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Symphonic Metal",
+                    "Cinematic"
                   ],
                   "descricao": {
                     "en": "The coronation of an unstoppable force. A throne built on the ruins of everything that dared to stand in its way. The quiet, terrifying silence of a victory that has no end."
@@ -4283,9 +4212,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Symphonic Metal",
+                    "Darkwave"
                   ],
                   "descricao": {
                     "en": "The final decree to the broken. A world stripped of any illusion of tomorrow, where the only remaining path is the complete abandonment of the will."
@@ -4306,9 +4234,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Industrial Metal",
+                    "Symphonic Metal"
                   ],
                   "descricao": {
                     "en": "A dynasty that transcends time. A reign built not for a generation, but for the cosmos itself. The absolute certainty that the crown will never fall."
@@ -4326,8 +4253,8 @@
                 "Rock"
               ],
               "subgenero": [
-                "Spacesynth",
-                "Cyberpunk Techno"
+                "Industrial Metal",
+                "Symphonic Metal"
               ],
               "totalDuration": "37:32",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_supremacy.jpg"
@@ -4359,9 +4286,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Symphonic Metal",
+                    "Cinematic"
                   ],
                   "descricao": {
                     "en": "The exact moment the world changes forever. A silent presence descending from above, so unknown that it defies comprehension. The terrifying realization that it does not need to speak to deliver a sentence."
@@ -4382,9 +4308,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Symphonic Metal",
+                    "Darkwave"
                   ],
                   "descricao": {
                     "en": "The claustrophobia of a perfect trap. The slow realization that every exit is an illusion, and that the only destination left is the point from which there is no return."
@@ -4405,9 +4330,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Symphonic Metal",
+                    "Industrial"
                   ],
                   "descricao": {
                     "en": "The complete collapse of empathy. A reality where survival demands the abandonment of everything that made them human. The terrifying realization that cruelty is just a matter of circumstance."
@@ -4428,9 +4352,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Symphonic Metal",
+                    "Gothic Metal"
                   ],
                   "descricao": {
                     "en": "The illusion of assimilation. A desperate attempt to belong, only to realize that acceptance is a door that remains permanently locked. The pain of seeming like a stranger in the place you were used to calling home."
@@ -4451,9 +4374,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Symphonic Metal",
+                    "Darkwave"
                   ],
                   "descricao": {
                     "en": "The erasure of tomorrow. A reality where time has lost its meaning, and the future is no longer a promise, but a sentence. The silence of a generation that has nothing left to pass on."
@@ -4474,9 +4396,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Symphonic Metal",
+                    "Funeral Doom"
                   ],
                   "descricao": {
                     "en": "The final erasure. A void where an entire civilization used to breathe, leaving no monuments, no memories, and no echoes behind. The absolute triumph of silence over existence."
@@ -4494,8 +4415,8 @@
                 "Rock"
               ],
               "subgenero": [
-                "Spacesynth",
-                "Cyberpunk Techno"
+                "Symphonic Metal",
+                "Darkwave"
               ],
               "totalDuration": "31:27",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_agonizing.jpg"
@@ -4528,9 +4449,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
-                    "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Dark Ambient",
+                    "Cinematic"
                   ],
                   "descricao": {
                     "en": "A funeral procession for a voice that has already been silenced. The heavy, suffocating quiet of a world holding its breath, waiting for the final blow to fall."
@@ -4551,9 +4471,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
                     "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Spacesynth"
                   ],
                   "descricao": {
                     "en": "The terrifying quiet of a system that has already won. Control is no longer maintained through violence or fear, but through the absolute, inescapable architecture of the new reality."
@@ -4574,9 +4493,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
                     "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Minimal Synth"
                   ],
                   "descricao": {
                     "en": "The terrifying realization that nothing is accidental. The streets, the rules, the fear, all of it is a calculated blueprint. A perfect cage disguised as a city."
@@ -4597,9 +4515,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
                     "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Industrial"
                   ],
                   "descricao": {
                     "en": "The ultimate triumph of control. A state where rebellion is not crushed, but forgotten. The horror of a body moving in perfect synchronization, acting without the need for commands."
@@ -4620,9 +4537,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
                     "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Spacesynth"
                   ],
                   "descricao": {
                     "en": "A world stripped of all noise, except for the heavy breathing of terror. It is not harmony, but the absolute submission of a population that no longer dares to make a sound."
@@ -4643,9 +4559,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
                     "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "EBM"
                   ],
                   "descricao": {
                     "en": "The ultimate lie of absolute power. A doctrine that perverts the meaning of peace, convincing the broken that their chains are a form of salvation and that true freedom is found only in total submission."
@@ -4666,9 +4581,8 @@
                     "Rock"
                   ],
                   "track_subgenres": [
-                    "Spacesynth",
                     "Cyberpunk Techno",
-                    "Sci-Fi Darkwave"
+                    "Spacesynth"
                   ],
                   "descricao": {
                     "en": "The final, terrifying monument. A power so absolute that resistance has become a forgotten myth. There is no challenger, no rebel, and no fall, only the endless, silent permanence of the conqueror."
@@ -4686,8 +4600,8 @@
                 "Rock"
               ],
               "subgenero": [
-                "Spacesynth",
-                "Cyberpunk Techno"
+                "Cyberpunk Techno",
+                "Spacesynth"
               ],
               "totalDuration": "27:27",
               "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_dominate.jpg"
@@ -4829,7 +4743,7 @@
       ],
       "subgenero": [
         "Symphonic Gothic Metal",
-        "Gothic Metal"
+        "Doom Metal"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_dark-veil.jpg",
       "totalAlbuns": 1,
@@ -4863,7 +4777,7 @@
               ],
               "track_subgenres": [
                 "Symphonic Gothic Metal",
-                "Gothic Metal"
+                "Doom Metal"
               ],
               "descricao": {
                 "en": "A consecration in the dark. The heavy, sacred atmosphere of a forgotten sanctuary where time seems to have stopped, and the air itself feels like a held breath."
@@ -4885,7 +4799,7 @@
               ],
               "track_subgenres": [
                 "Symphonic Gothic Metal",
-                "Gothic Metal"
+                "Dark Metal"
               ],
               "descricao": {
                 "en": "The freezing breath of the grave. A somber invitation rising from the deep, pulling the living toward the ancient silence of the dead."
@@ -4906,8 +4820,8 @@
                 "Metal"
               ],
               "track_subgenres": [
-                "Symphonic Gothic Metal",
-                "Gothic Metal"
+                "Symphonic Metal",
+                "Instrumental"
               ],
               "descricao": {
                 "en": "The silent preparation of the altar. A ritual without words, where the shadows gather and the air grows heavy with the promise of what is to come."
@@ -4928,8 +4842,8 @@
                 "Metal"
               ],
               "track_subgenres": [
-                "Symphonic Gothic Metal",
-                "Gothic Metal"
+                "Gothic Metal",
+                "Heavy Metal"
               ],
               "descricao": {
                 "en": "A profane sacrament. The ultimate act of surrender, where the body and the soul are consumed by the void, finding a twisted kind of salvation in the absolute darkness."
@@ -4951,7 +4865,7 @@
               ],
               "track_subgenres": [
                 "Symphonic Gothic Metal",
-                "Gothic Metal"
+                "Ethereal Wave"
               ],
               "descricao": {
                 "en": "The total absence of light. The moment when the last sliver of hope is swallowed by the darkness, and the soul finally accepts the freezing embrace of the unknown."
@@ -4973,7 +4887,7 @@
               ],
               "track_subgenres": [
                 "Symphonic Gothic Metal",
-                "Gothic Metal"
+                "Power Metal"
               ],
               "descricao": {
                 "en": "The climax of the ritual. The tearing of the sacred veil, where the night is painted in shades of red and the final oath is sealed in violence and fire."
@@ -4992,7 +4906,7 @@
           ],
           "subgenero": [
             "Symphonic Gothic Metal",
-            "Gothic Metal"
+            "Doom Metal"
           ],
           "totalDuration": "22:49",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_dark-veil_bloodmoon-rite.jpg"
@@ -5080,7 +4994,7 @@
       ],
       "subgenero": [
         "Heavy Metal",
-        "Thrash Metal"
+        "Doom Metal"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_ember.jpg",
       "totalAlbuns": 1,
@@ -5111,7 +5025,6 @@
               ],
               "track_subgenres": [
                 "Heavy Metal",
-                "Thrash Metal",
                 "Doom Metal"
               ],
               "descricao": {
@@ -5134,8 +5047,7 @@
               ],
               "track_subgenres": [
                 "Heavy Metal",
-                "Thrash Metal",
-                "Doom Metal"
+                "Groove Metal"
               ],
               "descricao": {
                 "en": "The survival. Walking through the flames and losing a part of oneself, but never bending."
@@ -5156,9 +5068,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Heavy Metal",
-                "Thrash Metal",
-                "Doom Metal"
+                "Doom Metal",
+                "Epic Metal"
               ],
               "descricao": {
                 "en": "The legacy. Passing the spark to the next generation, refusing to die in the dark."
@@ -5177,7 +5088,7 @@
           ],
           "subgenero": [
             "Heavy Metal",
-            "Thrash Metal"
+            "Doom Metal"
           ],
           "totalDuration": "13:38",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_ember_the-flame-unquenched.jpg"
@@ -5335,8 +5246,8 @@
         "Electronic"
       ],
       "subgenero": [
-        "Modern DnB",
-        "Neurofunk"
+        "Neurofunk",
+        "Liquidfunk"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_ghostline.jpg",
       "totalAlbuns": 1,
@@ -5367,9 +5278,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Modern DnB",
-                "Neurofunk",
-                "Liquidfunk"
+                "Liquidfunk",
+                "Modern DnB"
               ],
               "descricao": {
                 "en": "The first step into the neon void. Breaking the system and running faster than the light."
@@ -5389,9 +5299,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Modern DnB",
                 "Neurofunk",
-                "Liquidfunk"
+                "Modern DnB"
               ],
               "descricao": {
                 "en": "The suffocating feeling of being hunted. They are always right behind, moving with a speed that defies physics, making the distance between the hunter and the prey almost nonexistent."
@@ -5411,9 +5320,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Modern DnB",
                 "Neurofunk",
-                "Liquidfunk"
+                "Atmospheric DnB"
               ],
               "descricao": {
                 "en": "The physical collapse of an endless escape. Lungs burning, muscles failing, and the terrifying awareness that there is no pause, no shelter, and no rest waiting ahead. Only the constant motion of survival."
@@ -5433,9 +5341,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Modern DnB",
                 "Neurofunk",
-                "Liquidfunk"
+                "Glitch"
               ],
               "descricao": {
                 "en": "An anomaly in the fabric of the world. A momentary failure in the system that opens a passage where none should exist, flickering in the static like a promise of escape."
@@ -5455,9 +5362,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Modern DnB",
-                "Neurofunk",
-                "Liquidfunk"
+                "Liquidfunk",
+                "Atmospheric DnB"
               ],
               "descricao": {
                 "en": "The absolute limit of existence. The moment when there is no more room to run, and the only path left is a blind leap into the blinding light. The final break from the machine."
@@ -5474,8 +5380,8 @@
             "Electronic"
           ],
           "subgenero": [
-            "Modern DnB",
-            "Neurofunk"
+            "Neurofunk",
+            "Liquidfunk"
           ],
           "totalDuration": "23:11",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_ghostline_terminal-velocity.jpg"
@@ -6113,8 +6019,9 @@
         "Electronic"
       ],
       "subgenero": [
+        "Ethnic Electronic",
         "Organic Deep House",
-        "Ethnic Electronic"
+        "Dark Ambient"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_nay-aman.jpg",
       "totalAlbuns": 1,
@@ -6145,8 +6052,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Organic Deep House",
-                "Ethnic Electronic"
+                "Ethnic Electronic",
+                "Dark Ambient"
               ],
               "descricao": {
                 "en": "Before the first stone, there was the river. The black soil. The sound of water that built an empire, and watched it turn to dust."
@@ -6166,7 +6073,7 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Organic Deep House",
+                "Desert House",
                 "Ethnic Electronic"
               ],
               "descricao": {
@@ -6188,7 +6095,7 @@
               ],
               "track_subgenres": [
                 "Organic Deep House",
-                "Ethnic Electronic"
+                "Cinematic"
               ],
               "descricao": {
                 "en": "The empire at its height. Gold on every pillar. But the sand is patient. The sand has always been patient."
@@ -6229,8 +6136,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Organic Deep House",
-                "Ethnic Electronic"
+                "Organic House",
+                "Ambient"
               ],
               "descricao": {
                 "en": "The desert does not warn. It simply takes what was always its. The empire sinks beneath the sand."
@@ -6247,8 +6154,8 @@
             "Electronic"
           ],
           "subgenero": [
-            "Organic Deep House",
-            "Ethnic Electronic"
+            "Ethnic Electronic",
+            "Organic Deep House"
           ],
           "totalDuration": "25:06",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_nay-aman_echoes-of-sand.jpg"
@@ -6371,8 +6278,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Organic Deep House",
-                "Ethnic Electronic"
+                "Ethnic Electronic",
+                "Dark Ambient"
               ],
               "descricao": {
                 "en": "Before the first stone, there was the river. The black soil. The sound of water that built an empire, and watched it turn to dust."
@@ -6389,8 +6296,8 @@
             "Electronic"
           ],
           "subgenero": [
-            "Organic Deep House",
-            "Ethnic Electronic"
+            "Ethnic Electronic",
+            "Dark Ambient"
           ],
           "totalDuration": "6:15",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_nay-aman_golden-horizon.jpg"
@@ -6673,6 +6580,7 @@
       ],
       "subgenero": [
         "Dark Synthwave",
+        "Ambient",
         "Outrun"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_rift.jpg",
@@ -6704,8 +6612,7 @@
               ],
               "track_subgenres": [
                 "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Cinematic"
               ],
               "descricao": {
                 "en": "He carried the body through the flames. Not because he knew how to save him, but because letting go was not an option."
@@ -6725,9 +6632,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Retrowave",
+                "Ambient Synth"
               ],
               "descricao": {
                 "en": "Two shadows on the same wall. One burned. One watched. The bond that survived the fire."
@@ -6748,8 +6654,7 @@
               ],
               "track_subgenres": [
                 "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Ambient"
               ],
               "descricao": {
                 "en": "The machine was ready. Only one could go. He looked back one last time, and stepped through."
@@ -6769,9 +6674,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Dark Synthwave",
                 "Outrun",
-                "Retrowave"
+                "Ambient"
               ],
               "descricao": {
                 "en": "The light consumed him. The years folded back. This is the moment the loop began."
@@ -6789,7 +6693,7 @@
           ],
           "subgenero": [
             "Dark Synthwave",
-            "Outrun"
+            "Ambient"
           ],
           "totalDuration": "13:24",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_before-the-loop.jpg"
@@ -6821,7 +6725,6 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Dark Synthwave",
                 "Outrun",
                 "Retrowave"
               ],
@@ -6844,8 +6747,7 @@
               ],
               "track_subgenres": [
                 "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Outrun"
               ],
               "descricao": {
                 "en": "Waking up before the alarm even sounds. The heavy, exhausting awareness of a day that has not started yet, but whose ending is already known."
@@ -6865,7 +6767,6 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Dark Synthwave",
                 "Outrun",
                 "Retrowave"
               ],
@@ -6887,9 +6788,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Dark Synthwave",
                 "Outrun",
-                "Retrowave"
+                "Synthwave"
               ],
               "descricao": {
                 "en": "There is a new idea. A new approach. And though he knows the odds, he cannot stop himself from hoping."
@@ -6910,8 +6810,7 @@
               ],
               "track_subgenres": [
                 "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Industrial Synth"
               ],
               "descricao": {
                 "en": "Something is different. A flicker. A break in the rhythm. For a moment, the world forgets what it is supposed to do."
@@ -6932,8 +6831,7 @@
               ],
               "track_subgenres": [
                 "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Ambient"
               ],
               "descricao": {
                 "en": "So close. The plan was perfect. But perfect is not enough. And the loop resets."
@@ -6953,9 +6851,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Dark Synthwave",
                 "Outrun",
-                "Retrowave"
+                "Epic Synthwave"
               ],
               "descricao": {
                 "en": "He will wake up again. The city will be the same. But he will keep trying. Because stopping means the loop wins."
@@ -6972,8 +6869,8 @@
             "Electronic"
           ],
           "subgenero": [
-            "Dark Synthwave",
-            "Outrun"
+            "Outrun",
+            "Dark Synthwave"
           ],
           "totalDuration": "27:21",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_rift_reset.jpg"
@@ -7006,8 +6903,7 @@
               ],
               "track_subgenres": [
                 "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Ambient"
               ],
               "descricao": {
                 "en": "The sky is not the sky he knows. The stars are different. The only familiar thing is the fear that something is coming."
@@ -7028,8 +6924,7 @@
               ],
               "track_subgenres": [
                 "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Outrun"
               ],
               "descricao": {
                 "en": "He walks through the crowd like a ghost. They do not see him. They do not hear him. The loneliness is louder than words."
@@ -7049,9 +6944,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Dark Synthwave",
                 "Outrun",
-                "Retrowave"
+                "Ethnic Electronic"
               ],
               "descricao": {
                 "en": "He tells them what is coming. They listen. They nod. And then they walk away. The warning is ignored."
@@ -7072,8 +6966,7 @@
               ],
               "track_subgenres": [
                 "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Ambient"
               ],
               "descricao": {
                 "en": "They call him mad. They drag him to the edge and leave him there. But he does not stop warning them."
@@ -7093,9 +6986,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Dark Synthwave",
                 "Outrun",
-                "Retrowave"
+                "Synthwave"
               ],
               "descricao": {
                 "en": "A handful believe him. They do not understand, but they trust him. And that trust is all he has left."
@@ -7116,8 +7008,7 @@
               ],
               "track_subgenres": [
                 "Dark Synthwave",
-                "Outrun",
-                "Retrowave"
+                "Industrial"
               ],
               "descricao": {
                 "en": "It happened exactly as he said it would. The fire. The smoke. He was right, and being right felt like failure."
@@ -7137,9 +7028,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Dark Synthwave",
                 "Outrun",
-                "Retrowave"
+                "Epic Synthwave"
               ],
               "descricao": {
                 "en": "The pull comes again. Inevitable. He lets go, not because he wants to, but because fighting it has never worked."
@@ -7280,7 +7170,7 @@
               ],
               "track_subgenres": [
                 "Post-Punk",
-                "Gothic Rock"
+                "Coldwave"
               ],
               "descricao": {
                 "en": "The familiar streets have become a maze of unseen eyes. The paranoia of knowing that safety is an illusion, and that danger does not hide in the shadows, it watches from the light."
@@ -7322,7 +7212,7 @@
               ],
               "track_subgenres": [
                 "Post-Punk",
-                "Gothic Rock"
+                "Noise Rock"
               ],
               "descricao": {
                 "en": "A quiet pressure that grows in the silence. The dangerous accumulation of unspoken truths, waiting for the exact moment when the tension becomes impossible to hold."
@@ -7342,8 +7232,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Post-Punk",
-                "Gothic Rock"
+                "Coldwave",
+                "Minimal Synth"
               ],
               "descricao": {
                 "en": "The terrifying isolation of trusting your own memory when everyone else denies it. A reality where the truth is treated as madness, and the only way to stay sane is to refuse to forget."
@@ -7364,7 +7254,7 @@
               ],
               "track_subgenres": [
                 "Post-Punk",
-                "Gothic Rock"
+                "Punk Rock"
               ],
               "descricao": {
                 "en": "The exact moment the silence is broken. A physical act of defiance that cannot be undone. Staring into the eye of the oppressor and making it clear that fear has lost its power."
@@ -7442,8 +7332,10 @@
         "Rock"
       ],
       "subgenero": [
+        "Progressive Metal",
+        "Alternative Metal",
         "Progressive Rock",
-        "Progressive Metal"
+        "Math Rock"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_trace.jpg",
       "totalAlbuns": 3,
@@ -7472,7 +7364,6 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Progressive Rock",
                 "Progressive Metal",
                 "Alternative Metal"
               ],
@@ -7495,8 +7386,7 @@
               ],
               "track_subgenres": [
                 "Progressive Rock",
-                "Progressive Metal",
-                "Alternative Metal"
+                "Post-Metal"
               ],
               "descricao": {
                 "en": "The room is small. The bed is hard. But the silence is his. And for the first time in years, he does not want to fill it."
@@ -7516,7 +7406,6 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Progressive Rock",
                 "Progressive Metal",
                 "Alternative Metal"
               ],
@@ -7535,8 +7424,8 @@
             "Rock"
           ],
           "subgenero": [
-            "Progressive Rock",
-            "Progressive Metal"
+            "Progressive Metal",
+            "Alternative Metal"
           ],
           "totalDuration": "14:49",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_what-i-chose.jpg"
@@ -7567,9 +7456,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Progressive Rock",
                 "Progressive Metal",
-                "Alternative Metal"
+                "Math Rock"
               ],
               "descricao": {
                 "en": "The ship drops out of the dark. The instruments begin their quiet work. And the planet below does not care."
@@ -7589,9 +7477,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Progressive Rock",
                 "Progressive Metal",
-                "Alternative Metal"
+                "Math Rock"
               ],
               "descricao": {
                 "en": "The relentless rhythm of the drill. Layers of dust, stone, and deep time."
@@ -7612,8 +7499,7 @@
               ],
               "track_subgenres": [
                 "Progressive Rock",
-                "Progressive Metal",
-                "Alternative Metal"
+                "Post-Metal"
               ],
               "descricao": {
                 "en": "He kneels. Picks up a stone. Turns it in his hands. It is smooth. It is cold. He drops it. And keeps walking."
@@ -7634,8 +7520,7 @@
               ],
               "track_subgenres": [
                 "Progressive Rock",
-                "Progressive Metal",
-                "Alternative Metal"
+                "Post-Metal"
               ],
               "descricao": {
                 "en": "He checks the oxygen levels. Then he sits back and watches the stars. They do not look any closer than yesterday."
@@ -7655,7 +7540,6 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Progressive Rock",
                 "Progressive Metal",
                 "Alternative Metal"
               ],
@@ -7678,8 +7562,7 @@
               ],
               "track_subgenres": [
                 "Progressive Rock",
-                "Progressive Metal",
-                "Alternative Metal"
+                "Space Rock"
               ],
               "descricao": {
                 "en": "He packs his tools. Checks them twice. Then he sits in the dark and waits. Not for sleep. For the next door to open."
@@ -7696,8 +7579,8 @@
             "Rock"
           ],
           "subgenero": [
-            "Progressive Rock",
-            "Progressive Metal"
+            "Progressive Metal",
+            "Progressive Rock"
           ],
           "totalDuration": "33:57",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_strata.jpg"
@@ -7728,9 +7611,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Progressive Rock",
                 "Progressive Metal",
-                "Alternative Metal"
+                "Space Rock"
               ],
               "descricao": {
                 "en": "The ship breaks through the clouds. And the first thing he sees is not a ruin — it is a road. A road that leads somewhere."
@@ -7750,9 +7632,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Progressive Rock",
                 "Progressive Metal",
-                "Alternative Metal"
+                "Math Rock"
               ],
               "descricao": {
                 "en": "He kneels in the dust. The layers are deep. Deeper than they should be. And something in the pattern does not fit."
@@ -7772,8 +7653,7 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Progressive Rock",
-                "Progressive Metal",
+                "Post-Metal",
                 "Alternative Metal"
               ],
               "descricao": {
@@ -7794,9 +7674,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Progressive Rock",
                 "Progressive Metal",
-                "Alternative Metal"
+                "Math Rock"
               ],
               "descricao": {
                 "en": "Stone blocks. Perfect squares. Laid out in patterns that once meant something. He does not know what they were. But they were something."
@@ -7816,9 +7695,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Progressive Rock",
                 "Progressive Metal",
-                "Alternative Metal"
+                "Post-Metal"
               ],
               "descricao": {
                 "en": "Something is buried here. Not deep. He brushes the dirt away with his hands. And the first shape begins to appear."
@@ -7838,7 +7716,6 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Progressive Rock",
                 "Progressive Metal",
                 "Alternative Metal"
               ],
@@ -7857,8 +7734,8 @@
             "Rock"
           ],
           "subgenero": [
-            "Progressive Rock",
-            "Progressive Metal"
+            "Progressive Metal",
+            "Math Rock"
           ],
           "totalDuration": "31:07",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_trace_unearthed.jpg"
@@ -8185,7 +8062,8 @@
       ],
       "subgenero": [
         "Darkwave",
-        "Coldwave"
+        "Coldwave",
+        "EBM"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_void.jpg",
       "totalAlbuns": 3,
@@ -8215,9 +8093,7 @@
               ],
               "track_subgenres": [
                 "Darkwave",
-                "Coldwave",
-                "EBM",
-                "Minimal Synthwave"
+                "Coldwave"
               ],
               "descricao": {
                 "en": "The pieces are all there. The problem is they don't fit anymore. And somewhere in the static, a voice speaks."
@@ -8237,10 +8113,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Darkwave",
-                "Coldwave",
                 "EBM",
-                "Minimal Synthwave"
+                "Industrial Electronic"
               ],
               "descricao": {
                 "en": "A face appears. Recognition should follow, but the files are empty. The system runs, but something essential was never saved."
@@ -8261,9 +8135,7 @@
               ],
               "track_subgenres": [
                 "Darkwave",
-                "Coldwave",
-                "EBM",
-                "Minimal Synthwave"
+                "Minimal Synth"
               ],
               "descricao": {
                 "en": "The mirror offers nothing back. Not a reflection, not a memory, not even a shadow. Just the crushing realization that the person who used to stand there is gone."
@@ -8312,10 +8184,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Darkwave",
-                "Coldwave",
                 "EBM",
-                "Minimal Synthwave"
+                "Darkwave"
               ],
               "descricao": {
                 "en": "The house is empty. But the silence is not. Something is here, it has been here longer than you. It remembers what you forgot."
@@ -8335,9 +8205,7 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Darkwave",
                 "Coldwave",
-                "EBM",
                 "Minimal Synthwave"
               ],
               "descricao": {
@@ -8359,9 +8227,7 @@
               ],
               "track_subgenres": [
                 "Darkwave",
-                "Coldwave",
-                "EBM",
-                "Minimal Synthwave"
+                "Ethereal Wave"
               ],
               "descricao": {
                 "en": "The voices are familiar. The laughter is the same. But the name they are speaking is not yours anymore."
@@ -8381,10 +8247,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Darkwave",
-                "Coldwave",
                 "EBM",
-                "Minimal Synthwave"
+                "Industrial Rock"
               ],
               "descricao": {
                 "en": "The chair is warm. The screen is on. Someone is wearing your name, living your life. Nobody noticed the difference."
@@ -8404,10 +8268,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Darkwave",
-                "Coldwave",
-                "EBM",
-                "Minimal Synthwave"
+                "Dark Ambient",
+                "Darkwave"
               ],
               "descricao": {
                 "en": "The name was taken. The face was replaced. What remains is the silence between two heartbeats that belong to no one."
@@ -8427,10 +8289,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Darkwave",
                 "Coldwave",
-                "EBM",
-                "Minimal Synthwave"
+                "Ethereal Wave"
               ],
               "descricao": {
                 "en": "Another life waits somewhere else. But the door to it is not in front of you. It is behind you, and it has been closed."
@@ -8448,7 +8308,7 @@
           ],
           "subgenero": [
             "Darkwave",
-            "Coldwave"
+            "EBM"
           ],
           "totalDuration": "22:37",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-stranger-at-the-door.jpg"
@@ -8475,10 +8335,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Darkwave",
-                "Coldwave",
                 "EBM",
-                "Minimal Synthwave"
+                "Coldwave"
               ],
               "descricao": {
                 "en": "A perfect circle. A perfect prison. The worst part is not being trapped, it is being the only one who knows."
@@ -8498,10 +8356,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Darkwave",
                 "Coldwave",
-                "EBM",
-                "Minimal Synthwave"
+                "Minimal Synth"
               ],
               "descricao": {
                 "en": "They move in perfect sync. They speak in perfect time. The only thing more terrifying is being the one who sees it."
@@ -8518,8 +8374,8 @@
             "Electronic"
           ],
           "subgenero": [
-            "Darkwave",
-            "Coldwave"
+            "Coldwave",
+            "EBM"
           ],
           "totalDuration": "10:49",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_void_the-loop.jpg"
@@ -8560,8 +8416,8 @@
         "Electronic"
       ],
       "subgenero": [
-        "Spacesynth",
-        "Cyberpunk Techno"
+        "Cyberpunk Techno",
+        "Darkwave"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_voyager-23.jpg",
       "totalAlbuns": 1,
@@ -8592,9 +8448,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Spacesynth",
                 "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Synthwave"
               ],
               "descricao": {
                 "en": "A light on the horizon. Always close, never closer. The hand reaches, and the dark takes it back."
@@ -8614,9 +8469,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Spacesynth",
                 "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Industrial"
               ],
               "descricao": {
                 "en": "A highway with no signs. A radio with no voice. The engines keep burning because stopping means there is nowhere to go."
@@ -8636,9 +8490,8 @@
                 "Electronic"
               ],
               "track_subgenres": [
-                "Spacesynth",
                 "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Darkwave"
               ],
               "descricao": {
                 "en": "Gravity lets go. The floor was never there. The fall does not end, it only changes shape."
@@ -8659,8 +8512,7 @@
               ],
               "track_subgenres": [
                 "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Darkwave"
               ],
               "descricao": {
                 "en": "What remains when the fire goes out? Not ashes. Not memory. Just smoke drifting into skies that hold nothing."
@@ -8681,8 +8533,7 @@
               ],
               "track_subgenres": [
                 "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Ambient Techno"
               ],
               "descricao": {
                 "en": "The last light flickers. The last word breaks. The silence that follows is not empty, it is the answer."
@@ -8699,8 +8550,8 @@
             "Electronic"
           ],
           "subgenero": [
-            "Spacesynth",
-            "Cyberpunk Techno"
+            "Cyberpunk Techno",
+            "Darkwave"
           ],
           "totalDuration": "23:32",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_voyager-23_cascade-collapse.jpg"
@@ -8763,8 +8614,11 @@
         "Rock"
       ],
       "subgenero": [
+        "Cyberpunk Techno",
         "Spacesynth",
-        "Cyberpunk Techno"
+        "Industrial Metal",
+        "Symphonic Metal",
+        "Darkwave"
       ],
       "foto": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/artist_x3n0.jpg",
       "totalAlbuns": 4,
@@ -8798,8 +8652,7 @@
               ],
               "track_subgenres": [
                 "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Cyberpunk Techno"
               ],
               "descricao": {
                 "en": "No warning. No negotiation. Only a declaration repeated like a sentence, marking the exact moment the sky went dark."
@@ -8821,8 +8674,7 @@
               ],
               "track_subgenres": [
                 "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Cinematic"
               ],
               "descricao": {
                 "en": "The declaration of possession. The planet is no longer yours. It belongs to the conqueror now."
@@ -8843,9 +8695,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
                 "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Industrial"
               ],
               "descricao": {
                 "en": "A hypnotic rhythm designed to break the mind. A single command repeated until all resistance dissolves into silence."
@@ -8866,9 +8717,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
                 "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "EBM"
               ],
               "descricao": {
                 "en": "No fight. No screams. Only the silence of the conquered. The sound of absolute surrender."
@@ -8889,9 +8739,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Industrial Metal",
+                "Cyberpunk Techno"
               ],
               "descricao": {
                 "en": "The apex of chaos. Desperate screams echoing through a broken world, where a dark laughter seals the fate of the conquered."
@@ -8912,9 +8761,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Industrial Metal",
+                "Heavy Metal"
               ],
               "descricao": {
                 "en": "The end of a cycle and the beginning of an era. The conqueror is not an invader passing through, but a permanent fixture. There is no departure, only an eternal occupation that outlasts everything."
@@ -8932,8 +8780,8 @@
             "Rock"
           ],
           "subgenero": [
-            "Spacesynth",
-            "Cyberpunk Techno"
+            "Cyberpunk Techno",
+            "Spacesynth"
           ],
           "totalDuration": "28:35",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_colonize.jpg"
@@ -8966,9 +8814,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Industrial Metal",
+                "Symphonic Metal"
               ],
               "descricao": {
                 "en": "A declaration of total control. The end of resistance, where the will of the conqueror becomes the only law. Power that does not need to be justified, only obeyed."
@@ -8989,9 +8836,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Industrial Metal",
+                "Cinematic"
               ],
               "descricao": {
                 "en": "The physical act of submission. A command that leaves no room for negotiation, forcing the conquered to bow before an unchallengeable force."
@@ -9012,9 +8858,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Industrial Metal",
+                "Symphonic Metal"
               ],
               "descricao": {
                 "en": "The same command repeated, stripped of all pretense. A brutal reminder that the demand for submission does not change, regardless of how it is delivered."
@@ -9035,9 +8880,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Industrial Metal",
+                "Death Metal"
               ],
               "descricao": {
                 "en": "The ultimate punishment is not death, but the complete removal of memory. A fate where identity is deleted, history is rewritten, and the victims are forgotten by the very world they tried to save."
@@ -9058,9 +8902,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Symphonic Metal",
+                "Cinematic"
               ],
               "descricao": {
                 "en": "The coronation of an unstoppable force. A throne built on the ruins of everything that dared to stand in its way. The quiet, terrifying silence of a victory that has no end."
@@ -9081,9 +8924,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Symphonic Metal",
+                "Darkwave"
               ],
               "descricao": {
                 "en": "The final decree to the broken. A world stripped of any illusion of tomorrow, where the only remaining path is the complete abandonment of the will."
@@ -9104,9 +8946,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Industrial Metal",
+                "Symphonic Metal"
               ],
               "descricao": {
                 "en": "A dynasty that transcends time. A reign built not for a generation, but for the cosmos itself. The absolute certainty that the crown will never fall."
@@ -9124,8 +8965,8 @@
             "Rock"
           ],
           "subgenero": [
-            "Spacesynth",
-            "Cyberpunk Techno"
+            "Industrial Metal",
+            "Symphonic Metal"
           ],
           "totalDuration": "37:32",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_supremacy.jpg"
@@ -9157,9 +8998,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Symphonic Metal",
+                "Cinematic"
               ],
               "descricao": {
                 "en": "The exact moment the world changes forever. A silent presence descending from above, so unknown that it defies comprehension. The terrifying realization that it does not need to speak to deliver a sentence."
@@ -9180,9 +9020,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Symphonic Metal",
+                "Darkwave"
               ],
               "descricao": {
                 "en": "The claustrophobia of a perfect trap. The slow realization that every exit is an illusion, and that the only destination left is the point from which there is no return."
@@ -9203,9 +9042,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Symphonic Metal",
+                "Industrial"
               ],
               "descricao": {
                 "en": "The complete collapse of empathy. A reality where survival demands the abandonment of everything that made them human. The terrifying realization that cruelty is just a matter of circumstance."
@@ -9226,9 +9064,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Symphonic Metal",
+                "Gothic Metal"
               ],
               "descricao": {
                 "en": "The illusion of assimilation. A desperate attempt to belong, only to realize that acceptance is a door that remains permanently locked. The pain of seeming like a stranger in the place you were used to calling home."
@@ -9249,9 +9086,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Symphonic Metal",
+                "Darkwave"
               ],
               "descricao": {
                 "en": "The erasure of tomorrow. A reality where time has lost its meaning, and the future is no longer a promise, but a sentence. The silence of a generation that has nothing left to pass on."
@@ -9272,9 +9108,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Symphonic Metal",
+                "Funeral Doom"
               ],
               "descricao": {
                 "en": "The final erasure. A void where an entire civilization used to breathe, leaving no monuments, no memories, and no echoes behind. The absolute triumph of silence over existence."
@@ -9292,8 +9127,8 @@
             "Rock"
           ],
           "subgenero": [
-            "Spacesynth",
-            "Cyberpunk Techno"
+            "Symphonic Metal",
+            "Darkwave"
           ],
           "totalDuration": "31:27",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_agonizing.jpg"
@@ -9326,9 +9161,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
-                "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Dark Ambient",
+                "Cinematic"
               ],
               "descricao": {
                 "en": "A funeral procession for a voice that has already been silenced. The heavy, suffocating quiet of a world holding its breath, waiting for the final blow to fall."
@@ -9349,9 +9183,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
                 "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Spacesynth"
               ],
               "descricao": {
                 "en": "The terrifying quiet of a system that has already won. Control is no longer maintained through violence or fear, but through the absolute, inescapable architecture of the new reality."
@@ -9372,9 +9205,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
                 "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Minimal Synth"
               ],
               "descricao": {
                 "en": "The terrifying realization that nothing is accidental. The streets, the rules, the fear, all of it is a calculated blueprint. A perfect cage disguised as a city."
@@ -9395,9 +9227,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
                 "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Industrial"
               ],
               "descricao": {
                 "en": "The ultimate triumph of control. A state where rebellion is not crushed, but forgotten. The horror of a body moving in perfect synchronization, acting without the need for commands."
@@ -9418,9 +9249,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
                 "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Spacesynth"
               ],
               "descricao": {
                 "en": "A world stripped of all noise, except for the heavy breathing of terror. It is not harmony, but the absolute submission of a population that no longer dares to make a sound."
@@ -9441,9 +9271,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
                 "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "EBM"
               ],
               "descricao": {
                 "en": "The ultimate lie of absolute power. A doctrine that perverts the meaning of peace, convincing the broken that their chains are a form of salvation and that true freedom is found only in total submission."
@@ -9464,9 +9293,8 @@
                 "Rock"
               ],
               "track_subgenres": [
-                "Spacesynth",
                 "Cyberpunk Techno",
-                "Sci-Fi Darkwave"
+                "Spacesynth"
               ],
               "descricao": {
                 "en": "The final, terrifying monument. A power so absolute that resistance has become a forgotten myth. There is no challenger, no rebel, and no fall, only the endless, silent permanence of the conqueror."
@@ -9484,8 +9312,8 @@
             "Rock"
           ],
           "subgenero": [
-            "Spacesynth",
-            "Cyberpunk Techno"
+            "Cyberpunk Techno",
+            "Spacesynth"
           ],
           "totalDuration": "27:27",
           "capa": "https://pub-9d39f9ae84344837a517f2dfdde5f23b.r2.dev/image/album_x3n0_dominate.jpg"
