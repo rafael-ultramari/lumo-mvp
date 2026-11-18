@@ -30,7 +30,7 @@ const translations = {
 };
 const t = translations[lang];
 
-const baseUrl = Astro.site?.toString() || 'https://lumo-mvp.netlify.app';
+const baseUrl = Astro.site?.toString() || 'https://lumoplatform.netlify.app/';
 const pathname = Astro.url?.pathname || '/';
 const canonicalURL = new URL(pathname, baseUrl);
 ---
