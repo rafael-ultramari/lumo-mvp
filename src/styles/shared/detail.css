@@ -11,20 +11,6 @@
   padding-bottom: 70px;
 }
 
-/* Fundo */
-.album-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  filter: blur(40px) brightness(0.3);
-  transform: scale(1.1);
-  z-index: 0;
-}
-
 /* Conteúdo */
 .album-content-wrapper {
   position: relative;

@@ -1,7 +1,7 @@
 
 /* src/styles/shared/common.css */
 
-/* Fundos desfocados das páginas de artista, álbum e faixa */
+/* Fundos compartilhados das páginas de artista, álbum e faixa */
 .artist-bg,
 .album-bg {
   position: fixed;
@@ -33,20 +33,38 @@
   z-index: 1;
 }
 
-/* Link de retorno */
-.artist-content-wrapper .back-link,
-.album-content-wrapper .back-link {
-  display: inline-block;
-  color: rgba(255, 255, 255, 0.6);
+/* Base do botão circular de retorno */
+.back-button {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  color: #fff;
   text-decoration: none;
-  font-size: 0.85rem;
-  margin-bottom: 1.5rem;
-  transition: color 0.3s;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.artist-content-wrapper .back-link:hover,
-.album-content-wrapper .back-link:hover {
-  color: #fff;
+/* Posicionamento na página de artista */
+.artist-top-block .back-button {
+  left: -60px;
+}
+
+/* Posicionamento nas páginas de álbum e faixa */
+.album-content-wrapper > .back-button {
+  left: calc(10% - 60px);
+}
+
+/* Interação do botão */
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(-3px);
 }
 
 /* Separador dos metadados */
