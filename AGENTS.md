@@ -92,6 +92,14 @@ A regra oficial é **"Álbum Completo ou Nada"**.
   - Botões diretos para WhatsApp e X (Twitter).
   - Botão "Copiar Link" (essencial para Instagram).
 
+### 9.1 Estado Reativo e Contexto de Reprodução
+- O GlobalPlayer deve emitir um evento `trackChanged` sempre que a faixa atual mudar.
+- As páginas que exibem entidades reproduzíveis (Álbum, Artista, Track e listagens) devem escutar esse evento.
+- A classe `.is-playing` deve ser aplicada ao elemento correspondente (linha da tracklist, card do álbum, etc.).
+- O indicador visual deve ser limpo automaticamente quando a entidade não for mais a atual.
+- Essa lógica é transversal e depende da arquitetura de Playlist (EP-02).
+- Não implementar essa lógica antes da estabilização do EP-02.
+
 ## 10. Organização e Convenções de CSS
 - Centralizar estilos genuinamente compartilhados; evitar duplicações.
 - Não mover estilos para arquivos compartilhados apenas para centralizar código: deve existir responsabilidade compartilhada real.
