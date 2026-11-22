@@ -130,7 +130,8 @@ function ingest() {
         descricao: desc,
         lyrics: lyrics,
         hasVideo: hasVideo,
-        audio: `${R2_BASE_URL}/audio/track_${artistSlug}_${slug}.mp3` 
+        audio: `${R2_BASE_URL}/audio/track_${artistSlug}_${slug}.mp3`,
+        imagem: `${R2_BASE_URL}/image/track_${artistSlug}_${slug}.jpg` // <--- ÚNICA LINHA ADICIONADA
       });
     }
   });

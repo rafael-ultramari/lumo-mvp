@@ -20,6 +20,9 @@ export function getStaticPaths() {
 
 const { artista, album, track } = Astro.props;
 
+// Lógica da imagem: usa a da track se existir, senão usa a do álbum
+const trackImage = track.imagem || album.capa;
+
 const queue = album.tracks.map(t => ({
   url: t.audio,
   title: t.title,
@@ -34,7 +37,8 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
   
   <div class="album-hero-container">
     
-    <div class="album-bg" style={`background-image: url('${album.capa}');`}></div>
+    <!-- ALTERADO: Usa trackImage no fundo -->
+    <div class="album-bg" style={`background-image: url('${trackImage}');`}></div>
     <div class="overlay"></div>
 
     <div class="album-content-wrapper">
@@ -55,7 +59,13 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
 
       <div class="album-info-section">
         <div class="album-cover-wrapper">
-          <img src={album.capa} alt={album.title} class="album-main-cover" />
+          <!-- ALTERADO: Usa trackImage na capa principal com fallback -->
+          <img 
+            src={trackImage} 
+            alt={track.title} 
+            class="album-main-cover" 
+            onerror={`this.onerror=null; this.src='${album.capa}'`}
+          />
         </div>
 
         <div class="album-text-content">
@@ -79,7 +89,7 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
               data-audio={track.audio} 
               data-title={track.title} 
               data-artist={artista.nome} 
-              data-cover={album.capa}
+              data-cover={trackImage}
               data-queue={queueJson}
               data-index={trackIndex}>
               <span class="play-icon">▶</span> Play
