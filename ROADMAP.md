@@ -156,6 +156,23 @@ Após a criação da página:
 
 **Diretriz:** EP-02 não deve ser executado simultaneamente com EP-03. A arquitetura de reprodução deve ser implementada, validada e estabilizada antes da modularização dos dados.
 
+## M-14 — Estado Reativo nas Páginas (Tocando Agora)
+
+**Status:** Pendente — dependente de EP-02
+
+**Objetivo:** Refletir em tempo real o estado do player nas páginas que exibem a entidade em reprodução.
+
+**Escopo:**
+- O GlobalPlayer deve emitir um evento `trackChanged` com o contexto (álbum, faixa, artista) sempre que a faixa mudar (play, next, prev ou término).
+- As páginas de Álbum, Artista e Track devem escutar esse evento.
+- Aplicar a classe `.is-playing` no elemento correspondente (linha da tracklist, card do álbum, etc.).
+- Exibir um ícone de equalizador animado e/ou destaque de cor.
+- Garantir que o indicador seja limpo quando a faixa não for a atual.
+
+**Dependência:** EP-02 (Playlist Contextual) implementado e estabilizado.
+
+**Critério de conclusão:** Ao navegar entre páginas, o usuário identifica visualmente qual faixa ou álbum está em reprodução no momento.
+
 ---
 
 # 6. FASE 5 — MODULARIZAÇÃO DE DADOS
