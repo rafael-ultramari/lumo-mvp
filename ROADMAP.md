@@ -1,4 +1,4 @@
-# 🏗️ ROADMAP OFICIAL — LUMO PLATFORM
+# ROADMAP OFICIAL — LUMO PLATFORM
 **MVP → Lançamento → Evolução da Plataforma**
 
 **Versão:** Novembro de 2026  
