@@ -33,6 +33,12 @@ O script de ingestão converte esses arquivos V4 para o JSON do catálogo (`cata
 - A lógica de agrupamento deve ser feita no build, não no input.
 - Os campos `genero` e `subgenero` são arrays de strings, nunca strings únicas.
 
+### Imagens de Tracks
+- O padrão de nomenclatura das imagens individuais de faixas no Cloudflare R2 é `track_{artista}_{slug}.jpg`.
+- Quando uma imagem individual da faixa estiver disponível, ela deve ser utilizada.
+- Na ausência de imagem individual, utilizar a capa do álbum como fallback.
+- Preservar o padrão de URLs e a lógica de fallback ao alterar o `ingest.js` ou os componentes que consomem os dados.
+
 ### Slugs
 - O slug é imutável após a publicação. Nunca altere o slug de um artista, álbum ou faixa já publicado.
 - Slugs podem se repetir em níveis diferentes; a hierarquia de rotas do Astro resolve isso naturalmente.
@@ -77,6 +83,9 @@ A regra oficial é **"Álbum Completo ou Nada"**.
 
 ## 9. Player e Compartilhamento
 - Player: usar Howler.js como engine de áudio e construir UI própria (sem bibliotecas prontas).
+- O Player é global e deve persistir durante a navegação entre páginas; a integração com Astro ViewTransitions não deve destruir nem reinicializar indevidamente sua reprodução ou estado.
+- A comunicação entre páginas/componentes e o Player deve utilizar eventos customizados como contratos, evitando acoplamento direto.
+- `playPlaylist` é o contrato previsto para a arquitetura EP-02 (Playlist Contextual). A migração do contrato atual deve ser planejada e validada; não presumir que EP-02 já está implementada.
 - O tema visual pode mudar por universo usando CSS variables (ex.: `--accent`, `--bg`).
 - Compartilhamento em 3 níveis (Faixa, Álbum, Artista):
   - Web Share API (nativo mobile).
@@ -114,6 +123,7 @@ A regra oficial é **"Álbum Completo ou Nada"**.
 13. O usuário mantém aprovação e aplicação das mudanças de código, salvo autorização específica para atuação direta no repositório.
 
 ## 12. Documentação e Roadmap
+- `README.md` deve apresentar o projeto e conter instruções de instalação, configuração necessária, execução local (`npm install`, `npm run dev`), build e preview, para orientar novos desenvolvedores.
 - `ROADMAP.md` é a fonte oficial de fases, prioridades, pendências, projetos futuros e status.
 - `AGENTS.md` contém instruções permanentes de desenvolvimento, arquitetura e convenções.
 - Não duplicar o roadmap inteiro neste arquivo.
