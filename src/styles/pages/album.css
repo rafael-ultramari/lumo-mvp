@@ -24,10 +24,6 @@
   transition: background 0.2s;
 }
 
-.track-row:hover {
-  background: rgba(255, 255, 255, 0.03);
-}
-
 .track-link {
   display: flex;
   align-items: center;
@@ -80,8 +76,4 @@
   opacity: 0;
   transition: opacity 0.2s;
   padding: 0.5rem;
-}
-
-.track-row:hover .track-play-btn {
-  opacity: 1;
 }

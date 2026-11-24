@@ -1,7 +1,8 @@
+
 /* src/styles/pages/home.css */
 
 /* Ignora o padding do <main> apenas para a home, para os fundos cobrirem a tela toda */
-main {
+body:has(.home-container) main {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
@@ -10,16 +11,30 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  scrollbar-width: none;
+}
+
+.home-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Oculta a barra de rolagem do main na Home */
+body:has(.home-container) main {
+  scrollbar-width: none;
+}
+
+body:has(.home-container) main::-webkit-scrollbar {
+  display: none;
 }
 
 .universe-section {
   /* Cada seção ocupa 100% da altura da tela */
-  height: 100vh; 
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;       
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -29,29 +44,32 @@ main {
 .universe-section::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
   z-index: 1;
 }
 
-.content {
+.home-container .content {
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  
+
   /* Compensa o header fixo (64px) e o player (80px) */
   padding-top: 64px;
   padding-bottom: 80px;
 }
 
-.label-logo {
+.home-container .label-logo {
   margin-bottom: 1rem;
 }
 
-h1 {
+.home-container h1 {
   font-size: 4.5rem;
   margin-bottom: 2rem;
   line-height: 1;
@@ -67,20 +85,9 @@ h1 {
   letter-spacing: 0.2em;
   border: 1px solid #fff;
   padding: 0.75rem 2.5rem;
-  background: rgba(0, 0, 0, 0.4); 
+  background: rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
 }
-
-.btn-enter:hover {
-  background: #fff;
-  color: #000;
-}
-
-.lining-nums {
-  font-variant-numeric: lining-nums;
-  font-feature-settings: "lnum"; 
-}
-
 
 /* Indicador de navegação vertical */
 
@@ -110,33 +117,6 @@ h1 {
     background 0.3s ease,
     transform 0.3s ease;
 }
-
-.scroll-down-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateX(-50%) translateY(3px);
-}
-
-/* Oculta a barra de rolagem somente na Home */
-
-.home-container {
-  scrollbar-width: none;
-}
-
-.home-container::-webkit-scrollbar {
-  display: none;
-}
-
-
-/* Oculta a barra de rolagem do main na Home */
-
-body:has(.home-container) main {
-  scrollbar-width: none;
-}
-
-body:has(.home-container) main::-webkit-scrollbar {
-  display: none;
-}
-
 
 /* Navegação entre os universos */
 
@@ -168,23 +148,6 @@ body:has(.home-container) main::-webkit-scrollbar {
     background 0.3s ease,
     transform 0.3s ease;
 }
-
-.scroll-navigation-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateX(-50%) translateY(3px);
-}
-
-/* Ocultar barra de rolagem na Home */
-
-body:has(.home-container) main {
-  scrollbar-width: none;
-}
-
-body:has(.home-container) main::-webkit-scrollbar {
-  display: none;
-}
-
-
 
 /* Navegação entre os universos */
 
@@ -219,27 +182,8 @@ body:has(.home-container) main::-webkit-scrollbar {
   top: 85px;
 }
 
-#nav-up:hover {
-  transform: translateX(-50%) translateY(-3px);
-}
-
 /* Seta para baixo */
 
 #nav-down {
   bottom: 100px;
 }
-
-#nav-down:hover {
-  transform: translateX(-50%) translateY(3px);
-}
-
-/* Ocultar barra de rolagem na Home */
-
-body:has(.home-container) main {
-  scrollbar-width: none;
-}
-
-body:has(.home-container) main::-webkit-scrollbar {
-  display: none;
-}
-

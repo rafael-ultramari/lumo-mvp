@@ -61,14 +61,30 @@
   left: calc(10% - 60px);
 }
 
-/* Interação do botão */
-.back-button:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateX(-3px);
-}
-
 /* Separador dos metadados */
 .artist-meta-row .meta-sep,
 .album-meta-row .meta-sep {
   opacity: 0.3;
+}
+
+/* Carrosséis compartilhados */
+.carousel-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 0;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
 }

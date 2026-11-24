@@ -1,0 +1,82 @@
+
+/* src/styles/desktop.css */
+
+/* ========================================
+   INTERAÇÕES EXCLUSIVAS DE DESKTOP
+======================================== */
+
+@media (min-width: 1025px) {
+
+  /* Elementos compartilhados */
+
+  .back-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(-3px);
+  }
+
+  .btn-play:hover {
+    transform: scale(1.05);
+  }
+
+  .btn-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Listagens */
+
+  .listing-row:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #555;
+  }
+
+  .listing-row:hover .listing-cta {
+    color: #ff3333;
+    border-color: #ff3333;
+  }
+
+  /* Artistas */
+
+  .album-card:hover {
+    transform: scale(1.05);
+  }
+
+  .artist-card:hover {
+    transform: scale(1.05);
+  }
+
+  /* Home */
+
+  .btn-enter:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  .scroll-down-btn:hover,
+  .scroll-navigation-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-50%) translateY(3px);
+  }
+
+  #nav-up:hover {
+    transform: translateX(-50%) translateY(-3px);
+  }
+
+  #nav-down:hover {
+    transform: translateX(-50%) translateY(3px);
+  }
+
+  /* Labels */
+
+  .nav-arrow:hover {
+    transform: translateY(-50%) scale(1.2);
+    text-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  }
+
+  .track-row:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .track-row:hover .track-play-btn {
+    opacity: 1;
+  }
+}
