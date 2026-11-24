@@ -77,3 +77,11 @@
   transition: opacity 0.2s;
   padding: 0.5rem;
 }
+
+/* Ajuste da capa no desktop */
+@media (min-width: 1025px) {
+  .album-layout-grid .album-cover-wrapper {
+    align-self: center;
+    margin-top: 2rem;
+  }
+}

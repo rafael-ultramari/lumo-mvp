@@ -1,10 +1,12 @@
+
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import catalogo from '../../../data/catalogo.json';
-import '../../../styles/pages/album.css'; // <--- Importando o CSS externo
+import '../../../styles/pages/album.css';
 
 export function getStaticPaths() {
   const paths = [];
+
   for (const artista of catalogo.artistas) {
     for (const album of artista.albuns) {
       if (album.isVisible) {
@@ -15,6 +17,7 @@ export function getStaticPaths() {
       }
     }
   }
+
   return paths;
 }
 
@@ -27,143 +30,302 @@ const queue = album.tracks.map(track => ({
   artist: artista.nome,
   cover: album.capa
 }));
+
 const queueJson = JSON.stringify(queue);
 ---
 
 <BaseLayout title={album.title} theme="home" lang="en">
-  
+
   <div class="album-hero-container">
-    
-    <div class="album-bg" style={`background-image: url('${album.capa}');`}></div>
+
+    <div
+      class="album-bg"
+      style={`background-image: url('${album.capa}');`}
+    ></div>
+
     <div class="overlay"></div>
 
     <div class="album-content-wrapper">
-      
+
       <a
         href={`/artists/${artista.slug}`}
         class="back-button"
         aria-label={`Back to ${artista.nome}`}
         title={`Back to ${artista.nome}`}
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          width="20" height="20" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          width="20"
+          height="20"
+          aria-hidden="true"
+        >
           <path d="M19 12H5"></path>
           <path d="M12 19l-7-7 7-7"></path>
         </svg>
       </a>
 
-      <div class="album-info-section">
-        <div class="album-cover-wrapper">
-          <img src={album.capa} alt={album.title} class="album-main-cover" />
-        </div>
+      <!-- NOVA ESTRUTURA: DUAS COLUNAS -->
+      <div class="album-layout-grid">
 
-        <div class="album-text-content">
-          <div class="album-text-top">
-            <h1 class="font-serif">{album.title.toUpperCase()}</h1>
-            <p class="album-artist">By {artista.nome}</p>
-            {album.descricao && album.descricao.en && (
-              <p class="album-description">{album.descricao.en}</p>
-            )}
-            <div class="album-meta-row">
-              <span class="meta-item">{album.releaseYear || '2026'}</span>
-              <span class="meta-sep">|</span>
-              <span class="meta-item">{album.tracks.length} TRACKS</span>
-              <span class="meta-sep">|</span>
-              <span class="meta-item">{album.totalDuration}</span>
-              <span class="meta-sep">|</span>
-              <span class="meta-item">{album.subgenero.join(' · ')}</span>
-            </div>
+        <!-- COLUNA ESQUERDA: INFORMAÇÕES DO ÁLBUM -->
+        <div class="album-info-section">
+
+          <div class="album-cover-wrapper">
+            <img
+              src={album.capa}
+              alt={album.title}
+              class="album-main-cover"
+            />
           </div>
 
-          <div class="album-actions">
-            {primeiraFaixa && (
-              <button class="btn-play" 
-                data-audio={primeiraFaixa.audio} 
-                data-title={primeiraFaixa.title} 
-                data-artist={artista.nome} 
-                data-cover={album.capa}
-                data-queue={queueJson}
-                data-index="0">
-                <span class="play-icon">▶</span> Play
-              </button>
-            )}
-            
-            <button class="btn-icon" id="page-shuffle-btn" 
-              data-queue={queueJson}
-              title="Shuffle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-                <polyline points="16 3 21 3 21 8"></polyline>
-                <line x1="4" y1="20" x2="21" y2="3"></line>
-                <polyline points="21 16 21 21 16 21"></polyline>
-                <line x1="15" y1="15" x2="21" y2="21"></line>
-                <line x1="4" y1="4" x2="9" y2="9"></line>
-              </svg>
-            </button>
+          <div class="album-text-content">
 
-            <button id="share-btn" class="btn-icon" aria-label="Compartilhar" title="Share">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
-                <polyline points="16 6 12 2 8 6"></polyline>
-                <line x1="12" y1="2" x2="12" y2="15"></line>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
+            <div class="album-text-top">
 
-      <div class="tracklist-section">
-        <div class="tracklist">
-          {album.tracks.map((track, index) => (
-            <div class="track-row">
-              <a href={`/tracks/${artista.slug}/${album.slug}/${track.slug}`} class="track-link">
-                <span class="track-number">{String(index + 1).padStart(2, '0')}</span>
-                <div class="track-title-wrapper">
-                  <span class="track-title">{track.title}</span>
-                  {track.track_subgenres && track.track_subgenres.length > 0 && (
-                    <span class="track-subgenres">{track.track_subgenres.join(' · ')}</span>
-                  )}
+              <!-- TÍTULO, ARTISTA E DESCRIÇÃO -->
+              <div class="album-header-text">
+
+                <div class="album-title-group">
+                  <div class="album-title-wrapper">
+                    <h1 class="font-serif">
+                      {album.title.toUpperCase()}
+                    </h1>
+                  </div>
+
+                  <p class="album-artist">
+                    By {artista.nome}
+                  </p>
                 </div>
-              </a>
-              <div class="track-meta">
-                <span class="track-duration">{track.duration}</span>
-                <button class="track-play-btn" 
-                  data-audio={track.audio}
-                  data-title={track.title}
+
+                {album.descricao && album.descricao.en && (
+                  <p class="album-description">
+                    {album.descricao.en}
+                  </p>
+                )}
+
+              </div>
+
+              <div class="album-meta-row">
+                <span class="meta-item">
+                  {album.releaseYear || '2026'}
+                </span>
+
+                <span class="meta-sep">|</span>
+
+                <span class="meta-item">
+                  {album.tracks.length} TRACKS
+                </span>
+
+                <span class="meta-sep">|</span>
+
+                <span class="meta-item">
+                  {album.totalDuration}
+                </span>
+
+                <span class="meta-sep">|</span>
+
+                <span class="meta-item">
+                  {album.subgenero.join(' · ')}
+                </span>
+              </div>
+
+            </div>
+
+            <div class="album-actions">
+
+              {primeiraFaixa && (
+                <button
+                  class="btn-play"
+                  data-audio={primeiraFaixa.audio}
+                  data-title={primeiraFaixa.title}
                   data-artist={artista.nome}
                   data-cover={album.capa}
                   data-queue={queueJson}
-                  data-index={index}
-                  title="Play">
-                  ▶
+                  data-index="0"
+                >
+                  <span class="play-icon">▶</span> Play
                 </button>
-              </div>
+              )}
+
+              <button
+                class="btn-icon"
+                id="page-shuffle-btn"
+                data-queue={queueJson}
+                title="Shuffle"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="18"
+                  height="18"
+                >
+                  <polyline points="16 3 21 3 21 8"></polyline>
+                  <line x1="4" y1="20" x2="21" y2="3"></line>
+                  <polyline points="21 16 21 21 16 21"></polyline>
+                  <line x1="15" y1="15" x2="21" y2="21"></line>
+                  <line x1="4" y1="4" x2="9" y2="9"></line>
+                </svg>
+              </button>
+
+              <button
+                id="share-btn"
+                class="btn-icon"
+                aria-label="Compartilhar"
+                title="Share"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="18"
+                  height="18"
+                >
+                  <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                  <polyline points="16 6 12 2 8 6"></polyline>
+                  <line x1="12" y1="2" x2="12" y2="15"></line>
+                </svg>
+              </button>
+
             </div>
-          ))}
+          </div>
         </div>
+
+        <!-- COLUNA DIREITA: TRACKLIST -->
+        <div class="tracklist-section">
+
+          <div class="tracklist">
+
+            {album.tracks.map((track, index) => (
+              <div class="track-row">
+
+                <a
+                  href={`/tracks/${artista.slug}/${album.slug}/${track.slug}`}
+                  class="track-link"
+                >
+                  <span class="track-number">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+
+                  <div class="track-title-wrapper">
+
+                    <span class="track-title">
+                      {track.title}
+                    </span>
+
+                    {track.track_subgenres &&
+                      track.track_subgenres.length > 0 && (
+                        <span class="track-subgenres">
+                          {track.track_subgenres.join(' · ')}
+                        </span>
+                      )}
+
+                  </div>
+                </a>
+
+                <div class="track-meta">
+
+                  <span class="track-duration">
+                    {track.duration}
+                  </span>
+
+                  <button
+                    class="track-play-btn"
+                    data-audio={track.audio}
+                    data-title={track.title}
+                    data-artist={artista.nome}
+                    data-cover={album.capa}
+                    data-queue={queueJson}
+                    data-index={index}
+                    title="Play"
+                  >
+                    ▶
+                  </button>
+
+                </div>
+              </div>
+            ))}
+
+          </div>
+        </div>
+
       </div>
-
     </div>
-
   </div>
 
 </BaseLayout>
 
 <script>
+  function alignAlbumArtist() {
+    const title = document.querySelector(
+      '.album-title-group h1'
+    ) as HTMLElement;
+
+    const group = document.querySelector(
+      '.album-title-group'
+    ) as HTMLElement;
+
+    const artist = document.querySelector(
+      '.album-title-group .album-artist'
+    ) as HTMLElement;
+
+    if (!title || !group || !artist) return;
+
+    title.style.width = '';
+    group.style.width = '';
+    artist.style.transform = '';
+
+    if (window.innerWidth <= 1024) {
+      return;
+    }
+
+    const range = document.createRange();
+    range.selectNodeContents(title);
+
+    const rects = Array.from(range.getClientRects())
+      .filter(rect => rect.width > 0);
+
+    if (!rects.length) return;
+
+    const lastLine = rects[rects.length - 1];
+    const titleRect = title.getBoundingClientRect();
+
+    const width = lastLine.right - titleRect.left;
+
+    title.style.width = `${width}px`;
+    group.style.width = `${width}px`;
+    artist.style.width = '100%';
+    artist.style.textAlign = 'right';
+  }
+
   function setupAlbumPage() {
     const shareBtn = document.getElementById('share-btn');
+
     if (shareBtn) {
       const newShareBtn = shareBtn.cloneNode(true) as HTMLButtonElement;
       shareBtn.parentNode?.replaceChild(newShareBtn, shareBtn);
-      
+
       newShareBtn.addEventListener('click', async () => {
         const url = window.location.href;
         const title = document.querySelector('h1')?.textContent || 'Album';
-        
+
         if (navigator.share) {
           try {
             await navigator.share({ title: title, url: url });
-          } catch (err) { console.log('Erro ao compartilhar:', err); }
+          } catch (err) {
+            console.log('Erro ao compartilhar:', err);
+          }
         } else {
           navigator.clipboard.writeText(url);
           alert('Link copiado para a área de transferência!');
@@ -172,12 +334,14 @@ const queueJson = JSON.stringify(queue);
     }
 
     const playBtn = document.querySelector('.btn-play');
+
     if (playBtn) {
       const newPlayBtn = playBtn.cloneNode(true) as HTMLButtonElement;
       playBtn.parentNode?.replaceChild(newPlayBtn, playBtn);
-      
+
       newPlayBtn.addEventListener('click', (e) => {
         const btn = e.currentTarget as HTMLButtonElement;
+
         const url = btn.getAttribute('data-audio');
         const title = btn.getAttribute('data-title');
         const artist = btn.getAttribute('data-artist');
@@ -187,35 +351,46 @@ const queueJson = JSON.stringify(queue);
 
         if (url && title && artist && cover) {
           document.dispatchEvent(new CustomEvent('playTrack', {
-            detail: { url, title, artist, cover, queue, index, isShuffle: false }
+            detail: {
+              url,
+              title,
+              artist,
+              cover,
+              queue,
+              index,
+              isShuffle: false
+            }
           }));
         }
       });
     }
 
     const shuffleBtn = document.getElementById('page-shuffle-btn');
+
     if (shuffleBtn) {
       const newShuffleBtn = shuffleBtn.cloneNode(true) as HTMLButtonElement;
       shuffleBtn.parentNode?.replaceChild(newShuffleBtn, shuffleBtn);
-      
+
       newShuffleBtn.addEventListener('click', () => {
         const queueAttr = newShuffleBtn.getAttribute('data-queue');
         if (!queueAttr) return;
 
         const queue = JSON.parse(queueAttr);
-        
+
         function shuffleArray(array) {
           const arr = [...array];
+
           for (let i = arr.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [arr[i], arr[j]] = [arr[j], arr[i]];
           }
+
           return arr;
         }
-        
+
         const shuffled = shuffleArray(queue);
         const randomTrack = shuffled[0];
-        
+
         document.dispatchEvent(new CustomEvent('playTrack', {
           detail: {
             url: randomTrack.url,
@@ -231,13 +406,16 @@ const queueJson = JSON.stringify(queue);
     }
 
     const playTrackBtns = document.querySelectorAll('.track-play-btn');
+
     playTrackBtns.forEach(btn => {
       const newBtn = btn.cloneNode(true) as HTMLButtonElement;
       btn.parentNode?.replaceChild(newBtn, btn);
 
       newBtn.addEventListener('click', (e) => {
         e.preventDefault();
+
         const el = e.currentTarget as HTMLButtonElement;
+
         const url = el.getAttribute('data-audio');
         const title = el.getAttribute('data-title');
         const artist = el.getAttribute('data-artist');
@@ -247,13 +425,30 @@ const queueJson = JSON.stringify(queue);
 
         if (url && title && artist && cover) {
           document.dispatchEvent(new CustomEvent('playTrack', {
-            detail: { url, title, artist, cover, queue, index, isShuffle: false }
+            detail: {
+              url,
+              title,
+              artist,
+              cover,
+              queue,
+              index,
+              isShuffle: false
+            }
           }));
         }
       });
     });
   }
 
-  document.addEventListener('DOMContentLoaded', setupAlbumPage);
-  document.addEventListener('astro:page-load', setupAlbumPage);
+  document.addEventListener('DOMContentLoaded', () => {
+    setupAlbumPage();
+    alignAlbumArtist();
+  });
+
+  document.addEventListener('astro:page-load', () => {
+    setupAlbumPage();
+    alignAlbumArtist();
+  });
+
+  window.addEventListener('resize', alignAlbumArtist);
 </script>

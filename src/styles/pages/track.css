@@ -25,3 +25,35 @@
   color: rgba(255, 255, 255, 0.5);
   font-style: italic;
 }
+
+/* Layout desktop — coluna de letras */
+@media (min-width: 1025px) {
+  .track-lyrics-section {
+    min-width: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    margin-top: 0;
+  }
+
+  /* Oculta visualmente a barra de rolagem */
+  .track-lyrics-section {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .track-lyrics-section::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Centralização da capa na coluna esquerda */
+  .album-layout-grid .album-cover-wrapper {
+    align-self: center;
+    margin-top: 2rem;
+  }
+}

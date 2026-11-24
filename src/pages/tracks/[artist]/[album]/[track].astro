@@ -1,3 +1,4 @@
+
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import catalogo from '../../../../data/catalogo.json';
@@ -34,15 +35,15 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
 ---
 
 <BaseLayout title={`${track.title} - ${artista.nome}`} theme="home" lang="en">
-  
+
   <div class="album-hero-container">
-    
-    <!-- ALTERADO: Usa trackImage no fundo -->
+
+    <!-- Imagem de fundo -->
     <div class="album-bg" style={`background-image: url('${trackImage}');`}></div>
     <div class="overlay"></div>
 
     <div class="album-content-wrapper">
-      
+
       <a
         href={`/artists/${artista.slug}`}
         class="back-button"
@@ -57,66 +58,73 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
         </svg>
       </a>
 
-      <div class="album-info-section">
-        <div class="album-cover-wrapper">
-          <!-- ALTERADO: Usa trackImage na capa principal com fallback -->
-          <img 
-            src={trackImage} 
-            alt={track.title} 
-            class="album-main-cover" 
-            onerror={`this.onerror=null; this.src='${album.capa}'`}
-          />
-        </div>
+      <!-- Layout dividido em duas colunas -->
+      <div class="album-layout-grid">
 
-        <div class="album-text-content">
-          <div class="album-text-top">
-            <h1 class="font-serif">{track.title.toUpperCase()}</h1>
-            <p class="album-artist">By {artista.nome}</p>
-            {track.descricao && track.descricao.en && (
-              <p class="album-description">{track.descricao.en}</p>
-            )}
-            <div class="album-meta-row">
-              <span class="meta-item">{track.duration}</span>
-              <span class="meta-sep">|</span>
-              <span class="meta-item">{track.track_genres.join(' · ')}</span>
-              <span class="meta-sep">|</span>
-              <span class="meta-item">{track.track_subgenres.join(' · ')}</span>
+        <!-- COLUNA ESQUERDA: Informações da track -->
+        <div class="album-info-section">
+
+          <div class="album-cover-wrapper">
+            <img
+              src={trackImage}
+              alt={track.title}
+              class="album-main-cover"
+              onerror={`this.onerror=null; this.src='${album.capa}'`}
+            />
+          </div>
+
+          <div class="album-text-content">
+            <div class="album-text-top">
+              <h1 class="font-serif">{track.title.toUpperCase()}</h1>
+              <p class="album-artist">By {artista.nome}</p>
+
+              {track.descricao && track.descricao.en && (
+                <p class="album-description">{track.descricao.en}</p>
+              )}
+
+              <div class="album-meta-row">
+                <span class="meta-item">{track.duration}</span>
+                <span class="meta-sep">|</span>
+                <span class="meta-item">{track.track_genres.join(' · ')}</span>
+                <span class="meta-sep">|</span>
+                <span class="meta-item">{track.track_subgenres.join(' · ')}</span>
+              </div>
+            </div>
+
+            <div class="album-actions">
+              <button class="btn-play"
+                data-audio={track.audio}
+                data-title={track.title}
+                data-artist={artista.nome}
+                data-cover={trackImage}
+                data-queue={queueJson}
+                data-index={trackIndex}>
+                <span class="play-icon">▶</span> Play
+              </button>
+
+              <button id="share-btn" class="btn-icon" aria-label="Compartilhar" title="Share">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                  <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                  <polyline points="16 6 12 2 8 6"></polyline>
+                  <line x1="12" y1="2" x2="12" y2="15"></line>
+                </svg>
+              </button>
             </div>
           </div>
 
-          <div class="album-actions">
-            <button class="btn-play" 
-              data-audio={track.audio} 
-              data-title={track.title} 
-              data-artist={artista.nome} 
-              data-cover={trackImage}
-              data-queue={queueJson}
-              data-index={trackIndex}>
-              <span class="play-icon">▶</span> Play
-            </button>
-
-            <button id="share-btn" class="btn-icon" aria-label="Compartilhar" title="Share">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
-                <polyline points="16 6 12 2 8 6"></polyline>
-                <line x1="12" y1="2" x2="12" y2="15"></line>
-              </svg>
-            </button>
-          </div>
         </div>
-      </div>
 
-      <!-- SEÇÃO DA LETRA -->
-      <div class="track-lyrics-section">
-        {track.lyrics && track.lyrics.en && track.lyrics.en !== '[Instrumental]' ? (
-          <p class="lyrics-text">{track.lyrics.en}</p>
-        ) : (
-          <p class="lyrics-empty">Instrumental</p>
-        )}
-      </div>
+        <!-- COLUNA DIREITA: Letra da música -->
+        <div class="track-lyrics-section">
+          {track.lyrics && track.lyrics.en && track.lyrics.en !== '[Instrumental]' ? (
+            <p class="lyrics-text">{track.lyrics.en}</p>
+          ) : (
+            <p class="lyrics-empty">Instrumental</p>
+          )}
+        </div>
 
+      </div>
     </div>
-
   </div>
 
 </BaseLayout>
@@ -127,11 +135,11 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
     if (shareBtn) {
       const newShareBtn = shareBtn.cloneNode(true) as HTMLButtonElement;
       shareBtn.parentNode?.replaceChild(newShareBtn, shareBtn);
-      
+
       newShareBtn.addEventListener('click', async () => {
         const url = window.location.href;
         const title = document.querySelector('h1')?.textContent || 'Track';
-        
+
         if (navigator.share) {
           try {
             await navigator.share({ title: title, url: url });
@@ -147,7 +155,7 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
     if (playBtn) {
       const newPlayBtn = playBtn.cloneNode(true) as HTMLButtonElement;
       playBtn.parentNode?.replaceChild(newPlayBtn, playBtn);
-      
+
       newPlayBtn.addEventListener('click', (e) => {
         const btn = e.currentTarget as HTMLButtonElement;
         const url = btn.getAttribute('data-audio');
