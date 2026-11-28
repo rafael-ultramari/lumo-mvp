@@ -1,4 +1,3 @@
-
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import catalogo from '../../../../data/catalogo.json';
@@ -21,7 +20,6 @@ export function getStaticPaths() {
 
 const { artista, album, track } = Astro.props;
 
-// Lógica da imagem: usa a da track se existir, senão usa a do álbum
 const trackImage = track.imagem || album.capa;
 
 const queue = album.tracks.map(t => ({
@@ -38,8 +36,12 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
 
   <div class="album-hero-container">
 
-    <!-- Imagem de fundo -->
-    <div class="album-bg" style={`background-image: url('${trackImage}');`}></div>
+    <div
+      class="album-bg"
+      style={`background-image: url('${trackImage}');`}
+      data-image={trackImage}
+      data-fallback-image={album.capa}>
+    </div>
     <div class="overlay"></div>
 
     <div class="album-content-wrapper">
@@ -58,10 +60,43 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
         </svg>
       </a>
 
-      <!-- Layout dividido em duas colunas -->
       <div class="album-layout-grid">
 
-        <!-- COLUNA ESQUERDA: Informações da track -->
+        <!-- CABEÇALHO -->
+        <div class="album-header-group">
+
+          <div class="album-title-group">
+            <div class="album-title-wrapper">
+              <h1 class="font-serif">{track.title.toUpperCase()}</h1>
+            </div>
+            <p class="album-artist">By {artista.nome}</p>
+          </div>
+
+          <div class="album-actions">
+            <button class="btn-play"
+              data-audio={track.audio}
+              data-title={track.title}
+              data-artist={artista.nome}
+              data-cover={trackImage}
+              data-queue={queueJson}
+              data-index={trackIndex}>
+              <span class="play-icon">▶</span> Play
+            </button>
+
+            <button id="share-btn" class="btn-icon" aria-label="Compartilhar" title="Share">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                width="18" height="18">
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                <polyline points="16 6 12 2 8 6"></polyline>
+                <line x1="12" y1="2" x2="12" y2="15"></line>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- COLUNA ESQUERDA: INFORMAÇÕES -->
         <div class="album-info-section">
 
           <div class="album-cover-wrapper">
@@ -75,11 +110,11 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
 
           <div class="album-text-content">
             <div class="album-text-top">
-              <h1 class="font-serif">{track.title.toUpperCase()}</h1>
-              <p class="album-artist">By {artista.nome}</p>
 
               {track.descricao && track.descricao.en && (
-                <p class="album-description">{track.descricao.en}</p>
+                <div class="album-header-text">
+                  <p class="album-description">{track.descricao.en}</p>
+                </div>
               )}
 
               <div class="album-meta-row">
@@ -89,32 +124,13 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
                 <span class="meta-sep">|</span>
                 <span class="meta-item">{track.track_subgenres.join(' · ')}</span>
               </div>
-            </div>
 
-            <div class="album-actions">
-              <button class="btn-play"
-                data-audio={track.audio}
-                data-title={track.title}
-                data-artist={artista.nome}
-                data-cover={trackImage}
-                data-queue={queueJson}
-                data-index={trackIndex}>
-                <span class="play-icon">▶</span> Play
-              </button>
-
-              <button id="share-btn" class="btn-icon" aria-label="Compartilhar" title="Share">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
-                  <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
-                  <polyline points="16 6 12 2 8 6"></polyline>
-                  <line x1="12" y1="2" x2="12" y2="15"></line>
-                </svg>
-              </button>
             </div>
           </div>
 
         </div>
 
-        <!-- COLUNA DIREITA: Letra da música -->
+        <!-- COLUNA DIREITA: LETRA -->
         <div class="track-lyrics-section">
           {track.lyrics && track.lyrics.en && track.lyrics.en !== '[Instrumental]' ? (
             <p class="lyrics-text">{track.lyrics.en}</p>
@@ -131,6 +147,23 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
 
 <script>
   function setupTrackPage() {
+    const background = document.querySelector('.album-bg') as HTMLElement | null;
+
+    if (background) {
+      const imageUrl = background.dataset.image;
+      const fallbackUrl = background.dataset.fallbackImage;
+
+      if (imageUrl && fallbackUrl && imageUrl !== fallbackUrl) {
+        const image = new Image();
+
+        image.onerror = () => {
+          background.style.backgroundImage = `url("${fallbackUrl}")`;
+        };
+
+        image.src = imageUrl;
+      }
+    }
+
     const shareBtn = document.getElementById('share-btn');
     if (shareBtn) {
       const newShareBtn = shareBtn.cloneNode(true) as HTMLButtonElement;
@@ -143,7 +176,9 @@ const trackIndex = album.tracks.findIndex(t => t.slug === track.slug);
         if (navigator.share) {
           try {
             await navigator.share({ title: title, url: url });
-          } catch (err) { console.log('Erro ao compartilhar:', err); }
+          } catch (err) {
+            console.log('Erro ao compartilhar:', err);
+          }
         } else {
           navigator.clipboard.writeText(url);
           alert('Link copiado para a área de transferência!');

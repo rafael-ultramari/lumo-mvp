@@ -1,10 +1,12 @@
-
 /* src/styles/pages/album.css */
 
 @import '../shared/common.css';
 @import '../shared/detail.css';
 
-/* Lista de faixas */
+/* ========================================
+   LISTA DE FAIXAS
+======================================== */
+
 .tracklist-section {
   max-width: 1000px;
   padding-right: 2rem;
@@ -78,10 +80,324 @@
   padding: 0.5rem;
 }
 
-/* Ajuste da capa no desktop */
+
+/* ========================================
+   ESCALA DESKTOP — 125%
+======================================== */
+
 @media (min-width: 1025px) {
+
+  /* Coluna esquerda: sem rolagem */
+  .album-layout-grid .album-info-section {
+    overflow: visible;
+    min-height: 0;
+  }
+
+  /* Metadados ligeiramente menores */
+  .album-layout-grid .album-meta-row {
+    font-size: 0.95rem;
+  }
+
+  .album-layout-grid .album-meta-primary,
+  .album-layout-grid .album-meta-genres {
+    font-size: inherit;
+  }
+
+  /* Estrutura e espaçamentos */
+  .album-hero-container {
+    padding-top: 37.5px;
+    padding-bottom: 37.5px;
+  }
+
+  .album-layout-grid {
+    column-gap: 1.875rem;
+    row-gap: 1.875rem;
+  }
+
+  /* Cabeçalho */
+  .album-layout-grid .album-header-group {
+    gap: clamp(0.625rem, 1.25vw, 1.25rem);
+  }
+
+  /* Título */
+  .album-layout-grid .album-title-group h1 {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  /* Artista */
+  .album-layout-grid .album-title-group .album-artist {
+    font-size: 1.375rem;
+    margin-bottom: 0;
+  }
+
+  /* Botões */
+  .album-layout-grid .album-header-group .album-actions {
+    gap: 0.75rem;
+  }
+
+  .album-layout-grid .album-header-group .btn-play {
+    padding: 0.75rem 2.25rem;
+    font-size: 1.125rem;
+    gap: 0.625rem;
+  }
+
+  .album-layout-grid .album-header-group .play-icon {
+    font-size: 0.9375rem;
+  }
+
+  .album-layout-grid .album-header-group .btn-icon {
+    width: 52.5px;
+    height: 52.5px;
+  }
+
+  /* Capa */
   .album-layout-grid .album-cover-wrapper {
+    width: min(100%, 425px, 34vh);
     align-self: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Descrição */
+  .album-layout-grid .album-text-content {
+    gap: 0.25rem;
+  }
+
+  .album-layout-grid .album-header-text .album-description {
+    font-size: 1.07rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Metadados */
+  .album-layout-grid .album-meta-row {
+    font-size: 1rem;
+    gap: 0.625rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* Tracklist */
+  .album-layout-grid .tracklist-section {
+    padding-left: 3.125rem;
+    padding-right: 1.25rem;
+  }
+
+  .album-layout-grid .track-row {
+    padding: 1.25rem 0;
+  }
+
+  .album-layout-grid .track-link {
+    gap: 1.875rem;
+  }
+
+  .album-layout-grid .track-number {
+    font-size: 1rem;
+    width: 25px;
+  }
+
+  .album-layout-grid .track-title {
+    font-size: 1.2rem;
+  }
+
+  .album-layout-grid .track-title-wrapper {
+    gap: 0.25rem;
+  }
+
+  .album-layout-grid .track-subgenres {
+    font-size: 0.83rem;
+  }
+
+  .album-layout-grid .track-meta {
+    gap: 1.875rem;
+  }
+
+  .album-layout-grid .track-duration {
+    font-size: 1.07rem;
+  }
+
+  .album-layout-grid .track-play-btn {
+    font-size: 1rem;
+    padding: 0.625rem;
+  }
+
+  /* Esconde visualmente a scrollbar, mantendo a rolagem funcional */
+  .album-layout-grid .tracklist-section {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .album-layout-grid .tracklist-section::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+/* ========================================
+   INTERAÇÕES MOBILE
+======================================== */
+
+@media (max-width: 1024px) {
+
+  /* Título */
+  .album-layout-grid .album-title-group h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Descrição com limite de caracteres */
+  .album-description {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .album-description-more {
+    display: inline;
+    position: static;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    font-size: inherit;
+    cursor: pointer;
+    vertical-align: baseline;
+  }
+
+  .album-description-more[hidden] {
+    display: none !important;
+  }
+
+  /* Controle da tracklist */
+  .mobile-tracklist-toggle {
+    display: inline-flex;
+  }
+
+  .tracklist-section {
+    display: none;
+    width: 100%;
+    max-width: none;
+    padding: 1.5rem 0 2rem;
+  }
+
+  .tracklist-section.is-open {
+    display: block;
+  }
+
+  /* Controles após a reorganização da estrutura */
+  .album-layout-grid .album-header-group .album-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .album-layout-grid .album-header-group .album-actions > button {
+    flex: 0 0 auto;
+    margin: 0;
+    align-self: center;
+  }
+
+  /* Botão de abrir a tracklist */
+  .album-layout-grid .album-header-group .mobile-tracklist-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    margin: 0;
+    padding: 0;
+    flex: 0 0 42px;
+    border-radius: 50%;
+  }
+
+  /* Metadados mobile */
+  .album-layout-grid .album-meta-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .album-layout-grid .album-meta-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .album-layout-grid .album-meta-genres {
+    text-align: center;
+    line-height: 1.5;
+  }
+}
+
+
+/* ========================================
+   MOBILE PEQUENO
+======================================== */
+
+@media (max-width: 768px) {
+
+  .album-layout-grid .album-title-group h1 {
+    font-size: 2rem;
+  }
+
+  .track-link {
+    gap: 1rem;
+  }
+
+  .track-title {
+    font-size: 1rem;
+  }
+}
+
+
+/* ========================================
+   CONTROLES EXCLUSIVOS DESKTOP
+======================================== */
+
+@media (min-width: 1025px) {
+
+  .mobile-tracklist-toggle {
+    display: none;
+  }
+
+  .album-description-more {
+    display: none;
+  }
+
+  /* Metadados divididos em duas linhas */
+  .album-layout-grid .album-meta-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .album-layout-grid .album-meta-primary {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+  }
+
+  .album-layout-grid .album-meta-primary .meta-item,
+  .album-layout-grid .album-meta-primary .meta-sep {
+    white-space: nowrap;
+  }
+
+  .album-layout-grid .album-meta-genres {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.5;
   }
 }

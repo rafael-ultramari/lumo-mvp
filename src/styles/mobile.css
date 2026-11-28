@@ -229,8 +229,36 @@
     justify-content: center;
   }
 
-  .album-actions {
+  /* Controles do álbum */
+  .album-info-section .album-text-content .album-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .album-info-section .album-text-content .album-actions > button {
+    flex: 0 0 auto;
+    margin: 0;
+    align-self: center;
+  }
+
+  /* Tracklist com as mesmas dimensões dos outros botões */
+  .album-info-section .album-text-content .album-actions .mobile-tracklist-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    margin: 0;
+    padding: 0;
+    flex: 0 0 42px;
+    border-radius: 50%;
   }
 
   .tracklist-section {
